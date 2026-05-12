@@ -34,7 +34,14 @@ Both paths resolve to the same files. Writes through either are visible through 
 
 ### SessionStart hooks (fire when a session opens, including `/clear` and `/resume`)
 
-3. **`vault-prior-session-review.ps1`** at `C:\Users\srlev\.claude\hooks\vault-prior-session-review.ps1`
+3. **`vault-pull.ps1`** at `C:\Users\srlev\.claude\hooks\vault-pull.ps1`
+   - Runs `git -C "<vault>" pull --rebase --autostash` to bring down any commits pushed to GitHub since last session. The MCP server (used by chat and Cowork) commits straight to `origin/main`, so without this pull, Code sessions miss memory updates made outside of Code.
+   - After the pull, invokes `sync-memory.ps1` so the canonical memory dir catches up via robocopy before the assistant starts reading files. The `~/.claude/CLAUDE.md` MEMORY-SYNC block has already been loaded into the session at this point, so the *index* in the current session is one session stale; per-file reads are correct.
+   - Targets the vault root explicitly via `git -C`, so launching from inside a worktree does not pull into the worktree's branch.
+   - Fails silently (exits 0) if the vault folder is missing or `git pull` fails (offline, lock contention, etc.). Hook never blocks session start.
+   - Ordered before `vault-prior-session-review.ps1` in `settings.json` so the review reads up-to-date memory.
+
+4. **`vault-prior-session-review.ps1`** at `C:\Users\srlev\.claude\hooks\vault-prior-session-review.ps1`
    - Two responsibilities (in priority order):
      - **Always:** verifies the project's `MEMORY.md` index lines match the underlying memory files. Flags structural drift (file indexed but missing from disk; file on disk but not indexed) and semantic drift (file frontmatter and index entry share zero substantial keywords). Surfaces the issues to the assistant so they can be fixed before responding to the user.
      - **Always (any launch location):** finds the most recent prior session transcript across both project directories (`C--Users-srlev` and `C--Users-srlev-OneDrive-...`), and instructs the assistant to recover artifacts, log decisions, persist feedback rules, and write a conversation log into the vault. Uses sentinel files at `C:\Users\srlev\.claude\hooks\.vault-log-state\processed-<session-id>` to avoid re-processing.
@@ -43,11 +50,11 @@ Both paths resolve to the same files. Writes through either are visible through 
 
 ## Scripts (not hooks)
 
-4. **`backup-claude-folder.ps1`** at `C:\Users\srlev\.claude\scripts\backup-claude-folder.ps1`
+5. **`backup-claude-folder.ps1`** at `C:\Users\srlev\.claude\scripts\backup-claude-folder.ps1`
    - Robocopies `C:\Users\srlev\OneDrive\Documents\Claude\` to `C:\Users\srlev\ClaudeBackups\YYYY-MM-DD\` and prunes anything older than 12 weeks.
    - Note: this does NOT cover `C:\Users\srlev\.claude\projects\` or memory. Memory backup is implicit via the sync to global CLAUDE.md, which IS in the OneDrive folder via... wait, no, global CLAUDE.md is at `~/.claude/CLAUDE.md` which is also outside the backup. Memory is currently NOT backed up by this script.
 
-5. **`register-claude-backup-task.ps1`** at `C:\Users\srlev\.claude\scripts\register-claude-backup-task.ps1`
+6. **`register-claude-backup-task.ps1`** at `C:\Users\srlev\.claude\scripts\register-claude-backup-task.ps1`
    - One-time install for the Windows scheduled task `ClaudeFolderWeeklyBackup`. Already registered.
    - Schedule: every Sunday at 12:00 PM, catches up if the laptop was asleep.
 
