@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brae Dunmore — Highland Single Malt Scotch Whisky, Est. 1843</title>
+<meta name="description" content="A single malt of patient hands. Distilled in the Speyside hills since 1843." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink:        #16110A;
+    --ink-2:      #221A10;
+    --ink-3:      #2E2418;
+
+    --cream:      #F1E7D1;
+    --cream-2:    #E6D9BC;
+    --cream-edge: #C8B791;
+
+    --cream-ink:    #1F1408;
+    --cream-ink-2:  #3A2A18;
+    --cream-mute:   #6F5A3D;
+
+    --paper:        #EFE5CE;
+    --paper-dim:    #C9B996;
+    --paper-mute:   #7E6E51;
+
+    --gold:        #B88F4F;
+    --gold-bright: #DBB479;
+    --gold-deep:   #846128;
+    --amber:       #7A4A22;
+
+    --line-dark:   rgba(184, 143, 79, 0.20);
+    --line-cream:  rgba(95, 70, 35, 0.22);
+
+    --ease-out:   cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-inout: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-press: cubic-bezier(0.32, 0.72, 0, 1);
+
+    --maxw: 1240px;
+    --gutter: clamp(20px, 4vw, 56px);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--gold); color: var(--ink); }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  /* Typography ------------------------------------------------ */
+  h1, h2, h3, h4, h5 {
+    font-family: 'Cormorant Garamond', 'Apple Garamond', Garamond, serif;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+  }
+  .ornament { display: inline-flex; align-items: center; gap: 14px; }
+  .ornament::before, .ornament::after {
+    content: ""; width: 28px; height: 1px;
+    background: currentColor; opacity: 0.55;
+  }
+
+  p { margin: 0 0 1em 0; max-width: 60ch; }
+  p.lede { font-size: 19px; line-height: 1.6; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px) scale(0.995);
+    transition: opacity 700ms var(--ease-out), transform 800ms var(--ease-out);
+    will-change: opacity, transform;
+  }
+  .reveal.in { opacity: 1; transform: translateY(0) scale(1); }
+  .reveal-stagger > * {
+    opacity: 0; transform: translateY(10px);
+    transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+  }
+  .reveal-stagger.in > *:nth-child(1) { transition-delay:   0ms; opacity:1; transform:translateY(0); }
+  .reveal-stagger.in > *:nth-child(2) { transition-delay:  60ms; opacity:1; transform:translateY(0); }
+  .reveal-stagger.in > *:nth-child(3) { transition-delay: 120ms; opacity:1; transform:translateY(0); }
+  .reveal-stagger.in > *:nth-child(4) { transition-delay: 180ms; opacity:1; transform:translateY(0); }
+  .reveal-stagger.in > *:nth-child(5) { transition-delay: 240ms; opacity:1; transform:translateY(0); }
+  .reveal-stagger.in > *:nth-child(6) { transition-delay: 300ms; opacity:1; transform:translateY(0); }
+
+  /* Header ---------------------------------------------------- */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    padding: 22px var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 400ms ease, backdrop-filter 400ms ease, border-color 400ms ease, color 400ms ease;
+    border-bottom: 1px solid transparent;
+    color: var(--paper);
+  }
+  header.scrolled {
+    background: rgba(22, 17, 10, 0.82);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    border-bottom: 1px solid var(--line-dark);
+  }
+  header.over-cream { color: var(--cream-ink); }
+  header.over-cream.scrolled {
+    background: rgba(241, 231, 209, 0.92);
+    border-bottom: 1px solid var(--line-cream);
+  }
+  .logo {
+    display: flex; align-items: center; gap: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500; font-size: 18px;
+    letter-spacing: 0.34em; text-transform: uppercase;
+  }
+  .logo svg { display: block; }
+  nav ul { display: flex; gap: 38px; margin: 0; padding: 0; list-style: none; }
+  nav a {
+    font-size: 11px; letter-spacing: 0.28em;
+    text-transform: uppercase; font-weight: 400;
+    opacity: 0.78;
+    transition: opacity 200ms ease;
+    position: relative;
+  }
+  nav a:hover { opacity: 1; }
+  nav a::after {
+    content: ""; position: absolute;
+    left: 0; right: 0; bottom: -8px;
+    height: 1px; background: var(--gold);
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform 320ms var(--ease-out);
+  }
+  nav a:hover::after { transform: scaleX(1); }
+
+  @media (max-width: 760px) { nav { display: none; } }
+
+  /* HERO ===================================================== */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #0A0604;
+  }
+  .hero-scene {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .hero-scene svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  /* Gradient vignette to ensure text legibility on the left side */
+  .hero-scene::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, rgba(8, 5, 3, 0.92) 0%, rgba(8, 5, 3, 0.55) 28%, transparent 52%),
+      linear-gradient(to bottom, transparent 70%, rgba(8, 5, 3, 0.6) 100%);
+    pointer-events: none;
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  .hero-text-inner { max-width: 540px; padding-top: 80px; }
+  .hero .est {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 300;
+    font-size: 13px; letter-spacing: 0.36em;
+    color: var(--gold-bright);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(56px, 9vw, 124px);
+    line-height: 0.92; font-weight: 300;
+    letter-spacing: -0.025em;
+    color: var(--paper);
+  }
+  .hero h1 .small {
+    display: block;
+    font-size: 0.16em; letter-spacing: 0.5em;
+    color: var(--paper-dim);
+    margin-bottom: 18px;
+    text-transform: uppercase; font-weight: 400;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-bright); font-weight: 300; }
+  .hero .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 300;
+    font-size: clamp(18px, 1.8vw, 24px);
+    color: var(--paper);
+    line-height: 1.5;
+    margin: 36px 0 0;
+    max-width: 30ch;
+  }
+  .hero .meta-row {
+    display: flex; align-items: center; gap: 28px;
+    margin-top: 56px;
+    color: var(--paper-mute);
+    font-size: 11px; letter-spacing: 0.28em;
+    text-transform: uppercase; flex-wrap: wrap;
+  }
+  .hero .meta-row .dot {
+    width: 4px; height: 4px;
+    background: var(--gold); border-radius: 50%;
+  }
+  .scroll-cue {
+    position: absolute;
+    left: var(--gutter); bottom: 36px;
+    color: var(--paper-mute);
+    font-size: 10px; letter-spacing: 0.4em;
+    text-transform: uppercase;
+    z-index: 3;
+  }
+  .scroll-cue::after {
+    content: "";
+    display: block;
+    width: 1px; height: 28px;
+    margin-top: 12px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: trickle 2.4s var(--ease-inout) infinite;
+    transform-origin: top center;
+  }
+  @keyframes trickle {
+    0%, 100% { transform: scaleY(0.4); opacity: 0.4; }
+    50%      { transform: scaleY(1);   opacity: 1; }
+  }
+
+  /* Hero video */
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0;
+    transition: opacity 1200ms var(--ease-out);
+    will-change: opacity;
+  }
+  .hero-video.loaded { opacity: 1; }
+
+  /* SECTION HELPERS =========================================== */
+  .section-head { text-align: center; max-width: 780px; margin: 0 auto 80px; }
+  .section-head .eyebrow.gold { color: var(--gold); }
+  .section-head h2 {
+    font-size: clamp(40px, 5.6vw, 76px);
+    line-height: 1.0; margin-top: 22px;
+    font-weight: 300; letter-spacing: -0.018em;
+  }
+  .section-head h2 em { font-style: italic; color: var(--gold); }
+  .section-head .lede { margin: 28px auto 0; }
+
+  /* CREAM SECTION BASE ====================================== */
+  .cream-section { background: var(--cream); color: var(--cream-ink-2); position: relative; }
+  .cream-section h2 { color: var(--cream-ink); }
+  .cream-section h2 em { color: var(--gold-deep); }
+  .cream-section p { color: var(--cream-ink-2); opacity: 0.86; }
+  .cream-section .eyebrow.gold { color: var(--gold-deep); }
+  .cream-section::before {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none; opacity: 0.10;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.10  0 0 0 0 0.06  0 0 0 0 0.03  0 0 0 0.65 0'/></filter><rect width='100%' height='100%' filter='url(%23p)'/></svg>");
+    mix-blend-mode: multiply;
+  }
+
+  /* DARK SECTION BASE ======================================= */
+  .dark-section {
+    background:
+      radial-gradient(ellipse 90% 60% at 50% 0%, rgba(122, 74, 34, 0.18), transparent 60%),
+      var(--ink-2);
+    position: relative;
+  }
+  .dark-section h2 { color: var(--paper); }
+  .dark-section h2 em { color: var(--gold-bright); }
+  .dark-section p { color: var(--paper-dim); }
+
+  /* HERITAGE (cream) ========================================= */
+  .heritage { padding: 160px var(--gutter); }
+  .heritage .grid {
+    max-width: var(--maxw); margin: 0 auto;
+    display: grid; grid-template-columns: 1.05fr 1fr;
+    gap: clamp(40px, 7vw, 120px); align-items: center;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 900px) { .heritage .grid { grid-template-columns: 1fr; gap: 60px; } }
+  .heritage h2 {
+    font-size: clamp(44px, 6.2vw, 88px);
+    line-height: 1.0; letter-spacing: -0.018em;
+    margin-bottom: 28px; font-weight: 300;
+  }
+  .heritage p { font-size: 17px; line-height: 1.75; }
+  .heritage .signature {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--line-cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 400;
+    color: var(--cream-ink); font-size: 17px;
+  }
+  .heritage .signature span {
+    display: block; font-style: normal;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--cream-mute); margin-top: 8px;
+  }
+  .heritage .glen-illo {
+    width: 100%; height: auto;
+    color: var(--cream-ink); opacity: 0.78;
+  }
+
+  /* PROCESS (dark) ========================================== */
+  .process { padding: 160px var(--gutter); }
+  .process .steps {
+    max-width: var(--maxw); margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; position: relative; z-index: 1;
+  }
+  @media (max-width: 900px) { .process .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .process .steps { grid-template-columns: 1fr; } }
+  .step {
+    padding: 48px 32px;
+    border-right: 1px solid var(--line-dark);
+    text-align: left; position: relative;
+    background: linear-gradient(to bottom, rgba(184, 143, 79, 0.04), transparent 30%);
+    transition: background 500ms ease;
+  }
+  .step:hover { background: linear-gradient(to bottom, rgba(184, 143, 79, 0.10), transparent 50%); }
+  .step:last-child { border-right: none; }
+  @media (max-width: 900px) {
+    .step:nth-child(2) { border-right: none; }
+    .step:nth-child(-n+2) { border-bottom: 1px solid var(--line-dark); }
+  }
+  .step .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 300; font-size: 14px;
+    color: var(--gold); letter-spacing: 0.1em; margin-bottom: 32px;
+  }
+  .step .icon {
+    width: 56px; height: 56px;
+    color: var(--gold-bright);
+    margin-bottom: 28px; display: block;
+  }
+  .step h3 {
+    font-size: 26px; font-weight: 400;
+    margin-bottom: 14px; letter-spacing: -0.005em;
+    color: var(--paper);
+  }
+  .step p { font-size: 14px; line-height: 1.65; color: var(--paper-dim); }
+
+  /* RANGE (cream) ============================================ */
+  .range { padding: 160px var(--gutter) 140px; }
+  .range .cards {
+    max-width: var(--maxw); margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 32px; position: relative; z-index: 1;
+  }
+  @media (max-width: 900px) { .range .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: linear-gradient(180deg, #FAF1DA 0%, var(--cream) 100%);
+    padding: 48px 40px 40px;
+    position: relative; overflow: hidden;
+    border: 1px solid var(--line-cream);
+    box-shadow:
+      0 1px 0 rgba(255, 250, 230, 0.5) inset,
+      0 18px 40px -28px rgba(60, 40, 20, 0.35);
+    transition: transform 500ms var(--ease-out), box-shadow 500ms var(--ease-out);
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 1px 0 rgba(255, 250, 230, 0.6) inset,
+      0 28px 50px -30px rgba(60, 40, 20, 0.5);
+  }
+  .card::before {
+    content: ""; position: absolute;
+    left: 0; right: 0; top: 0; height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold-deep) 30%, var(--gold-deep) 70%, transparent);
+    opacity: 0.7;
+  }
+  .card .age {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(110px, 13vw, 180px);
+    line-height: 0.85; color: var(--cream-ink);
+    letter-spacing: -0.04em; margin-bottom: 20px;
+    transition: color 500ms ease;
+  }
+  .card:hover .age { color: var(--gold-deep); }
+  .card .age sup {
+    font-size: 0.18em; font-style: italic;
+    color: var(--gold-deep);
+    margin-left: 6px; vertical-align: top;
+    line-height: 1; top: 0.4em; position: relative;
+    font-weight: 300;
+  }
+  .card .name-line {
+    display: flex; align-items: baseline;
+    gap: 12px; margin-bottom: 28px;
+  }
+  .card .name-line::before {
+    content: ""; width: 24px; height: 1px;
+    background: var(--gold-deep); flex: none; align-self: center;
+  }
+  .card .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 500; font-size: 22px;
+    color: var(--cream-ink); letter-spacing: 0.005em;
+  }
+  .card .specs {
+    display: flex; gap: 28px;
+    font-size: 10px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--cream-mute);
+    margin-bottom: 32px; padding-bottom: 28px;
+    border-bottom: 1px solid var(--line-cream);
+  }
+  .card .specs span strong {
+    display: block; color: var(--cream-ink);
+    font-weight: 500; font-size: 12px;
+    letter-spacing: 0.16em; margin-top: 4px;
+  }
+  .card .notes { display: grid; gap: 18px; }
+  .card .note {
+    display: grid; grid-template-columns: 70px 1fr;
+    gap: 16px; align-items: baseline;
+  }
+  .card .note .label {
+    font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold-deep);
+    font-weight: 500;
+  }
+  .card .note .body {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 400;
+    font-size: 16.5px; line-height: 1.55;
+    color: var(--cream-ink-2);
+  }
+  .card .price {
+    margin-top: 36px; padding-top: 24px;
+    border-top: 1px solid var(--line-cream);
+    display: flex; justify-content: space-between;
+    align-items: baseline;
+    font-size: 11px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--cream-mute);
+  }
+  .card .price strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 500; font-size: 21px;
+    color: var(--cream-ink); letter-spacing: 0.01em;
+    text-transform: none;
+  }
+
+  /* AWARDS (dark) ============================================ */
+  .awards { padding: 140px var(--gutter); }
+  .awards .row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    max-width: var(--maxw); margin: 0 auto;
+    gap: 0; position: relative; z-index: 1;
+    border-top: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
+  }
+  @media (max-width: 800px) { .awards .row { grid-template-columns: repeat(2, 1fr); } }
+  .award {
+    padding: 56px 24px;
+    border-right: 1px solid var(--line-dark);
+    text-align: center;
+    transition: background 500ms ease;
+  }
+  .award:last-child { border-right: none; }
+  @media (max-width: 800px) {
+    .award:nth-child(2) { border-right: none; }
+    .award:nth-child(-n+2) { border-bottom: 1px solid var(--line-dark); }
+  }
+  .award:hover { background: rgba(184, 143, 79, 0.06); }
+  .award .medal {
+    width: 60px; height: 60px;
+    margin: 0 auto 28px;
+    color: var(--gold-bright); display: block;
+  }
+  .award .year {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400; font-size: 30px;
+    color: var(--paper); margin-bottom: 6px;
+  }
+  .award .body {
+    font-size: 11px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--paper-dim); line-height: 1.7;
+  }
+  .award .body strong {
+    display: block; color: var(--gold-bright);
+    font-weight: 500; margin-bottom: 6px; letter-spacing: 0.26em;
+  }
+
+  /* RESERVE (cream) ========================================== */
+  .reserve { padding: 160px var(--gutter); text-align: center; }
+  .reserve .inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+  .reserve h2 {
+    font-size: clamp(44px, 6.5vw, 92px);
+    line-height: 1.0; margin: 22px 0 28px;
+    font-weight: 300; letter-spacing: -0.018em;
+  }
+  .reserve p { color: var(--cream-ink-2); font-size: 17px; max-width: 56ch; margin: 0 auto 48px; opacity: 0.9; }
+  .form-row {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 12px; max-width: 560px; margin: 0 auto;
+  }
+  @media (max-width: 540px) { .form-row { grid-template-columns: 1fr; } }
+  input[type="email"] {
+    background: rgba(255, 248, 230, 0.6);
+    border: 1px solid var(--cream-edge);
+    padding: 18px 22px; color: var(--cream-ink);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300; font-size: 14px;
+    letter-spacing: 0.04em; border-radius: 0;
+    transition: border-color 240ms ease, background 240ms ease;
+  }
+  input[type="email"]::placeholder {
+    color: var(--cream-mute); letter-spacing: 0.18em;
+    text-transform: uppercase; font-size: 11px;
+  }
+  input[type="email"]:focus {
+    outline: none; border-color: var(--gold-deep);
+    background: rgba(255, 248, 230, 0.95);
+  }
+  .btn {
+    background: var(--cream-ink); color: var(--cream);
+    border: 1px solid var(--cream-ink);
+    padding: 18px 36px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; font-size: 11px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 160ms var(--ease-press), background 240ms ease, color 240ms ease, border-color 240ms ease;
+  }
+  .btn:hover { background: var(--gold-deep); border-color: var(--gold-deep); color: var(--cream); }
+  .btn:active { transform: scale(0.97); }
+  .age-gate {
+    color: var(--cream-mute); font-size: 10px;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    text-align: center; margin-top: 32px;
+  }
+
+  /* FOOTER =================================================== */
+  footer {
+    padding: 100px var(--gutter) 48px;
+    background: var(--ink); border-top: 1px solid var(--line-dark);
+    color: var(--paper-mute);
+    font-size: 11px; letter-spacing: 0.18em;
+  }
+  footer .top {
+    max-width: var(--maxw); margin: 0 auto 56px;
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 60px;
+  }
+  @media (max-width: 800px) { footer .top { grid-template-columns: 1fr 1fr; gap: 40px; } }
+  @media (max-width: 480px) { footer .top { grid-template-columns: 1fr; } }
+  footer h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; font-size: 10px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--gold-bright); margin-bottom: 22px;
+  }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer li { margin-bottom: 10px; }
+  footer a {
+    color: var(--paper-dim);
+    transition: color 200ms ease;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+  footer a:hover { color: var(--paper); }
+  footer .brand-block p {
+    color: var(--paper-mute); font-size: 13px; line-height: 1.7;
+    letter-spacing: 0.02em; text-transform: none; max-width: 36ch;
+  }
+  footer .brand-block .logo { color: var(--paper); margin-bottom: 22px; }
+  footer .bottom {
+    max-width: var(--maxw); margin: 0 auto;
+    padding-top: 32px; border-top: 1px solid var(--line-dark);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 10px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--paper-mute);
+    flex-wrap: wrap; gap: 16px;
+  }
+
+  /* Reduced motion =========================================== */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-cue::after, .bokeh-drift, .dust-mote { animation: none; }
+    .reveal, .reveal-stagger > * { transition-duration: 0ms !important; opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <a href="#" class="logo" aria-label="Brae Dunmore home">
+    <svg width="22" height="28" viewBox="0 0 22 28" fill="none" aria-hidden="true">
+      <path d="M11 1L20 6V14C20 19.5 16.4 24.4 11 26C5.6 24.4 2 19.5 2 14V6L11 1Z" stroke="currentColor" stroke-width="0.9" fill="none"/>
+      <path d="M7 11L11 8L15 11M7 16L11 13L15 16M9 19H13" stroke="currentColor" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span>Brae Dunmore</span>
+  </a>
+  <nav>
+    <ul>
+      <li><a href="#heritage">Heritage</a></li>
+      <li><a href="#process">The Spirit</a></li>
+      <li><a href="#range">The Range</a></li>
+      <li><a href="#awards">Recognition</a></li>
+      <li><a href="#reserve">Reserve</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO ============================================================== -->
+<section class="hero">
+  <div class="hero-scene" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="hero-pour.mp4" type="video/mp4" />
+    </video>
+    <!-- Removed SVG pour scene; now driven by hero-pour.mp4 -->
+    <svg style="display:none" aria-hidden="true">
+      <defs>
+        <!-- Studio background gradient -->
+        <radialGradient id="studio-bg" cx="0.78" cy="0.28" r="0.95">
+          <stop offset="0%"  stop-color="#3A2516"/>
+          <stop offset="20%" stop-color="#2A1A0E"/>
+          <stop offset="55%" stop-color="#150D06"/>
+          <stop offset="100%" stop-color="#070403"/>
+        </radialGradient>
+
+        <!-- Warm key light from upper-right -->
+        <radialGradient id="key-light" cx="0.78" cy="0.18" r="0.42">
+          <stop offset="0%"  stop-color="#F0BF77" stop-opacity="0.55"/>
+          <stop offset="40%" stop-color="#A86A28" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#A86A28" stop-opacity="0"/>
+        </radialGradient>
+
+        <!-- Liquid in glass — two-layer fill -->
+        <linearGradient id="liquid-deep" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#E0A55C"/>
+          <stop offset="40%"  stop-color="#A8662C"/>
+          <stop offset="100%" stop-color="#3F2010"/>
+        </linearGradient>
+        <linearGradient id="liquid-top" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#F0CB7E"/>
+          <stop offset="100%" stop-color="#C28442" stop-opacity="0.4"/>
+        </linearGradient>
+
+        <!-- Stream gradient (warm liquid in motion) -->
+        <linearGradient id="stream-fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#E8B370"/>
+          <stop offset="40%"  stop-color="#C28442"/>
+          <stop offset="100%" stop-color="#9C6230"/>
+        </linearGradient>
+        <linearGradient id="stream-shimmer" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#FFE7B3"/>
+          <stop offset="50%"  stop-color="#F0CB7E"/>
+          <stop offset="100%" stop-color="#C28442"/>
+        </linearGradient>
+
+        <!-- Bottle materials -->
+        <linearGradient id="bottle-glass" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#0A0805"/>
+          <stop offset="40%"  stop-color="#1A1208"/>
+          <stop offset="55%"  stop-color="#2A1B0E"/>
+          <stop offset="70%"  stop-color="#1A1208"/>
+          <stop offset="100%" stop-color="#0A0805"/>
+        </linearGradient>
+        <linearGradient id="bottle-liquid" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#3F2010"/>
+          <stop offset="40%"  stop-color="#8C501F"/>
+          <stop offset="55%"  stop-color="#D89A4A"/>
+          <stop offset="70%"  stop-color="#8C501F"/>
+          <stop offset="100%" stop-color="#3F2010"/>
+        </linearGradient>
+        <linearGradient id="capG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#1A1714"/>
+          <stop offset="100%" stop-color="#080706"/>
+        </linearGradient>
+        <linearGradient id="foilG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#3A2C1A"/>
+          <stop offset="100%" stop-color="#1F1610"/>
+        </linearGradient>
+        <linearGradient id="labelG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#E6DCC4"/>
+          <stop offset="100%" stop-color="#C8B891"/>
+        </linearGradient>
+
+        <!-- Glass tumbler walls (refractive) -->
+        <linearGradient id="glass-wall" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="rgba(220,200,170,0.45)"/>
+          <stop offset="20%"  stop-color="rgba(220,200,170,0.10)"/>
+          <stop offset="50%"  stop-color="rgba(220,200,170,0.04)"/>
+          <stop offset="80%"  stop-color="rgba(220,200,170,0.10)"/>
+          <stop offset="100%" stop-color="rgba(220,200,170,0.45)"/>
+        </linearGradient>
+
+        <!-- Surface life: turbulence + displacement -->
+        <filter id="surface-life" x="-15%" y="-15%" width="130%" height="130%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.025 0.04" numOctaves="2" seed="3" result="turb">
+            <animate attributeName="baseFrequency"
+                     values="0.022 0.038; 0.030 0.046; 0.022 0.038"
+                     dur="6s" repeatCount="indefinite"/>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="turb" scale="2.4"/>
+        </filter>
+
+        <!-- Gooey filter for splash droplets -->
+        <filter id="goo">
+          <feGaussianBlur stdDeviation="2.6"/>
+          <feColorMatrix values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 18 -7"/>
+        </filter>
+
+        <!-- Soft blur on stream leading edge -->
+        <filter id="stream-blur" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="0.8"/>
+        </filter>
+
+        <!-- Drop shadow under bottle and glass -->
+        <filter id="ground-shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="8"/>
+        </filter>
+
+        <!-- Glass interior clipPath (clips liquid to inside of tumbler) -->
+        <clipPath id="glass-interior">
+          <path d="M 1023 545 L 1177 545 L 1166 715 Q 1166 728 1100 728 Q 1034 728 1034 715 Z"/>
+        </clipPath>
+      </defs>
+
+      <!-- BACKGROUND ============================== -->
+      <rect width="1600" height="900" fill="url(#studio-bg)"/>
+      <rect width="1600" height="900" fill="url(#key-light)"/>
+
+      <!-- Subtle bokeh dots (warm, blurred) -->
+      <g class="bokeh-drift" opacity="0.55">
+        <g filter="url(#stream-blur)">
+          <circle cx="220"  cy="180" r="48"  fill="#A86A28" opacity="0.14"/>
+          <circle cx="380"  cy="280" r="32"  fill="#D89A4A" opacity="0.10"/>
+          <circle cx="640"  cy="120" r="60"  fill="#A86A28" opacity="0.08"/>
+          <circle cx="1320" cy="540" r="76"  fill="#D89A4A" opacity="0.10"/>
+          <circle cx="1480" cy="380" r="40"  fill="#F0BF77" opacity="0.08"/>
+          <circle cx="120"  cy="640" r="52"  fill="#A86A28" opacity="0.08"/>
+          <circle cx="1260" cy="780" r="36"  fill="#D89A4A" opacity="0.10"/>
+        </g>
+      </g>
+
+      <!-- Floating dust motes -->
+      <g opacity="0.5">
+        <circle class="dust-mote" cx="900"  cy="200" r="0.8" fill="#F0CB7E" opacity="0.6"/>
+        <circle class="dust-mote" cx="1200" cy="320" r="1.0" fill="#F0CB7E" opacity="0.7" style="animation-delay:-3s"/>
+        <circle class="dust-mote" cx="700"  cy="450" r="0.9" fill="#F0CB7E" opacity="0.5" style="animation-delay:-7s"/>
+        <circle class="dust-mote" cx="1340" cy="180" r="0.7" fill="#F0CB7E" opacity="0.6" style="animation-delay:-11s"/>
+        <circle class="dust-mote" cx="1100" cy="520" r="0.8" fill="#F0CB7E" opacity="0.5" style="animation-delay:-5s"/>
+        <circle class="dust-mote" cx="820"  cy="660" r="0.9" fill="#F0CB7E" opacity="0.6" style="animation-delay:-9s"/>
+      </g>
+
+      <!-- Volumetric warm light beam (very subtle, from upper-right) -->
+      <path d="M 1600 0 L 1600 280 L 700 900 L 500 900 Z"
+            fill="#F0BF77" opacity="0.05" filter="url(#stream-blur)"/>
+
+      <!-- Floor reflection plane (dark mirror under product) -->
+      <ellipse cx="1100" cy="745" rx="180" ry="14" fill="#000" opacity="0.65" filter="url(#ground-shadow)"/>
+
+      <!-- ============ GLASS BACK + LIQUID ============ -->
+
+      <!-- Glass back wall (faint silhouette behind liquid for depth) -->
+      <path d="M 1023 545 L 1177 545 L 1166 715 Q 1166 728 1100 728 Q 1034 728 1034 715 Z"
+            fill="rgba(20,12,6,0.7)"/>
+
+      <!-- Liquid clipped inside glass -->
+      <g clip-path="url(#glass-interior)" id="liquid-group">
+        <!-- Base layer (deeper) -->
+        <rect id="liquid-fill" x="1020" y="725" width="170" height="200" fill="url(#liquid-deep)"/>
+        <!-- Top tint layer (slightly offset for natural depth) -->
+        <rect id="liquid-fill-top" x="1022" y="725" width="170" height="200" fill="url(#liquid-top)" opacity="0.55"/>
+
+        <!-- Surface meniscus — animated with feTurbulence/displacement -->
+        <g class="surface-life" filter="url(#surface-life)">
+          <path id="meniscus" d="M 1024 725 Q 1100 722 1176 725 L 1176 730 Q 1100 727 1024 730 Z"
+                fill="#F0CB7E" opacity="0.55"/>
+        </g>
+
+        <!-- Bottom-of-glass darkening for depth -->
+        <rect x="1020" y="700" width="170" height="30" fill="black" opacity="0.25"/>
+      </g>
+
+      <!-- Glass front walls drawn over liquid -->
+      <path d="M 1019 542 L 1181 542 L 1170 717 Q 1170 732 1100 732 Q 1030 732 1030 717 Z"
+            fill="url(#glass-wall)"
+            stroke="rgba(245,225,180,0.55)" stroke-width="1.2"/>
+
+      <!-- Glass top rim (front edge) -->
+      <ellipse cx="1100" cy="542" rx="81" ry="9" fill="none"
+               stroke="rgba(245,225,180,0.85)" stroke-width="1.4"/>
+      <ellipse cx="1100" cy="544" rx="76" ry="7" fill="none"
+               stroke="rgba(245,225,180,0.30)" stroke-width="0.7"/>
+
+      <!-- Glass thick base (chunky tumbler bottom) -->
+      <ellipse cx="1100" cy="730" rx="68" ry="9" fill="rgba(20,12,6,0.85)"/>
+      <ellipse cx="1100" cy="730" rx="68" ry="9" fill="none" stroke="rgba(245,225,180,0.55)" stroke-width="1"/>
+
+      <!-- Glass specular highlights (key from upper-right) -->
+      <path d="M 1156 555 Q 1162 640 1152 715" stroke="rgba(255,245,210,0.6)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M 1052 555 Q 1046 640 1056 715" stroke="rgba(255,245,210,0.22)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      <ellipse cx="1158" cy="556" rx="8" ry="3" fill="rgba(255,245,210,0.5)"/>
+
+      <!-- Surface ripples and crown splashes go here (between glass and bottle) -->
+      <g id="ripple-group"></g>
+      <g id="splash-group" filter="url(#goo)"></g>
+
+      <!-- ============ STREAM ============ -->
+      <path id="stream-path" d="" fill="url(#stream-fill)" filter="url(#stream-blur)" opacity="0"/>
+      <path id="stream-shimmer-path" d="" fill="url(#stream-shimmer)" opacity="0"/>
+
+      <!-- ============ BOTTLE ============ -->
+      <g class="bottle-position" transform="translate(883.5, 235)">
+        <g class="bottle-tilt" transform="rotate(0, 0, 250)">
+          <!-- Bottle drop shadow (subtle, on the page) -->
+          <ellipse cx="0" cy="450" rx="60" ry="6" fill="#000" opacity="0.4" filter="url(#ground-shadow)"/>
+
+          <!-- Cap -->
+          <rect x="-16" y="6"  width="32" height="44" rx="2" fill="url(#capG)"/>
+          <rect x="-17" y="48" width="34" height="6"  fill="#0A0907"/>
+          <!-- Foil -->
+          <path d="M -22 54 L 22 54 L 20 100 L -20 100 Z" fill="url(#foilG)"/>
+          <line x1="-20" y1="76" x2="20" y2="76" stroke="#5C4426" stroke-width="0.5" opacity="0.6"/>
+          <!-- Neck -->
+          <rect x="-14" y="100" width="28" height="48" fill="url(#bottle-glass)"/>
+          <!-- Shoulder -->
+          <path d="M -14 148 Q -14 156 -22 168 L 22 168 Q 14 156 14 148 Z" fill="url(#bottle-glass)"/>
+          <!-- Body -->
+          <rect x="-58" y="168" width="116" height="262" rx="6" fill="url(#bottle-glass)"/>
+          <!-- Liquid inside bottle -->
+          <rect x="-54" y="246" width="108" height="180" rx="4" fill="url(#bottle-liquid)" opacity="0.95"/>
+          <ellipse cx="0" cy="246" rx="54" ry="3" fill="#D89A4A" opacity="0.55"/>
+          <!-- Glass highlights -->
+          <rect x="-48" y="180" width="6" height="240" rx="3" fill="rgba(255,235,200,0.18)"/>
+          <rect x="46"  y="180" width="3" height="240" rx="1.5" fill="rgba(255,235,200,0.10)"/>
+          <ellipse cx="0" cy="170" rx="60" ry="10" fill="rgba(214,176,122,0.30)" />
+
+          <!-- Label -->
+          <rect x="-44" y="262" width="88" height="128" fill="url(#labelG)"/>
+          <rect x="-44" y="262" width="88" height="128" fill="none" stroke="#8A7858" stroke-width="0.4"/>
+          <line x1="-38" y1="272" x2="38" y2="272" stroke="#8A7858" stroke-width="0.3"/>
+          <line x1="-38" y1="380" x2="38" y2="380" stroke="#8A7858" stroke-width="0.3"/>
+
+          <!-- Crest -->
+          <g transform="translate(0, 296)" fill="none" stroke="#3F2A14" stroke-width="0.6" stroke-linejoin="round">
+            <path d="M-10 8 L-6 -4 L-2 4 L2 -8 L6 2 L10 -4 L10 8 Z"/>
+            <line x1="-12" y1="10" x2="12" y2="10"/>
+          </g>
+
+          <text x="0" y="328" text-anchor="middle"
+                font-family="Cormorant Garamond, serif" font-size="11" font-weight="500"
+                letter-spacing="2.4" fill="#3F2A14">BRAE DUNMORE</text>
+          <text x="0" y="344" text-anchor="middle"
+                font-family="Cormorant Garamond, serif" font-style="italic" font-size="6.5"
+                letter-spacing="1.6" fill="#6B533A">Highland Single Malt</text>
+          <line x1="-20" y1="350" x2="20" y2="350" stroke="#8A7858" stroke-width="0.3"/>
+          <text x="0" y="368" text-anchor="middle"
+                font-family="Cormorant Garamond, serif" font-size="22" font-weight="400" fill="#3F2A14">25</text>
+          <text x="0" y="378" text-anchor="middle"
+                font-family="Inter, sans-serif" font-size="4.4" letter-spacing="2" fill="#6B533A">YEARS · AGED IN OAK</text>
+          <rect x="-44" y="396" width="88" height="14" fill="#3F2A14"/>
+          <text x="0" y="406" text-anchor="middle"
+                font-family="Inter, sans-serif" font-size="4" letter-spacing="2.4" fill="#C8B891">EST · MDCCCXLIII · SCOTLAND</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-text">
+    <div class="hero-text-inner">
+      <div class="est">— Distilled in the Speyside Hills —</div>
+      <h1>
+        <span class="small">A Highland Single Malt</span>
+        Brae<br />Dunmore
+      </h1>
+      <p class="tagline">A single malt of <em>patient hands</em>, drawn slow from the same five copper stills since eighteen forty-three.</p>
+
+      <div class="meta-row">
+        <span>Est. 1843</span>
+        <span class="dot"></span>
+        <span>Speyside, Scotland</span>
+        <span class="dot"></span>
+        <span>Family-owned</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">Scroll</div>
+</section>
+
+<!-- HERITAGE (cream) ================================================== -->
+<section class="cream-section heritage" id="heritage" data-bg="cream">
+  <div class="grid">
+    <div class="reveal">
+      <div class="ornament eyebrow gold">Our Heritage</div>
+      <h2 style="margin-top: 22px;">One distillery.<br /><em>Six generations.</em></h2>
+      <p class="lede">In 1843, Alasdair Dunmore lit the fires beneath two squat copper stills on a bend of the Spey, a mile downstream of the village his father was born in. Six generations later, those same stills still run.</p>
+      <p>We have refused, in every decade since, to grow beyond what one family can attend to by hand. We make less whisky than almost any distillery of our age. We do so deliberately. The cask we lay down today will be opened by a grandchild who is not yet born.</p>
+      <p>This is not a strategy. It is the only way we know.</p>
+      <div class="signature">
+        Iona Dunmore
+        <span>Sixth-generation distiller</span>
+      </div>
+    </div>
+
+    <div class="reveal" aria-hidden="true">
+      <svg class="glen-illo" viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 220 L60 160 L120 200 L190 130 L260 195 L330 150 L420 210 L520 170 L520 360 L0 360 Z"
+              stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.45"/>
+        <path d="M0 260 L80 210 L160 250 L240 200 L320 245 L400 215 L520 250 L520 360 L0 360 Z"
+              stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.7"/>
+        <path d="M0 310 Q140 280 260 305 T520 300" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <path d="M260 305 Q300 320 280 340 Q260 355 290 358" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.7"/>
+        <path d="M260 305 Q220 320 240 340 Q260 355 230 358" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.7"/>
+        <g transform="translate(238, 268)">
+          <rect x="0" y="14" width="44" height="22" stroke="currentColor" stroke-width="0.7" fill="none"/>
+          <path d="M0 14 L22 0 L44 14" stroke="currentColor" stroke-width="0.7" fill="none"/>
+          <rect x="46" y="20" width="18" height="16" stroke="currentColor" stroke-width="0.7" fill="none"/>
+          <path d="M46 20 L55 12 L64 20" stroke="currentColor" stroke-width="0.7" fill="none"/>
+          <rect x="14" y="-14" width="8" height="14" stroke="currentColor" stroke-width="0.6" fill="none"/>
+          <path d="M11 -14 L25 -14 L22 -22 L14 -22 Z" stroke="currentColor" stroke-width="0.6" fill="none"/>
+          <path d="M9 -22 L27 -22 L23 -28 L13 -28 Z" stroke="currentColor" stroke-width="0.6" fill="none"/>
+          <path d="M18 -28 Q22 -38 18 -46 Q14 -54 20 -62" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.5"/>
+        </g>
+        <g stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.55">
+          <path d="M70 300 L70 285 M65 290 L70 285 L75 290"/>
+          <path d="M460 295 L460 280 M455 285 L460 280 L465 285"/>
+          <path d="M390 305 L390 292 M386 296 L390 292 L394 296"/>
+        </g>
+        <circle cx="408" cy="84" r="22" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.5"/>
+        <circle cx="408" cy="84" r="32" stroke="currentColor" stroke-width="0.3" fill="none" opacity="0.25"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS (dark) ==================================================== -->
+<section class="dark-section process" id="process" data-bg="dark">
+  <div class="section-head reveal">
+    <div class="ornament eyebrow gold">The Spirit</div>
+    <h2>Four things, done <em>without compromise.</em></h2>
+  </div>
+
+  <div class="steps reveal-stagger">
+    <div class="step">
+      <div class="num">i.</div>
+      <svg class="icon" viewBox="0 0 64 64" fill="none">
+        <path d="M32 8 C32 8 18 26 18 38 C18 47 24.5 54 32 54 C39.5 54 46 47 46 38 C46 26 32 8 32 8 Z"
+              stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+        <path d="M28 38 C28 41 30 44 33 44" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"/>
+      </svg>
+      <h3>Spring Water</h3>
+      <p>Drawn from the Allt Beithe, a peat-filtered burn that has run black and cold beside the distillery for as long as anyone has counted.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">ii.</div>
+      <svg class="icon" viewBox="0 0 64 64" fill="none">
+        <path d="M22 20 L22 36 C22 40 26 42 32 42 C38 42 42 40 42 36 L42 20"
+              stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        <ellipse cx="32" cy="20" rx="10" ry="3.5" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M32 42 L32 50" stroke="currentColor" stroke-width="1"/>
+        <path d="M22 50 L42 50" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+        <path d="M16 30 Q12 32 16 36 Q20 40 16 44" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"/>
+        <path d="M48 30 Q52 32 48 36 Q44 40 48 44" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"/>
+        <circle cx="32" cy="14" r="1.6" fill="currentColor"/>
+      </svg>
+      <h3>Slow Distillation</h3>
+      <p>Five squat copper stills, kept deliberately small. The slow run gives the spirit time to gather depth and a quiet, oily weight.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">iii.</div>
+      <svg class="icon" viewBox="0 0 64 64" fill="none">
+        <ellipse cx="32" cy="32" rx="14" ry="20" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M18 22 Q32 26 46 22" stroke="currentColor" stroke-width="0.9"/>
+        <path d="M18 32 Q32 36 46 32" stroke="currentColor" stroke-width="0.9"/>
+        <path d="M18 42 Q32 46 46 42" stroke="currentColor" stroke-width="0.9"/>
+        <ellipse cx="32" cy="12" rx="14" ry="3" stroke="currentColor" stroke-width="1"/>
+        <ellipse cx="32" cy="52" rx="14" ry="3" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      <h3>First-Fill Oak</h3>
+      <p>Bourbon casks from a single Kentucky cooperage we have worked with for forty years. Then sherry. Never anything new, never anything rushed.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">iv.</div>
+      <svg class="icon" viewBox="0 0 64 64" fill="none">
+        <path d="M22 8 L42 8" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        <path d="M22 56 L42 56" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        <path d="M24 8 L24 22 Q24 28 32 32 Q40 36 40 42 L40 56" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M40 8 L40 22 Q40 28 32 32 Q24 36 24 42 L24 56" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M28 18 L36 18" stroke="currentColor" stroke-width="0.9"/>
+        <circle cx="32" cy="38" r="1" fill="currentColor"/>
+        <circle cx="32" cy="42" r="1" fill="currentColor"/>
+        <circle cx="32" cy="46" r="1" fill="currentColor"/>
+      </svg>
+      <h3>Time</h3>
+      <p>The youngest cask in our warehouse was filled in 2008. The oldest, in 1976. We open none of them on a schedule. We open them when the spirit says it is ready.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RANGE (cream) ==================================================== -->
+<section class="cream-section range" id="range" data-bg="cream">
+  <div class="section-head reveal">
+    <div class="ornament eyebrow gold">The Range</div>
+    <h2>Three expressions, <em>each its own life.</em></h2>
+    <p class="lede">Released in small allocations, twice a year. Cask numbers, bottle counts, and tasting notes are documented in the bothy ledger we have kept since 1851.</p>
+  </div>
+
+  <div class="cards">
+    <article class="card reveal">
+      <div class="age">18<sup>yr</sup></div>
+      <div class="name-line"><span class="name">The Founder's</span></div>
+      <div class="specs">
+        <span>Cask<strong>First-Fill Bourbon</strong></span>
+        <span>ABV<strong>46.2%</strong></span>
+      </div>
+      <div class="notes">
+        <div class="note"><span class="label">Nose</span><span class="body">Heather honey, beeswax, a thread of orchard apple.</span></div>
+        <div class="note"><span class="label">Palate</span><span class="body">Soft toffee at first, then dried apricot, then a long thread of woodsmoke that arrives slowly.</span></div>
+        <div class="note"><span class="label">Finish</span><span class="body">Long, dry, faintly salted.</span></div>
+      </div>
+      <div class="price">Allocation<strong>£245</strong></div>
+    </article>
+
+    <article class="card reveal">
+      <div class="age">25<sup>yr</sup></div>
+      <div class="name-line"><span class="name">Master's Reserve</span></div>
+      <div class="specs">
+        <span>Cask<strong>Sherry / Bourbon</strong></span>
+        <span>ABV<strong>48.8%</strong></span>
+      </div>
+      <div class="notes">
+        <div class="note"><span class="label">Nose</span><span class="body">Dark fruit, polished oak, a faint note of struck flint.</span></div>
+        <div class="note"><span class="label">Palate</span><span class="body">Christmas cake, walnut oil, then a long savoury seam — old leather, autumn leaves, faint clove.</span></div>
+        <div class="note"><span class="label">Finish</span><span class="body">Profound. Warming. Holds for a quarter of an hour.</span></div>
+      </div>
+      <div class="price">Allocation<strong>£620</strong></div>
+    </article>
+
+    <article class="card reveal">
+      <div class="age">40<sup>yr</sup></div>
+      <div class="name-line"><span class="name">The Cooperage</span></div>
+      <div class="specs">
+        <span>Cask<strong>Single PX Sherry</strong></span>
+        <span>ABV<strong>43.1%</strong></span>
+      </div>
+      <div class="notes">
+        <div class="note"><span class="label">Nose</span><span class="body">Old library, dried fig, a quiet hum of pipe tobacco.</span></div>
+        <div class="note"><span class="label">Palate</span><span class="body">Dense, almost syrupy. Black cherry, dark chocolate, espresso, then antique wood and a faint salinity.</span></div>
+        <div class="note"><span class="label">Finish</span><span class="body">Patient. Stays with you the whole evening.</span></div>
+      </div>
+      <div class="price">Allocation<strong>£3,400</strong></div>
+    </article>
+  </div>
+</section>
+
+<!-- AWARDS (dark) ===================================================== -->
+<section class="dark-section awards" id="awards" data-bg="dark">
+  <div class="section-head reveal">
+    <div class="ornament eyebrow gold">Recognition</div>
+    <h2>Awarded quietly. <em>Earned slowly.</em></h2>
+  </div>
+
+  <div class="row reveal-stagger">
+    <div class="award">
+      <svg class="medal" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="28" r="18" stroke="currentColor" stroke-width="1.1"/>
+        <circle cx="32" cy="28" r="13" stroke="currentColor" stroke-width="0.7"/>
+        <path d="M22 42 L18 60 L26 56 L32 60 L38 56 L46 60 L42 42" stroke="currentColor" stroke-width="1" stroke-linejoin="round" fill="none"/>
+        <text x="32" y="32" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="currentColor">D</text>
+      </svg>
+      <div class="year">2024</div>
+      <div class="body"><strong>Best Single Malt</strong>International Spirits Challenge</div>
+    </div>
+    <div class="award">
+      <svg class="medal" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="28" r="18" stroke="currentColor" stroke-width="1.1"/>
+        <circle cx="32" cy="28" r="13" stroke="currentColor" stroke-width="0.7"/>
+        <path d="M22 42 L18 60 L26 56 L32 60 L38 56 L46 60 L42 42" stroke="currentColor" stroke-width="1" stroke-linejoin="round" fill="none"/>
+        <text x="32" y="32" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="currentColor">★</text>
+      </svg>
+      <div class="year">2023</div>
+      <div class="body"><strong>Distillery of the Year</strong>Whisky Magazine</div>
+    </div>
+    <div class="award">
+      <svg class="medal" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="28" r="18" stroke="currentColor" stroke-width="1.1"/>
+        <circle cx="32" cy="28" r="13" stroke="currentColor" stroke-width="0.7"/>
+        <path d="M22 42 L18 60 L26 56 L32 60 L38 56 L46 60 L42 42" stroke="currentColor" stroke-width="1" stroke-linejoin="round" fill="none"/>
+        <text x="32" y="32" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="currentColor">98</text>
+      </svg>
+      <div class="year">2022</div>
+      <div class="body"><strong>98 Points</strong>Jim Murray's Whisky Bible</div>
+    </div>
+    <div class="award">
+      <svg class="medal" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="28" r="18" stroke="currentColor" stroke-width="1.1"/>
+        <circle cx="32" cy="28" r="13" stroke="currentColor" stroke-width="0.7"/>
+        <path d="M22 42 L18 60 L26 56 L32 60 L38 56 L46 60 L42 42" stroke="currentColor" stroke-width="1" stroke-linejoin="round" fill="none"/>
+        <text x="32" y="32" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="currentColor">G</text>
+      </svg>
+      <div class="year">2021</div>
+      <div class="body"><strong>Double Gold</strong>San Francisco World Spirits</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVE (cream) =================================================== -->
+<section class="cream-section reserve" id="reserve" data-bg="cream">
+  <div class="inner reveal">
+    <div class="ornament eyebrow gold">Private Allocation</div>
+    <h2>Reserve a <em>private cask.</em></h2>
+    <p>Each year we set aside a small number of casks for private patrons. If you are interested in laying down a single-cask allocation in your name, write to our cellar master and we will be in touch.</p>
+    <form class="form-row" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you';">
+      <input type="email" placeholder="Your email address" required />
+      <button type="submit" class="btn">Inquire</button>
+    </form>
+    <div class="age-gate">Please drink responsibly. You must be of legal drinking age in your country to view this site.</div>
+  </div>
+</section>
+
+<!-- FOOTER ============================================================ -->
+<footer data-bg="dark">
+  <div class="top">
+    <div class="brand-block">
+      <a href="#" class="logo">
+        <svg width="22" height="28" viewBox="0 0 22 28" fill="none">
+          <path d="M11 1L20 6V14C20 19.5 16.4 24.4 11 26C5.6 24.4 2 19.5 2 14V6L11 1Z" stroke="currentColor" stroke-width="0.9" fill="none"/>
+          <path d="M7 11L11 8L15 11M7 16L11 13L15 16M9 19H13" stroke="currentColor" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>Brae Dunmore</span>
+      </a>
+      <p>The Distillery, Glen Tannoch,<br />Speyside, Scotland AB37 9XX</p>
+      <p style="margin-top: 14px;">+44 (0)1340 555 184</p>
+    </div>
+
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#">The Distillery Tour</a></li>
+        <li><a href="#">The Cellar Tasting</a></li>
+        <li><a href="#">Private Bookings</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>The House</h4>
+      <ul>
+        <li><a href="#heritage">Heritage</a></li>
+        <li><a href="#process">The Spirit</a></li>
+        <li><a href="#range">The Range</a></li>
+        <li><a href="#awards">Recognition</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Cellar Master</a></li>
+        <li><a href="#">Trade Enquiries</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <span>© 2026 Brae Dunmore Distillers Ltd.</span>
+    <span>Drink responsibly.</span>
+  </div>
+</footer>
+
+<script>
+  /* Header background + color flip on scroll over cream sections */
+  const header = document.getElementById('site-header');
+  const sections = Array.from(document.querySelectorAll('[data-bg]'));
+
+  function updateHeader() {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 40);
+    const topProbe = y + 40;
+    let overCream = false;
+    for (const s of sections) {
+      const top = s.offsetTop;
+      const bottom = top + s.offsetHeight;
+      if (topProbe >= top && topProbe < bottom) {
+        overCream = s.dataset.bg === 'cream';
+        break;
+      }
+    }
+    header.classList.toggle('over-cream', overCream);
+  }
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  window.addEventListener('resize', updateHeader);
+  updateHeader();
+
+  /* Reveal on scroll */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+</script>
+
+<script>
+  /* Hero video fade-in once playable */
+  (() => {
+    const v = document.querySelector('.hero-video');
+    if (!v) return;
+    const show = () => v.classList.add('loaded');
+    if (v.readyState >= 3) show();
+    v.addEventListener('canplay', show, { once: true });
+    v.addEventListener('loadeddata', show, { once: true });
+  })();
+</script>
+
+<script style="display:none">
+  /* Legacy GSAP pour animation — kept inert (removed from runtime) */
+  window.addEventListener('load_disabled', () => {
+    if (typeof gsap === 'undefined') { console.warn('GSAP not loaded'); return; }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ns = 'http://www.w3.org/2000/svg';
+    const $  = (sel) => document.querySelector(sel);
+
+    /* Scene constants */
+    const PIVOT_SCENE_X = 883.5;
+    const PIVOT_SCENE_Y = 485;     // pivot in scene = translate(883.5, 235) + local pivot (0, 250)
+    const TARGET_X = 1100;
+    const TARGET_Y = 540;          // glass top rim
+    const FILL_Y_EMPTY = 720;      // glass interior bottom
+    const FILL_Y_FULL  = 562;      // ~70% full from bottom
+    const TILT_DEG = 62;
+
+    const bottle      = $('.bottle-tilt');
+    const streamPath  = $('#stream-path');
+    const shimmerPath = $('#stream-shimmer-path');
+    const liquidFill  = $('#liquid-fill');
+    const liquidTop   = $('#liquid-fill-top');
+    const meniscus    = $('#meniscus');
+    const surfaceGroup= document.querySelector('.surface-life');
+    const splashGroup = $('#splash-group');
+    const rippleGroup = $('#ripple-group');
+
+    const state = {
+      streamProgress: 0,
+      glassFillY:     FILL_Y_EMPTY,
+      surfaceY:       0,
+      streamFlow:     1,
+      bottleAngle:    0,
+      liquidOpacity:  1,
+    };
+
+    /* Mouth position based on current bottle tilt */
+    function mouthFromAngle(angleDeg) {
+      const θ = angleDeg * Math.PI / 180;
+      // Mouth in local = (0, 0); pivot in local = (0, 250); vector = (0, -250)
+      // Rotate by θ (CW in screen): (250 sinθ, -250 cosθ)
+      return {
+        x: PIVOT_SCENE_X + 250 * Math.sin(θ),
+        y: PIVOT_SCENE_Y - 250 * Math.cos(θ),
+      };
+    }
+
+    /* Build stream path silhouette — closed path with Bernoulli taper + lateral wobble */
+    function buildStreamPath(narrow) {
+      const progress = state.streamProgress;
+      if (progress <= 0.001) return '';
+
+      const mouth = mouthFromAngle(state.bottleAngle);
+      const sx = mouth.x, sy = mouth.y;
+      const tx = TARGET_X, ty = TARGET_Y;
+
+      // Current bottom of stream (extends gravitationally)
+      const cby = sy + (ty - sy) * progress;
+      const my  = (sy + cby) / 2;
+      const mx  = (sx + tx) / 2;
+
+      // Wobble: low-amp sine on midpoint X, period ~280ms
+      const t = performance.now();
+      const wobble = Math.sin(t * 0.022) * 1.4;
+      const wobbledMx = mx + wobble;
+
+      // Width tapers (Bernoulli effect) + flow-rate scaling
+      const flow = state.streamFlow;
+      const sw = (narrow ? 2.0 : 5.5) * flow;          // source
+      const mw = (narrow ? 1.2 : 2.8) * flow;          // mid (narrowest)
+      const iw = (narrow ? 1.8 : 4.2) * flow;          // impact (widens)
+
+      // Perpendicular to stream direction
+      const dx = tx - sx, dy = ty - sy;
+      const len = Math.hypot(dx, dy) || 1;
+      const nx = -dy / len, ny = dx / len;
+
+      const off = (px, py, w, sign) => [px + nx * sign * w/2, py + ny * sign * w/2];
+      const [lsx, lsy] = off(sx, sy, sw, -1);
+      const [rsx, rsy] = off(sx, sy, sw, +1);
+      const [lmx, lmy] = off(wobbledMx, my, mw, -1);
+      const [rmx, rmy] = off(wobbledMx, my, mw, +1);
+      const [lix, liy] = off(tx, cby, iw, -1);
+      const [rix, riy] = off(tx, cby, iw, +1);
+
+      return `M ${lsx} ${lsy} ` +
+             `Q ${lmx} ${lmy - 8}, ${lmx} ${lmy} ` +
+             `Q ${lmx} ${lmy + 8}, ${lix} ${liy} ` +
+             `L ${rix} ${riy} ` +
+             `Q ${rmx} ${rmy + 8}, ${rmx} ${rmy} ` +
+             `Q ${rmx} ${rmy - 8}, ${rsx} ${rsy} Z`;
+    }
+
+    /* Per-frame tick (GSAP ticker) */
+    function tick() {
+      // Stream path
+      streamPath.setAttribute('d', buildStreamPath(false));
+      streamPath.setAttribute('opacity', state.streamProgress > 0.05 ? 0.95 : 0);
+      // Shimmer (narrower, brighter, slightly transparent)
+      shimmerPath.setAttribute('d', buildStreamPath(true));
+      shimmerPath.setAttribute('opacity', state.streamProgress > 0.1 ? 0.7 : 0);
+
+      // Glass liquid: animate y; height stays large (clipped by glass interior)
+      liquidFill.setAttribute('y', state.glassFillY);
+      liquidFill.setAttribute('height', 240);
+      liquidFill.setAttribute('opacity', state.liquidOpacity);
+      liquidTop.setAttribute('y',  state.glassFillY);
+      liquidTop.setAttribute('height', 240);
+      liquidTop.setAttribute('opacity', 0.55 * state.liquidOpacity);
+
+      // Meniscus path: rises with fill, dipped under impact during pour
+      const mY = state.glassFillY + state.surfaceY;
+      const dipAmount = state.streamProgress > 0.6 ? -3 : 0;
+      meniscus.setAttribute('d',
+        `M 1024 ${mY+1} ` +
+        `Q 1062 ${mY-1}, 1100 ${mY + dipAmount} ` +
+        `T 1176 ${mY+1} ` +
+        `L 1176 ${mY + 5} ` +
+        `Q 1100 ${mY + 3}, 1024 ${mY + 5} Z`
+      );
+      meniscus.setAttribute('opacity', state.liquidOpacity * 0.6);
+    }
+
+    /* Crown splash at impact */
+    function spawnSplash(x, y) {
+      const numDroplets = 5 + Math.floor(Math.random() * 4); // 5–8
+      for (let i = 0; i < numDroplets; i++) {
+        const angle = -Math.PI/2 + (Math.random() - 0.5) * 1.6; // upward radiating, ±46°
+        const speed = 28 + Math.random() * 42;
+        const sizeR = 1.3 + Math.random() * 1.8;
+        const e = document.createElementNS(ns, 'ellipse');
+        e.setAttribute('cx', x);
+        e.setAttribute('cy', y);
+        e.setAttribute('rx', sizeR);
+        e.setAttribute('ry', sizeR * 1.25);
+        e.setAttribute('fill', '#C28442');
+        splashGroup.appendChild(e);
+
+        const dx = Math.cos(angle) * speed;
+        const dy = Math.sin(angle) * speed;
+        const dur = 0.30 + Math.random() * 0.12;
+
+        // Arc: travel out + gravity drop
+        gsap.to(e, {
+          attr: { cx: x + dx, cy: y + dy + 28 },
+          duration: dur,
+          ease: 'power2.in',
+        });
+        gsap.to(e, {
+          opacity: 0,
+          duration: dur * 1.05,
+          ease: 'power1.in',
+          onComplete: () => e.remove(),
+        });
+      }
+    }
+
+    /* Surface ripple */
+    function spawnRipple(x, y) {
+      const r = document.createElementNS(ns, 'ellipse');
+      r.setAttribute('cx', x);
+      r.setAttribute('cy', y);
+      r.setAttribute('rx', 4);
+      r.setAttribute('ry', 1);
+      r.setAttribute('fill', 'none');
+      r.setAttribute('stroke', '#F0CB7E');
+      r.setAttribute('stroke-width', '0.6');
+      r.setAttribute('opacity', '0.65');
+      rippleGroup.appendChild(r);
+      gsap.to(r, {
+        attr: { rx: 32, ry: 5 },
+        opacity: 0,
+        duration: 0.62,
+        ease: 'power3.out',
+        onComplete: () => r.remove(),
+      });
+    }
+
+    /* Continuous emitters while pouring */
+    let splashI = null, rippleI = null;
+    function startEmitters() {
+      // Immediate first ripple + splash
+      spawnRipple(TARGET_X, TARGET_Y);
+      spawnSplash(TARGET_X, TARGET_Y);
+      rippleI = setInterval(() => spawnRipple(TARGET_X, TARGET_Y), 320);
+      splashI = setInterval(() => spawnSplash(TARGET_X, TARGET_Y), 220);
+    }
+    function stopEmitters() {
+      clearInterval(splashI); clearInterval(rippleI);
+      splashI = rippleI = null;
+    }
+
+    /* Damped settle oscillation on pour end */
+    function settleSurface() {
+      const tl = gsap.timeline();
+      tl.to(state, { surfaceY: -3.5, duration: 0.26, ease: 'sine.inOut' })
+        .to(state, { surfaceY:  1.8, duration: 0.32, ease: 'sine.inOut' })
+        .to(state, { surfaceY: -0.9, duration: 0.40, ease: 'sine.inOut' })
+        .to(state, { surfaceY:  0.4, duration: 0.46, ease: 'sine.inOut' })
+        .to(state, { surfaceY:  0,   duration: 0.55, ease: 'sine.inOut' });
+      return tl;
+    }
+
+    /* Update bottle transform from state.bottleAngle */
+    function applyBottleTilt() {
+      bottle.setAttribute('transform', `rotate(${state.bottleAngle}, 0, 250)`);
+    }
+
+    function buildMaster() {
+      if (reduceMotion) {
+        state.glassFillY = FILL_Y_FULL;
+        state.bottleAngle = 0;
+        applyBottleTilt();
+        tick();
+        return;
+      }
+
+      const m = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+
+      /* 1. Tilt forward (slight overshoot via back.out) */
+      m.to(state, {
+        bottleAngle: TILT_DEG,
+        duration: 0.95,
+        ease: 'back.out(1.4)',
+        onUpdate: applyBottleTilt,
+      }, 0);
+
+      /* 2. Stream extends downward at gravity (power2.in) */
+      m.to(state, {
+        streamProgress: 1,
+        duration: 0.20,
+        ease: 'power2.in',
+        onStart: startEmitters,
+      }, 0.85);
+
+      /* 3. Glass fills (power2.out — decelerates as it gets full) */
+      m.to(state, {
+        glassFillY: FILL_Y_FULL,
+        duration: 4.6,
+        ease: 'power2.out',
+      }, 1.05);
+
+      /* 4. Stream weakens as glass fills (less flow rate at end) */
+      m.to(state, {
+        streamFlow: 0.82,
+        duration: 4.0,
+        ease: 'power1.in',
+      }, 1.6);
+
+      /* 5. Stream retracts upward (power3.in) */
+      m.to(state, {
+        streamProgress: 0,
+        duration: 0.22,
+        ease: 'power3.in',
+        onComplete: stopEmitters,
+      }, 5.7);
+
+      /* 6. Bottle returns to upright (slightly before stream retract finishes) */
+      m.to(state, {
+        bottleAngle: 0,
+        duration: 0.7,
+        ease: 'power3.out',
+        onUpdate: applyBottleTilt,
+      }, 5.55);
+
+      /* 7. Reset stream flow */
+      m.set(state, { streamFlow: 1 }, 6.0);
+
+      /* 8. Damped settle oscillation on the surface */
+      m.add(settleSurface(), 6.0);
+
+      /* 9. Hold full glass — surface life keeps moving via feTurbulence */
+      m.to({}, { duration: 2.6 }, '>');
+
+      /* 10. Fade liquid for clean reset */
+      m.to(state, {
+        liquidOpacity: 0,
+        duration: 0.7,
+        ease: 'power2.in',
+      }, '>');
+
+      /* 11. Reset for loop */
+      m.set(state, { glassFillY: FILL_Y_EMPTY, liquidOpacity: 1 });
+      m.to({}, { duration: 0.4 }, '>');
+
+      return m;
+    }
+
+    /* Hook tick to GSAP ticker (runs every frame) */
+    gsap.ticker.add(tick);
+    applyBottleTilt();
+    buildMaster();
+  });
+</script>
+
+</body>
+</html>

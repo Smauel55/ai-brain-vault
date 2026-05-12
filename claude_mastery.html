@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Mastery — The Founder's Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0f;
+    --card: #13141c;
+    --border: rgba(255,255,255,0.08);
+    --body: #d4d4e8;
+    --muted: #6b6d85;
+    --purple: #a78bfa;
+    --orange: #fb923c;
+    --green: #34d399;
+    --yellow: #fbbf24;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--body);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: 220px;
+    min-width: 220px;
+    height: 100vh;
+    background: var(--bg);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .logo-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--green));
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0.04em;
+  }
+
+  .sidebar-subtitle {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    padding-left: 16px;
+  }
+
+  .nav-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    padding-left: 8px;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-btn {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.12s, color 0.12s;
+  }
+
+  .nav-btn:hover {
+    background: rgba(255,255,255,0.03);
+    color: var(--body);
+  }
+
+  .nav-btn.active {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+  }
+
+  .nav-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .dot-purple { background: var(--purple); }
+  .dot-orange { background: var(--orange); }
+  .dot-green  { background: var(--green); }
+
+  .sidebar-footer {
+    font-size: 11px;
+    color: var(--muted);
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── MAIN ── */
+  .main {
+    margin-left: 220px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+
+  .topbar-section {
+    font-size: 14px;
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .topbar-badge {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--green);
+    border: 1px solid rgba(52,211,153,0.35);
+    background: transparent;
+    border-radius: 20px;
+    padding: 3px 10px;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── CONTENT AREA ── */
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.1) transparent;
+  }
+
+  .content::-webkit-scrollbar { width: 5px; }
+  .content::-webkit-scrollbar-track { background: transparent; }
+  .content::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+
+  .panel {
+    display: none;
+    padding: 40px;
+    max-width: 960px;
+  }
+
+  .panel.active { display: block; }
+
+  /* ── SHARED COMPONENTS ── */
+  .eyebrow {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .section-heading {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+
+  .section-sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    max-width: 620px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .cards-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .cards-row .card { flex: 1; }
+
+  .card-accent-top {
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+    margin: -20px -20px 16px -20px;
+  }
+
+  .card-emoji {
+    font-size: 22px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .card-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .card-title-purple { color: var(--purple); }
+  .card-title-orange { color: var(--orange); }
+  .card-title-green  { color: var(--green); }
+
+  .card-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .callout {
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .callout-green {
+    background: rgba(52,211,153,0.06);
+    border: 1px solid rgba(52,211,153,0.2);
+    color: var(--body);
+  }
+
+  .callout-purple {
+    background: rgba(167,139,250,0.06);
+    border: 1px solid rgba(167,139,250,0.2);
+    color: var(--body);
+  }
+
+  .callout-orange {
+    background: rgba(251,146,60,0.06);
+    border: 1px solid rgba(251,146,60,0.2);
+    color: var(--body);
+  }
+
+  .bold-green  { color: var(--green);  font-weight: 500; }
+  .bold-purple { color: var(--purple); font-weight: 500; }
+  .bold-orange { color: var(--orange); font-weight: 500; }
+  .bold-white  { color: #fff; font-weight: 500; }
+
+  /* ── PANEL 1: OVERVIEW ── */
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .pulse-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.75); }
+  }
+
+  .hero-eyebrow-text {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--green);
+  }
+
+  .hero-heading {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 1.0;
+    margin-bottom: 18px;
+  }
+
+  .hero-heading .line1 { color: #fff; display: block; }
+  .hero-heading .line2 { color: var(--purple); display: block; }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 580px;
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  .stats-box {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+
+  .stat-block {
+    flex: 1;
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+  .stat-block + .stat-block {
+    border-left: 1px solid var(--border);
+  }
+
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  /* ── PANEL 2: THE 3 TOOLS ── */
+  .tool-card-tag {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+
+  .bullet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .bullet-list li {
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    gap: 8px;
+    line-height: 1.4;
+  }
+
+  .bullet-list li::before {
+    content: '→';
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  /* ── PANEL 3: DECISION GUIDE ── */
+  .decision-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+  }
+
+  .decision-table th {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-align: left;
+    padding: 0 12px 12px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .decision-table td {
+    padding: 13px 12px;
+    font-size: 13px;
+    color: var(--body);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: middle;
+  }
+
+  .decision-table tbody tr:hover td {
+    background: rgba(255,255,255,0.015);
+  }
+
+  .decision-table td:last-child {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 3px 10px;
+    white-space: nowrap;
+  }
+
+  .badge-purple {
+    color: var(--purple);
+    background: rgba(167,139,250,0.1);
+    border: 1px solid rgba(167,139,250,0.25);
+  }
+
+  .badge-orange {
+    color: var(--orange);
+    background: rgba(251,146,60,0.1);
+    border: 1px solid rgba(251,146,60,0.25);
+  }
+
+  .badge-green {
+    color: var(--green);
+    background: rgba(52,211,153,0.1);
+    border: 1px solid rgba(52,211,153,0.25);
+  }
+
+  .badge-gray {
+    color: var(--muted);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* ── PANEL 4: 30-DAY PLAN ── */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 20px;
+    position: relative;
+  }
+
+  .timeline-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 32px;
+  }
+
+  .phase-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    color: #fff;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+
+  .phase-circle-purple { background: rgba(167,139,250,0.2); border: 1px solid var(--purple); color: var(--purple); }
+  .phase-circle-orange { background: rgba(251,146,60,0.2);  border: 1px solid var(--orange); color: var(--orange); }
+  .phase-circle-green  { background: rgba(52,211,153,0.2);  border: 1px solid var(--green);  color: var(--green); }
+
+  .timeline-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border);
+    margin-top: 4px;
+  }
+
+  .timeline-content {
+    flex: 1;
+    padding-bottom: 36px;
+  }
+
+  .phase-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .phase-days {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .phase-body {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+
+  .project-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .project-box strong {
+    color: var(--body);
+  }
+
+  /* ── PANEL 5: VIBE CODING ── */
+  .vibe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .vibe-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+
+  .vibe-num {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #3a3c50;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .vibe-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+
+  .vibe-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* ── PANEL 6: SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 14px;
+    margin-bottom: 0;
+  }
+
+  .skill-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+
+  .skill-emoji {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .skill-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .skill-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── PANEL 7: PROMPTING ── */
+  .framework-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .framework-card {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+
+  .framework-card.fp-purple::before { background: var(--purple); }
+  .framework-card.fp-orange::before { background: var(--orange); }
+  .framework-card.fp-green::before  { background: var(--green); }
+  .framework-card.fp-yellow::before { background: var(--yellow); }
+
+  .framework-part {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .framework-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .framework-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .prompt-examples-heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px;
+    margin-top: 28px;
+  }
+
+  .prompt-pair {
+    margin-bottom: 20px;
+  }
+
+  .prompt-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .prompt-label-bad  { color: #f87171; }
+  .prompt-label-good { color: var(--green); }
+
+  .prompt-block {
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .prompt-block-bad {
+    background: rgba(248,113,113,0.06);
+    border: 1px solid rgba(248,113,113,0.15);
+    color: #f0c0c0;
+  }
+
+  .prompt-block-good {
+    background: rgba(52,211,153,0.06);
+    border: 1px solid rgba(52,211,153,0.15);
+    color: #a7f3d0;
+  }
+
+  .docs-link {
+    color: var(--purple);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(167,139,250,0.3);
+    transition: border-color 0.12s;
+  }
+
+  .docs-link:hover {
+    border-color: var(--purple);
+  }
+
+  .docs-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 14px;
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div>
+      <div class="sidebar-logo">
+        <div class="logo-dot"></div>
+        <span class="logo-text">CLAUDE</span>
+      </div>
+      <div class="sidebar-subtitle">Founder's Playbook</div>
+
+      <div class="nav-label">GUIDE</div>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <button class="nav-btn active" data-panel="overview" onclick="showPanel('overview', 'Overview', this)">
+            <span>Overview</span>
+            <span class="nav-dot dot-purple"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-btn" data-panel="tools" onclick="showPanel('tools', 'The 3 Tools', this)">
+            <span>The 3 Tools</span>
+            <span class="nav-dot dot-purple"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-btn" data-panel="decision" onclick="showPanel('decision', 'Decision Guide', this)">
+            <span>Decision Guide</span>
+            <span class="nav-dot dot-orange"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-btn" data-panel="plan" onclick="showPanel('plan', '30-Day Plan', this)">
+            <span>30-Day Plan</span>
+            <span class="nav-dot dot-green"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-btn" data-panel="vibe" onclick="showPanel('vibe', 'Vibe Coding', this)">
+            <span>Vibe Coding</span>
+            <span class="nav-dot dot-green"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-btn" data-panel="skills" onclick="showPanel('skills', 'Skills & Features', this)">
+            <span>Skills & Features</span>
+            <span class="nav-dot dot-purple"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-btn" data-panel="prompting" onclick="showPanel('prompting', 'Prompting', this)">
+            <span>Prompting</span>
+            <span class="nav-dot dot-purple"></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-footer">Northwestern · Class of 2029</div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <span class="topbar-section" id="topbar-title">Overview</span>
+      <span class="topbar-badge">0 coding required</span>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- PANEL 1: OVERVIEW -->
+      <div class="panel active" id="panel-overview">
+
+        <div class="hero-eyebrow">
+          <div class="pulse-dot"></div>
+          <span class="hero-eyebrow-text">Your AI foundation starts here</span>
+        </div>
+
+        <div class="hero-heading">
+          <span class="line1">MASTER CLAUDE.</span>
+          <span class="line2">SHIP FASTER.</span>
+        </div>
+
+        <p class="hero-sub">The definitive guide for aspiring founders: when to use Chat, Cowork, and Code — and how to make them work for you starting today, without writing a single line of code.</p>
+
+        <div class="stats-box">
+          <div class="stat-block">
+            <div class="stat-num" style="color:var(--purple)">3</div>
+            <div class="stat-label">Tools</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num" style="color:var(--orange)">5</div>
+            <div class="stat-label">Phases</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num" style="color:var(--green)">30</div>
+            <div class="stat-label">Day Plan</div>
+          </div>
+        </div>
+
+        <div class="cards-row">
+          <div class="card" style="border-top:3px solid var(--purple);">
+            <span class="card-emoji">💬</span>
+            <div class="card-title card-title-purple">Claude Chat</div>
+            <div class="card-desc">Think, write, research, and plan with your AI co-founder.</div>
+          </div>
+          <div class="card" style="border-top:3px solid var(--orange);">
+            <span class="card-emoji">🖥️</span>
+            <div class="card-title card-title-orange">Cowork</div>
+            <div class="card-desc">Automate files and folders on your desktop — no code needed.</div>
+          </div>
+          <div class="card" style="border-top:3px solid var(--green);">
+            <span class="card-emoji">⌨️</span>
+            <div class="card-title card-title-green">Claude Code</div>
+            <div class="card-desc">Build real software from plain English descriptions.</div>
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <span class="bold-green">Which tool for this guide?</span> Right here — Claude Chat. This is a thinking, planning, and learning task. No files to manage, no software to build.
+        </div>
+
+      </div>
+
+      <!-- PANEL 2: THE 3 TOOLS -->
+      <div class="panel" id="panel-tools">
+        <div class="eyebrow">SECTION 01</div>
+        <div class="section-heading">THE 3 TOOLS</div>
+        <p class="section-sub">Each tool has a distinct job. Using the right one is the skill that separates power users from casual ones.</p>
+
+        <div class="cards-row">
+          <div class="card" style="border-top:3px solid var(--purple);">
+            <div class="card-title card-title-purple" style="margin-bottom:4px;">Claude Chat</div>
+            <div class="tool-card-tag">Your thinking partner — claude.ai or the mobile app</div>
+            <ul class="bullet-list">
+              <li>Brainstorming &amp; strategy</li>
+              <li>Research, summaries, analysis</li>
+              <li>Writing: emails, pitch decks, essays</li>
+              <li>Learning new concepts fast</li>
+              <li>Feedback &amp; decision-making</li>
+              <li>Planning, advice, quick Q&amp;A</li>
+            </ul>
+          </div>
+          <div class="card" style="border-top:3px solid var(--orange);">
+            <div class="card-title card-title-orange" style="margin-bottom:4px;">Cowork</div>
+            <div class="tool-card-tag">A desktop agent that operates your computer</div>
+            <ul class="bullet-list">
+              <li>Organize files &amp; folders</li>
+              <li>Batch rename or sort files</li>
+              <li>Automate repetitive file tasks</li>
+              <li>Reformat spreadsheets or docs</li>
+              <li>Manage project assets in bulk</li>
+              <li>Multi-step desktop workflows</li>
+            </ul>
+          </div>
+          <div class="card" style="border-top:3px solid var(--green);">
+            <div class="card-title card-title-green" style="margin-bottom:4px;">Claude Code</div>
+            <div class="tool-card-tag">A command-line tool that builds real software</div>
+            <ul class="bullet-list">
+              <li>Build apps, sites, and tools</li>
+              <li>Vibe code without knowing syntax</li>
+              <li>Automate complex multi-step logic</li>
+              <li>Modify and debug codebases</li>
+              <li>Create APIs, scripts, data pipelines</li>
+              <li>Anything requiring actual software</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-purple">
+          <span class="bold-purple">Mental model:</span> Chat is the co-founder you text at 2am. Cowork is the ops assistant who organizes your files while you sleep. Code is the engineering team who ships software from a plain English description.
+        </div>
+      </div>
+
+      <!-- PANEL 3: DECISION GUIDE -->
+      <div class="panel" id="panel-decision">
+        <div class="eyebrow">SECTION 02</div>
+        <div class="section-heading">DECISION GUIDE</div>
+        <p class="section-sub">Unsure which tool to reach for? Run your task through this table.</p>
+
+        <table class="decision-table">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Tool</th>
+              <th>Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Write an investor pitch deck outline</td>
+              <td><span class="badge badge-purple">Chat</span></td>
+              <td>Thinking, strategy, writing</td>
+            </tr>
+            <tr>
+              <td>Build a working landing page</td>
+              <td><span class="badge badge-green">Code</span></td>
+              <td>Real software needs to be created</td>
+            </tr>
+            <tr>
+              <td>Organize 500 images by date &amp; type</td>
+              <td><span class="badge badge-orange">Cowork</span></td>
+              <td>File management on your desktop</td>
+            </tr>
+            <tr>
+              <td>Research competitors in your market</td>
+              <td><span class="badge badge-purple">Chat</span></td>
+              <td>Research &amp; synthesis task</td>
+            </tr>
+            <tr>
+              <td>Build a Chrome extension</td>
+              <td><span class="badge badge-green">Code</span></td>
+              <td>A real software artifact needed</td>
+            </tr>
+            <tr>
+              <td>Rename &amp; sort exported CSVs</td>
+              <td><span class="badge badge-orange">Cowork</span></td>
+              <td>File manipulation, no custom logic</td>
+            </tr>
+            <tr>
+              <td>Draft a cold email sequence</td>
+              <td><span class="badge badge-purple">Chat</span></td>
+              <td>Writing &amp; communication task</td>
+            </tr>
+            <tr>
+              <td>Scrape a website to a spreadsheet</td>
+              <td><span class="badge badge-green">Code</span></td>
+              <td>Requires programmatic logic</td>
+            </tr>
+            <tr>
+              <td>Summarize 20 research PDFs</td>
+              <td><span class="badge badge-gray">Chat / Cowork</span></td>
+              <td>Chat to analyze; Cowork to batch files</td>
+            </tr>
+            <tr>
+              <td>Build an AI-powered dashboard</td>
+              <td><span class="badge badge-green">Code</span></td>
+              <td>Any real product = Code</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-orange">
+          <span class="bold-orange">The quick rule:</span> Thinking task? → Chat. File/folder task on my computer? → Cowork. Needs to run as actual software? → Code.
+        </div>
+      </div>
+
+      <!-- PANEL 4: 30-DAY PLAN -->
+      <div class="panel" id="panel-plan">
+        <div class="eyebrow">SECTION 03</div>
+        <div class="section-heading">30-DAY LEARNING PLAN</div>
+        <p class="section-sub">Structured for zero coding experience. Complete this before Northwestern and you'll be ahead of 99% of your classmates on day one.</p>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="phase-circle phase-circle-purple">1</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="phase-title">Master Chat</div>
+              <div class="phase-days">DAYS 1–5</div>
+              <div class="phase-body">Open claude.ai and just talk. Create a Project called 'Northwestern Prep' — give Claude context about your goals; it remembers across every conversation in that project. Turn on Web Search. Upload a PDF and ask Claude to analyze it. Ask it to create an Artifact (chart, calculator, table) directly in chat.</div>
+              <div class="project-box"><strong>Project:</strong> Write a full business plan for a startup idea. Ask Claude to poke holes in your plan, then help you rebuild it stronger.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="phase-circle phase-circle-orange">2</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="phase-title">Explore Cowork</div>
+              <div class="phase-days">DAYS 6–9</div>
+              <div class="phase-body">Download the Cowork desktop app. First task: organize your Downloads folder by file type. Try a batch rename. Then try a multi-step workflow: 'Find all PDFs from the last 30 days and move them to a folder called Recent Research.' Learn its limits — great for files, not for building software.</div>
+              <div class="project-box"><strong>Project:</strong> Use Cowork to create a clean file structure for all your college prep materials and project assets.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="phase-circle phase-circle-green">3</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="phase-title">Vibe Code Your First App</div>
+              <div class="phase-days">DAYS 10–18</div>
+              <div class="phase-body">Install Node.js from nodejs.org. Run: npm install -g @anthropic-ai/claude-code — then open Terminal in a project folder and type claude. Describe what you want built in plain English. Ask Claude Code to teach you git basics — it's like saving your game in Minecraft. You never touch the code directly.</div>
+              <div class="project-box"><strong>Project:</strong> Build a personal homepage showing your goals, a reading list, and links to your projects. Then ask Claude Code to add a dark mode toggle.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="phase-circle phase-circle-purple">4</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="phase-title">Combine the Tools</div>
+              <div class="phase-days">DAYS 19–25</div>
+              <div class="phase-body">Start a real startup project. Use Chat to brainstorm and plan → Cowork to organize assets → Code to build the product. Practice the handoff deliberately. This is the full founder workflow.</div>
+              <div class="project-box"><strong>Project:</strong> Pick a real problem you have. Chat to define it, Cowork to manage files, Code to build the MVP.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="phase-circle phase-circle-green">5</div>
+              <div class="timeline-line" style="visibility:hidden"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="phase-title">Go Deep</div>
+              <div class="phase-days">DAYS 26–30+</div>
+              <div class="phase-body">Learn MCP connectors (Claude Code can connect to GitHub, Slack, Notion). Explore the Claude API. Study prompt engineering at docs.claude.com. Start an 'AI experiments' journal — when something works brilliantly or fails, write it down.</div>
+              <div class="project-box"><strong>Project:</strong> Build something genuinely useful. This becomes your first AI portfolio piece for Northwestern clubs and interviews.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PANEL 5: VIBE CODING -->
+      <div class="panel" id="panel-vibe">
+        <div class="eyebrow">SECTION 04</div>
+        <div class="section-heading">VIBE CODING</div>
+        <p class="section-sub">Building real software by describing what you want in plain English. No syntax. No confusion.</p>
+
+        <div class="vibe-grid">
+          <div class="vibe-card">
+            <div class="vibe-num">01</div>
+            <div class="vibe-title">Set up</div>
+            <div class="vibe-desc">Install Node.js from nodejs.org. Run: npm install -g @anthropic-ai/claude-code. Create a folder, open Terminal inside it, type: claude</div>
+          </div>
+          <div class="vibe-card">
+            <div class="vibe-num">02</div>
+            <div class="vibe-title">Describe, don't code</div>
+            <div class="vibe-desc">Write what you want in plain English. 'Build me a webpage where I input a startup idea and get back a list of risks.' That's a complete prompt.</div>
+          </div>
+          <div class="vibe-card">
+            <div class="vibe-num">03</div>
+            <div class="vibe-title">Review intent</div>
+            <div class="vibe-desc">Claude Code tells you every step it's taking. You don't need to understand the code — understand the goal of each step. Ask 'what does this do?' freely.</div>
+          </div>
+          <div class="vibe-card">
+            <div class="vibe-num">04</div>
+            <div class="vibe-title">Iterate in English</div>
+            <div class="vibe-desc">'Make the button bigger.' 'Add a dark mode.' 'Show a loading spinner on submit.' Every change is a conversation, not a code edit.</div>
+          </div>
+          <div class="vibe-card">
+            <div class="vibe-num">05</div>
+            <div class="vibe-title">When things break</div>
+            <div class="vibe-desc">'When I click the button, nothing happens.' That's enough to diagnose and fix. Describe the symptom, not the technical cause.</div>
+          </div>
+          <div class="vibe-card">
+            <div class="vibe-num">06</div>
+            <div class="vibe-title">Ship it</div>
+            <div class="vibe-desc">Say 'deploy this to Vercel' or 'push to GitHub.' Claude Code walks you through every step including account setup. Your app goes live.</div>
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <span class="bold-green">The mindset shift:</span> You are the product manager and designer. Claude Code is your engineer. Describe the experience you want — not how to build it. The better your description, the better the output.
+        </div>
+      </div>
+
+      <!-- PANEL 6: SKILLS & FEATURES -->
+      <div class="panel" id="panel-skills">
+        <div class="eyebrow">SECTION 05</div>
+        <div class="section-heading">SKILLS & FEATURES</div>
+        <p class="section-sub">Built-in capabilities most users never find. These separate casual users from power users.</p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <span class="skill-emoji">🔍</span>
+            <div class="skill-title">Web search</div>
+            <div class="skill-desc">Turn on in Settings. Claude searches the web in real time and cites sources. Use for market research, competitor analysis, and current events.</div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-emoji">📁</span>
+            <div class="skill-title">Projects &amp; memory</div>
+            <div class="skill-desc">Create a Project and give Claude context about your goals. It remembers your background across all conversations within that project.</div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-emoji">🎨</span>
+            <div class="skill-title">Artifacts</div>
+            <div class="skill-desc">Ask Claude to build interactive things in chat: charts, calculators, games, data tables. No Claude Code needed for quick demos.</div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-emoji">📎</span>
+            <div class="skill-title">File upload</div>
+            <div class="skill-desc">Upload PDFs, images, spreadsheets, docs. Claude reads, analyzes, summarizes, and extracts data from anything you give it.</div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-emoji">🔗</span>
+            <div class="skill-title">MCP connectors</div>
+            <div class="skill-desc">Connect Claude to Google Drive, Slack, GitHub, Notion, and more. Claude becomes an agent in your actual workflow.</div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-emoji">📊</span>
+            <div class="skill-title">Deep research</div>
+            <div class="skill-desc">Multi-step web research on demand. Ask it to research an entire competitive landscape and it goes wide, deep, then synthesizes findings.</div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-emoji">✍️</span>
+            <div class="skill-title">Style settings</div>
+            <div class="skill-desc">In Settings, set your preferred tone, formality, and response length. Your preferences applied globally across every conversation.</div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-emoji">👁️</span>
+            <div class="skill-title">Vision</div>
+            <div class="skill-desc">Screenshot anything and paste into Chat. Claude analyzes UI designs, reads text in images, and critiques visual content in detail.</div>
+          </div>
+          <div class="skill-card">
+            <span class="skill-emoji">🌐</span>
+            <div class="skill-title">Claude in Chrome</div>
+            <div class="skill-desc">A browsing agent that navigates the web and takes actions in your browser. Useful for research workflows and repetitive web tasks.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 7: PROMPTING -->
+      <div class="panel" id="panel-prompting">
+        <div class="eyebrow">SECTION 06</div>
+        <div class="section-heading">THE ART OF PROMPTING</div>
+        <p class="section-sub">The single highest-leverage AI skill. Weak prompts get generic output. Precise prompts get output that feels like magic.</p>
+
+        <div class="framework-row">
+          <div class="framework-card fp-purple">
+            <div class="framework-part">PART 1</div>
+            <div class="framework-title">Role / Context</div>
+            <div class="framework-desc">Tell Claude who it is. "You are a YC partner who has reviewed 10,000 pitches."</div>
+          </div>
+          <div class="framework-card fp-orange">
+            <div class="framework-part">PART 2</div>
+            <div class="framework-title">Specific Task</div>
+            <div class="framework-desc">Not "help with my pitch" — instead "identify the three weakest assumptions in my value proposition."</div>
+          </div>
+          <div class="framework-card fp-green">
+            <div class="framework-part">PART 3</div>
+            <div class="framework-title">Output Format</div>
+            <div class="framework-desc">Specify how you want the answer. "A numbered list." "Under 200 words." "A pros/cons table."</div>
+          </div>
+          <div class="framework-card fp-yellow">
+            <div class="framework-part">PART 4</div>
+            <div class="framework-title">Constraints</div>
+            <div class="framework-desc">"No technical jargon." "Assume I'm a beginner." "Focus only on B2B." Tell it what to avoid.</div>
+          </div>
+        </div>
+
+        <div class="prompt-examples-heading">Weak vs. Strong Examples</div>
+
+        <div class="prompt-pair">
+          <div class="prompt-label prompt-label-bad">❌ Weak</div>
+          <div class="prompt-block prompt-block-bad">Help me with my startup idea.</div>
+          <div style="height:10px"></div>
+          <div class="prompt-label prompt-label-good">✅ Strong</div>
+          <div class="prompt-block prompt-block-good">You're a YC partner who has reviewed 10,000 pitches. My idea is [X]. Give me 3 bullets on why startups like mine typically fail, and 3 on what would make an investor immediately excited. Be direct, don't sugarcoat.</div>
+        </div>
+
+        <div class="prompt-pair">
+          <div class="prompt-label prompt-label-bad">❌ Weak</div>
+          <div class="prompt-block prompt-block-bad">Write me a cold email.</div>
+          <div style="height:10px"></div>
+          <div class="prompt-label prompt-label-good">✅ Strong</div>
+          <div class="prompt-block prompt-block-good">Write a cold outreach email to the CTO of a Series A startup. I want to offer to build a free automation tool for their team to show my skills. Keep it under 100 words, human and non-salesy. Leave a placeholder for one specific company observation I'll fill in. Write three versions with different opening hooks.</div>
+        </div>
+
+        <div class="callout callout-purple" style="margin-top:4px;">
+          <span class="bold-purple">Best tip:</span> Treat Claude like the smartest person you've ever worked with, not a search engine. Give it context, constraints, and tell it what good looks like. When stuck, ask: "What information would help you give me a better answer?" That question alone will save you hours.
+        </div>
+
+        <p class="docs-note">Full prompt engineering guide: <a class="docs-link" href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank">docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview</a></p>
+
+      </div>
+
+    </div><!-- end .content -->
+  </div><!-- end .main -->
+</div><!-- end .layout -->
+
+<script>
+  function showPanel(id, title, btn) {
+    document.querySelectorAll('.panel').forEach(function(p) {
+      p.classList.remove('active');
+    });
+    document.querySelectorAll('.nav-btn').forEach(function(b) {
+      b.classList.remove('active');
+    });
+    document.getElementById('panel-' + id).classList.add('active');
+    btn.classList.add('active');
+    document.getElementById('topbar-title').textContent = title;
+    document.querySelector('.content').scrollTop = 0;
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+.obsidian/workspace*
+.obsidian/cache
+.obsidian/graph.json
+.obsidian/appearance.json
+.claude/
+*-conflicted.md
+*-conflicted */
+*.tmp
+.DS_Store
+Thumbs.db

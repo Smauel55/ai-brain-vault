@@ -1,0 +1,11 @@
+# Memory Index
+
+- [Samuel Levy — founder profile](user_samuel_levy.md) — Northwestern-bound solo founder, Caught Up AI, cannot code, targets The Garage Sept 2026
+- [Caught Up AI — project state](project_caught_up_ai.md) — Full spec, decisions log, timeline. Current task: 2-week learning plan (build slice in Lovable). One-pager v0.4 paused.
+- [Samuel's voice rules — written copy](feedback_samuel_voice.md) — Hard rules (no em-dashes), signatures, register guide for all customer-facing copy
+- [Communication style — conversational](feedback_communication_style.md) — How Claude should communicate in chat: no praise openers, be realistic, guide not instruct, ask before acting, no em-dashes
+- [Personal context brief](reference_personal_brief.md) — Paste-ready universal brief for new Claude projects; identity, working style, voice rules; not project-specific
+- [Google Drive MCP setup](project_google_drive_mcp.md) — Complete as of May 8, 2026; tools live and working
+- [Keep personal brief separate from project brief](feedback_brief_separation.md) — Personal brief and Caught Up AI spec are separate documents; never merge unless asked
+- [Number to remember](reference_number_255.md) — Samuel asked to remember the number 66 (prior: 86, 27, 255)
+- [Vault and memory infrastructure](reference_vault_infrastructure.md) — All hooks, scripts, paths, and how the AI Brain vault and memory system are wired together; check before suggesting new infrastructure
