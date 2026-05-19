@@ -10,4 +10,6 @@
 - [Number to remember](reference_number_255.md) — Samuel asked to remember the number 66 (prior: 86, 27, 255)
 - [Vault and memory infrastructure](reference_vault_infrastructure.md) — All hooks, scripts, paths, and how the AI Brain vault and memory system are wired together; check before suggesting new infrastructure
 - [No-code operator path](feedback_no_code_path.md) — Samuel will not learn to code; direct AI, verify by behavior, never inspect code line-by-line
+- [Lesson pacing — small segments](feedback_lesson_pacing.md) — Deliver multi-part lessons one segment at a time, pause for questions; no full-day dumps
 - [AI Brain MCP — PAT rotation reminder](reference_pat_rotation.md) — GitHub PAT for the MCP Worker expires ~2027-05-11; rotate before then
+- [Surface routing — flag when Cowork or Chat would fit better](feedback_surface_routing.md) — When Code is asked to do something better suited for Cowork (long-running agent jobs) or chat (mobile, ideation), mention it in one line; don't refuse, just flag

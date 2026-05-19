@@ -1,6 +1,6 @@
 ---
 created: 2026-05-07
-updated: 2026-05-10
+updated: 2026-05-17
 tags: [index, projects]
 ---
 
@@ -11,7 +11,7 @@ tags: [index, projects]
 ## In flight
 
 - 🟢 [[Second Brain Setup]] — Build out this vault and the Claude Code workflow around it. *Status: in progress (started 2026-05-07).*
-- 🟢 [[Caught Up AI]] — AP Lang teacher daily-brief startup. *Status: spec locked v1.0; one-pager v0.4 with 5 outstanding edits; customer discovery starts mid-May.*
+- 🟢 [[Caught Up AI]] — AP Lang teacher daily-brief startup. *Status: spec v1.1 (D-002 script revision, D-003 scope cut); one-pager v0.4 paused; teacher meeting brief v0.2 with real sample "The Quiet Classroom" (2026-05-19); customer discovery ~May 25. Product work otherwise paused until ~May 25 (Claude mastery plan).*
 
 ## Paused / on hold
 
