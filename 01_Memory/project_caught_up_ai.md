@@ -55,3 +55,17 @@ originSessionId: 0989c639-71c6-4076-bd4f-12a75fc43788
 - Project Synopsis - May 2026.md
 
 **Why:** Samuel wants The Garage evidence stack by September 2026. The Caught Up AI vehicle satisfies three criteria: concrete measurable pain, workflow-based moat, solo-buildable MVP phase.
+
+**Update 2026-06-04 - Product design session; CONTENT ENGINE is the open blocker:**
+Began designing the product (end-to-end journey map; spine agreed; paused before deep-designing the Landing stage). The session went deep on where the daily article comes from, which gates everything.
+- D-005: Link / point-to-source model REJECTED. The teacher version marks up rhetorical devices INSIDE the text, so the article must be reproduced AND modified in the email; cannot be done on a remote link.
+- D-006 (finding, verified by deep research): To reproduce-in-full, annotate inline, and sell, only PUBLIC DOMAIN / CC0 / CC-BY licenses qualify. CC-BY-SA's ShareAlike makes the paid teacher version freely redistributable, so treat as off. ALL NonCommercial (NC) out (paid product); ALL NoDerivatives (ND) out (annotation = derivative). The Conversation = CC-BY-ND (out); ProPublica = CC-BY-NC-ND (out).
+- D-007 (finding, verified by spot-check): The free CC-BY/PD pool of CURRENT, argument-driven, classroom-safe nonfiction is too thin for a daily cadence. Global Voices (CC BY 3.0) is the lone genuine current source (~1-2 usable/wk, activism-skewed). The 7-day vs 30-day window is irrelevant; the constraint is licensing structure, not recency.
+- D-008: Canon-as-backbone REJECTED (reaffirms D-004). No teacher prep pain, no moat, kills the subscription logic, and the modern canon is still copyrighted. Canon stays a supplement only.
+- AI-quality scope (honest): AI can write rhetorically rich, hard-to-detect, useful ANALYSIS TEXT, but only with a human editor per piece; it cannot fully replicate authentic pathos / lived experience or supply a real rhetorical situation. So AI-at-quality = AI + human editor (labor), plus trust/disclosure tradeoffs. Fully automated = spottable/hollow.
+- OPEN DECISION (resume here): the content engine. Cannot keep real + not-commissioned + current + daily + cheap + annotatable (empty set); must relax one. Honest finalists: LICENSE real op-eds (spend money; annotation/derivative rights are hard to get) vs AI-WITH-EDITING (spend labor; authenticity/trust tradeoffs). Other relaxations: drop to a 2-3x/week free product, or commission writers.
+- Reframe to keep: sourcing difficulty IS the moat; the apparatus is the real IP, worth most on fresh content nobody else has covered.
+- NEXT STEP proposed: draft a blind teacher test (unlabeled AI brief vs real brief) for discovery to settle whether real authorship is load-bearing. Alternative: resume the journey map at Landing.
+- Does NOT block the fall manual MVP; this is the weakest link, tested by the MVP/discovery, not a stopper.
+- Also covered (reusable): build-and-cost path sketch (Phase 0 manual ~$0-20/mo; Phase 1 semi-auto Base44 + Resend + Stripe ~$50-150/mo; Phase 2 automated ~$150-400/mo run + ~$3-25k one-time build); ~95% margin realistic; content cost flat in user count; biggest underestimated build risk = email deliverability.
+- Full detail: vault 20_Conversations/2026-06-04 - Product design and content sourcing.md; license filter: 30_Knowledge/Caught Up AI - content licensing filter.md; project state: 10_Projects/Caught Up AI/Content-Sourcing.md.
