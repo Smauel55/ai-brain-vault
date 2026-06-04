@@ -12,7 +12,7 @@ tags: [index, projects]
 
 - 🟢 [[Second Brain Setup]] — Build out this vault and the Claude Code workflow around it. *Status: in progress (started 2026-05-07).*
 - 🟢 [[Caught Up AI]] — AP Lang teacher daily-brief startup. *Status: spec v1.1 (D-002 script revision, D-003 scope cut); one-pager v0.4 paused; teacher meeting brief v0.2 with real sample "The Quiet Classroom" (2026-05-19); customer discovery ~May 25. Product work otherwise paused until ~May 25 (Claude mastery plan).*
-  - Website thread (2026-06-02): Base44 site live at teach-caught-up.base44.app; domain caughtup-ai.com via Cloudflare. BLOCKED on a stuck Cloudflare registration ("invalid nameservers," NXDOMAIN), awaiting Cloudflare Support. Full status and next steps in [[Website-Setup]].
+  - Website thread (2026-06-03): UNBLOCKED. Dropped Cloudflare/caughtup-ai.com, switched to **caughtupai.com** (no hyphen) on **Porkbun**, connected to Base44. Site live; Google Search Console Domain property verified; sitemap submitted; title/meta set. SEO paused at the content stage. Full status and next steps in [[Website-Setup]].
 
 ## Paused / on hold
 
