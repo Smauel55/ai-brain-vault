@@ -121,6 +121,7 @@ Banned diction (AI-favored vocabulary):
 
 Banned structure:
 - Every sentence the same length (kills the rhythm in section 4).
+- Monotone syntax, even when the lengths vary. Length alone is not enough. If every sentence shares the same grammatical shape, the piece still reads as a machine wrote it. The usual tell is starting clause after clause on the subject (noun, verb, object, then repeat), or leaning on one connector to bolt clauses together. Blend the syntax on purpose: mix simple, compound, complex, and compound-complex sentences; open some sentences on a dependent clause, an adverb, or a prepositional phrase rather than on the subject; let one sentence run periodic (main clause held to the end) and the next run loose (main clause first); drop a deliberate fragment once or twice where it earns its place. The page should look uneven. That unevenness is most of what reads as a human, and its absence is most of what reads as a bot.
 - Relentless symmetry and over-parallelism. Real voice is a little ragged.
 - Stacked participial openers ("Having considered... Recognizing that... Understanding the...").
 - The fake-profound one-line paragraph stating an abstraction. (A short sentence is good only if it carries concrete weight, see section 4.)
@@ -134,7 +135,7 @@ Banned structure:
 3. Open sets stance fast, no throat-clearing.
 4. Exactly one structural engine in the middle.
 5. Close lands; final sentence is short.
-6. Long-sentence-against-short-sentence rhythm present.
+6. Sentence variety present in two dimensions: length (long against short) and structure (mixed sentence types and varied openings, not every sentence on the subject).
 7. At least three markable devices, each doing real work.
 8. Pathos carried by one concrete particular, not abstraction.
 9. Zero items from the section 7 blocklist.
@@ -143,7 +144,7 @@ Banned structure:
 
 ## 9. Generation brief (paste-ready, if AI drafts the first pass)
 
-Write a 350-450 word op-ed arguing [THESIS]. One clear position you obviously believe; no both-sides hedging. Open by naming the assumption you are about to overturn or stating a flat fact you will detonate, no throat-clearing. In the middle, run a single structural engine the whole way: [antithesis / accumulation under a repeated frame / concession-then-rebuttal / escalating examples]. Carry the emotional weight on one concrete, specific detail, a real scene or number, not on abstraction or feeling-words. Vary sentence length hard: at least one long accumulating sentence, several short punchy ones, and end on a short line that lands. Use real rhetorical devices (antithesis, one earned repetition, concrete imagery, a concession, maybe one pointed rhetorical question) but only where they do work.
+Write a 350-450 word op-ed arguing [THESIS]. One clear position you obviously believe; no both-sides hedging. Open by naming the assumption you are about to overturn or stating a flat fact you will detonate, no throat-clearing. In the middle, run a single structural engine the whole way: [antithesis / accumulation under a repeated frame / concession-then-rebuttal / escalating examples]. Carry the emotional weight on one concrete, specific detail, a real scene or number, not on abstraction or feeling-words. Vary sentence length hard: at least one long accumulating sentence, several short punchy ones, and end on a short line that lands. Vary sentence structure as well as length: mix simple, compound, and complex sentences, and do not start every sentence on the subject; open some on a dependent clause or a prepositional phrase, and use a deliberate fragment once if it earns its place. Use real rhetorical devices (antithesis, one earned repetition, concrete imagery, a concession, maybe one pointed rhetorical question) but only where they do work.
 
 Hard bans: no em-dashes. No "it's not just X, it's Y". No "in a world where", "here's the thing", "at the end of the day", "more than ever", "from X to Y". None of these words: delve, tapestry, testament, underscore, pivotal, crucial, vital, robust, nuanced, navigate, landscape, realm, foster, leverage, resonate, seamless, myriad. No tidy three-point summary conclusion. No relentless symmetry. Sound like one opinionated person wrote it in one sitting, not like a model balancing every clause.
 
