@@ -69,3 +69,11 @@ Began designing the product (end-to-end journey map; spine agreed; paused before
 - Does NOT block the fall manual MVP; this is the weakest link, tested by the MVP/discovery, not a stopper.
 - Also covered (reusable): build-and-cost path sketch (Phase 0 manual ~$0-20/mo; Phase 1 semi-auto Base44 + Resend + Stripe ~$50-150/mo; Phase 2 automated ~$150-400/mo run + ~$3-25k one-time build); ~95% margin realistic; content cost flat in user count; biggest underestimated build risk = email deliverability.
 - Full detail: vault 20_Conversations/2026-06-04 - Product design and content sourcing.md; license filter: 30_Knowledge/Caught Up AI - content licensing filter.md; project state: 10_Projects/Caught Up AI/Content-Sourcing.md.
+
+**Update 2026-06-04 (cont.) - Blind test, AI side built:**
+- Built the source-article Writing Manual (10_Projects/Caught Up AI/Writing-Manual.md), reverse-engineered from the verified released AP Lang exam Q2 corpus (2005-2024): open/build/close spine, single structural engine, long-vs-short AND syntactic-variety rhythm rules, earned-device palette, AI-tell blocklist (no em-dashes, banned diction/constructions), markability test, paste-ready generation brief. This is the editorial standard / apparatus IP for the content engine.
+- Decision: for the blind teacher test, Claude writes the AI side only; Samuel supplies currently-published real op-eds to pair, strips labels, randomizes order. Topic lane = safe + pointed (evergreen, non-partisan).
+- Wrote 3 AI essays to the manual (passion-as-career-advice myth; optimization/hustle culture; true-crime ethics), each in its own Google Doc on the Northwestern account (samuellevy2030@u.northwestern.edu). Backup: 10_Projects/Caught Up AI/Blind-Test-Essays.md.
+- Next: Samuel reviews/owns the essays, selects+pairs the real comparators, builds the scoring instrument (guess AI vs real + which they would rather teach), runs in discovery to settle license-vs-AI-with-editing.
+- Corpus correction to remember: Chavez nonviolence passage = 2015 Q2 rhetorical analysis, not a 2014 argument prompt.
+- Detail: 20_Conversations/2026-06-04 - AP Lang writing manual and blind-test essays.md.

@@ -33,4 +33,6 @@ Finalists: licensing vs AI-with-editing.
 
 ## Next step
 
-Blind teacher test in discovery: unlabeled AI brief vs real brief; does real authorship matter? Likely settles the engine. Detail in [[2026-06-04 - Product design and content sourcing]].
+Blind teacher test in discovery: unlabeled AI brief vs real brief; does real authorship matter? Likely settles the engine.
+
+Status 2026-06-04: AI side built. Wrote the source-article [[Writing-Manual]] (reverse-engineered from the released AP Lang exam corpus) and 3 AI essays to it ([[Blind-Test-Essays]]), each in its own Google Doc on the Northwestern account. Decision: Claude writes the AI side only; Samuel supplies currently-published real op-eds to pair, strips labels, randomizes order. Remaining: Samuel reviews and owns the essays, selects and pairs the real comparators, builds the scoring instrument (teacher guesses AI vs real, and which they would rather teach), then runs it in discovery. Detail in [[2026-06-04 - Product design and content sourcing]] and [[2026-06-04 - AP Lang writing manual and blind-test essays]].
