@@ -170,3 +170,17 @@ Produce ALL of the following, written so a no-code operator and a drafting model
 Deliver rigor over brevity. This apparatus is the core IP of the product; build it to be used daily and defended line by line.
 ======================================
 ```
+
+## 2026-06-05 — Register palette derived (7 registers)
+
+Partition by ETHOS strategy + emotional temperature, reconciled against genre/period/syntax. Spans 1780–2016. Load-bearing historical anchors carried.
+
+1. **Prophetic Indictment** (moral-authority, hot, accusatory) — Banneker 1791, Kelley 1905, JFK 1962, Chavez 1978, Gandhi 1930.
+2. **Reasoned Restraint** (measured civic argument, cool, visible reasoning) — Lippmann 1939, Hazlitt 1827, GAO/DOJ/NPS agency prose, McWilliams/Somin op-eds.
+3. **Intimate Counsel** (confessional, warm, first-person experience as evidence) — Abigail Adams 1780, Sotomayor 2001/2022, Saujani 2018/2024, Sanders 1993.
+4. **Plain Witness** (factual testimony, flat affect, particulars carry weight) — Kelley documentary stretches, Gogoi/Molla business press, Shaw encyclopedia.
+5. **Lyric Awe** (contemplative wonder, mid-warm, accretive precision) — Barry/Rising Tide 2005, Barry/Great Influenza 2008, Louv 2005, Maya Lin 2000.
+6. **Ironic Detachment** (deadpan satire, cool-charged, sees through pretense) — The Onion 2005, Wilson 2009, Trubek 2016, Appelbaum 2020.
+7. **Ceremonial Grace** (commemorative elevation, warm-formal, consecrates) — Obama 2013, Thatcher 2004, Albright 1997, Lady Bird Johnson 1964, Dove 2016.
+
+Distinctness check: indictment vs. ceremony both hot+formal but opposite vectors (accuse vs. consecrate); reasoned restraint vs. plain witness both cool but one foregrounds the arguer's reasoning/concession, the other suppresses the arguer behind verifiable particulars. Primary defense against cross-piece AI sameness = rotate registers across a batch.
