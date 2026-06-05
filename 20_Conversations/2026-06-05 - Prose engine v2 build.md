@@ -43,3 +43,11 @@ project: "[[Caught Up AI]]"
 
 - Whether to do a cleaner self-administered proxy (placeholder-neutralized pieces, topic-matched modern comparison passages) before spending human-judge time, or go straight to the human panel.
 - Accuracy pipeline (fact sourcing/verification per [[Accuracy-Guardrail]]) still needs wiring before any piece publishes.
+
+## Update: Proxy Run 2 (cleaner proxy)
+
+- Ran the cleaner self-proxy: 14 placeholder-free pieces from the real [[Generation-Briefs]] (2 per register), each paired with a modern register-matched genuine human passage, 3 blind AI judges per pair. Full results: [[Proxy-Pilot-Run-2]].
+- Result: 36 of 36 (100%) the AI judge still identified the machine piece, same as Run 1 even with the placeholder and era confounds removed. The leak is in the writing, not test hygiene. Band check: only 2 of 14 in band (opener variety the top miss).
+- The diagnosis is the value. Consensus tells: manufactured symmetry, tidy closing buttons, frictionlessness, too-tidy invented specifics, over-engineered keyword loops, reader-directing signposting. The human textures the pieces lack: disfluency, asides, idiosyncrasy, load-bearing detail, tonal unevenness.
+- Strategic read: the spec's emphasis on legible architecture is manufacturing the symmetry; an AI judge is likely saturated and partly format-cued, so 100% here is not the human verdict. Do not optimize against the AI judge (P5). Build a friction/anti-symmetry layer, fix opener variety, then go to the human panel.
+- New action item: [ ] Samuel/Claude — add a friction/anti-symmetry layer to [[Register-Specs]] and [[Anti-Tell-List]] from the six consensus tells, fix opener variety and per-register band misses, regenerate, then run the human panel.
