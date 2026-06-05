@@ -44,7 +44,17 @@ REFRAMED FINALISTS:
 - AI-with-editing is now the cost-saver variant of commissioning (AI drafts, paid human rewrites/fact-checks to quality). The 2026-06-04 formula problem shows even rules-guided AI drifts to a detectable house style, so the AI path really means paying for substantial human rewriting, which converges toward commissioning.
 - Licensing survives only as direct-from-independent-writers; commissioning dominates it (topic/neutrality/format control licensing lacks).
 
-Blind test still useful but its question shifts: not "AI vs real to decide if we can go cheap-AI" but "does authentic authorship move teachers at all?" If yes, commission real; if teachers truly can't tell and don't care, lean on AI-draft + light human edit. Either way, the real-content path (commissioning) is now known to be financially viable.
+Blind test still useful but its question shifts: not "AI vs real to decide if we can go cheap-AI" but "does authentic authorship move teachers at all?" If yes, commission real; if teachers truly can't tell and don't care, lean on AI-draft + light human edit. Either way, the real-content path (commissioning) is now known to be financially viable. [Superseded: commissioning later ruled out by Samuel, see next section.]
+
+## 2026-06-04 (later) - commissioning out; "leave the article untouched" idea (candidate D-009)
+
+- Samuel ruled OUT commissioning writers (not a possibility; reason not specified).
+- New idea: do NOT mark up the article inline. Reproduce it verbatim and untouched, and put the rhetorical-device locations in a SEPARATE apparatus in the teacher brief (quote the phrase, give its location, label it, add the analysis).
+- Why it matters: the structural blocker was MODIFYING the article (inline markup = derivative work; derivative rights are bespoke and effectively unbuyable, per D-006). Leaving the article untouched means the product needs only REPRODUCTION rights, which are normal and purchasable. Licensing moves from "structurally impossible" to "a question of price and terms."
+- Unlocks (preliminary read): (1) mainstream publishers via standard reprint/syndication licenses, because the "used exactly as written" restriction is now satisfied, not violated, so AP/Reuters/Tribune/per-article reprints become a COST question, not a rights wall; (2) CC-BY-ND sources reopen (ND permits verbatim commercial reproduction; clean article + separate apparatus = a collection, not a derivative), with the prize being The Conversation (current, expert, classroom-safe argument pieces) IF its contract terms allow a paid product; (3) minor: CC-BY-SA usable without copyleft attaching to the apparatus.
+- Does NOT fix: NonCommercial sources stay out (paid product); reproduction still costs money for copyrighted work (truly free stays PD/CC0/CC-BY plus maybe ND); small pedagogy/UX tradeoff (device map beside a clean article instead of inline highlights).
+- To verify before relying: (a) the "separate apparatus is not a derivative" line against each source's actual terms and ideally a lawyer, and keep the article and apparatus physically separate, not interleaved; (b) the ND contract overlays (The Conversation, Aeon, Knowable add no-sell/no-paywall/agreement terms; The Conversation is the swing factor for the free pool); (c) reprint pricing at a daily/near-daily cadence.
+- If The Conversation's terms allow a paid product, that may be the engine on its own: free, current, real, classroom-safe, legally clean.
 
 ## Next step
 

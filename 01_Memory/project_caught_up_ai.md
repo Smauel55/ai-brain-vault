@@ -84,3 +84,10 @@ Began designing the product (end-to-end journey map; spine agreed; paused before
 - Reframed finalists: commission originals (2-3x/wk) + free/PD/canon supplement on off-days is the front-runner; AI-with-editing is now the cost-saver variant of commissioning (today's formula critique weakens pure-AI); licensing survives only as direct-from-writers, which commissioning dominates. Blind-test question shifts to "does authentic authorship move teachers at all?"
 - Feedback logged: rule-driven AI prose reads formulaic across pieces (feedback_ai_writing_formulaic.md).
 - OPEN next step: design the commissioning pipeline (writer sourcing, work-for-hire contract, per-piece brief from the Writing Manual, budget) vs run the blind test first. Detail: 10_Projects/Caught Up AI/Content-Sourcing.md (2026-06-04 cost research section).
+
+**Update 2026-06-04 (cont. 3) - commissioning OUT; "leave the article untouched" idea (candidate D-009):**
+- Samuel ruled out commissioning writers.
+- New idea: reproduce the article verbatim (untouched) and put rhetorical-device locations in a SEPARATE apparatus in the teacher brief, instead of inline markup. So the product needs only REPRODUCTION rights, not DERIVATIVE rights, dissolving the core blocker (D-006). Licensing moves from structurally impossible to a price/terms question.
+- Preliminary read: unlocks mainstream reprint/syndication licenses (verbatim "as written" now fits, so AP/Reuters/Tribune/reprints are a cost question not a rights wall) and reopens CC-BY-ND sources (verbatim commercial repro allowed; article + separate apparatus = collection, not derivative); prize = The Conversation if its terms allow paid use. Does NOT fix NonCommercial (still out) or make reproduction free. Small pedagogy tradeoff (device map beside clean article).
+- To verify: the derivative-vs-collection line (actual terms + a lawyer; keep article/apparatus physically separate); ND contract overlays (The Conversation is the swing factor); reprint pricing at cadence. Samuel asked whether to run this verification.
+- Detail: 10_Projects/Caught Up AI/Content-Sourcing.md (2026-06-04 "later" section).
