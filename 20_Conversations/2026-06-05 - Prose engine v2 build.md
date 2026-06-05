@@ -5,7 +5,7 @@ tags: [conversation, caught-up-ai, writing, prose-engine]
 project: "[[Caught Up AI]]"
 ---
 
-# 2026-06-05 — Prose engine v2 build
+# 2026-06-05 - Prose engine v2 build
 
 ## Context
 
@@ -31,9 +31,9 @@ project: "[[Caught Up AI]]"
 
 ## Action items
 
-- [ ] Samuel — read [[Style-Palette]], [[Register-Specs]], [[Generation-Briefs]], [[Annotated-Exemplars]].
-- [ ] Samuel — calibrate the 6 out-of-band exemplars back into band; feed fixes into [[Register-Specs]] and [[Anti-Tell-List]] (the iteration loop).
-- [ ] Samuel — to run the real blind test: produce placeholder-free pieces with verified facts, build topic-matched pairs, recruit AP-Lang teacher judges (ties to the existing teacher list / [[Outreach-Tracker-2026-05]]).
+- [ ] Samuel - read [[Style-Palette]], [[Register-Specs]], [[Generation-Briefs]], [[Annotated-Exemplars]].
+- [ ] Samuel - calibrate the 6 out-of-band exemplars back into band; feed fixes into [[Register-Specs]] and [[Anti-Tell-List]] (the iteration loop).
+- [ ] Samuel - to run the real blind test: produce placeholder-free pieces with verified facts, build topic-matched pairs, recruit AP-Lang teacher judges (ties to the existing teacher list / [[Outreach-Tracker-2026-05]]).
 
 ## New knowledge to file
 
@@ -50,4 +50,10 @@ project: "[[Caught Up AI]]"
 - Result: 36 of 36 (100%) the AI judge still identified the machine piece, same as Run 1 even with the placeholder and era confounds removed. The leak is in the writing, not test hygiene. Band check: only 2 of 14 in band (opener variety the top miss).
 - The diagnosis is the value. Consensus tells: manufactured symmetry, tidy closing buttons, frictionlessness, too-tidy invented specifics, over-engineered keyword loops, reader-directing signposting. The human textures the pieces lack: disfluency, asides, idiosyncrasy, load-bearing detail, tonal unevenness.
 - Strategic read: the spec's emphasis on legible architecture is manufacturing the symmetry; an AI judge is likely saturated and partly format-cued, so 100% here is not the human verdict. Do not optimize against the AI judge (P5). Build a friction/anti-symmetry layer, fix opener variety, then go to the human panel.
-- New action item: [ ] Samuel/Claude — add a friction/anti-symmetry layer to [[Register-Specs]] and [[Anti-Tell-List]] from the six consensus tells, fix opener variety and per-register band misses, regenerate, then run the human panel.
+- New action item: [ ] Samuel/Claude - add a friction/anti-symmetry layer to [[Register-Specs]] and [[Anti-Tell-List]] from the six consensus tells, fix opener variety and per-register band misses, regenerate, then run the human panel.
+
+## Update: v2.1 friction layer plus sample essays
+
+- Integrated the six Run-2 consensus tells into [[Anti-Tell-List]] as a read-first Friction / Anti-Symmetry Layer (v2.1): cap manufactured symmetry, kill the tidy-button reflex, require deliberate friction (one inert detail, one uneven turn), make invented specifics less tidy, drop ring-composition loops and reader-directing signposting. Added friction checks (steps 9 to 11) to the mechanical pass.
+- Wrote 3 sample essays from the updated manual in three registers (The Ledger, The Reckoning, The Witness Stand) into a Google Doc for Samuel to review. Facts illustrative, not fact-checked. Doc title: "Caught Up AI - Friction-Layer Sample Essays (2026-06-05)".
+- Caveat carried forward: the friction layer is directional (it came from an AI-judge proxy). The decisive test is still the human AP Lang panel.

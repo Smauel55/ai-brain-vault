@@ -13,12 +13,35 @@ How to use this file:
 - The lexical, syntactic, structural, and discourse sections below are DON'T lists. Each banned item names the legitimate craft move it counterfeits and how to do the real thing. That craft-vs-counterfeit pairing is the whole point: you are not banning a device, you are banning the fake version of it.
 - The table at the end is the fast reference: device, real move, counterfeit, keep-it-real test.
 - Register variety across a batch is the other half of the defense. This file kills the per-piece tell; cross-piece sameness is governed by [[Cross-Piece-Sameness-Rubric]] and the register palette in [[Register-Specs]].
+- v2.1 (2026-06-05) adds the Friction / Anti-Symmetry Layer below, derived from [[Proxy-Pilot-Run-2]]. Read it first. It is the highest-order fix in this file, because clean execution of everything else here is itself the current tell.
 
 Two permanent rules that override any corpus evidence, any model update, and any argument that "the source did it":
 - NO em-dashes anywhere. Not the long dash, not an en-dash standing in for one. Use commas, colons, periods, or parentheses. This is Samuel's voice standard and the single loudest journalist-facing AI flag.
 - NO emojis anywhere.
 
 One framing to carry through everything below: the old AI vocabulary (delve, tapestry, robust) is burned and newer models already suppress it. Avoiding it is table stakes, not safety. The active signature is now the habit of TELLING the reader that something matters instead of showing it, and the habit of dodging the plain verb "is." Hunt those two first.
+
+## The Friction Layer (v2.1, read first, highest-order)
+
+Added 2026-06-05 after [[Proxy-Pilot-Run-2]]. A sharp automated judge identified the system piece in 36 of 36 blind pairs even after the surface giveaways (placeholder tags, period topics) were removed. The cues it named were not banned words. They were the marks of prose that is too clean: perfectly balanced, neatly resolved, frictionless, tidily specific. The lesson is uncomfortable and load-bearing. Executing legible rhetorical architecture cleanly is itself the current tell. Human professional prose carries friction, mess, and waste that the rest of this file, and the v1 [[Writing-Manual]] drive toward "markable" structure, trains out. This layer puts some of it back.
+
+Two caveats. This came from an AI judge, which is directional, not the human verdict (the real test is the panel in [[Blind-Test-Protocol]]). And friction must not harden into its own formula: if every piece has exactly one awkward turn and one flat ending, that is a new template. Apply these unevenly, and never at the cost of accuracy or clarity. One clear engine per piece still holds; this layer roughens the surface, it does not abandon structure.
+
+The six tells, each with the craft it counterfeits and the fix:
+
+1. Manufactured symmetry. DON'T balance everything: stacked tricolons, anaphora on a fixed beat, "not X but Y" as a reflex, both-sides sentences weighted equal ("supporters say it helps, opponents say it hurts"). The balance reads engineered. It counterfeits genuine antithesis or parallelism deployed at ONE emphatic moment. FIX: let the structure be lopsided. Most paragraphs should not be balanced. Cap "not X but Y" at zero to one per piece and only on a real opposition. Vary list length; an asymmetric list (two items, or four of different shapes) beats a clean three. You have drifted if a reader could fold the piece into matched halves.
+
+2. The tidy closing button. DON'T resolve every paragraph and the whole piece on a neat summarizing line, especially the negation-correction kicker ("X is not breaking. It is slowing down."). The reflex is the tell even when one instance is good. It counterfeits the earned button or charge that a register like The Reckoning legitimately lands. FIX: let most paragraphs end on a plain fact or trail off. Allow the piece to end flat, mid-thought, or anticlimactic. Reserve the hard button for the one register and the one moment that earns it. You have drifted if every paragraph ends on a punchline.
+
+3. Frictionlessness. DON'T make every sentence load-bearing and every detail serve the thesis. Uniform polish, no awkwardness, no waste, no surprise, was the single most-named tell. It counterfeits economy. FIX: include at least one detail that does not advance the argument, a specific that is just true. Allow one genuinely awkward or surprising turn the reader does not expect. Let an argument lean to one side rather than balance. Do not sand off every rough edge in revision; leave one. You have drifted if nothing in the piece is inert, odd, or off-center.
+
+4. Too-tidy specifics. DON'T use round, symmetrical, conveniently exact numbers and generic, placeholder-sounding proper nouns ("$4,200", "forty-one staff", "Meridian Freight", "Daniel Vore"). The detail reads invented to score the point. It counterfeits reported particulars. FIX: in production these are REAL verified facts, which are naturally messy and odd (1.9 percent, not 2; $4,180, not $4,200; a company with a dull real name). Until the facts are in, vary precision and avoid suspiciously clean numbers and names. Let a specific or two be slightly inconvenient to the argument. You have drifted if every number is round and every name sounds assigned.
+
+5. Over-engineered loops. DON'T set up an abstract keyword early and pay it off at the close, or call back to the opening image to ring the piece shut (redefine "proof" or "citizen" or "home", then land on it). Nothing left unresolved reads as machine. It counterfeits thematic coherence. FIX: do not make the ending mirror the opening. Resist the redefine-a-word-and-cash-it-in move; if a keyword recurs, let it recur unevenly, not as setup-and-payoff. Leave one thread hanging. You have drifted if the last line answers the first line.
+
+6. Reader-directing signposting. DON'T tell the reader how to read ("Read those two facts together", "Consider what the work actually was") or label the moves ("The forecast is the first instrument. Real time is the second discipline."). It counterfeits clear structure. FIX: cut the meta-instructions and the enumeration. Put the two facts next to each other and trust the reader to read them together. Let structure be felt, not announced. You have drifted if you are narrating your own organization.
+
+The positive target (the textures that marked the genuine human passages as human, to allow back in): a parenthetical aside, a sentence that runs on a little, an idiosyncratic word choice, a detail that is just true rather than useful, a tone that is not uniformly even, an argument that takes a side or trails off. These are not errors to fix. Their absence is the error.
 
 ## 1. Lexical (banned words and phrases)
 
@@ -125,8 +148,11 @@ Fast, cheap, do it every time, before any judgment call about quality:
 6. Check burstiness: at least one sentence under 8 words and at least one over 30; no three same-length sentences in a row.
 7. Check every factual claim names a real checkable source. Unattributed claim: cut it. This is both the AI-tell gate and the accuracy gate.
 8. Check the close: it lands on a turn, button, or concrete stake, not a recap or a forward-looking homily.
+9. Symmetry check (friction layer): count "not X but Y" (cap one), count three-item lists (most lists should not be threes), and confirm the paragraphs are not all balanced and not all the same length.
+10. Button check (friction layer): confirm not every paragraph ends on a kicker, that at least one paragraph ends flat or mid-thought, and that the negation-correction closer appears at most once.
+11. Friction check (friction layer): confirm at least one inert or off-thesis detail and one un-tidy specific are present, the ending does not mirror the opening, and there is no reader-directing signpost ("read these together", labeled "first / second / third").
 
-A piece that fails any of steps 1, 4, or 7 does not get a quality read. It goes back first.
+A piece that fails any of steps 1, 4, or 7 does not get a quality read. It goes back first. Steps 9 through 11 are the friction gate: a piece that passes everything else but is perfectly smooth still reads as machine, so treat a clean sweep of 9 through 11 as a warning, not a pass.
 
 ## 7. Related
 
