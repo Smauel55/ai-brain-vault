@@ -11,6 +11,8 @@ The spec for writing (or editing AI-drafted) the daily nonfiction article. Rever
 
 This is the apparatus. It is the IP. Treat it as the editorial standard every piece must pass.
 
+> **Superseded by v2 (2026-06-05).** This v1 manual is now the foundation layer, not the whole spec. Its single open/build/close spine and one rhythm rule have been replaced by a seven-register palette and a rotating template library, and the stylometric and detectability layers it lacked have been added. For production, use the v2 apparatus: [[Style-Palette]] (the seven registers), [[Structural-Templates]] (the rotating skeletons and rotation grid), [[Register-Specs]] (per-register craft plus measurable bands and drift cues), [[Anti-Tell-List]] (the extended blocklist and craft-vs-counterfeit table), [[Cross-Piece-Sameness-Rubric]] (batch-level defense), [[Annotated-Exemplars]] (worked models), [[Generation-Briefs]] (paste-ready per-register prompts and pre-flight), [[Accuracy-Guardrail]] (facts-not-expression protocol), [[Blind-Test-Protocol]] (the human indistinguishability test), and [[Prose-Engine-Research-Report]] (the corpus manifest, methodology, and verification log that tie it together). The hard rules below (no em-dashes, no emojis, the blocklist) still hold and are inherited by every register.
+
 ## 1. What the exam corpus actually is
 
 The rhetorical-analysis question (Q2) gives students a self-contained nonfiction passage with a clear speaker, audience, occasion, and purpose, and asks them to analyze how the writer achieves that purpose. Verified examples from released exams, the study set to internalize:

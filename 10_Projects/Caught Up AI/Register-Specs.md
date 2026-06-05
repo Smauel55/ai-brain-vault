@@ -1,0 +1,385 @@
+---
+created: 2026-06-05
+updated: 2026-06-05
+tags: [project, caught-up-ai, writing, register-specs, anti-tell]
+project: "[[Caught Up AI]]"
+---
+
+# Register Specs (D3)
+
+Per-register spec sheets for Caught Up AI's full AI-generation pipeline. Each sheet pairs the QUALITATIVE craft (how the voice behaves) with QUANTITATIVE Layer-B bands (the measurable targets), and every band carries a plain "you have drifted if..." cue a no-code operator can check by eye.
+
+These are the seven registers in the palette. Pick one per piece. The point of having seven is variety across a batch: rotating registers is the primary defense against cross-piece sameness (the second of our two failure modes). The first failure mode, the per-piece AI tell, is fought inside each sheet by the bands and the drift cues.
+
+Read this alongside [[Style-Palette]] (which register fits which kind of news), [[Structural-Templates]] (the skeletons referenced here by name), [[Anti-Tell-List]] (the per-piece tells these bands exist to beat), and [[Generation-Briefs]] (how to assemble a brief from a register sheet). Cross-references to the broader apparatus live in [[Writing-Manual]] and [[Content-Sourcing]]; the product itself is [[Caught Up AI]].
+
+## How to read a band
+
+- Every number is a BAND, not a target to hit on the nose. Land inside the range and you are in register.
+- "You have drifted if..." is the cue to act on. A no-code operator does not count tokens; they read the cue and check whether the piece feels like the failure described.
+- Hard rules that override every band: NO em-dashes (the long dash), NO en-dash substitute, NO emojis. Where a band mentions punctuation, the dash is always replaced by a comma (appositive), a colon (an introduced list or a turn), or a semicolon (two balanced clauses).
+- Accuracy of current events is non-negotiable and sits OUTSIDE these sheets. A register controls how a piece sounds, never whether a fact is true. Never bend a fact to fit a register's shape.
+
+## Confidence labels
+
+The verification pass recomputed four of seven registers from public-domain full texts and quarantined one anchor. Each sheet is tagged:
+
+- VERIFIED: bands recomputed from public-domain full text and reproduced within rounding. Trust the numbers.
+- MEASURED, NOT RE-VERIFIED: bands computed once from full or excerpt text but resting on copyrighted sources the verification pass could not re-fetch. Treat as high-confidence, not independently confirmed.
+- PROVISIONAL ANCHOR: the register's primary numeric anchor could not be independently re-verified (source blocked). The synthesized target bands still stand because they were deliberately moderated down from the unverified raw figures, but the raw anchor numbers are flagged and should not be cited as measured.
+
+---
+
+# 1. The Ledger
+
+Confidence: PROVISIONAL ANCHOR. The primary anchor (GAO-11-282) was unreachable for re-measurement, so its raw figures (mean 24.1 words, FK 16.6, MATTR 0.69, etc.) are provisional and must not be cited as independently measured. The synthesized target bands below stand: they were moderated downward from those raw figures toward a consumer length, and the public-facing pole (Obama) was independently confirmed.
+
+## Craft
+
+- Stance: disinterested adjudication. The voice is a clearinghouse for the documented record. It states what is the case, names who established it, quantifies where it can, weighs competing claims, and lets the evidence compel a conclusion. It does take a position, but the position arrives as the residue the facts leave behind, never as the writer's conviction.
+- Audience: a busy, literate, slightly skeptical non-specialist who grants authority only if the writing sounds sourced. They can follow a figure, a date, and a named body without hand-holding. They distrust visible salesmanship. This is the core Caught Up AI subscriber: someone who wants the situation explained by something that sounds like it read the filings, not the hot takes.
+- Occasion: something happened, is in dispute, or is widely misunderstood, and a reasonable person needs the state of play. Informational, not ceremonial or personal. The trigger is a knowledge gap.
+- Ethos strategy: credibility by restraint. Authority is borrowed from the cited record, not claimed for the self. The moves are attribution as ethos (name bodies, figures, dates so the reader can in principle check), visible method (say how you know), controlled concession (grant the other side's strongest point before qualifying it), and flat plainness as a moral posture. First person is near-absent: institutional "we" at most, never a confessing "I".
+- Appeal braiding: logos is the spine and runs in nearly every sentence. Ethos rides on top of the sourcing (the citation IS the credibility). Pathos is deliberately thin and lives in the concrete fact, never in adjectives. Emotion is outsourced to data: a number or a specific human-scale detail carries the feeling, and the writer declines to comment on it. If you reach for an emotive modifier, you have left the register.
+- Device palette: low density by design; the plainness is the ethos. Load-bearing: structural parallelism (aligning attributed facts, "we reviewed, we met, we toured"), appositive definition set off by commas, the colon to introduce an enumeration. Thin: a single quiet metaphor at most (usually a term of art like "last mile"), mild understatement. Largely absent: rhetorical questions, aphorism (one epigram allowed at the op-ed pole, none at the agency pole), irony, sarcasm, literary allusion, exclamation, apostrophe.
+- Opening repertoire (see [[Structural-Templates]]): name the situation or finding flatly and impersonally with a key actor and often a figure or date already present; or open with the contested question stated neutrally; or lead with a quantified fact that sets scale; or establish the stakes institutionally.
+- Closing repertoire: state the implication the evidence supports, level and unembellished; or leave the matter in its current status; or land a quiet qualified verdict phrased as conclusion, not exhortation. No call to action, no uplift, no image. If the last line feels like a mic-drop, rewrite it as a status report.
+- Structural architectures: order-by-logic (situation, cause, scope, consequence, status); finding-first lead; concession-then-qualification ("yes, but the data show"); accumulation under a steady frame; define-then-apply.
+- Do: attribute every claim, quantify, concede fairly, repeat the precise noun rather than chasing elegant variation. Avoid: emotive modifiers, rhetorical questions, flourish closes, whiplash rhythm, ornament stacking, strawmanning the other side.
+
+## Bands
+
+- Sentence-length mean: 18 to 24 words; anchor near 19 to 21 for a consumer piece. Drifted if: the prose reads as dense as a government report (sentences routinely past 25 words) or as thin as a news brief (routinely under 14).
+- Sentence-length min/max: shortest 5 to 9 words, longest 34 to 44. Drifted if: there is no short declarative reset under 10 words anywhere, or any sentence runs past about 45 words.
+- Variance / burstiness: medium, lower than the hotter registers. Most sentences cluster 16 to 28 words with occasional dips to a short verdict line. Drifted if: the rhythm swings dramatically long-then-two-words for drama (that is a columnist register, not this one).
+- Sentence-type mix: roughly simple 35 to 45%, complex 30 to 40%, compound 8 to 15%, compound-complex 12 to 20%. Drifted if: compound-complex sentences pile up and clarity drops; the register subordinates one idea per sentence, not three.
+- Opener variety: about 50 to 60% subject-first, 25 to 30% prepositional ("In 2008", "According to officials"), 12 to 20% adverbial or dependent ("Similarly", "Although", "Because"). Drifted if: nearly every sentence opens with its grammatical subject, or coordinator openers ("And", "But") recur.
+- Clause depth: shallow to moderate, usually one level of subordination per sentence. Drifted if: subordination stacks three deep; deep nesting reads as evasive, not rigorous.
+- Periodic vs loose: 75 to 85% loose, 15 to 25% periodic. The workhorse sentence states its main clause early and trails qualifiers and attributions after it. Drifted if: most sentences withhold the point to the end (that is a speech register).
+- Parallelism rate: moderate and structural, a parallel or isocolic series roughly every 4 to 6 sentences, usually a catalogue of attributed facts. Drifted if: parallelism becomes anaphoric refrain (that belongs to the speech registers).
+- Fragment rate: near zero, 0 to at most 1 intentional fragment per 400 words. Drifted if: any sentence is grammatically incomplete; short means a full short clause, not a fragment.
+- Punctuation profile: commas heavy (6 to 8 per 100 words) doing appositive and serial-list work; colons sparing (0 to 1 per 100 words); semicolons rare (0 to 1 per 100 words, only to balance two close clauses); parentheses occasional for a citation-like aside. Em-dashes banned: use a comma for an appositive or a colon for an introduced list. No exclamation points, essentially no question marks. Drifted if: a dash appears, or punctuation is used decoratively rather than to carry attribution and lists.
+- Lexical diversity: moderate and deliberately repetitive on key terms (MATTR-100 roughly 0.66 to 0.72). Reuse the precise noun. Drifted if: the piece reaches for synonyms to avoid repeating "the bill" or "the agency"; precision outranks variety here.
+- Concreteness: balanced, leaning concrete-via-data. Every abstract claim is anchored to a countable or attributable particular within a sentence or two. Drifted if: abstractions (viability, reform, the public interest) float without a figure, date, or named body cashing them out.
+- Latinate vs Anglo-Saxon: Latinate-leaning, mid-formal. Average word length about 5.0 to 5.4; polysyllabic share roughly 18 to 22%. Institutional and exact, never inflated. Drifted if: the diction is purpled up; the formality should live in precision, not ornament.
+- Device density: low, roughly 1 to 2 identifiable devices per 100 words, most of them structural parallelism or appositive definition. Drifted if: density climbs past about 3 per 100 words (you have slid toward the op-ed or speech pole).
+- Readability: target grade 11 to 13. Sourced and precise, but readable in one pass. Drifted if: it reads like a college research paper (grade 16+) or a tabloid brief (grade 8).
+
+## Drift cues (whole-piece)
+
+- Drifted if a sentence is about the writer instead of the record ("I think", "I was struck by"). Institutional "we report" is fine; confessing "I" is not.
+- Drifted if a claim arrives with no named source, figure, or date. Soften it to a question or cut it.
+- Drifted if you are using adjectives or adverbs to make the reader feel ("shockingly", "tragically"). Delete the emotive word; let the number carry it.
+- Drifted if a rhetorical question, exclamation, or direct address appears. This register adjudicates a record; it has no live audience to perform for.
+- Drifted if the close lands on a flourish, image, uplift, or call to action. End on the assessment, in the same flat tone as the body.
+- Drifted if the rhythm swings long-then-very-short for drama, or if devices stack past 2 to 3 per 100 words.
+- Drifted if the opposing view is ignored or mocked rather than conceded in good faith and then qualified with evidence.
+- Drifted if any em-dash appears. Replace with a comma (appositive) or colon (introduced list).
+- Drifted toward another register if the piece renders a scene at length (that is The Long Look) or turns inward to wrestle with the writer's own mind (that is The Long Think).
+
+---
+
+# 2. The Open Letter
+
+Confidence: MEASURED, NOT RE-VERIFIED at the high-deference pole. The blended bands draw on three measured letters (Banneker, Gandhi, Adams). The verification pass re-confirmed Banneker's word count, type mix, TTR, and semicolon density, but its exact mean sentence length is splitter-sensitive (the embedded Declaration quotation). The blended target bands are the operative numbers, not Banneker's extreme periodic figures.
+
+## Craft
+
+- Stance: a single named voice petitioning a more-powerful named party, deferential on the surface and morally relentless underneath, with the public positioned to overhear. The writer never claims equal standing. The leverage comes from holding the addressee to principles the addressee has already professed.
+- Audience: two at once. The ostensible reader is the powerful addressee, named and spoken to in the second person. The real audience is the overhearing public and posterity, invited to judge whether the addressee will honor or betray the principle quoted back at them. Refusal becomes a public self-contradiction.
+- Occasion: a specific, datable provocation that gives the writer standing to break decorum (a gift enclosed, a reply owed, a notice served). The letter moves from the small pretext to the large indictment or appeal, then back to a concrete request or deadline.
+- Ethos strategy: built by restraint and credential-by-implication, never by self-assertion. Lower your own status explicitly, then make the addressee's own principles carry the weight. Deference is performed in the syntax (stacked subordinate clauses that defer the main verb) so the care of the thinking is visible. Moral authority is on loan from the addressee's stated values; the writer's job is to be the one who remembers them.
+- Appeal braiding: logos and ethos braid inside the long sentence (a concessive clause grants the addressee's virtue while the main clause draws the inference that binds him, so reasoning feels like courtesy). Pathos is held in reserve and lands on concrete nouns and scenes, never on adjectives. Argue in the abstract, then let one concrete image carry the feeling.
+- Device palette: anaphora and the tricolon are load-bearing (accumulate moral weight under a repeated frame). Allusion is heavy and authoritative (scripture, shared canon, the addressee's own prior words). Paradox and concession are the disarming tools. Figurative language is sparing and elemental, not ornamental. Rhetorical questions are largely absent in the deferential mode and appear only where indictment is licensed. Irony and sarcasm are absent by design: the power is earnestness, and irony reads as insolence. Wit and jokes are absent.
+- Opening repertoire (see [[Structural-Templates]]): a direct vocative that flatters station and stakes a claim; an apology for the liberty of writing that doubles as a statement of lower standing and higher purpose; a warm salutation when kinship exists; anchoring to the precipitating event in the first sentence or two.
+- Closing repertoire: renewed deference framing the request as a throw on the addressee's better nature; a formal self-lowering subscription; an affectionate benediction in the kinship variant; a concrete deadline or condition that hands the next move to the addressee. Never a bald demand or threat.
+- Structural architectures: apology-for-writing then escalation from small pretext to large moral claim; quote-the-addressee-back; concession-then-bind; anaphoric accumulation; periodic build to a button resolved by a short flat sentence; close on a concrete request framed as the addressee's choice.
+- Do: name a real addressee, quote their values back at them, ration pathos to one or two concrete scenes, build one genuinely long periodic sentence per piece. Avoid: attacking the addressee directly, sarcasm, uniform sentence length, baldly demanding, opening every sentence with the subject.
+
+## Bands
+
+- Sentence-length mean: 24 to 34 words for a short piece. Blend the poles: the high-deference periodic pole (Banneker, mean about 87 words) is pastiche at this length; the clipped pole (Gandhi, about 22) is the floor; aim for the Adams-like middle (about 30) with at least one genuinely long periodic sentence. Drifted if: the mean falls toward ordinary journalistic length (under 20) and the deference disappears, or every sentence balloons past 40 and it reads as costume drama.
+- Sentence-length min/max: shortest 4 to 8 words (a flat landing sentence), longest 55 to 90 for the one or two showpiece periodic sentences. Expect roughly 1 to 2 sentences above 50 words and 2 to 4 below 12. Drifted if: there is no long periodic showpiece and no short flat landing.
+- Variance / burstiness: high. The signature is a long suspended sentence answered by a short flat one. Drifted if: three sentences read aloud take roughly the same breath.
+- Sentence-type mix: roughly complex 25 to 40%, compound-complex 20 to 35%, compound 10 to 25%, simple 10 to 25%. Complex plus compound-complex should be a clear majority; the deference lives in subordination. Drifted if: simple declaratives dominate (that flattens the deference into ordinary prose).
+- Opener variety: 45 to 60% subject-first, 15 to 30% dependent or participial ("Having", "Although", "When I reflected"), 5 to 15% prepositional, 5 to 15% coordinating ("And now", "But"), plus a vocative address opener 1 to 3 times. Drifted if: every sentence opens subject-first and no opener performs deference.
+- Clause depth: moderate to deep. Showpiece sentences carry 2 to 4 subordinate or coordinate clauses with the main verb deferred at least once; everyday sentences stay at depth 1 to 2. Drifted if: depth is uniform across the piece.
+- Periodic vs loose: 25 to 40% periodic, 60 to 75% loose. At least one fully periodic sentence per piece is the fingerprint. Drifted if: no sentence withholds its main point to the end.
+- Parallelism rate: high, one sustained parallel or anaphoric series every 120 to 180 words (roughly 2 to 4 per piece), with at least one tricolon. Drifted if: there are no tricolons or anaphoric series; weight here is built by accumulation, not volume.
+- Fragment rate: low, 0 to 1 true fragment per 400 words. The clipped effect comes from short complete SENTENCES, not fragments. Drifted if: fragments are doing the punch work.
+- Punctuation profile: comma-dominant, with semicolons doing the heavy structural lifting of the suspensions (0.3 to 0.6 per sentence). Use the colon (not a dash) for the turn into the main claim or to introduce a quotation. Parentheses rare. Em-dashes banned: replace every dash-marked turn with a colon, semicolon, or comma. Question marks 0 to 2 per piece, only in licensed indictment. Drifted if: a dash appears, or the long sentences have no semicolons to articulate their members.
+- Lexical diversity: moderate, depressed by deliberate anaphora and recurring moral vocabulary (TTR roughly 0.40 to 0.55 on a short piece). Do not chase high TTR; the repeated frames are a feature. Drifted if: the repeated moral keyword has been swapped out for synonyms.
+- Concreteness: abstract-leaning overall (rights, liberty, justice, duty), with pathos concentrated in 1 to 3 concrete image-anchors. Roughly 60 to 70% abstract diction. Drifted if: feeling is smeared across the piece in emotional adjectives rather than rationed to a few concrete nouns.
+- Latinate vs Anglo-Saxon: Latinate-leaning in the moral and legal abstractions, Anglo-Saxon plainness reserved for the emotional beats and the short landing sentences. Drifted if: the diction is uniformly plain and conversational, or uniformly Latinate and pompous.
+- Device density: moderate, 2 to 4 devices per 100 words, dominated by parallelism, anaphora, and concession, with allusion and understatement occasional and metaphor sparing. Drifted if: density exceeds about 4 per 100 words (the deference tips into oratory).
+- Readability: high formal band, grade 12 to 16 for the blended register. Avoid the Banneker extreme (grade 37, an artifact of 87-word sentences). Drifted if: it is unreadable on one pass, or it reads as casual as a blog post.
+
+## Drift cues (whole-piece)
+
+- Drifted if you attack the addressee directly instead of holding them to their own stated principles. The move is "you said you believe X; this contradicts X", never "you are wrong".
+- Drifted if the tone turns sarcastic, snarky, or ironic. This register runs on earnest deference.
+- Drifted if every sentence is the same length, or if there is no single long periodic sentence withholding its point to the end.
+- Drifted if you never quote or paraphrase the addressee's own values back at them; that borrowed-authority move is the whole engine.
+- Drifted if pathos is smeared across the piece in emotional adjectives instead of landing on one or two concrete scenes.
+- Drifted if there is no named, more-powerful addressee and no sense of a public overhearing.
+- Drifted if you used an em-dash. Use a colon for the turn, or a semicolon to separate the members of a long suspended sentence.
+- Drifted if there are no tricolons or anaphoric series, or if the close is a bald demand or threat rather than the addressee's own choice.
+- Drifted if the diction is uniformly plain; the reasoning clauses should lean formal and Latinate, the emotional landings plain.
+
+---
+
+# 3. The Reckoning
+
+Confidence: VERIFIED. Recomputed from public-domain full texts (Florence Kelley 1905, JFK 1962 steel statement). Every measured figure reproduced within rounding; no band contradicted.
+
+## Craft
+
+- Stance: the speaker stands above the reader on a shared moral floor and refuses to let the reader stand apart from the wrong. Prosecutorial but inclusive: "we" are implicated even as a nameable "few" are charged. The speaker deliberately puts themselves inside the verdict, so the accusation reads as conscience, not attack.
+- Audience: a gathered, morally serious public assumed to already share the governing principle. They are not being persuaded of the value, only forced to feel that the value is being violated NOW and that inaction is complicity. They are addressed as citizens with residual power (the vote, attention), never as bystanders.
+- Occasion: a specific, datable provocation licenses the address (an act announced "in the last 24 hours", a standing fact treated as a live breach). Without a live, attributable trigger the register has no warrant and curdles into a sermon.
+- Ethos strategy: moral authority by alignment, not credential. The speaker claims the right to speak by standing visibly inside the wronged community. Restraint is the engine: the indictment is delivered through fact and grammar rather than name-calling, so the speaker seems forced to the conclusion by the evidence. Command of specific statutes, dollar figures, and dates signals the work has been done.
+- Appeal braiding: logos and pathos are fused inside single sentences, not siloed into a data paragraph then a feelings paragraph. The statistic IS the emotional payload (a dollar figure becomes the cost to every family; a head-count becomes a six-year-old at the bobbins). Pathos lives in concrete nouns and a single imagined body in a real place at a real hour, never in abstract emotion-words. Ethos braids in through the first-person stake.
+- Device palette: antithesis is the central engine (a tiny handful against the many). Anaphora and parallel framing are the load-bearing rhythm. Fronted statistics treated as moral fact. The present-tense pivot ("Tonight while we sleep..."). Escalating exemplification. Rhetorical question used sparingly and only as indictment. Largely absent or muted: irony, understatement, literary allusion, extended metaphor (figuration is compressed to a single hard image). Sarcasm is banned by tone.
+- Opening repertoire (see [[Structural-Templates]]): name the breach flatly in sentence one with the loaded judgment-noun deferred to the end; or front the governing statistic as established moral fact; or set the live occasion and timestamp before any argument.
+- Closing repertoire: a short hard button after a long sentence; an explicit charge to the audience framed as collective duty; a restatement of the principle as the audience's own obligation. Never a meditation, a qualification, or a both-sides softening; the close tightens rather than opens.
+- Structural architectures: suspended periodic build to a button; accumulation under a repeated frame; antithesis-as-engine; statistic-to-scene pivot; charge-to-act close.
+- Do: anchor to a real recent act and a nameable responsible party, fuse number and feeling, run at least one parallel series of three, keep "we" present. Avoid: name-calling instead of fact, feeling-words instead of scenes, irony, both-sides softening, forcing blame the facts do not support.
+
+## Bands
+
+- Sentence-length mean: 21 to 34 words; for a short piece target 22 to 28, long enough to sustain a suspended runway, short enough to land buttons. (Kelley measured 21.3, JFK 34.4.) Drifted if: the mean sits below 20 and there is no room for a runway.
+- Sentence-length min/max: shortest 5 to 9 words (the buttons), longest 50 to 90+ for ONE deliberate runway per piece (JFK's ran 122). Aim for one runway of 45 to 70 words. Drifted if: there is no runway, or there are several.
+- Variance / burstiness: high. Most sentences sit medium, then exactly one or two balloon into a long anaphoric runway and at least one collapses to a short hard button right after. (Kelley SD 12.5, JFK 23.8.) Drifted if: every sentence is roughly the same length.
+- Sentence-type mix: 45 to 60% compound-complex, 15 to 30% complex or compound, 10 to 20% simple (the buttons and flat accusations). Drifted if: simple sentences dominate and there is no subordinated runway.
+- Opener variety: subject-first 50 to 65%, the rest split across prepositional or temporal openers, fronted adverbials, the present-tense pivot, coordinator-front buttons, and a rare interrogative for the indicting question. At least 3 non-subject-first opener types per piece. Drifted if: subject-first exceeds about 65%.
+- Clause depth: moderate to deep in the runway (2 to 3 levels stacked under one main clause), shallow everywhere else. Depth concentrated in one or two sentences, not spread evenly. Buttons are single-clause. Drifted if: depth is uniform.
+- Periodic vs loose: mostly loose (the accumulation stacks), but the rhetorical climax is strictly periodic (meaning withheld to the main clause at the end). Target 1 to 2 periodic climaxes against a loose majority. Drifted if: there is no periodic climax.
+- Parallelism rate: very high and load-bearing. At least one sustained anaphoric or parallel series per piece (3+ members). Parallelism in roughly 20 to 35% of sentences. Drifted if: there is no parallel run of three (the single most common way out of this register).
+- Fragment rate: near zero, 0 to 1 per 400 words. The punch comes from short COMPLETE sentences. Drifted if: the piece goes staccato with fragments.
+- Punctuation profile: comma-dense (5 to 6 per 100 words) from the long parallel series; semicolons present but sparing; colons rare to absent; parentheses occasional for a packed aside; exclamation rare and reserved for the charge. Em-dashes banned: carry the suspension with "when... when..." clauses, semicolons, and commas, exactly as Kelley does without a single dash. Drifted if: a dash appears, or the suspension has no "when/while" scaffolding.
+- Lexical diversity: TTR 0.39 to 0.48 over a full piece, higher (about 0.50 to 0.60) on a short one simply from length. Key terms are repeated for hammering effect. Drifted if: the hammered keyword is swapped for novelty synonyms.
+- Concreteness: strongly concrete where it matters. The spine may be abstract (public interest, responsibility, complicity) but pathos is delivered exclusively through concrete nouns and one imagined scene. Every abstraction is cashed out within a sentence or two. Drifted if: emotion rides on feeling-words rather than a body, a number, or a named hour.
+- Latinate vs Anglo-Saxon: tonally split. Judgment and indictment vocabulary leans Latinate and formal; the human scenes and buttons lean short and Anglo-Saxon. The contrast is intentional. Drifted if: the charge-words go plain or the scenes go abstract.
+- Readability: target grade 11 to 14, demanding but public-facing, never academic. The buttons should be readable by anyone; the runway is allowed to be hard. Drifted if: the whole piece reads at grade 16+ with no plain buttons.
+- Device density: roughly 3 to 6 named moves per 100 words, spiking inside the runway and dropping to near zero in the buttons. Drifted if: devices are spread evenly (a tell of machine writing); cluster them, then go bare.
+
+## Drift cues (whole-piece)
+
+- Drifted if there is no live, datable trigger and no nameable responsible party. With only a vague trend, you are writing an explainer, not a reckoning.
+- Drifted if every sentence is the same length, or if there is no parallel series of three or more.
+- Drifted if emotion is carried by feeling-words ("tragic", "heartbreaking", "outrageous") instead of a concrete scene or number.
+- Drifted if the piece ends by softening, qualifying, or seeing both sides. The close must be a charge to act or a verdict, tighter than what came before.
+- Drifted if you are being ironic, sarcastic, or clever, or if the indictment relies on name-calling rather than fact.
+- Drifted if "we" disappears into pure third-person reportage.
+- Drifted if you used an em-dash. Carry suspension with "when... when..." clauses, commas, and the occasional semicolon.
+- Drifted if you attribute responsibility the facts do not support; forcing blame onto a story without a real culprit reads as demagoguery.
+
+---
+
+# 4. The Tribute
+
+Confidence: VERIFIED at the Obama pole (recomputed from public-domain full text: mean 20.0 vs reported 20.8, SD 13.8, commas 9.4/100w, TTR 0.471, FK 10.7, all within rounding) and MEASURED, NOT RE-VERIFIED at the Thatcher pole (copyrighted, measured once from a lawful transcript). The third exemplar (Lady Bird Johnson) was gated and used qualitatively only; treat any Johnson-specific claim as provisional.
+
+## Craft
+
+- Stance: consecratory, not argumentative. The voice takes a settled, reverent posture toward a subject whose worth is treated as already established. The job is to articulate and elevate that worth, never to prove it against an opponent. The vector is upward and inward (binding a life to shared values), the opposite of The Reckoning's accusatory outward thrust. Assertion by placement, not by case-building.
+- Audience: a gathered community of mourners or celebrants who already share the esteem and need only language adequate to the occasion. Addressed as a "we" the speaker joins rather than instructs. A wider audience (the nation, posterity) is invoked so the local occasion opens onto a longer history.
+- Occasion: a moment demands marking (a death, a dedication, an anniversary, a milestone, a farewell). The news event is the warrant, but the piece quickly subordinates the occasion to the meaning of the subject's life or gesture.
+- Ethos strategy: borrowed dignity and credential-by-implication. Authority is lent by the subject and the occasion, not asserted. Restraint is dominant: grandeur is produced by understatement (small means magnifying a large result). The speaker recedes; first person appears mainly to register debt or affection.
+- Appeal braiding: pathos dominant but delivered through logos-shaped scaffolding and almost never named. Emotion lives in concrete nouns and scenes, not adjectives of feeling. The structure is logical (claim about character, then the act that proves it), but the proof is narrative. A sentence typically honors, argues, and moves at once. Logos is present as ordering, not adversarial reasoning; there is no rebuttal of a named opponent.
+- Device palette: anaphora and parallelism heavily present and load-bearing (the chief ornament and the engine of cadence). Antithesis central, especially small-versus-large and one-versus-many. Allusion present but reverent and shared (scripture, cultural canon). Aphorism present as quiet sententiae, often quoted rather than minted. Figurative language sparing and architectural. Understatement is the governing tonal device. Notably absent: irony, sarcasm, the rhetorical question, the call to action, hyperbole, the second-person accusation, any adversarial framing.
+- Opening repertoire (see [[Structural-Templates]]): direct invocation of the present ceremonial moment plus the subject's defining compression; or plain declaration of loss or worth in a balanced tricolon; or understated establishment by negation, withholding the elevation.
+- Closing repertoire: quiet elevation placing the figure in a longer history, resolving on a short benediction or button, never a call to action; or a transcendent or scriptural lift; or a reflexive turn handing the subject's meaning to the audience as inheritance; or a burden-shift to the living that stops short of an imperative.
+- Structural architectures: narrative-into-claim (the signature); antithesis-as-engine; accumulation under a repeated frame; periodic build to a quiet button; placement-into-permanence close.
+- Do: anchor every value-claim to a concrete scene or object, carry cadence with at least one anaphoric or antithetical frame, let the writer recede behind the honored figure, build grandeur from restraint. Avoid: arguing against an opponent, ending on a to-do, superlative-piling, irony, displacing the subject with the writer's own opinions.
+
+## Bands
+
+- Sentence-length mean: 15 to 21 words; aim 16 to 20 for a short piece. (Obama 20.8, Thatcher 17.4.) Drifted if: the mean climbs past about 22 and the cadence goes prosy.
+- Sentence-length min/max: shortest 3 to 5 words (the deliberate short button), longest 40 to 70 (the single big accumulation sentence). At least one sentence under 6 words and one over 35. Drifted if: nothing is under 6 and nothing is over 35.
+- Variance / burstiness: high. Pair very long cadenced accumulation sentences against very short declarative buttons and let the contrast do the emotional work. (SD: Obama 13.7, Thatcher 9.2.) Drifted if: sentences are all in the 15 to 22 band.
+- Sentence-type mix: roughly simple 30 to 40% (disproportionately the short buttons), complex 32 to 42%, compound 12 to 20%, compound-complex 9 to 17% (carrying the accumulation). Drifted if: no short simple buttons exist to anchor the cadence.
+- Opener variety: subject-first dominant at 65 to 70%; coordinating-conjunction openers ("And", "Yet", "So", "But") are a signature at 17 to 21% and encouraged for cadence; dependent or adverbial 7 to 12%; prepositional 2 to 6%. Drifted if: no sentence opens with And/Yet/But/So to chain the cadence.
+- Clause depth: moderate. Most sentences one or two clauses deep; the long sentences are wide (many parallel members) more than deep (stacked subordination). Drifted if: the long sentences get their length from deep nesting rather than parallel breadth.
+- Periodic vs loose: 25 to 35% periodic, 65 to 75% loose. The punch comes from occasionally withholding resolution to a final short periodic sentence. Drifted if: nothing is ever withheld to a final button.
+- Parallelism rate: high and defining. A parallel or anaphoric construction roughly every 2 to 4 sentences; at least 3 to 5 distinct parallel structures in a short piece. This is the single most distinctive feature. Drifted if: nothing repeats by design (the fastest way out of register).
+- Fragment rate: low, 0.4 to 0.7 short or minor sentences per 400 words. The short sentences are usually complete simple sentences functioning as buttons, not true fragments. Drifted if: the piece is peppered with fragments.
+- Punctuation profile: colon low but characteristic (set up a balanced revelation or a quoted creed); semicolon low (balance twinned clauses); comma high (5.5 to 9.5 per 100 words) from parallel series and appositive accumulation; parentheses essentially absent (the register speaks aloud). Em-dashes banned and this is the single most important mechanical adaptation here, because the tribute's appositive-accumulation habit naturally reaches for the dash: replace every dash with a comma, colon, semicolon, or sentence break. Drifted if: a dash appears, or appositive accumulations have nowhere to breathe.
+- Lexical diversity: TTR 0.42 to 0.48 on full text, higher (about 0.55 to 0.65) on a short excerpt. Repetition of anchor words (the subject's name, a refrain verb) is a feature. Drifted if: the refrain word is swapped out for variety.
+- Concreteness: balanced, with pathos concentrated in concrete nouns and scenes and significance carried by abstraction. Every abstract claim about character is anchored to at least one concrete image. Drifted if: the prose floats entirely in abstraction (courage, dignity, freedom, legacy) with no scene (it has gone sentimental).
+- Latinate vs Anglo-Saxon: register-shifting. Anglo-Saxon plainness for the human and concrete, Latinate elevation for the consecratory and abstract. The movement from plain to elevated within a paragraph is itself a device. Drifted if: pure Latinate throughout (pompous) or pure Anglo-Saxon throughout (flat).
+- Readability: grade 9 to 11. Dignified but not academic; built to be heard. Drifted if: it reads at grade 14+ and cannot be followed aloud on first hearing.
+- Device density: roughly 1.5 to 3 named devices per 100 words; the density is real but feels restrained because the devices are structural (cadence, balance) rather than flashy. Drifted if: the ornament reads as ornament; understatement should keep it quiet.
+
+## Drift cues (whole-piece)
+
+- Drifted if the piece argues against an opponent or anticipates objections ("Critics say...", "Some would argue..."). Tribute consecrates; it does not rebut. That is The Reckoning.
+- Drifted if the ending issues a call to action or a to-do list. The tribute closes on quiet elevation and placement into a longer history.
+- Drifted if every sentence is roughly the same length (nothing under 6, nothing over 35).
+- Drifted if there is no concrete scene or object; emotion must live in things you can see, not stacked abstract nouns.
+- Drifted if you used an em-dash. This register reaches for them constantly to set off appositives; convert every one to a comma, colon, semicolon, or full stop.
+- Drifted if there is no parallelism or anaphora across the whole piece, or if the praise is loud and superlative-heavy. Grandeur comes from restraint and antithesis, not piled adjectives.
+- Drifted if the speaker becomes the subject; first person should appear only to register debt, affection, or shared grief.
+- Drifted if you are summarizing or paraphrasing an obituary's wording rather than writing original consecratory prose from verified facts.
+- Drifted if irony, sarcasm, or a knowing wink appears; the tribute is sincere by definition.
+
+---
+
+# 5. The Long Think
+
+Confidence: MEASURED, NOT RE-VERIFIED. The bands rest on copyrighted exemplars (Sanders, Lippmann, Onion) measured once from lawful excerpts plus a public-domain Hazlitt full text. The verification pass confirmed the load-bearing craft quote (Sanders "Norway rats") but could not re-fetch the AP PDF; treat the "Yet" hinge and cookie-cutter metaphor as high-confidence, not re-confirmed. The Onion satiric sub-mode is provisional from a short excerpt.
+
+## Craft
+
+- Stance: a mind visibly turning a durable question over, not a position being defended to a crowd. The writer reasons in the open, grants the other side real intellectual ground, and arrives at a conclusion that feels earned. It commits to a view, but the authority is that of a peer thinking harder than you have, not an expert ranking above you. In the satiric sub-mode the stance hides entirely: the writer ventriloquizes the target's own register straight-faced and lets the excess indict itself.
+- Audience: a single thoughtful peer-reader, intelligent, unhurried, capable of holding a counter-argument in mind. No crowd to rally, no superior to flatter, no novice to instruct. The reader is trusted to follow a long cumulative sentence to its discovered point and to notice an unspoken irony. That trust licenses the syntactic length.
+- Occasion: no event being marked, no decision forced today. The occasion is the recurrence of a perennial theme behind the news (money, place, attention, work, language, freedom) that warrants reconsideration. The piece reframes a question everyone thinks is settled. Use when the news is a fresh instance of an old human pattern and the value added is perspective, not information.
+- Ethos strategy: credential-by-implication, never by claim. Authority comes from the quality of the discrimination on display (the exactness of an example, the fairness of the concession, the precision of a distinction). Restraint dominates: the writer underclaims and qualifies ("perhaps", "likelier", "we might") and lets the reader complete the inference. CRITICAL: the Long Think writer has NO biography on the page. No "I remember when", no personal scene starring the author. The "I" that appears is the I of a reasoner, not a memoirist. (Personal biography is The Witness Stand.)
+- Appeal braiding: logos is the spine (shared premise, concession, distinction, conclusion). Pathos is not siloed; it is braided in through exact concrete particulars dropped inside otherwise analytic sentences, and through a late tonal shift. Pathos lives in nouns and scenes, almost never in adjectives of feeling. Ethos braids through the concession itself; granting the other side IS the credibility move. Avoid the failure mode of a cold analytic stretch followed by a separate "and that matters because..." emotional appeal; the emotion must ride inside the reasoning.
+- Device palette: anaphora and parallelism (the engine of accumulation); aphorism (compressed truths as buttons, sparingly); figurative language as the TURN not decoration (a single withheld metaphor lands the argument); understatement and irony (the dominant tonal control, total and unsignalled in the satiric mode); light allusion to ideas or named interlocutors. Usually absent or rare: rhetorical questions (one genuine probing question allowed, never the hectoring kind); exclamation; direct command; statistics-as-argument; overt emotional declaration; first-person biography.
+- Opening repertoire (see [[Structural-Templates]]): state the thesis flatly as a settled-sounding truism, then complicate it; or voice the opposing view first, generously and in its best form; or name the abstraction you intend to re-examine and ground it immediately in a concrete consequence.
+- Closing repertoire: close inward on a turn of thought, not outward on a call to action; or land the earned conclusion as a quiet restatement of the reframed premise; or button with a compressed image or distinction and let it rest. No summary, no "in conclusion", no exhortation. Satiric close: end on the most damning straight-faced detail.
+- Structural architectures: concession-then-rebuttal with a withheld turn (pivot on a single hinge word); reason-forward-from-shared-premises; accumulation under a repeated frame; definition-by-redefinition; escalating exemplification to a turn; satiric ventriloquism.
+- Do: concede the other side sincerely, discover the point mid-stride or at a withheld turn, run at least one parallel series, let one metaphor carry the turn, keep the writer's biography off the page. Avoid: straw-manning, personal anecdote, uniform sentence length, exhorting the reader, declaring emotion, winking in the satiric mode, bending a fact to sharpen the turn.
+
+## Bands
+
+- Sentence-length mean: 20 to 30 words; working center 22 to 28. (Sanders 24.3, Lippmann 37.3 at the formal pole, Onion 25.3 satiric.) Push past 30 only for a deliberately periodic high-formal piece. Drifted if: the mean falls below 20 and the thinking has no room to turn over.
+- Sentence-length min/max: shortest 3 to 8 words (a short button or hinge is mandatory), longest 45 to 65 for one or two cumulative sentences per piece. Cap the longest near 65 for readability. Drifted if: there is no short snap, or a sentence runs past about 65.
+- Variance / burstiness: high. Most sentences sit in the low-20s, then one long cumulative sentence discovers its point across several semicolon-separated members, answered immediately by a short 3 to 10 word sentence that lands the turn. (Sanders SD 9.6, Lippmann 20.8.) Drifted if: every sentence is within five words of the mean.
+- Sentence-type mix: roughly simple 30 to 40%, compound 12 to 20%, complex 30 to 45%, compound-complex 12 to 20%. Complex plus compound-complex should be a near-majority (the subordination is where the thinking shows). Keep enough simple sentences for the short snaps. Drifted if: there are no simple sentences for relief.
+- Opener variety: subject-first 55 to 65%, the rest dependent, adverbial, prepositional, or conjunction-first. Open clauses with "If", "When", "Yet", "By", "Because" often enough to enact the turning-over. Drifted if: nearly every clause opens with its subject.
+- Clause depth: moderate to deep, 2 to 3 clauses per sentence with one or two reaching 4+ via semicolon-chained members. The depth comes from coordinated accumulation more than deep embedding. Drifted if: it goes Faulknerian with nested clauses.
+- Periodic vs loose: loose dominant (65 to 75%), the Hazlitt/Sanders mode where a sentence starts with a core and discovers meaning by adding members. Periodic (25 to 35%) is concentrated at turns and the close. Drifted if: the point arrives in the first clause and the rest merely supports it.
+- Parallelism rate: high and structural, parallel or anaphoric construction in 25 to 40% of sentences. At least one extended parallel series per piece is close to mandatory; it is the register's primary rhythm. Drifted if: there is no parallel or anaphoric series anywhere.
+- Fragment rate: low, 0 to 1 deliberate fragment per 400 words, used only as a rhetorical snap. Drifted if: fragments carry the rhythm.
+- Punctuation profile: semicolons are the signature mark (0.8 to 2.0 per 100 words, at least 2 to 4 in a short piece, including one chained series) separating major coordinate members in cumulative sentences. Colons 0.2 to 0.5 per 100 words, reserved for the pivot. Commas high (7 to 10 per 100 words). Parentheses occasional for a dry aside. Em-dashes banned: render an appositive with commas or parentheses, the dramatic pivot with a colon or sentence break. Drifted if: a dash appears, or the cumulative sentences have no semicolons to articulate their members.
+- Lexical diversity: TTR 0.48 to 0.55 for a short piece. Low TTR can be deliberate; argument repeats its key terms on purpose. Drifted if: the repeated thematic keyword is swapped for synonyms to chase variety.
+- Concreteness: deliberately mixed and braided. The argument frame is abstract (freedom, mobility, money) but every claim is anchored by concrete particulars. Roughly 50/50 abstract-frame to concrete-instance, with no abstraction going more than two sentences without a concrete anchor. Pathos lives entirely in the concrete nouns. Drifted if: an abstraction runs unanchored for more than two sentences.
+- Latinate vs Anglo-Saxon: balanced, tilting Anglo-Saxon for the concrete particulars and Latinate for the analytic connective tissue. The difficulty should come from idea density and sentence length, never from obscure vocabulary. Drifted if: the difficulty comes from jargon rather than thought.
+- Readability: college, grade 12 to 16; target 12 to 15 for product use (Sanders 12.3 is the readable floor, Lippmann 16.6 the formal ceiling). Drifted if: it reads below grade 12 (too thin to be thinking) or relies on jargon to reach the ceiling.
+- Device density: roughly 2 to 4 named devices per 100 words, parallelism most frequent. A typical piece carries one extended parallel series, one or two aphoristic buttons, one load-bearing metaphor at the turn, pervasive understatement, 0 to 1 rhetorical questions, no exclamation. Drifted if: devices are absent (flat exposition) or piled on (it stops thinking and starts performing).
+
+## Drift cues (whole-piece)
+
+- Drifted if the writer's personal biography appears (a remembered scene, "when I was young"). That is The Witness Stand. The Long Think "I" only reasons.
+- Drifted if you never genuinely concede the other side; a straw man means you are rallying a crowd, not thinking aloud.
+- Drifted if every sentence is the same length; the register lives on the long-cumulative-against-the-short-snap contrast.
+- Drifted if you used an em-dash. Use semicolons for major members, a colon for the pivot, commas or parentheses for asides.
+- Drifted if the ending exhorts, summarizes "in conclusion", or asks an uplifting rhetorical question. Turn inward and complete the thought.
+- Drifted if emotion is declared instead of carried by a precise concrete noun.
+- Drifted if you reach the point in the first sentence and merely support it; the register should DISCOVER its point mid-stride or at a withheld turn.
+- Drifted if there is no parallel or anaphoric series anywhere, or if it sounds like it is addressing an auditorium rather than one thoughtful reader.
+- In the satiric sub-mode, drifted the moment the writer winks; the imitation must be deadpan and the excess must indict itself.
+- Drifted if accuracy was bent to fit the turn. The reframe must work on the true facts.
+
+---
+
+# 6. The Witness Stand
+
+Confidence: MEASURED, NOT RE-VERIFIED. Bands are anchored on one measured full-window text (Rita Dove, 144-word verbatim excerpt) widened with a micro-sample (Saujani triplet) and the register description. Sotomayor was gated and used qualitatively only. Sentence-type mix, periodic/loose ratio, and device density are reasoned estimates from the Dove excerpt, not measured facts; treat them as target ranges.
+
+## Craft
+
+- Stance: first-person, warmly self-implicating. The writer stands inside the subject as someone who has lived the thing and now turns to face the reader. Claims are advanced as earned conclusions ("I learned X" rather than "X is true"). The posture is confiding, not commanding, and it pre-emptively concedes its own limits. Authority is offered up, not imposed.
+- Audience: a specific, present, slightly junior or peer audience the writer feels warmth toward (graduates, a younger self, readers who share the experience). The address is intimate and second-person-aware. The reader is treated as a confidant being let in on something the writer paid for personally, not a jury to be argued into submission.
+- Occasion: there is almost always a felt occasion (a commencement, an anniversary, an invitation extended precisely because of who the writer is). For a current-events piece, the analog is a moment that touches a shared human experience where the writer can credibly say "I have stood here". The occasion licenses the intimacy; without it the voice reads as oversharing.
+- Ethos strategy: built almost entirely by vulnerability and qualification rather than credential-display. The moves: name the personal stake out loud; self-deprecate to disarm; confess failure as proof of having tried; credential by implication only, never by recitation. Moral authority comes from having been the small one in the story, not the powerful one. Intimacy is the load-bearing ethos device.
+- Appeal braiding: pathos and ethos are fused at the sentence level and are usually the same move (the writer's remembered scene IS the emotional appeal AND the proof of standing). Logos is the quietest of the three and arrives late, as the generalizable lesson distilled from the anecdote. The structure is narrative-into-claim. Pathos lives in concrete personal nouns and scenes, never in abstract emotional vocabulary. The danger zone is logos-forward generalization with no scene under it; that flips the register into generic motivational filler and kills the ethos.
+- Device palette: anaphora (the confiding refrain, used to accumulate warmth, not hammer); redefinition of a common word (the organizing move); figurative language drawn from domestic or personal life, kept homely rather than ornate; self-aware irony and gentle self-deprecation (the disarming engine of ethos). Light: a single driving antithesis; one casual or playful allusion. Largely absent: the rhetorical question as a hammer; cold aphorism from authority; sustained classical allusion; sarcasm or contempt; the accumulating tricolon of institutional grievance.
+- Opening repertoire (see [[Structural-Templates]]): name the occasion and claim it as personal; or open mid-scene in the writer's own life, present and concrete; or a self-deprecating disarmer that lowers the stakes before raising them; or a flat confession of smallness or outsider status.
+- Closing repertoire: hand the organizing word back to the reader transformed (so the redefinition becomes a gift); or collapse the long anecdote into one short portable sentence; or a forward-looking blessing or wish rather than a directive; or return to the opening image now meaning something different.
+- Structural architectures: narrative-into-claim (dominant); redefinition-as-engine; driving antithesis drawn from experience; anaphoric accumulation that confides; withheld-turn (name what the audience expects, decline it); address-the-reader-as-gift close.
+- Do: keep a real "I" with a real personal stake, anchor every paragraph to a nameable concrete thing from a life, redefine one ordinary word, build warmth from vulnerability, swing one long looping sentence against a short clipped line. Avoid: detached reporting, pointing outward in alarm, abstraction with nothing under it, credential-listing, directives, sarcasm, generic interchangeability.
+
+## Bands
+
+- Sentence-length mean: 17 to 24 words (Dove measured 24.0). Aim toward the lower-middle for a short piece so the long sentences land harder against the short ones. Drifted if: the mean sits high and there is no clipped relief.
+- Sentence-length min/max: shortest 4 to 8 words (the clipped confession or punchline), longest 40 to 60 (one looping comma-chained middle sentence per piece). At least one sentence under 8 words and one over 35. Drifted if: nothing is under 8 and nothing is over 35.
+- Variance / burstiness: high. Run one long looping sentence (a remembered scene that keeps adding clauses) then drop to a 4 to 6 word line right after it, the way a person lands a point in conversation. Dove swings 9-14-58-27-9-13. Drifted if: three medium sentences run in a row.
+- Sentence-type mix: roughly simple 30 to 40% (including the short punchlines), compound 10 to 20% (conversationally joined with and/but/so), complex 35 to 45% (the "because/although/when" middles), compound-complex 5 to 15% (the one big looping sentence). Drifted if: compound-complex sentences pile up; this is speech, not legal prose.
+- Opener variety: about 35 to 50% subject-first; the rest deliberately varied with conversational conjunction openers ("So", "And", "But"), subordinator openers ("Although", "When", "Because"), and the occasional 1 to 3 word fragment opener. Conjunction openers are a positive marker here, not an error. Drifted if: openers are uniformly subject-first.
+- Clause depth: shallow to medium, mostly one or two clauses deep. The long sentence gets depth from coordination and stacked parenthetical asides, not deep nesting. Drifted if: third-level embedded subordinate clauses appear; this is speech.
+- Periodic vs loose: strongly loose-leaning (75 to 85% loose). Reserve one periodic build-to-a-button near a section end or the close. Drifted if: most sentences withhold their point (too formal for this register).
+- Parallelism rate: moderate-to-high but warm. One anaphoric run per piece (3 to 4 parallel members under a repeated frame like "I wish you ___" or "I bravely ___"). Outside that run, keep parallelism light. Drifted if: there is no confiding refrain, or parallelism is everywhere and stops feeling warm.
+- Fragment rate: 1 to 3 deliberate fragments per 400 words, for intimacy and emphasis, never accidental. This register fragments less than a punchy-journalistic register. Drifted if: fragments are frequent or accidental.
+- Punctuation profile: comma-forward and conversational (6 to 9 per 100 words); parentheses characteristic and welcome for the confiding aside; colons occasional for a redefinition or a handed-over list; semicolons rare (about 1 per 120 to 150 words); exclamation allowed once, sparingly, for the self-deprecating beat. Em-dashes banned: substitute parentheses (asides), commas (light interruption), or a colon (a delivered turn). Drifted if: a dash appears, or the confiding parenthetical asides have disappeared entirely.
+- Lexical diversity: high for the genre (TTR about 0.60 to 0.68 on a short window; Dove 0.653). Vocabulary is varied because anecdote brings specific concrete nouns, but the organizing word (bravery, hunger, voice) repeats deliberately and is not a diversity failure. Drifted if: the organizing word has been varied away.
+- Concreteness: strongly concrete-leaning (about 65 to 75% concrete). Pathos requires specific nameable things from a life (a job, a loss, a kitchen, a classroom). Abstraction is permitted only when a concrete instance has just paid for it. Drifted if: a paragraph has no nameable object or scene.
+- Latinate vs Anglo-Saxon: Anglo-Saxon-leaning (about 60 to 70% plain Germanic core), with an occasional Latinate reach for a single elevated beat. The default texture is plain and spoken. Drifted if: the baseline diction goes formal and Latinate.
+- Readability: grade 8 to 11. Accessible, spoken, immediately legible on first hearing. The one long sentence may spike locally; the piece overall stays conversational. Drifted if: the piece reads at grade 13+.
+- Device density: about 2 to 4 named devices per 100 words, concentrated rather than even (the anaphoric run and the redefinition cluster the density; narrative passages run nearly device-free so the scene can breathe). Drifted if: devices are spread evenly across every sentence.
+
+## Drift cues (whole-piece)
+
+- Drifted if there is no "I" with a real personal stake. A detached observer is The Reckoning or an institutional register.
+- Drifted if you are pointing outward in alarm (urgency, blame) rather than turning inward and toward the reader with warmth. Urgency over intimacy is The Reckoning.
+- Drifted if a whole paragraph contains no nameable concrete thing from a life.
+- Drifted if every sentence is the same length; the register lives on the swing between one long looping sentence and a short clipped line.
+- Drifted if ethos is built by listing credentials or stating authority instead of vulnerability, confession, and self-deprecation.
+- Drifted if there is no single ordinary word being redefined and no single lived contrast organizing the piece.
+- Drifted if the close issues a directive ("You must", "We need to"). Hand the lesson over as a gift or wish.
+- Drifted if you used an em-dash, or if the confiding parenthetical asides have disappeared. Render asides with parentheses or commas.
+- Drifted if the tone turns contemptuous, sarcastic, or superior. Warmth and self-implication are non-negotiable.
+- Drifted if it reads like it could have been written by anyone about anything; the register is defined by a specific person having specifically stood somewhere.
+
+---
+
+# 7. The Long Look
+
+Confidence: MEASURED, NOT RE-VERIFIED. The primary target bands rest on two short copyrighted Barry excerpts (Rising Tide, The Great Influenza) measured once and labeled estimated; the public-domain lineage anchor (Muir 1894) was measured from full text but runs longer and more adjective-rich than the modern target and did not set the bands. Per-piece percentages (type mix, periodic/loose, device density) are estimates widened into ranges. Maya Lin and Richard Louv were gated and used qualitatively only.
+
+## Craft
+
+- Stance: an absorbed, fascinated observer reporting a phenomenon, place, or process from inside its complexity. The voice does not argue a position; it earns belief by demonstrating accurate, patient attention. Authority comes from mastery of detail and from candor about the limits of what is known. The writer wants you to feel scale and intricacy, not to vote.
+- Audience: an intelligent general reader, curious and willing to be slowed down, who does not already know the system being described. Not specialists (the prose explains its own technical terms by accretion) and not a crowd being moved to action (no exhortation, no second person).
+- Occasion: something genuinely awe-worthy that resists quick summary (a complex system, a vast process, an intricate institution or place). The occasion is illumination, not a deadline-driven verdict. This register is WRONG for conflict, scandal, blame, or breaking-news urgency. Reserve it for the storm, the supply chain, the telescope, the migration, the market mechanism, where wonder is honest. For Caught Up AI: use it only when the news item is a marvel of how-something-works, never for accountability or dispute stories.
+- Ethos strategy: credential-by-implication through precision. The density and correctness of detail do the work; the writer never says "I am an expert". Restraint is itself an ethos move (withhold adjectives and moral commentary, trust facts to carry the wonder). The most distinctive signature is candor about uncertainty: mastery that admits its edges reads as more trustworthy than mastery that performs total command. The self stays out of the way of the subject.
+- Appeal braiding: logos is the spine (causal mechanism, comparison, enumeration of parts). Pathos is NOT delivered by emotive words; it is braided into the logos and lives in the concrete nouns and the sheer accumulation (awe arises when a list grows long enough to enact the thing's complexity). Ethos and logos are fused in the same sentences (accurate detail equals trustworthiness). Wonder is a byproduct of precision, never an asserted emotion. Avoid editorializing wonder-words ("astonishing", "breathtaking"); let the facts be astonishing.
+- Device palette: figurative language sparing and precise (controlled simile or personification); antithesis as the primary structural device; accretive parallel lists (asyndeton and polysyndeton) as the signature complexity-enactor; understatement carrying the awe by refusing to inflate it. Largely absent by design: the rhetorical question; direct exhortation and second-person address; aphorism (one analytic-premise borderline case allowed); allusion (rare, factual when present); irony (this register is sincere and admiring); adjective-stacking and emotive intensifiers.
+- Opening repertoire (see [[Structural-Templates]]): state the subject as a flat declarative, often with a comparative claim that sets up the scale to come; or open on the controlling antithesis in clipped sentences; or begin with a precise concrete particular and widen outward.
+- Closing repertoire: land a quiet, slightly cool culminating sentence that resolves the opening antithesis without moralizing; or close on the longest, most technical accumulation so the final gesture is the complexity itself; or end on a calibrating comparison or a candid limit. Avoid the rousing button, the call to action, and the rhetorical-question closer.
+- Structural architectures: accumulation under a repeated frame; antithesis-as-engine; short-declarative establishment then long-sentence elaboration; patient build to a quiet culminating claim; comparison-to-the-familiar to calibrate scale; description-into-meaning.
+- Do: pile up specific checkable particulars, snap short blunt declaratives against long accumulating technical sentences, admit what is not known, cluster devices in one or two showpiece sentences. Avoid: arguing or blaming, asserting the wonder with adjectives, rhetorical questions, even device-spreading, generic descriptions that could fit any topic.
+
+## Bands
+
+- Sentence-length mean: 16 to 24 words. The mean is mid-range only because very short and very long sentences average out; the mean alone is misleading here (the variance is the point). Drifted if: you treat the mean as a target and write everything near 20 words.
+- Sentence-length min/max: shortest 3 to 7 words (the flat declarative, "It acts."), longest 40 to 60 (the accumulating technical sentence). At least one sentence under 8 words and one over 35 per piece. Drifted if: nothing is under 8 and nothing is over 35.
+- Variance / burstiness: HIGH (coefficient of variation roughly 0.7 to 0.9; measured 0.83 across the modern Barry exemplars). Every long, list-heavy sentence should be answered nearby by a short blunt one. Drifted if: consecutive sentences are all 20 to 30 words (you have slid to a flat institutional rhythm).
+- Sentence-type mix: roughly simple 30 to 40% (the short declaratives and short establishing facts), complex 30 to 40% (the elaborating sentences), compound or compound-complex 20 to 30% (the accumulating lists). Drifted if: there are no short simple declaratives to snap against the long sentences.
+- Opener variety: subject-first dominant (55 to 70%, often "The [subject]...", "It..."); the rest prepositional or adverbial (15 to 25%), conjunction openers ("But", "And", "Not only...") 10 to 20% for the snap. Drifted if: openers are mechanically subject-verb uniform.
+- Clause depth: moderate and deliberately bimodal. Short declaratives at depth 0 to 1; the showpiece accumulating sentences at depth 2 to 3 through stacked coordinate phrases and a trailing relative clause. Complexity is achieved by ADDING coordinate parts (rightward accumulation), not by burying clauses inside clauses. Drifted if: the long sentences get their length from deep left-branching nesting.
+- Periodic vs loose: loose dominant (65 to 80%). The signature sentence is cumulative: main clause first, then a cascade of added detail. Periodic build is reserved for the withheld culminating claim. Drifted if: most sentences suspend their point to the end.
+- Parallelism rate: high within the showpiece sentences, moderate overall. Expect 1 to 2 strongly parallel accretive series per piece (the "its X, its Y, its Z, and even W" pattern) plus parallel short declaratives at openings. Roughly 25 to 40% of sentences participate. Drifted if: no sentence ever runs long with an accumulating list.
+- Fragment rate: low, 0 to 1 per 400 words. This register prefers complete short declaratives over true fragments. Drifted if: fragments carry the rhythm.
+- Punctuation profile: semicolons the workhorse (3 to 7 per 400 words, joining accumulating clauses and snapping paired declaratives where another writer would use a dash); colons occasional (0 to 2 per 400 words, to introduce an enumeration); commas heavy (9 to 13 per 100 words) from the in-sentence series; parentheses rare. Em-dashes banned: replace every dash with a semicolon, colon, comma pair, or sentence break. Drifted if: a dash appears, or the accumulating sentences have no semicolons to articulate the snap.
+- Lexical diversity: TTR about 0.55 to 0.70 on a short piece. The signature repeated frame ("its... its... its...") and the antithesis keyword repetition intentionally lower local diversity in showpiece passages; do not fight this with forced synonyms. Drifted if: the repeated frame is varied away.
+- Concreteness: strongly concrete-leaning (about 65 to 75% concrete). The wonder lives in specific physical nouns and measurable particulars. Abstraction is allowed only as a frame and is always cashed out in concrete detail immediately after. Drifted if: abstraction floats with nothing physical underneath.
+- Latinate vs Anglo-Saxon: mixed and functionally split (roughly 50/50 to slightly Latinate). The short declarative spine is Anglo-Saxon and blunt; the technical accumulation clusters Latinate precise terms. The contrast between plain verbs and technical nouns is part of the texture. Drifted if: the spine goes Latinate or the technical terms go plain.
+- Readability: grade 11 to 14. Vocabulary is accessible; difficulty comes from sentence length and density of detail in the showpiece sentences, not rare words. Drifted if: difficulty comes from obscure vocabulary rather than accumulation.
+- Device density: moderate, about 2 to 4 named devices per 100 words, concentrated rather than evenly spread. Most devices cluster in the one or two showpiece sentences; the connective tissue between them is plain and device-light. Drifted if: devices are spread evenly (the contrast between ornamented and plain passages is intentional).
+
+## Drift cues (whole-piece)
+
+- Drifted if you are arguing a position or assigning blame. The Long Look illuminates and admires; the moment it takes a side or scolds, switch registers.
+- Drifted if every sentence is the same length; the signature is short blunt sentences snapped against long accumulating ones.
+- Drifted if you TELL the reader it is amazing ("astonishingly", "breathtaking"). The wonder must come from accurate piled-up detail.
+- Drifted if there are no concrete, specific, checkable particulars (numbers, place names, named parts, measurable facts).
+- Drifted if you never let one sentence run long with an accumulating list ("its X, its Y, its Z, and even W").
+- Drifted if you used a rhetorical question, a direct call to the reader, or a rousing motivational button. This voice answers and observes.
+- Drifted if you pretended total command and hid every uncertainty; honest candor about what is not known is part of this register's ethos.
+- Drifted if devices are spread evenly rather than clustered in one or two showpiece sentences.
+- Drifted if you used an em-dash, or reached for a dash where a semicolon, colon, or sentence break should carry the snap.
+- Drifted if the wonder is generic and could describe any topic; the Long Look is specific to one system seen closely.
+
+---
+
+## Cross-piece variety (batch-level check)
+
+The bands above defend each piece against the per-piece AI tell. They do not, on their own, defend a batch against cross-piece sameness. When generating several pieces in a window, run this final check (detailed in [[Anti-Tell-List]] and [[Generation-Briefs]]):
+
+- Rotate registers across the batch. Do not run three Ledgers in a row; the disinterested flatness becomes its own tell when repeated.
+- Vary the structural opening across pieces even within one register; the opening and closing repertoires above exist so you can pick a different one each time.
+- Watch the cross-piece mean. If every piece in a week lands at the same sentence-length mean, the same opener split, and the same device density, the batch reads machine-made even when each piece passes alone. Deliberate spread across the palette is the fix.
+- Burstiness note (provisional): the verification pass kept the author's own caveat that burstiness and perplexity thresholds are vendor-sourced and directional, not established academic fact. Use the variance bands as craft targets, not as a detector-beating guarantee.
