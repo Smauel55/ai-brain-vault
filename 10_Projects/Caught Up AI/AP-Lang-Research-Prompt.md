@@ -61,6 +61,17 @@ VERIFIED CORPUS ANCHORS (confirmed from released exams; use as seed, expand, and
 Carry these corrections: the Chavez nonviolence passage is 2015 Q2 (not a 2014 argument prompt); Orwell, Didion, Staples, Carson, and MLK "Letter from Birmingham Jail" are TEACHING mentor texts, NOT exam passages, the exam deliberately avoids the most-anthologized pieces. Re-verify year/author/form for every anchor against primary College Board materials before relying on it; flag any you cannot confirm.
 
 --------------------------------------------------------
+0.5 LOCKED PARAMETERS (non-negotiable; do not deviate, do not treat as open choices)
+--------------------------------------------------------
+These six settings are fixed by Samuel because each one widens the range the prose can blend into and hardens it against detection. Treat them as constraints, not defaults to reconsider.
+  P1. REGISTER COUNT. The style palette must contain 5 to 9 distinct registers, derived from the corpus. Do not collapse toward a single house voice and do not drop below 5. Breadth of distinct registers is the primary defense against cross-piece sameness.
+  P2. CORPUS SPAN. Study BOTH Q1 synthesis sources AND Q2 rhetorical-analysis sources, spanning ~1999 to 2024 AND older released forms wherever available. Do not narrow to the contemporary era; the historical registers are load-bearing parts of the palette.
+  P3. BLIND-TEST. Fully specify the runnable human-judge protocol AND run a self-administered proxy pilot now: an automated-detector pre-screen, a Layer-B stylometric-band check, and an independent-agent "is this machine-written" read on each exemplar. The real AP-Lang-teacher panel is Samuel's to run later; never fabricate or simulate human-judge results.
+  P4. PIECE LENGTH. Calibrate everything to a 350 to 600 word piece. The stylometric bands, templates, and exemplars all assume this length.
+  P5. DETECTOR RELIANCE. Automated AI detectors are a PRE-SCREEN only; blind human judgment is the decisive gold standard. Tune toward the measured human distribution and never overfit to any single detector.
+  P6. EXEMPLAR TOPICS. Write the annotated exemplars on plausible, clearly-labeled placeholder current topics, and flag every invented specific as a placeholder so no unverified fact ships. Do not present fabricated specifics as real.
+
+--------------------------------------------------------
 1. THE CORPUS YOU MUST STUDY
 --------------------------------------------------------
 Assemble and study the largest defensible corpus of GENUINE AP-Lang-selected professional source passages:
@@ -105,7 +116,7 @@ LAYER C, AI-DETECTABILITY TELLS (the adversary)
 --------------------------------------------------------
   M1. MULTI-AGENT FAN-OUT. Parallelize: agents per era, per genre/register, per layer (craft / stylometry / detectability). Each agent works from primary materials and reports with citations.
   M2. ADVERSARIAL VERIFICATION. Every non-trivial claim (a corpus fact, a stylometric number, a "this is a tell" assertion) is checked by a second, independent agent against primary sources or recomputed from text. Stylometric numbers must be reproducible from the stated corpus. Flag and quarantine anything unverified; never present a guess as a finding. Separately verify corpus provenance (that a passage really is an exam source text).
-  M3. BLIND-TEST PROTOCOL (operationalize "indistinguishable"). Design and SPECIFY a runnable protocol, and run a pilot if feasible:
+  M3. BLIND-TEST PROTOCOL (operationalize "indistinguishable"). Design and SPECIFY a runnable protocol, and run the self-administered proxy pilot from P3 now:
       - Build matched pairs: a system-written current-events Caught Up AI piece vs a genuine AP-Lang professional passage of comparable length and the SAME target register. Multiple pairs across MULTIPLE registers (not one).
       - Strip all identifying marks (no period-specific topical giveaways; control for the fact that ours are current-events, match on register and craft, not subject).
       - Randomize order; present to qualified blind judges (AP Lang teachers / experienced readers). Judges (a) guess machine vs human and (b) state the cues they used.
