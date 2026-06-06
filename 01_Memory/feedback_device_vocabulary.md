@@ -1,0 +1,16 @@
+---
+name: feedback-device-vocabulary
+description: "Caught Up AI lesson openers may label/highlight rhetorical devices ONLY from a fixed AP list, and only where genuinely present"
+metadata: 
+  node_type: memory
+  type: feedback
+  originSessionId: 776a4dc9-83ea-452d-8043-9832204b5684
+---
+
+For Caught Up AI lesson openers (and any rhetorical-device labeling for the product), use ONLY the fixed AP device vocabulary, and tag a device only where it is genuinely present. Do not invent device names ("the level close", "comparison that sets scale") and do not force a label to hit a count.
+
+The full 30-term list with definitions lives at `10_Projects/Caught Up AI/Rhetorical-Device-Vocabulary.md` and is encoded in `10_Projects/Caught Up AI/Sample-Briefs/render_briefs.py`.
+
+**Why:** Samuel flagged on 2026-06-05 that early sample briefs invented loose device names and mislabeled devices (called mid-clause parallelism "anaphora"). The customer is an AP Lang teacher; a wrong device label is a credibility failure.
+
+**How to apply:** When highlighting or explaining devices in a piece, pick the single correct term from the list. Watch the look-alikes: anaphora is repetition at the START of clauses (mid-clause repetition is parallelism); keep metaphor vs simile, antithesis vs juxtaposition, asyndeton vs polysyndeton distinct. Relates to [[feedback_ai_writing_formulaic]] and the [[project_caught_up_ai]] prose engine.
