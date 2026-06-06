@@ -196,10 +196,10 @@ longthink = {
  "devices":[
   {"para":1,"device":"Anaphora",
    "purpose":"The three sentences all open with “You,” pulling the reader into the habit of waiting and making three unlike losses feel like one shared condition. The repeated opening builds a rhythm that the short line after it (“None of this was a virtue”) then breaks. The repeated word sits at the START of each sentence, which is what makes this anaphora and not parallelism."},
-  {"para":2,"device":"Concession and refutation",
-   "purpose":"This is the concession half: the writer grants the other side its strongest case in full, that speed retired real miseries and we were right to want it. Note what is NOT the concession: the earlier line “it would be foolish to pretend otherwise” only insists the grant is sincere; the grant itself is the claim highlighted here. The refutation does not arrive in this paragraph. It lands at the turn in the next one (“And yet...”), so the two halves of this device straddle the paragraph break."},
+  {"para":2,"device":"Concession",
+   "purpose":"The writer grants the other side its strongest case in full: speed retired real miseries and we were right to want it. Note what is NOT the concession: the earlier line “it would be foolish to pretend otherwise” only insists the grant is sincere; the grant itself is the claim highlighted here. Conceding this much, plainly and in good faith, is what lets the later turn read as fair rather than as a reflex complaint."},
   {"para":3,"device":"Shift / volta",
-   "purpose":"The turn is the whole highlighted clause, not the connective “And yet” that introduces it. By themselves those two words do nothing; the volta is the claim they open, that something went out of the world with the waiting. This same sentence also carries the refutation of the concession above, which is why the piece pivots from praising speed to counting its cost right here."},
+   "purpose":"The turn is the whole highlighted clause, not the connective “And yet” that introduces it. By themselves those two words do nothing; the volta is the claim they open, that something went out of the world with the waiting. This is where the piece pivots from praising speed to counting its cost."},
   {"para":3,"device":"Metaphor",
    "purpose":"Recasting the empty wait as “a room” turns an abstract loss into a space the reader can picture and the mind can occupy. The metaphor carries the essay's central claim: that waiting was where private thinking got done."},
   {"para":4,"device":"Parallelism",
@@ -234,10 +234,10 @@ longthink = {
  "misconceptions":[
   "Students often call the three “You...” sentences in paragraph 1 parallelism. They are anaphora: the repeated word opens each sentence. Reserve “parallelism” for repeated structure that does not begin the clause, like the series in paragraph 4.",
   "Students may take the concession in paragraph 2 as the writer's settled view. It is ground granted on purpose; the writer agrees in order to turn, not to give up the argument. Watch too for students who point to “it would be foolish to pretend otherwise” as the concession. That line only claims the grant is sincere; the concession is the substance, that speed was a real good worth wanting.",
-  "Students often name “And yet” as the shift. The connective only signals that a turn is coming. The volta is the claim that follows it, that something went out of the world with the waiting. Mark the whole clause, not the two words. The same holds for spotting the refutation: it is this clause, one paragraph after the concession, not anything inside paragraph 2.",
+  "Students often name “And yet” as the shift. The connective only signals that a turn is coming. The volta is the claim that follows it, that something went out of the world with the waiting. Mark the whole clause, not the two words.",
   "Students may label “it was a room” a simile. There is no “like” or “as”; it is a metaphor, an implied identity.",
  ],
- "ap_alignment":"Q2 rhetorical-analysis value: a compact text for teaching the concession-then-turn structure, the anaphora-versus-parallelism distinction, a clearly marked shift (volta), and a single load-bearing metaphor students can name and defend. The clipped telegraphic sentence set against the long cumulative one is a clean lesson in how sentence length alone creates emphasis.",
+ "ap_alignment":"Q2 rhetorical-analysis value: a compact text for teaching a clean concession, the anaphora-versus-parallelism distinction, a clearly marked shift (volta), and a single load-bearing metaphor students can name and defend. The clipped telegraphic sentence set against the long cumulative one is a clean lesson in how sentence length alone creates emphasis.",
 }
 
 if __name__ == "__main__":

@@ -23,10 +23,14 @@ lesson opener. Set by Samuel on 2026-06-05 after early drafts invented loose lab
   or "tone" only when no more precise device on the list applies. (Samuel, 2026-06-06.)
 - Highlight the WHOLE device, not its trigger word. The span must cover the rhetorical
   move itself, not just the signal that flags it. A volta is the turn-clause, not the
-  "And yet" / "But" that opens it. A concession-and-refutation is the granted claim plus
-  the counter (which may sit a paragraph apart from the grant), not a meta-line asserting
-  the grant is sincere. Marking only the opening cue teaches students to hunt for signal
-  words instead of the move. (Samuel, 2026-06-06.)
+  "And yet" / "But" that opens it. A concession is the granted claim itself, not a
+  meta-line asserting the grant is sincere. Marking only the opening cue teaches students
+  to hunt for signal words instead of the move. (Samuel, 2026-06-06.)
+- Do not tag two devices on one move. It is too error-prone and over-highlights the page.
+  Concession and refutation are the usual culprit: tag the concession alone (it stands on
+  its own), and do not name or explain refutation unless it is explicit in its own
+  standalone sentence. Refutations take a long time to explain; leave them out rather than
+  crowd the paper. (Samuel, 2026-06-06.)
 - Be precise about look-alikes. The recurring trap: parallelism vs anaphora. Anaphora
   repeats a word or phrase at the START of successive clauses; if the repeated element
   sits mid-clause, it is parallelism, not anaphora. Same care for metaphor vs simile,
@@ -58,7 +62,10 @@ lesson opener. Set by Samuel on 2026-06-05 after early drafts invented loose lab
 - Hyperbole: deliberate exaggeration for emphasis or irony.
 - Irony: a gap between what is said and what is meant, or expected and actual.
 - Repetition: recurring words or sounds for emphasis or rhythm.
-- Concession and refutation: granting the opposing view, then countering it.
+- Concession: granting the opposing view its real force. Tag this alone by default.
+- Concession and refutation: granting the opposing view, then countering it. Use the
+  combined label ONLY when the refutation is explicit in its own standalone sentence;
+  otherwise tag the concession alone and do not name or explain refutation.
 - Anecdote: a short personal story used as evidence or to humanize an argument.
 - Epistrophe: repeating a word or phrase at the end of successive clauses.
 - Asyndeton: omitting conjunctions to speed rhythm and pile up items.
