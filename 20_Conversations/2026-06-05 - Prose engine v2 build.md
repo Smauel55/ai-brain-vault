@@ -57,3 +57,9 @@ project: "[[Caught Up AI]]"
 - Integrated the six Run-2 consensus tells into [[Anti-Tell-List]] as a read-first Friction / Anti-Symmetry Layer (v2.1): cap manufactured symmetry, kill the tidy-button reflex, require deliberate friction (one inert detail, one uneven turn), make invented specifics less tidy, drop ring-composition loops and reader-directing signposting. Added friction checks (steps 9 to 11) to the mechanical pass.
 - Wrote 3 sample essays from the updated manual in three registers (The Ledger, The Reckoning, The Witness Stand) into a Google Doc for Samuel to review. Facts illustrative, not fact-checked. Doc title: "Caught Up AI - Friction-Layer Sample Essays (2026-06-05)".
 - Caveat carried forward: the friction layer is directional (it came from an AI-judge proxy). The decisive test is still the human AP Lang panel.
+
+## Human review (Samuel), first read of friction-layer output
+
+- Ranking: The Reckoning (transit) best, The Witness Stand (first-gen student) second, The Ledger (Minnesota right-to-repair) weakest.
+- The Ledger read "a little wordy and hard to read." The hotter and more personal registers landed; the impersonal workhorse did not.
+- Takeaway for next session: when pushing friction into [[Register-Specs]], prioritize a Ledger readability pass (shorter sentences, less subordination, lower clause depth, plainer phrasing, cut the long periodic closer). Readability matters most in The Ledger because it is the daily default.
