@@ -21,6 +21,12 @@ lesson opener. Set by Samuel on 2026-06-05 after early drafts invented loose lab
 - Name the SPECIFIC device, never the umbrella category. If a span is a telegraphic
   sentence, label it "telegraphic sentence," not "syntax." Reach for "syntax," "diction,"
   or "tone" only when no more precise device on the list applies. (Samuel, 2026-06-06.)
+- Highlight the WHOLE device, not its trigger word. The span must cover the rhetorical
+  move itself, not just the signal that flags it. A volta is the turn-clause, not the
+  "And yet" / "But" that opens it. A concession-and-refutation is the granted claim plus
+  the counter (which may sit a paragraph apart from the grant), not a meta-line asserting
+  the grant is sincere. Marking only the opening cue teaches students to hunt for signal
+  words instead of the move. (Samuel, 2026-06-06.)
 - Be precise about look-alikes. The recurring trap: parallelism vs anaphora. Anaphora
   repeats a word or phrase at the START of successive clauses; if the repeated element
   sits mid-clause, it is parallelism, not anaphora. Same care for metaphor vs simile,

@@ -33,7 +33,7 @@ OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOGO = os.path.join(OUT_DIR, "caughtup-logo.png")
 
 GREY = HexColor("#666666"); RULE = HexColor("#CCCCCC")
-HL_BG    = "#DCE9F5"   # single highlight color for every tagged device
+HL_BG    = "#FFF3A0"   # single highlight color for every tagged device (yellow)
 HL_LABEL = "#1F4E79"   # single label color for every inline device name
 
 _ir = ImageReader(LOGO); _iw, _ih = _ir.getSize()
@@ -188,8 +188,8 @@ longthink = {
  "headline":"What the Waiting Did",
  "body":[
   "Waiting used to be the ordinary weather of a life. [[1]]You wrote a letter and waited weeks for the reply. You wanted a song and waited for the radio to play it. You missed a fact and waited, sometimes for years, to learn it.[[/1]] None of this was a virtue. It was the plain cost of being alive, back before that cost was quietly abolished.",
-  "The abolition is a gift, and [[2]]it would be foolish to pretend otherwise[[/2]]. A parent now reaches a child in a held breath. A test result arrives before the dread has time to settle. The busy signal, the layaway counter, the long line at the bank: speed has retired a hundred small daily humiliations, and almost nobody who lived through them misses the waiting itself. We bought back the time we used to lose, and we were right to want it.",
-  "[[3]]And yet[[/3]] something went out of the world along with the waiting, something we were never given a price for. The wait had never been only an absence; [[4]]it was a room[[/4]]. Inside that room the mind did its slow and unsupervised work, rehearsing and dreading and hoping and changing its own position before anyone else could watch. The letter you waited three weeks for was answered, in part, by the three weeks. Boredom, the most maligned of states, was often just thinking with the lights off.",
+  "The abolition is a gift, and it would be foolish to pretend otherwise. A parent now reaches a child in a held breath. A test result arrives before the dread has time to settle. The busy signal, the layaway counter, the long line at the bank: speed has retired a hundred small daily humiliations, and almost nobody who lived through them misses the waiting itself. [[2]]We bought back the time we used to lose, and we were right to want it.[[/2]]",
+  "[[3]]And yet something went out of the world along with the waiting, something we were never given a price for.[[/3]] The wait had never been only an absence; [[4]]it was a room[[/4]]. Inside that room the mind did its slow and unsupervised work, rehearsing and dreading and hoping and changing its own position before anyone else could watch. The letter you waited three weeks for was answered, in part, by the three weeks. Boredom, the most maligned of states, was often just thinking with the lights off.",
   "We did not only lose the wait; we lost what the wait used to make in us. Patience, yes, but also [[5]]the second thought, the cooled temper, the letter never sent[[/5]]. [[6]]Speed keeps its promises.[[/6]] It is the promises of slowness that go unrecorded, because a thing that never happens leaves behind no receipt.",
   "So the real question is not whether to go back. Nobody is going back, and the radio is not returning to make us wait for the song. We are very good now at not waiting. The question is smaller, and harder. It is whether a life that need never pause has quietly stopped doing the work that only the pause once did. And whether we would even notice the loss now, with nothing left in the day to make us wait for it.",
  ],
@@ -197,9 +197,9 @@ longthink = {
   {"para":1,"device":"Anaphora",
    "purpose":"The three sentences all open with “You,” pulling the reader into the habit of waiting and making three unlike losses feel like one shared condition. The repeated opening builds a rhythm that the short line after it (“None of this was a virtue”) then breaks. The repeated word sits at the START of each sentence, which is what makes this anaphora and not parallelism."},
   {"para":2,"device":"Concession and refutation",
-   "purpose":"The writer grants the other side its strongest point, that speed is a real gift, fully and in good faith. Conceding first earns the standing to turn against speed later, so the argument reads as a fair conclusion rather than a reflex complaint."},
+   "purpose":"This is the concession half: the writer grants the other side its strongest case in full, that speed retired real miseries and we were right to want it. Note what is NOT the concession: the earlier line “it would be foolish to pretend otherwise” only insists the grant is sincere; the grant itself is the claim highlighted here. The refutation does not arrive in this paragraph. It lands at the turn in the next one (“And yet...”), so the two halves of this device straddle the paragraph break."},
   {"para":3,"device":"Shift / volta",
-   "purpose":"Two small words pivot the whole piece from praising speed to counting its cost. Placing the turn here, early and plainly, signals that the real argument is only now beginning."},
+   "purpose":"The turn is the whole highlighted clause, not the connective “And yet” that introduces it. By themselves those two words do nothing; the volta is the claim they open, that something went out of the world with the waiting. This same sentence also carries the refutation of the concession above, which is why the piece pivots from praising speed to counting its cost right here."},
   {"para":3,"device":"Metaphor",
    "purpose":"Recasting the empty wait as “a room” turns an abstract loss into a space the reader can picture and the mind can occupy. The metaphor carries the essay's central claim: that waiting was where private thinking got done."},
   {"para":4,"device":"Parallelism",
@@ -233,7 +233,8 @@ longthink = {
   "text":"The writer suggests that a life that “need never pause” may have “quietly stopped doing the work that only the pause once did.” Defend, challenge, or qualify the claim that something valuable is lost when waiting disappears from everyday life. Use your own knowledge, observation, or reading."},
  "misconceptions":[
   "Students often call the three “You...” sentences in paragraph 1 parallelism. They are anaphora: the repeated word opens each sentence. Reserve “parallelism” for repeated structure that does not begin the clause, like the series in paragraph 4.",
-  "Students may take the concession in paragraph 2 as the writer's settled view. It is ground granted on purpose; the writer agrees in order to turn, not to give up the argument.",
+  "Students may take the concession in paragraph 2 as the writer's settled view. It is ground granted on purpose; the writer agrees in order to turn, not to give up the argument. Watch too for students who point to “it would be foolish to pretend otherwise” as the concession. That line only claims the grant is sincere; the concession is the substance, that speed was a real good worth wanting.",
+  "Students often name “And yet” as the shift. The connective only signals that a turn is coming. The volta is the claim that follows it, that something went out of the world with the waiting. Mark the whole clause, not the two words. The same holds for spotting the refutation: it is this clause, one paragraph after the concession, not anything inside paragraph 2.",
   "Students may label “it was a room” a simile. There is no “like” or “as”; it is a metaphor, an implied identity.",
  ],
  "ap_alignment":"Q2 rhetorical-analysis value: a compact text for teaching the concession-then-turn structure, the anaphora-versus-parallelism distinction, a clearly marked shift (volta), and a single load-bearing metaphor students can name and defend. The clipped telegraphic sentence set against the long cumulative one is a clean lesson in how sentence length alone creates emphasis.",
