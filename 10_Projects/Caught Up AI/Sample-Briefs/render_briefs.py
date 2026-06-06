@@ -65,7 +65,7 @@ def footer(canvas, doc):
 def header(date_str, role):
     logo = Image(LOGO, width=LOGO_W, height=LOGO_H)
     left = Table([[logo, [Paragraph("Caught Up AI", wordm),
-                          Paragraph("Daily AP English Language lesson opener", wtag)]]],
+                          Paragraph("The daily AP English Language Opener", wtag)]]],
                  colWidths=[LOGO_W+8, 3.1*inch])
     left.setStyle(TableStyle([("VALIGN",(0,0),(-1,-1),"MIDDLE"),
                               ("LEFTPADDING",(0,0),(-1,-1),0),("RIGHTPADDING",(0,0),(0,0),8),
@@ -97,7 +97,7 @@ def quickref(devices):
 
 def build(piece, role):
     teacher = (role == "Teacher")
-    fname = os.path.join(OUT_DIR, "%s - %s.pdf" % (piece["base"], role))
+    fname = os.path.join(OUT_DIR, "%s - %s copy.pdf" % (piece["base"], role))
     doc = SimpleDocTemplate(fname, pagesize=letter, leftMargin=0.9*inch, rightMargin=0.9*inch,
                             topMargin=0.7*inch, bottomMargin=0.75*inch,
                             title="%s (%s copy)" % (piece["headline"], role), author="Caught Up AI")
@@ -162,7 +162,7 @@ def build(piece, role):
 DATE = "Friday, June 5, 2026"
 
 ledger = {
- "base":"Caught Up AI - 2026-06-05 - Ukraine Aid Vote (Ledger)",
+ "base":"Caught Up AI Opener - 2026-06-05 - Ukraine Aid Vote (Ledger)",
  "edition":"Sample edition 1 of 3", "date":DATE,
  "headline":"A Cross-Party Majority, and a Procedural Back Door",
  "body":[
@@ -213,7 +213,7 @@ ledger = {
 }
 
 longlook = {
- "base":"Caught Up AI - 2026-06-05 - Antarctic Basin (Long Look)",
+ "base":"Caught Up AI Opener - 2026-06-05 - Antarctic Basin (Long Look)",
  "edition":"Sample edition 2 of 3", "date":DATE,
  "headline":"The Shape Under the Ice",
  "body":[
@@ -264,7 +264,7 @@ longlook = {
 }
 
 tribute = {
- "base":"Caught Up AI - 2026-06-05 - Marjane Satrapi (Tribute)",
+ "base":"Caught Up AI Opener - 2026-06-05 - Marjane Satrapi (Tribute)",
  "edition":"Sample edition 3 of 3", "date":DATE,
  "headline":"She Drew Small",
  "body":[
