@@ -48,6 +48,8 @@ BEFORE WRITING ANYTHING, load the engine. Read these files in
 - Anti-Tell-List.md  (the per-piece banned-construction gate)
 - Cross-Piece-Sameness-Rubric.md  (the batch audit + Variety Matrix)
 - Accuracy-Guardrail.md  (fact-sourcing + the expression firewall)
+- MCQ-Construction-Spec.md  (AP-grounded rules for the two multiple-choice questions: skill spread, stem patterns, distractor traps, the one-best-answer gate, the self-check)
+- Rhetorical-Device-Vocabulary.md  (the controlled device list for labeling, plus the single-color highlight and per-device purpose convention)
 
 TWO HARD RULES override everything below: no em-dashes anywhere, no emojis anywhere.
 
@@ -89,9 +91,12 @@ OUTPUT: present each piece as the full inbox lesson-opener package, in this orde
   it creates. Only label devices that are genuinely there.
 
   MULTIPLE CHOICE (AP Lang style)
-  2 questions in the AP Lang reading style, asking about rhetorical function, the effect
-  of a choice, tone, or the relationship between parts of the passage. Four options each
-  (A to D), one defensibly best. Add an answer key with a one-line rationale for each.
+  2 questions built to MCQ-Construction-Spec.md. The two MUST target different reading
+  skills (for example one Reasoning or Claims item and one Style tone item), not two
+  function-of-a-phrase questions. Four options each (A to D), exactly one defensibly best;
+  every distractor plausible and partly true and failing by a named trap from the spec, no
+  free elimination a student discards on sight. Run the spec self-check before finalizing.
+  Add an answer key with a one-line rationale for each.
 
   DISCUSSION QUESTIONS
   2 open questions a teacher could put on the board
