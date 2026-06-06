@@ -18,12 +18,19 @@ lesson opener. Set by Samuel on 2026-06-05 after early drafts invented loose lab
   device names.
 - Tag a device only where it is genuinely present. Do not force a label onto a phrase to
   fill a quota. Fewer correct labels beat more loose ones.
+- Name the SPECIFIC device, never the umbrella category. If a span is a telegraphic
+  sentence, label it "telegraphic sentence," not "syntax." Reach for "syntax," "diction,"
+  or "tone" only when no more precise device on the list applies. (Samuel, 2026-06-06.)
 - Be precise about look-alikes. The recurring trap: parallelism vs anaphora. Anaphora
   repeats a word or phrase at the START of successive clauses; if the repeated element
   sits mid-clause, it is parallelism, not anaphora. Same care for metaphor vs simile,
   antithesis vs juxtaposition, asyndeton vs polysyndeton.
-- This list is encoded in the PDF generator at
-  10_Projects/Caught Up AI/Sample-Briefs/render_briefs.py. Keep the two in sync.
+- Highlighting convention (2026-06-06): mark every device in ONE color, not a color per
+  device. The current renderer is 10_Projects/Caught Up AI/Sample-Briefs/render_opener_v2.py
+  (single highlight + single label color). In the teacher copy, each device also gets its
+  PURPOSE: why the author chose it and what it accomplishes, kept to a line or two.
+- This list is also encoded in the PDF generators under
+  10_Projects/Caught Up AI/Sample-Briefs/. Keep the two in sync.
 
 ## The list
 
@@ -55,6 +62,7 @@ lesson opener. Set by Samuel on 2026-06-05 after early drafts invented loose lab
 - Analogy: extended comparison mapping a familiar relationship onto an unfamiliar one.
 - Personification: assigning human traits to abstractions or objects.
 - Cumulative and periodic sentences: front-loading vs withholding the main clause for effect.
+- Telegraphic sentence: a very short sentence (roughly under five words) used for emphasis, pace, or to land a point. Name this, not "syntax," when a span is clipped this way.
 - Anecdotal vs statistical evidence: the deliberate choice of which evidence type to reach for.
 - Shift / volta: a deliberate turn in tone, argument, or focus.
 
