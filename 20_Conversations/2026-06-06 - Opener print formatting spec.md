@@ -25,10 +25,17 @@ Samuel asked for a detailed synopsis of how best to format the Opener for printi
 - Delivered a paste-ready build prompt (in transcript) that modifies render_opener_v2.py and ends with verification steps (page counts, no orphaned headers, no split blocks).
 - Not implemented yet; awaiting Samuel's go / the two decisions.
 
+## Build (same day)
+
+- Samuel chose 11pt article and a firm NO on two-up MCQ.
+- [[render_opener_v2.py]] updated: stronger 12pt section headers with a thin rule, role-based article leading (teacher 15.5, student 17 for annotation room), tighter apparatus leading (14.5), running header on pages 2+, separate teacher/student PDFs, B&W-safe yellow highlight kept.
+- First render came out 8 pages (teacher) / 3 (student): KeepTogether on every header+block and every article paragraph forced early page breaks. Fixed by switching to keepWithNext for headers and widow/orphan control for article paragraphs. Result: teacher 3 pages, student 2 (1 double-sided sheet).
+- Verified visually (PyMuPDF render): no orphaned headers, no atomic block split, multi-item sections flow with each item whole.
+
 ## Action items
 
-- [ ] Samuel — decide 12pt vs 11pt article and two-up MCQ, then send the build prompt (or ask Claude to run it on the sample).
+- [ ] None open. Renderer is ready for the next edition's content.
 
 ## Open threads
 
-- Whether to render the "What the Waiting Did" sample now as a before/after, or adjust the spec first.
+- Student copy is 2 pages for a ~470-word article; 1 page is not realistic without cutting content. Lever if ever wanted: drop student article leading from 17 back to 15.5 (loses annotation room).

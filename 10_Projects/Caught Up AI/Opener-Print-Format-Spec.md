@@ -7,7 +7,14 @@ project: "[[Caught Up AI]]"
 
 # Opener Print Format Spec
 
-Print-formatting decisions for the daily [[Caught Up AI]] Opener PDFs. Not yet implemented in the renderer ([[render_opener_v2.py]]); this is the agreed target. See also [[Product naming]] (Opener, teacher copy / student copy, edition).
+Print-formatting decisions for the daily [[Caught Up AI]] Opener PDFs. IMPLEMENTED in the renderer ([[render_opener_v2.py]]) on 2026-06-06. See also [[Product naming]] (Opener, teacher copy / student copy, edition).
+
+Status (2026-06-06): built and verified on the "What the Waiting Did" sample. Teacher copy = 3 pages, Student copy = 2 pages (1 double-sided sheet per student). No orphaned headers, no atomic block split; multi-item sections (answer key, MCQ) flow across pages with each item kept whole. Two-up MCQ NOT used (Samuel: definitely no).
+
+Implementation notes:
+- Orphan-header prevention uses keepWithNext on the section-header style + the rule, NOT KeepTogether(header+block). The KeepTogether approach forced whole blocks onto the next page and ballooned the doc to 8/3 pages; keepWithNext fixed it to 3/2.
+- Article paragraphs are NOT each wrapped in KeepTogether (that wasted pages). They flow with widow/orphan control (allowWidows=0, allowOrphans=0) so no single line is stranded, but a paragraph may break across a page. This is the deliberate relaxation of "keep each paragraph whole."
+- Atomic units still wrapped in KeepTogether: each MCQ (stem+options), each device entry, each answer-key item, each sample response, each misconception bullet.
 
 ## Core principle
 

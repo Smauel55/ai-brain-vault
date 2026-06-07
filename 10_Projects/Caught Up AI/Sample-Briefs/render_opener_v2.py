@@ -40,18 +40,25 @@ _ir = ImageReader(LOGO); _iw, _ih = _ir.getSize()
 LOGO_H = 0.40*inch; LOGO_W = LOGO_H*_iw/_ih
 
 ss = getSampleStyleSheet()
-body  = ParagraphStyle("body", parent=ss["Normal"], fontName="Times-Roman",
-                       fontSize=11, leading=15.5, alignment=TA_LEFT, spaceAfter=7)
+# Article body. Teacher uses 'body' (15.5 leading); student uses 'bodystu' (17
+# leading) for annotation room between lines. Both 11pt (decided 2026-06-06).
+body   = ParagraphStyle("body", parent=ss["Normal"], fontName="Times-Roman",
+                        fontSize=11, leading=15.5, alignment=TA_LEFT, spaceAfter=7,
+                        allowWidows=0, allowOrphans=0)
+bodystu= ParagraphStyle("bodystu", parent=body, leading=17)
+# Apparatus (MCQ, discussion, prompt, teacher notes): tighter leading to stay compact.
+appb   = ParagraphStyle("appb", parent=body, leading=14.5, spaceAfter=6)
 title = ParagraphStyle("title", parent=ss["Title"], fontName="Times-Bold",
-                       fontSize=17, leading=20, textColor=black, alignment=TA_LEFT, spaceAfter=3)
+                       fontSize=18, leading=21, textColor=black, alignment=TA_LEFT, spaceAfter=3)
 roletag = ParagraphStyle("roletag", parent=ss["Normal"], fontName="Helvetica-Bold",
                          fontSize=9, textColor=GREY, spaceAfter=10)
 sect  = ParagraphStyle("sect", parent=ss["Normal"], fontName="Helvetica-Bold",
-                       fontSize=11, textColor=black, spaceBefore=13, spaceAfter=5, leading=13)
-q     = ParagraphStyle("q", parent=body, spaceAfter=2)
-opt   = ParagraphStyle("opt", parent=body, leftIndent=18, spaceAfter=1)
-bullet= ParagraphStyle("bullet", parent=body, leftIndent=14, spaceAfter=2)
-devp  = ParagraphStyle("devp", parent=body, leftIndent=14, spaceAfter=5)
+                       fontSize=12, textColor=black, spaceBefore=12, spaceAfter=3, leading=14,
+                       keepWithNext=1)
+q     = ParagraphStyle("q", parent=appb, spaceAfter=2)
+opt   = ParagraphStyle("opt", parent=appb, leftIndent=18, spaceAfter=1)
+bullet= ParagraphStyle("bullet", parent=appb, leftIndent=14, spaceAfter=2)
+devp  = ParagraphStyle("devp", parent=appb, leftIndent=14, spaceAfter=5)
 wordm = ParagraphStyle("wordm", parent=ss["Normal"], fontName="Helvetica-Bold",
                        fontSize=12, textColor=black, leading=13)
 wtag  = ParagraphStyle("wtag", parent=ss["Normal"], fontName="Helvetica",
@@ -61,12 +68,28 @@ mdate = ParagraphStyle("mdate", parent=ss["Normal"], fontName="Helvetica",
 
 def esc(t): return t.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
 
-def footer(canvas, doc):
+def _footer(canvas, doc):
     canvas.saveState()
     canvas.setFont("Helvetica", 7.5); canvas.setFillColor(GREY)
     canvas.drawString(0.9*inch, 0.5*inch, "Caught Up AI   .   caughtupai.com")
     canvas.drawRightString(letter[0]-0.9*inch, 0.5*inch, "p. %d" % canvas.getPageNumber())
     canvas.restoreState()
+
+def make_decorators(running_text):
+    """First page: footer only (the logo header is in the flow). Later pages: footer
+    plus a small running header so a dropped or mixed print stack stays identifiable."""
+    def first(canvas, doc):
+        _footer(canvas, doc)
+    def later(canvas, doc):
+        _footer(canvas, doc)
+        canvas.saveState()
+        canvas.setFont("Helvetica", 8); canvas.setFillColor(GREY)
+        y = letter[1] - 0.45*inch
+        canvas.drawString(0.9*inch, y, running_text)
+        canvas.setStrokeColor(RULE); canvas.setLineWidth(0.5)
+        canvas.line(0.9*inch, y-3, letter[0]-0.9*inch, y-3)
+        canvas.restoreState()
+    return first, later
 
 def header(date_str, role):
     logo = Image(LOGO, width=LOGO_W, height=LOGO_H)
@@ -115,9 +138,22 @@ def devices_section(devices, quotes):
         rows.append(Paragraph("%s<br/>%s" % (head, esc(d["purpose"])), devp))
     return rows
 
+def sec(title, blocks):
+    """A section header with a thin rule. The header style sets keepWithNext and the
+    rule is flagged the same way, so the header is never left at the bottom of a page
+    without content under it, while a long first block is NOT forced whole (no big gaps)."""
+    head = Paragraph(title, sect)
+    rule = HRFlowable(width="100%", thickness=0.5, color=RULE, spaceBefore=1, spaceAfter=5)
+    rule.keepWithNext = 1
+    return [head, rule] + list(blocks)
+
 def build(piece, role):
     teacher = (role == "Teacher")
+    art = body if teacher else bodystu
     fname = os.path.join(OUT_DIR, "%s - %s copy.pdf" % (piece["base"], role))
+    running = ("Caught Up AI Opener   .   %s   .   %s   .   %s copy"
+               % (piece["date"], piece["headline"], role))
+    first_fn, later_fn = make_decorators(running)
     doc = SimpleDocTemplate(fname, pagesize=letter, leftMargin=0.9*inch, rightMargin=0.9*inch,
                             topMargin=0.7*inch, bottomMargin=0.75*inch,
                             title="%s (%s copy)" % (piece["headline"], role), author="Caught Up AI")
@@ -127,57 +163,61 @@ def build(piece, role):
     s.append(Paragraph("Teacher copy (everything in the student copy, plus answers and teaching notes)"
                        if teacher else "Student copy (project or hand out)", roletag))
 
-    # Article
+    # Article: each paragraph kept intact across page breaks.
+    art_paras = [Paragraph(make_para(para, i, piece["devices"], teacher), art)
+                 for i, para in enumerate(piece["body"], 1)]
     if teacher:
-        s.append(Paragraph("The article, marked for rhetorical devices (one color throughout):", sect))
-    for i, para in enumerate(piece["body"], 1):
-        s.append(Paragraph(make_para(para, i, piece["devices"], teacher), body))
+        s += sec("The article, marked for rhetorical devices (one color throughout):", art_paras)
+    else:
+        s += art_paras
 
+    # Devices, and why they are here (teacher only): each entry atomic.
     if teacher:
-        s.append(Paragraph("Devices, and why they are here:", sect))
         quotes = extract_quotes(piece["body"])
-        for row in devices_section(piece["devices"], quotes):
-            s.append(row)
+        dev_blocks = [KeepTogether(r) for r in devices_section(piece["devices"], quotes)]
+        s += sec("Devices, and why they are here:", dev_blocks)
 
-    # MCQ
-    s.append(Paragraph("AP-style multiple choice:", sect))
+    # MCQ: stem plus all four options kept together.
+    mcq_blocks = []
     for i, item in enumerate(piece["mcq"], 1):
         blk = [Paragraph("<b>%d.</b>&nbsp;&nbsp;%s" % (i, esc(item["stem"])), q)]
         for let, o in zip("ABCD", item["options"]):
             blk.append(Paragraph("%s)&nbsp;&nbsp;%s" % (let, esc(o)), opt))
-        s.append(KeepTogether(blk)); s.append(Spacer(1,4))
+        blk.append(Spacer(1, 4))
+        mcq_blocks.append(KeepTogether(blk))
+    s += sec("AP-style multiple choice:", mcq_blocks)
 
+    # Answer key (teacher only): each item atomic.
     if teacher:
-        key = [Paragraph("Multiple choice answer key:", sect)]
-        for i, item in enumerate(piece["mcq"], 1):
-            key.append(Paragraph("<b>%d. Answer %s.</b>&nbsp;&nbsp;%s" % (i, item["answer"], esc(item["rationale"])), q))
-        s.append(KeepTogether(key))
+        key_blocks = [KeepTogether([Paragraph("<b>%d. Answer %s.</b>&nbsp;&nbsp;%s"
+                       % (i, item["answer"], esc(item["rationale"])), q)])
+                      for i, item in enumerate(piece["mcq"], 1)]
+        s += sec("Multiple choice answer key:", key_blocks)
 
-    # Discussion
-    s.append(Paragraph("Discussion questions:", sect))
-    for i, d in enumerate(piece["discussion"], 1):
-        s.append(Paragraph("<b>%d.</b>&nbsp;&nbsp;%s" % (i, esc(d)), q))
+    # Discussion.
+    disc_blocks = [KeepTogether([Paragraph("<b>%d.</b>&nbsp;&nbsp;%s" % (i, esc(d)), q)])
+                   for i, d in enumerate(piece["discussion"], 1)]
+    s += sec("Discussion questions:", disc_blocks)
 
+    # Sample responses (teacher only).
     if teacher:
-        sr = [Paragraph("Sample strong discussion responses:", sect)]
-        for i, r in enumerate(piece["sample_responses"], 1):
-            sr.append(Paragraph("<b>%d.</b>&nbsp;&nbsp;%s" % (i, esc(r)), q))
-        s.append(KeepTogether(sr))
+        sr_blocks = [KeepTogether([Paragraph("<b>%d.</b>&nbsp;&nbsp;%s" % (i, esc(r)), q)])
+                     for i, r in enumerate(piece["sample_responses"], 1)]
+        s += sec("Sample strong discussion responses:", sr_blocks)
 
-    # Writing prompt
-    s.append(Paragraph("Writing prompt (%s):" % esc(piece["writing"]["type"]), sect))
-    s.append(Paragraph(esc(piece["writing"]["text"]), body))
+    # Writing prompt.
+    s += sec("Writing prompt (%s):" % esc(piece["writing"]["type"]),
+             [Paragraph(esc(piece["writing"]["text"]), appb)])
 
+    # Misconceptions and AP alignment (teacher only).
     if teacher:
-        mis = [Paragraph("Common misconceptions to watch for:", sect)]
-        for m in piece["misconceptions"]:
-            mis.append(Paragraph("&bull;&nbsp;&nbsp;" + esc(m), bullet))
-        s.append(KeepTogether(mis))
-        s.append(Paragraph("AP exam alignment:", sect))
-        s.append(Paragraph(esc(piece["ap_alignment"]), body))
+        mis_blocks = [KeepTogether([Paragraph("&bull;&nbsp;&nbsp;" + esc(m), bullet)])
+                      for m in piece["misconceptions"]]
+        s += sec("Common misconceptions to watch for:", mis_blocks)
+        s += sec("AP exam alignment:", [Paragraph(esc(piece["ap_alignment"]), appb)])
 
-    doc.build(s, onFirstPage=footer, onLaterPages=footer)
-    return fname
+    doc.build(s, onFirstPage=first_fn, onLaterPages=later_fn)
+    return fname, doc.page
 
 # ================================================================== content
 DATE = "Saturday, June 6, 2026"
@@ -242,4 +282,5 @@ longthink = {
 
 if __name__ == "__main__":
     for role in ("Teacher", "Student"):
-        print("wrote:", build(longthink, role))
+        fn, pages = build(longthink, role)
+        print("wrote: %s  (%d page%s)" % (os.path.basename(fn), pages, "" if pages == 1 else "s"))
