@@ -18,12 +18,12 @@ Student and teacher copies get DIFFERENT formatting rules because they print dif
 
 ## Type
 
-- Article body: 12pt serif, leading ~16.5pt. (Current renderer is 11pt.)
-- Student copy article only: raise leading to ~18pt for annotation room.
+- Article body: 11pt serif, leading ~15.5pt (DECIDED 2026-06-06; keeps student copy to one page more easily). Current renderer is already 11pt.
+- Student copy article only: raise leading to ~17pt for annotation room.
 - All apparatus (MCQ, discussion, writing prompt, teacher notes, device explanations): 11pt serif, leading ~14.5pt.
 - Headline 18pt bold. Section headers 12pt bold sans + 0.5pt rule beneath (current headers are 11pt, too weak a hierarchy).
 - Footer / running header: 7.5-8pt grey.
-- Note: at 0.9in side margins a line runs ~95 chars (wide). Fix via 12pt type, not narrower margins (margins add pages).
+- Note: at 0.9in side margins an 11pt line runs ~95 chars (wider than the ideal 65-75). Accepted as the cost of staying on one page; do not narrow margins (that adds pages).
 
 ## No-split rules (keep whole on one page)
 
@@ -53,7 +53,7 @@ Student and teacher copies get DIFFERENT formatting rules because they print dif
 
 ## Open decisions before building
 
-1. 12pt article (readability) vs keep 11pt (one-page student copy easier).
-2. Two-up MCQ options yes/no.
+1. RESOLVED 2026-06-06: article body stays 11pt.
+2. Two-up MCQ options: default NO (cleaner reading-page look). Add only if the student copy overflows one page.
 
 The full paste-ready build prompt is in [[2026-06-06 - Opener print formatting spec]].
