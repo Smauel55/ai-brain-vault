@@ -115,6 +115,19 @@ Keep each to a four-option set with parallel grammar and comparable length, exac
 defensibly best answer, and distractors that are partly true but fail by a named trap.
 A student should be able to answer each from the opener alone in under a minute.
 
+## Writing prompt (FRQ) selection
+
+Each opener also carries one writing prompt tied to an AP free-response type. AP English Language has three FRQs:
+
+- Q1 synthesis: requires 6 to 7 provided sources and an argument that cites them. It does NOT fit a single-passage opener unless an edition is deliberately built with multiple sources.
+- Q2 rhetorical analysis: analyze the rhetorical choices the writer makes in the passage. Fits any marked opener, since every opener is a passage of rhetorical choices.
+- Q3 argument: defend, challenge, or qualify a debatable claim, no sources. Fits only openers whose passage advances a contestable position; a Q3 prompt generalizes the passage's theme into a debatable proposition.
+
+Rules:
+- Choose the type that genuinely FITS the passage. Do not default every opener to Q2, and do not force a rotation. Fit always beats forced variety (the same principle as the answer-key fix: vary by fit, never by pattern).
+- Argument-driven registers (The Reckoning, The Long Think, The Ledger, The Open Letter) support both Q2 and Q3; rotate them across a batch. Observational or consecratory registers (The Long Look, The Tribute) usually support only Q2, because there is no contestable claim to argue.
+- Across a batch, vary the FRQ type wherever the passages allow, the way registers are varied, but never staple a Q3 argument onto a piece that argues nothing.
+
 ## Sourcing and confidence
 
 - Grounded against the official CED (2024) reading samples Q1 to Q7 and the skill-alignment table (Skills 1.A, 3.A, 7.A, 5.A, 5.C, 7.B). Exam structure: Section I = 45 multiple choice in 60 minutes (45% of score), 23 to 25 reading plus 20 to 22 writing questions across 5 passage sets.

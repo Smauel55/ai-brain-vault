@@ -69,8 +69,8 @@ ledger = {
   "A strong answer notes that by withholding an explicit 'should,' the writer makes the conclusion feel discovered rather than argued. The named body (the Mint), the dated figures (above face value since 2006), and the foreign precedent (Canada) do the persuading, so the reader reaches the verdict and credits it to the evidence rather than to the writer's opinion. The restraint is the persuasion.",
   "By granting that rounding can fall hardest on cash users and that the coin carries real attachment, the writer removes the easy charge of bias. Having been fair to the other side, the statistical turn in paragraph 4 reads as a correction of the record rather than a partisan jab, which makes it much harder to wave away.",
  ],
- "writing": {"type":"homework or extended in-class, Q2 rhetorical analysis",
-  "text":"Read the opener closely and write an essay analyzing the rhetorical choices the writer makes to build a case against the penny while appearing only to report on it. Consider the writer's use of attribution, figures, concession, and tone."},
+ "writing": {"type":"homework or extended in-class, Q3 argument",
+  "text":"The opener suggests that the penny stays in circulation 'by default rather than decision.' Write an essay that argues your position on the extent to which a society should keep a long-standing convention after its original usefulness has faded. Use evidence from your reading, experience, or observation to support your argument."},
  "misconceptions": [
   "Students may call the contrast in paragraph 1 (a coin worth one cent that costs nearly three to make) irony. It is closer to antithesis: two opposed facts set in balanced form. Reserve irony for a gap between what is said and what is meant.",
   "Students often read paragraph 3 as the writer's real position because it argues for the penny. It is a concession: the writer grants the opposing case in good faith in order to answer it in paragraph 4, not to endorse it.",
