@@ -10,6 +10,11 @@ On-spec against Register-Specs, Rhetorical-Device-Vocabulary (controlled list),
 MCQ-Construction-Spec, Anti-Tell-List (friction layer), Accuracy-Guardrail.
 No em-dashes, no emojis. Facts are well-established and stated with honest hedging;
 a real published Ledger would still need the full multi-source sourcing pass.
+
+Revisions (2026-06-06, per Samuel):
+  - MCQ answer keys distributed across A/B/C/D (was always A).
+  - Removed the niche "Free to All" carved-motto allusion (not widely known).
+  - Removed Understatement / litotes (dropped from the controlled device list).
 """
 from render_opener_v2 import build
 
@@ -26,7 +31,7 @@ ledger = {
   "Other countries have already run the experiment. In its 2012 budget the Canadian government announced it would stop making the penny, and the Royal Canadian Mint ended distribution the following February. Cash purchases in Canada are now rounded to the nearest five cents, while electronic payments, which cost nothing to round, still settle to the exact cent. Australia withdrew its one and two-cent coins decades earlier. None of these governments has moved to bring the small coin back.",
   "The case for keeping the penny is not empty. [[2]]Rounding falls only on cash, which is used more by people with the least, so a price rounded up at the register is a small tax on exactly those buyers.[[/2]] Pennies still fill charity jars and school fundraisers. And a currency carries habits and attachments that a balance sheet does not record; the one-cent coin has worn Lincoln's profile since 1909.",
   "The evidence has not been kind to that case. [[3]]Studies of cash transactions have found that rounding to the nearest five cents nets out close to zero for buyers over time, because prices round down about as often as they round up.[[/3]] Electronic payment, now most of retail, is untouched either way. The charities that once counted pennies increasingly ask for a card instead. [[4]]The coin has become a rounding error in the economy it was built to serve.[[/4]]",
-  "What keeps it in circulation is mostly inertia. Ending the penny would take an act of Congress, which has not come, while the Mint goes on striking a coin it loses money on and a lobbying group funded in part by the zinc that goes into the blanks argues for keeping it. [[5]]In Ottawa, the missing coin has not been missed.[[/5]] The American penny stays in production, by default rather than decision.",
+  "What keeps it in circulation is mostly inertia. Ending the penny would take an act of Congress, which has not come, while the Mint goes on striking a coin it loses money on and a lobbying group funded in part by the zinc that goes into the blanks argues for keeping it. In Ottawa, the missing coin has not been missed. The American penny stays in production, by default rather than decision.",
  ],
  "devices": [
   {"para":1,"device":"Antithesis",
@@ -37,26 +42,24 @@ ledger = {
    "purpose":"To answer the concession the writer reaches for statistical evidence, studies of many transactions, rather than a single hard-luck story. The choice of evidence type is deliberate: a number drawn from many cases rebuts a worry about fairness more convincingly than one anecdote could, and it holds the register's sourced, disinterested tone."},
   {"para":4,"device":"Metaphor",
    "purpose":"Calling the penny a rounding error in the economy it was built to serve turns an abstract claim about irrelevance into a single concrete figure of speech. It is a metaphor, an implied identity with no like or as, and it carries the piece's verdict in a handful of words without the writer stating an opinion."},
-  {"para":5,"device":"Understatement / litotes",
-   "purpose":"In Ottawa, the missing coin has not been missed says far less than it means. The dry understatement, and the quiet play on missing and missed, lets the phrasing carry the judgment that Canada lost nothing, which lands harder than an outright claim would in a register that prizes restraint."},
  ],
  "mcq": [
   {"stem":"The relationship between the third paragraph and the fourth is best described as one in which the writer first",
    "options":[
-     "grants the strongest case for keeping the penny, then turns the evidence against it",
      "raises the main objections to the penny, then concedes that they are valid",
+     "grants the strongest case for keeping the penny, then turns the evidence against it",
      "states a personal preference for the penny, then supports it with statistics",
      "presents two competing studies, then explains why their findings conflict"],
-   "answer":"A",
-   "rationale":"Paragraph 3 makes the best case for keeping the penny (rounding as a tax on cash buyers, sentiment, charity); paragraph 4 opens with 'The evidence has not been kind to that case' and answers it with data. That is concession followed by an evidence-driven turn. B inverts which side paragraph 3 takes; C imports a personal preference the disinterested register never states; D invents conflicting studies the passage does not contain."},
+   "answer":"B",
+   "rationale":"Paragraph 3 makes the best case for keeping the penny (rounding as a tax on cash buyers, sentiment, charity); paragraph 4 opens with 'The evidence has not been kind to that case' and answers it with data. That is concession followed by an evidence-driven turn. The piece does not raise objections to the penny and then call them valid (that reverses which side paragraph 3 takes); it states no personal preference, since the register stays disinterested; and it offers one line of evidence, not two studies in conflict."},
   {"stem":"In context, the final sentence ('The American penny stays in production, by default rather than decision') primarily serves to",
    "options":[
-     "frame the penny's survival as the result of inaction rather than deliberate choice",
      "predict that Congress will vote to eliminate the coin in the near future",
      "credit lawmakers with deliberately preserving a familiar tradition",
-     "concede that the penny still serves a genuine practical purpose"],
-   "answer":"A",
-   "rationale":"The close caps a paragraph about inertia (no act of Congress, the Mint striking at a loss, lobbying) and names the cause of the penny's survival as default, not decision. B imports a prediction the text does not make; C inverts the dry, critical tone into praise; D contradicts paragraph 4, which shows the practical case has failed."},
+     "concede that the penny still serves a genuine practical purpose",
+     "frame the penny's survival as the result of inaction rather than deliberate choice"],
+   "answer":"D",
+   "rationale":"The close caps a paragraph about inertia (no act of Congress, the Mint striking at a loss, lobbying) and names the cause of the penny's survival as default, not decision. The text makes no prediction about a future vote; it does not credit lawmakers with deliberate preservation (the point is that no decision was made); and it does not concede a practical purpose, since paragraph 4 has just shown the practical case failing."},
  ],
  "discussion": [
   "The writer never says outright that the penny should be abolished, yet most readers finish the piece thinking it should. How does building the case almost entirely from costs, precedents, and figures, rather than from open argument, shape the way the conclusion lands?",
@@ -72,9 +75,9 @@ ledger = {
   "Students may call the contrast in paragraph 1 (a coin worth one cent that costs nearly three to make) irony. It is closer to antithesis: two opposed facts set in balanced form. Reserve irony for a gap between what is said and what is meant.",
   "Students often read paragraph 3 as the writer's real position because it argues for the penny. It is a concession: the writer grants the opposing case in good faith in order to answer it in paragraph 4, not to endorse it.",
   "Students may treat 'the coin has become a rounding error' as a literal accounting term. In context it is a metaphor for irrelevance: the penny now matters about as little as a sum too small to bother counting.",
-  "Students may credit the closing line's force to strong opinion words. It has none; its edge comes from understatement ('by default rather than decision'), which lets the dry phrasing carry the verdict.",
+  "Students may assume the second multiple-choice answer is wrong because the closing line sounds neutral. Its job is to characterize the penny's survival as the product of inaction, which is exactly what 'by default rather than decision' states.",
  ],
- "ap_alignment":"Q2 rhetorical-analysis value: a clean model of persuasion by restraint, where attribution, dated figures, and a fairly stated concession do the arguing in place of overt opinion. Good for teaching antithesis versus irony, a concession that precedes a turn, the deliberate choice of statistical over anecdotal evidence, and how understatement can carry a verdict.",
+ "ap_alignment":"Q2 rhetorical-analysis value: a clean model of persuasion by restraint, where attribution, dated figures, and a fairly stated concession do the arguing in place of overt opinion. Good for teaching antithesis versus irony, a concession that precedes a turn, and the deliberate choice of statistical over anecdotal evidence.",
 }
 
 # ============================================================ 2. THE TRIBUTE
@@ -83,33 +86,31 @@ tribute = {
  "edition": EDITION, "date": DATE,
  "headline": "Free to All",
  "body": [
-  "There is a building in almost every town that will take you in and ask for nothing. [[1]]You do not have to buy anything. You do not have to believe anything. You do not have to be anyone in particular.[[/1]] Over the door of one of them, in Boston, three words are cut into the stone: [[2]]Free to All[[/2]]. We built thousands of these, and then half forgot that we had.",
-  "Think of who is inside on a cold afternoon. A child carries a stack of books taller than her arms. A man with nowhere warmer to be reads the paper front to back, because the room is his too. Someone fills out the forms that will decide a year of their life, and a librarian leans in to help, for nothing. [[3]]It is the smallest thing a town builds, and close to the largest in what it hands out.[[/3]]",
-  "The promise is strange when you say it plainly. Walk in with a question, any question, and a person whose job is to care about the answer will help you find it. [[4]]The library does not ask whether the question is worth asking.[[/4]] A scholar and a kid doing a report on volcanoes get the same patient attention and the same chair. The building keeps no record of which of them deserved it.",
-  "And it does all this quietly, without a slogan, without a campaign, without anyone needing to be persuaded that a warm room and a free book and a person who knows where to look might be worth keeping, which is perhaps why it has been so easy to let the hours shrink and the branches dim while we were busy admiring louder things. [[5]]The library has never been good at advertising itself.[[/5]]",
+  "There is a building in almost every town that will take you in and ask for nothing. [[1]]You do not have to buy anything. You do not have to believe anything. You do not have to be anyone in particular.[[/1]] You walk in, and you are simply welcome. We built thousands of them, in nearly every town, and then half forgot that we had.",
+  "Think of who is inside on a cold afternoon. A child carries a stack of books taller than her arms. A man with nowhere warmer to be reads the paper front to back, because the room is his too. Someone fills out the forms that will decide a year of their life, and a librarian leans in to help, for nothing. [[2]]It is the smallest thing a town builds, and close to the largest in what it hands out.[[/2]]",
+  "The promise is strange when you say it plainly. Walk in with a question, any question, and a person whose job is to care about the answer will help you find it. [[3]]The library does not ask whether the question is worth asking.[[/3]] A scholar and a kid doing a report on volcanoes get the same patient attention and the same chair. The building keeps no record of which of them deserved it.",
+  "And it does all this quietly, [[4]]without a slogan, without a campaign, without anyone needing to be persuaded[[/4]] that a warm room and a free book and a person who knows where to look might be worth keeping, which is perhaps why it has been so easy to let the hours shrink and the branches dim while we were busy admiring louder things. The library has never been good at selling itself.",
   "So before we let it go without thanks, it is worth saying plainly what it was: a place that believed, in brick and oak and a stamped card, that a person's worth did not depend on their purse. We will not build many things like that again. The lights are still on, in most towns, for now.",
  ],
  "devices": [
   {"para":1,"device":"Anaphora",
    "purpose":"The three sentences open on the same phrase ('You do not have to'), and each completes it with a larger surrender: buy, believe, be anyone. Because the repeated words sit at the START of successive sentences, this is anaphora, not parallelism, and the rising order, from a purchase to a person's whole identity, builds the welcome from small to total."},
-  {"para":1,"device":"Allusion",
-   "purpose":"Free to All is not the writer's slogan; it is carved over the entrance of the Boston Public Library. Quoting it is an allusion, a reference to a known thing, which lets the writer borrow the institution's own stated promise rather than assert one of his own."},
   {"para":2,"device":"Antithesis",
    "purpose":"The smallest thing a town builds, and close to the largest in what it hands out sets small against large in balanced form. The antithesis compresses the tribute's whole claim, that a modest civic building gives out something close to immeasurable, into one line whose shape the reader can feel."},
   {"para":3,"device":"Personification",
    "purpose":"Giving the building human acts (the library does not ask whether the question is worth asking) is personification. It lets the writer credit the institution itself with the welcome and the lack of judgment, so the value seems to live in the place rather than in any single librarian."},
-  {"para":4,"device":"Understatement / litotes",
-   "purpose":"The library has never been good at advertising itself downplays on purpose. The understatement, dropped after a long accumulating sentence, quietly explains why something this valuable has been so easy to neglect, and it does the work without scolding anyone."},
+  {"para":4,"device":"Parallelism",
+   "purpose":"The repeated frame 'without a slogan, without a campaign, without anyone needing to be persuaded' lines up three things the library never does to promote itself. Because the repeated structure sits inside the sentence rather than opening successive sentences, it is parallelism, not anaphora, and the accumulation quietly explains how something this useful could be so easy to overlook."},
  ],
  "mcq": [
   {"stem":"In the first paragraph, the repetition of 'You do not have to' (buy anything, believe anything, be anyone in particular) primarily serves to",
    "options":[
-     "convey that the library places no condition of any kind on who may enter",
      "list the specific services the library provides to its visitors",
      "criticize people who expect public spaces to charge a fee",
+     "convey that the library places no condition of any kind on who may enter",
      "trace the steps a visitor follows to obtain a library card"],
-   "answer":"A",
-   "rationale":"The escalating repetition strips away conditions one by one (commerce, belief, identity) to establish an unconditional welcome. B is too literal: no services are named. C imports a criticism of people the passage never makes. D invents a procedure the paragraph does not describe."},
+   "answer":"C",
+   "rationale":"The escalating repetition strips away conditions one by one (commerce, belief, identity) to establish an unconditional welcome. It does not list services, since none are named; it does not criticize people, since no one is faulted; and it does not trace a procedure for getting a card, which the paragraph never describes."},
   {"stem":"Which of the following best characterizes the writer's overall stance toward the public library?",
    "options":[
      "reverent esteem for an institution the writer treats as plainly worth keeping",
@@ -117,25 +118,25 @@ tribute = {
      "a balanced weighing of the library's costs against its public benefits",
      "nostalgic regret for an institution the writer says has already vanished"],
    "answer":"A",
-   "rationale":"The piece consecrates the library as a settled good, anchoring its worth in concrete scenes rather than arguing for it. B imports a modernization theme the text never raises. C describes a cost-benefit weighing the tribute deliberately avoids. D overstates the ending, which says the lights are 'still on, for now,' not that the library is gone."},
+   "rationale":"The piece consecrates the library as a settled good, anchoring its worth in concrete scenes rather than arguing for it. There is no optimism about modernizing to survive (the text never raises modernization); no claim that the library has already vanished (the lights are 'still on, for now'); and no balanced cost-benefit weighing, which a tribute deliberately avoids."},
  ],
  "discussion": [
   "The writer praises the library entirely through concrete scenes (a child with a stack of books, a man with nowhere warmer to be) rather than through adjectives like 'important' or 'valuable.' What does the piece gain by showing the library's worth this way instead of asserting it?",
   "The closing line says the lights are 'still on, in most towns, for now.' How do those three small qualifications change the feeling of the ending, even though the writer never issues a warning or a call to action?",
  ],
  "sample_responses": [
-  "By rooting each value-claim in a scene, the writer lets the reader feel the worth and reach the judgment, which is more persuasive than being told the library matters. The man reading the paper in the warm room proves the claim that the place asks nothing of anyone, so the abstraction (free to all) arrives already cashed out in a person.",
-  "The qualifications quietly carry the loss the piece never states. 'Still' and 'for now' admit the lights could go off; 'in most towns' admits some already have. The understatement lets the reader supply the alarm, so the ending consecrates the library and mourns it at once, without lecturing.",
+  "By rooting each value-claim in a scene, the writer lets the reader feel the worth and reach the judgment, which is more persuasive than being told the library matters. The man reading the paper in the warm room proves the claim that the place asks nothing of anyone, so the abstraction (a place free to all) arrives already cashed out in a person.",
+  "The qualifications quietly carry the loss the piece never states. 'Still' and 'for now' admit the lights could go off; 'in most towns' admits some already have. The restraint lets the reader supply the alarm, so the ending consecrates the library and mourns it at once, without lecturing.",
  ],
  "writing": {"type":"homework or extended in-class, Q2 rhetorical analysis",
-  "text":"Write an essay analyzing how the writer uses concrete detail, repetition, and understatement to honor the public library and to suggest, without ever stating it, that the institution is at risk."},
+  "text":"Write an essay analyzing how the writer uses concrete detail, repetition, and a restrained tone to honor the public library and to suggest, without ever stating it, that the institution is at risk."},
  "misconceptions": [
-  "Students often call the repeated 'You do not have to...' parallelism. It is anaphora: the repeated phrase opens each successive sentence. Reserve parallelism for repeated structure that does not begin the clause.",
-  "Students may read 'Free to All' as the writer's own slogan. It is an allusion: the phrase is carved over the entrance of the Boston Public Library, and the writer borrows its authority rather than coining it.",
+  "Students often call the repeated 'You do not have to...' parallelism. It is anaphora: the repeated phrase opens each successive sentence. Reserve parallelism for repeated structure that does not begin the clause, like the 'without a slogan, without a campaign' series in paragraph 4.",
   "Students may take lines like 'the library does not ask whether the question is worth asking' literally. The library cannot ask anything; this is personification, giving the building a human judgment it then declines to make.",
   "Students may look for an opposing side the writer argues against. There is none. A tribute consecrates a settled worth; it does not rebut critics, so reading paragraph 2 as a rebuttal misreads the register.",
+  "Students may assume the correct stance answer must mention the library's problems. The piece never weighs costs and benefits; it consecrates, so the best answer names reverent esteem, not balance.",
  ],
- "ap_alignment":"Q2 rhetorical-analysis value: a compact model of praise built from concrete scenes rather than adjectives. Useful for teaching anaphora versus parallelism, allusion that borrows authority, personification of an institution, and how understatement at the close can carry a loss the writer never states. The long accumulation sentence set against short buttons is a clean lesson in cadence.",
+ "ap_alignment":"Q2 rhetorical-analysis value: a compact model of praise built from concrete scenes rather than adjectives. Useful for teaching anaphora versus parallelism within a single piece, personification of an institution, and antithesis that compresses a claim. The long accumulation sentence set against short buttons is a clean lesson in cadence.",
 }
 
 # ============================================================ 3. THE LONG LOOK
@@ -167,12 +168,12 @@ longlook = {
  "mcq": [
   {"stem":"In the third paragraph, the comparison of the tightening flock to 'a bruise spreading under skin' primarily serves to",
    "options":[
-     "give the flock's sudden, spreading reaction a precise and physical image",
      "suggest that the flock has been injured by the diving falcon",
+     "give the flock's sudden, spreading reaction a precise and physical image",
      "register the writer's sympathy for the hunted birds",
      "compare the starlings unfavorably with their predator"],
-   "answer":"A",
-   "rationale":"The simile translates an abstract speed-and-spread into something the reader can see. B is the too-literal trap, reading the bruise as an actual injury. C imports a sympathy the observational register never states. D invents an unfavorable comparison the line does not make."},
+   "answer":"B",
+   "rationale":"The simile translates an abstract speed-and-spread into something the reader can see. Reading the bruise as a real injury is the too-literal trap; the sympathy reading imports a feeling the observational register never states; and the unfavorable comparison invents a contrast the line does not make."},
   {"stem":"The writer follows the long sentence describing the flock's motion with the short sentence 'It has no leader.' This juxtaposition primarily functions to",
    "options":[
      "stress that the flock's intricate order arises without anything directing it",
@@ -180,7 +181,7 @@ longlook = {
      "concede that the flock's movements are ultimately random",
      "summarize a scientific debate introduced earlier in the passage"],
    "answer":"A",
-   "rationale":"The blunt short sentence lands hard against the long one, setting the flock's visible order against the absence of any director. B inverts the passage, which insists there is no leader. C inverts the point, since the piece argues for order, not randomness. D is the wrong location: the debate appears later, in paragraph 4, with nothing earlier to summarize."},
+   "rationale":"The blunt short sentence lands hard against the long one, setting the flock's visible order against the absence of any director. The passage insists there is no leader, so the reading that a leader will be explained is inverted; the piece argues for order, not randomness; and the debate appears later, in paragraph 4, so there is nothing earlier to summarize."},
  ],
  "discussion": [
   "The writer describes the murmuration almost entirely through precise physical detail and never once calls it beautiful or amazing. How does withholding those words change the way the wonder of the scene reaches the reader?",
@@ -198,13 +199,13 @@ longlook = {
   "Students may call 'Thousands of separate animals, and not one collision; total panic, and perfect order' parallelism. The point of the line is the opposition between its halves, so it is antithesis: contrasting ideas set in balanced form.",
   "Students may treat the short sentence 'It has no leader' as throwaway. It is a telegraphic sentence placed for emphasis, landing the piece's central fact hard against the long sentence before it.",
  ],
- "ap_alignment":"Q2 rhetorical-analysis value: a clean model of wonder conveyed through precise detail rather than asserted with adjectives. Strong for teaching asyndeton against polysyndeton, a simile read in context rather than literally, antithesis as a structural engine, the telegraphic sentence as emphasis, and how a writer's candor about uncertainty builds credibility. The wide swing between short declaratives and long accumulating sentences is a clear lesson in how sentence length creates effect.",
+ "ap_alignment":"Q2 rhetorical-analysis value: a clean model of wonder conveyed through precise detail rather than asserted with adjectives. Strong for teaching asyndeton against polysyndeton, a simile read in context rather than literally, antithesis as a structural engine, and the telegraphic sentence as emphasis. The wide swing between short declaratives and long accumulating sentences is a clear lesson in how sentence length creates effect.",
 }
 
 # ============================================================ render
 if __name__ == "__main__":
+    import os
     for piece in (ledger, tribute, longlook):
         for role in ("Teacher", "Student"):
             fn, pages = build(piece, role)
-            import os
             print("wrote: %s  (%d page%s)" % (os.path.basename(fn), pages, "" if pages == 1 else "s"))
