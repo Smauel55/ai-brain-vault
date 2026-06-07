@@ -21,12 +21,13 @@ Samuel raised an unaddressed product question: should Openers be customizable by
 
 ## Decisions
 
-- None locked. Claude's recommendation: launch with ONE opener/day, AP Lang level, plus a political-intensity setting (default neutral, opt-in to civic/current). Keep the political dial (trust gate); defer difficulty tiers and the daily buffet (premature + QA tax). Samuel has not yet confirmed.
+- DECIDED (2026-06-07): No difficulty setting. SCRAPPED for now; revisit only after the AP Lang market is fully saturated (Samuel does not see that happening in the near future). Launch is a single AP Lang difficulty.
+- DECIDED (2026-06-07): Adopt the political-intensity dial as the one customization axis. To be designed next. (Direction: low-cardinality setting at signup, default neutral, implemented as topic routing not a parallel pipeline.)
+- Rejected: the 5-10/day buffet (breaks print-and-go ritual + multiplies QA).
 
 ## Action items
 
-- [ ] Samuel — decide whether to adopt the one-opener + political-setting model.
-- [ ] Optional next step offered — pressure-test the recommendation against what AP teachers actually request.
+- [ ] Design the political-intensity dial (tier count + wording, topic-bucket routing). Next work item.
 
 ## Open threads
 
