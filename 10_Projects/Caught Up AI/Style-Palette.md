@@ -1,6 +1,6 @@
 ---
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-07
 tags: [project, caught-up-ai, writing, style, palette]
 project: "[[Caught Up AI]]"
 ---
@@ -18,6 +18,15 @@ Companion documents: [[Register-Specs]] (the measurable bands and drift cues for
 - Match register to the news, not the news to the register. If the story has no nameable opposing party, it is not a Reckoning. If it is an occasion to honor rather than argue, it is a Tribute. If it has no genuine awe in it, it is not a Long Look. Forcing the wrong register is itself a tell.
 - Emulate craft only. We borrow rhetorical architecture, sentence craft, and register from the exemplar passages. We never borrow their topic, their period diction, or the pretense of being a historical author, and we never reproduce, summarize, or paraphrase any source prose. Facts only from sources; the prose is original.
 - Two hard personal rules sit above everything: no em-dashes anywhere (commas, semicolons, colons, periods, and parentheses carry every suspension and turn) and no emojis. These are not stylistic preferences; they are gates.
+
+## Evergreen vs event-pegged registers (a routing lens, not a rule)
+
+The seven registers split on whether they need a live news event or sit naturally on a durable, evergreen subject. This is a tendency to route by, not a restriction: an evergreen subject can still be pegged to recent news, and a current event can be handled in an evergreen-leaning voice. Use it to spread a batch, not to forbid a pairing.
+
+- Need a live event or trigger: The Reckoning (hard-requires a nameable culprit plus a datable trigger), The Open Letter (needs a named addressee and a precipitating occasion). The Ledger leans current and policy-driven but flexes evergreen when a stable subject is framed as a live question.
+- Built for evergreen or durable subjects: The Long Look (defined against breaking-news urgency; wants an awe-worthy system or process), The Long Think (turns over the durable human theme behind the news), The Tribute (an occasion to honor, which can be an idea or institution, not only an event), The Witness Stand (runs on shared human experience, with the news as the doorway).
+
+Why it matters: evergreen pieces are not a fallback. They are the native habitat for roughly four of the seven voices, and they are well-attested in real AP Lang source material, where timeless essays sit alongside event-driven argument. A week that mixes current and evergreen reads more like the actual AP corpus than an all-event week would. It also tends to ease sourcing, since the evergreen-suited registers can draw on public-domain and durable material rather than the thin current-source pool, though that is a side benefit to plan around, never a reason to force a register onto the wrong story.
 
 ## Why seven, and how the proposals were reconciled
 
