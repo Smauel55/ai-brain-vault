@@ -12,27 +12,27 @@ Purpose: produce a realistic batch of Openers and review each one before Samuel 
 Decisions locked 2026-06-07 (Samuel):
 - Fact basis is a MIX, as close to the real product as possible: most openers are real current events, live-sourced; a minority are evergreen or persona-safe. Not all invented, not all real news.
 - Run as a multi-agent workflow, in a new session.
-- Count: 21 recommended (3 per register, clean rotation). 28 is the heavier option (4 each). Samuel floated 15 or 30; both rotate unevenly across 7 registers, so 21 or 28 is preferred.
+- Count: 28 (4 per register, clean even rotation), chosen by Samuel 2026-06-07 for a thorough pre-pitch test. (15 and 30 rotate unevenly across 7 registers; 28 is the clean step near 30.)
 
 ## The 7 registers (rotate all of them)
 
 Ledger, Reckoning, Long Think, Open Letter, Witness Stand, Tribute, Long Look. Specs: [[Register-Specs]]. Rotating registers is the primary defense against cross-piece sameness; vary the structural opening/closing within a register too ([[Structural-Templates]]).
 
-## Register x fact-basis matrix (21 openers, 3 each)
+## Register x fact-basis matrix (28 openers, 4 each)
 
 R = real news, live-sourced. E = evergreen or persona-safe. Fit governs the split (some registers only fit one basis).
 
 | Register | Count | Basis | Notes |
 |---|---|---|---|
-| Ledger | 3 | 3R | disputed or misunderstood record; inherently news |
-| Reckoning | 3 | 3R | needs a live, datable wrong and a nameable culprit |
-| Long Think | 3 | 2R, 1E | a perennial theme behind a current story; one pure evergreen |
-| Open Letter | 3 | 2R, 1E | real named powerful addressee held to their own stated values |
-| Witness Stand | 3 | 1R, 2E | persona "I" (invented self/family OK); only hard facts must be real |
-| Tribute | 3 | 2R, 1E | a real death, milestone, or dedication; one evergreen institution |
-| Long Look | 3 | 1R, 2E | a marvel or how-it-works; wrong for conflict or blame |
+| Ledger | 4 | 4R | disputed or misunderstood record; inherently news |
+| Reckoning | 4 | 4R | needs a live, datable wrong and a nameable culprit |
+| Long Think | 4 | 3R, 1E | a perennial theme behind a current story; one pure evergreen |
+| Open Letter | 4 | 3R, 1E | real named powerful addressee held to their own stated values |
+| Witness Stand | 4 | 1R, 3E | persona "I" (invented self/family OK); only hard facts must be real |
+| Tribute | 4 | 2R, 2E | a real death, milestone, or dedication; or an evergreen institution |
+| Long Look | 4 | 1R, 3E | a marvel or how-it-works; wrong for conflict or blame |
 
-Totals: 14 real-news, 7 evergreen/persona (about 2:1, leaning real, like the product). For 28, add one of each register (keep the R/E lean).
+Totals: 18 real-news, 10 evergreen/persona (about 1.8:1, leaning real, like the product).
 
 ## Per-opener pipeline (each opener runs this independently)
 
@@ -49,6 +49,15 @@ Totals: 14 real-news, 7 evergreen/persona (about 2:1, leaning real, like the pro
    - Mechanical: zero em-dashes, zero emojis; anti-tell sweep; register bands in range.
    Return pass or fail with specific fixes; re-draft on fail.
 6. EMIT the structured opener (schema below).
+
+## Effort and model allocation
+
+This is a go/no-go quality gate, so run it at HIGH effort, but concentrate effort on the real risks rather than spreading it evenly.
+
+- Strongest model on the stages that carry the run: SOURCE (judging source independence and primacy), DRAFT (human-passing AP prose is the core product risk), APPARATUS (one-best-answer MCQ construction is subtle), and VERIFY (adversarial checkers must be smart). Launch the session on the strongest model, or set opts.model on these stages.
+- VERIFY is genuinely adversarial: a separate checker per dimension (accuracy, devices, MCQ one-best, mechanical/anti-tell), each prompted to find the flaw, not to approve. Redraft once on a fail. Add one cross-piece sameness critic over the whole batch.
+- Do not over-invest: one solid adversarial pass per dimension beats five redundant ones (diminishing returns). Assembly and rendering are deterministic and need no model muscle.
+- The two binding constraints on whether the test is meaningful are sourcing depth on the real-news pieces and the prose model. If either is weak, high effort elsewhere will not save the result.
 
 ## Cross-batch checks (after all openers, before render)
 
