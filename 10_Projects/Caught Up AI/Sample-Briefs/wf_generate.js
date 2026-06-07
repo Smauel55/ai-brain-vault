@@ -23,8 +23,8 @@ const F = {
 const DATE = 'Sunday, June 7, 2026'
 const ISO = '2026-06-07'
 
-const openers = (args && args.openers) || []
-if (!openers.length) throw new Error('no openers passed via args')
+const openers = __MATRIX__
+if (!openers.length) throw new Error('no openers embedded')
 
 // ---------------- schemas ----------------
 const SOURCE_SCHEMA = {
