@@ -16,7 +16,7 @@ Revisions (2026-06-06, per Samuel):
   - Removed the niche "Free to All" carved-motto allusion (not widely known).
   - Removed Understatement / litotes (dropped from the controlled device list).
 """
-from render_opener_v2 import build
+from render_opener_v2 import build, randomize_answers
 
 DATE = "Saturday, June 6, 2026"
 EDITION = "Sample edition (new format)"
@@ -206,6 +206,9 @@ longlook = {
 if __name__ == "__main__":
     import os
     for piece in (ledger, tribute, longlook):
+        randomize_answers(piece)
         for role in ("Teacher", "Student"):
             fn, pages = build(piece, role)
-            print("wrote: %s  (%d page%s)" % (os.path.basename(fn), pages, "" if pages == 1 else "s"))
+            print("wrote: %s  (%d page%s)  answers %s"
+                  % (os.path.basename(fn), pages, "" if pages == 1 else "s",
+                     [it["answer"] for it in piece["mcq"]]))

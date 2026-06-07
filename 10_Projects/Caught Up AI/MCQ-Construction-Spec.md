@@ -91,7 +91,7 @@ probably a free elimination and must be rewritten.
 8. Is the answer verifiable from the opener text alone, with no outside knowledge required?
 9. For a function stem, do all four choices read as parallel verb completions of the stem?
 10. Zero em-dashes and zero emojis in stem and options?
-11. Is the keyed letter varied: different from the other question in this opener, and not landing on the same letter every time across a batch? Distribute keys across A, B, C, and D.
+11. Is the correct option marked by content rather than hand-placed at a fixed letter? Option order is randomized at render time, so do not pattern the keys; an occasional repeated letter by chance is expected and fine.
 
 ## Do not
 
@@ -103,7 +103,7 @@ probably a free elimination and must be rewritten.
 - Do not require outside knowledge or import facts the opener does not state.
 - Do not reuse the same stem shape for both questions; rotate the patterns.
 - Do not key an answer that is true about the passage but does not answer the exact function, position, or tone the stem asks for.
-- Do not let the keyed answer fall on the same letter every time. Spread keys across A, B, C, and D so position carries no signal. (Early samples keyed every question to A, an obvious giveaway a test-wise student exploits.)
+- Do not pattern the keyed letter, neither all-A nor a forced even A/B/C/D rotation. The renderer (render_opener_v2.randomize_answers) shuffles each question's options at render time so the key lands on a random letter, exactly as on the real AP exam; two questions sharing a letter by chance is fine and is not a design flaw. Author each question by marking the single correct option; never hand-place it at a chosen letter. (Early samples keyed every question to A, the giveaway this fixes.)
 
 ## Scale for a two-question opener
 

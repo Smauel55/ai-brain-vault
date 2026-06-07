@@ -19,7 +19,7 @@ TEACHER copy: the marked article (single-color highlight + inline device name), 
 
 No em-dashes, no emojis.
 """
-import os, re
+import os, re, random
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib.colors import HexColor, black
@@ -137,6 +137,17 @@ def devices_section(devices, quotes):
                 % (HL_LABEL, esc(d["device"]), d["para"], esc(quote)))
         rows.append(Paragraph("%s<br/>%s" % (head, esc(d["purpose"])), devp))
     return rows
+
+def randomize_answers(piece, rng=random):
+    """Shuffle each MCQ's four options and recompute the answer letter, so the correct
+    choice lands on a random letter, as on the real AP exam (two questions can share a
+    letter by chance). Call ONCE per piece BEFORE building the teacher and student
+    copies, so both copies get the same option order and the key matches. Rationales
+    must reference distractors by content, not by letter, for this to stay correct."""
+    for item in piece["mcq"]:
+        correct = item["options"][ord(item["answer"]) - 65]
+        rng.shuffle(item["options"])
+        item["answer"] = chr(65 + item["options"].index(correct))
 
 def sec(title, blocks):
     """A section header with a thin rule. The header style sets keepWithNext and the
@@ -281,6 +292,9 @@ longthink = {
 }
 
 if __name__ == "__main__":
+    randomize_answers(longthink)
     for role in ("Teacher", "Student"):
         fn, pages = build(longthink, role)
-        print("wrote: %s  (%d page%s)" % (os.path.basename(fn), pages, "" if pages == 1 else "s"))
+        print("wrote: %s  (%d page%s)  answers %s"
+              % (os.path.basename(fn), pages, "" if pages == 1 else "s",
+                 [it["answer"] for it in longthink["mcq"]]))
