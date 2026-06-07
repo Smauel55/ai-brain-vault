@@ -11,4 +11,6 @@ Caught Up AI Opener MCQs are governed by `10_Projects/Caught Up AI/MCQ-Construct
 
 Each opener carries exactly 2 reading MCQs that must target DIFFERENT skills. Every distractor must be plausible and partly true and fail by a named trap (right device/wrong effect, right effect/wrong location, true-but-not-the-function-asked, too literal, over-broad/extreme, inverted relationship, out-of-passage import); no free-elimination option a student discards on sight; exactly one defensibly-best answer. Run the spec self-check before shipping.
 
+ANSWER-KEY DISTRIBUTION (Samuel, 2026-06-06, top-priority fix): the keyed letter must vary across A/B/C/D, not land on the same letter every time. Early samples keyed every single question to A, an obvious giveaway. The two questions in one opener must use different letters; across a batch, spread keys evenly.
+
 The production prompt [[caughtupai-sampleprompt-V1]] now loads this spec. Built 2026-06-06 via a 20-agent workflow that verified the exam facts against the primary CED PDF (and caught a "52 questions" hallucination; the real figure is 45). Relates to [[feedback_device_vocabulary]] and [[project_caught_up_ai]].

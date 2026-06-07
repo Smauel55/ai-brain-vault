@@ -58,7 +58,7 @@ lesson opener. Set by Samuel on 2026-06-05 after early drafts invented loose lab
 - Metaphor: implied comparison treating one thing as another.
 - Simile: explicit comparison using "like" or "as."
 - Imagery: sensory language that builds a concrete picture.
-- Allusion: reference to a known text, person, or event to borrow meaning.
+- Allusion: reference to a known text, person, or event to borrow meaning. The reference must be one the average reader would recognize. A fact only specialists know (e.g., a motto carved on one particular building) does not work as an allusion, because the borrowed meaning never lands. (Samuel, 2026-06-06.)
 - Hyperbole: deliberate exaggeration for emphasis or irony.
 - Irony: a gap between what is said and what is meant, or expected and actual.
 - Repetition: recurring words or sounds for emphasis or rhythm.
@@ -71,7 +71,6 @@ lesson opener. Set by Samuel on 2026-06-05 after early drafts invented loose lab
 - Asyndeton: omitting conjunctions to speed rhythm and pile up items.
 - Polysyndeton: deliberately overusing conjunctions to slow pace and weight each item.
 - Chiasmus: inverting the structure of two parallel phrases.
-- Understatement / litotes: deliberately downplaying for effect, often ironic.
 - Analogy: extended comparison mapping a familiar relationship onto an unfamiliar one.
 - Personification: assigning human traits to abstractions or objects.
 - Cumulative and periodic sentences: front-loading vs withholding the main clause for effect.
