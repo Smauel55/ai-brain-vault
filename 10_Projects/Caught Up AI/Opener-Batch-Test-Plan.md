@@ -96,4 +96,6 @@ Collect all opener dicts, then render each as teacher + student PDFs via render_
 
 ## Related
 
-[[Register-Specs]], [[Anti-Tell-List]], [[Rhetorical-Device-Vocabulary]], [[MCQ-Construction-Spec]], [[Accuracy-Guardrail]], [[Structural-Templates]], [[Cross-Piece-Sameness-Rubric]], [[Opener-Print-Format-Spec]], [[feedback_persona_fabrication]], [[Caught Up AI]].
+[[Register-Specs]], [[Style-Palette]], [[Anti-Tell-List]], [[Rhetorical-Device-Vocabulary]], [[MCQ-Construction-Spec]], [[Accuracy-Guardrail]], [[Content-Sourcing]], [[Structural-Templates]], [[Cross-Piece-Sameness-Rubric]], [[Opener-Print-Format-Spec]], [[feedback_persona_fabrication]], [[Caught Up AI]].
+
+Note: the new session reads these specs live at runtime, so any edits to the palette or sourcing guides before launch are picked up automatically. Edit files in place; do not rename them (the references are by name).
