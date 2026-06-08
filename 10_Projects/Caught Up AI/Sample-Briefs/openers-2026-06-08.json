@@ -1,0 +1,193 @@
+[
+  {
+    "_meta": {"id": 1, "register": "Long Look", "basis": "real-news"},
+    "base": "Caught Up AI Opener - 2026-06-08 - The Oscillating Fragment (Long Look)",
+    "edition": "Daily edition",
+    "date": "Monday, June 8, 2026",
+    "headline": "The Oscillating Fragment",
+    "body": [
+      "A rock no more than a hundred meters across, and perhaps less than half that, has kept Earth company for more than a century. Astronomers call it Kamo'oalewa. [[1]]It orbits the Sun, not the Earth; but it holds so near our own path that, seen from here, it seems to circle us[[/1]], a companion that never quite arrives and never quite departs. The technical name for such a body is a quasi-satellite: bound to the Sun, pacing the Earth, ours only in the loose sense of company. This one has shadowed us longer than the telescope that found it has existed, and by one orbital model it will go on doing so for a few hundred thousand years.",
+      "It was found on a single night in April 2016, by a survey telescope on Haleakala, in Hawaii, that sweeps the sky for things that move. The name came later, drawn from the Kumulipo, an old Hawaiian chant of creation: Ka mo'o a lewa, the oscillating fragment, a piece of something larger set swinging across the sky. The word fragment turned out to be a question rather than a description. A fragment of something, the name said, but of what it did not say.",
+      "For several years the likeliest answer pointed at the Moon. Kamo'oalewa reflects sunlight in a reddened way that resembles lunar soil left long exposed to space, and that resemblance fed an idea: that the rock is a piece of the Moon, thrown free by some ancient impact and never fully gone from Earth's neighborhood. A likely scar was even proposed, the crater Giordano Bruno on the Moon's far side, the right size and the right age to have flung such a fragment. [[2]]The companion overhead, on this telling, was a relative.[[/2]]",
+      "Then the resemblance began to look less like proof. A group at the Chinese Academy of Sciences took ordinary material with no lunar history and weathered it by hand, firing lasers at it to mimic the long bombardment of open space. [[3]]The color changed.[[/3]] It reddened, and went on reddening, until it matched Kamo'oalewa. The finding was narrow and sharp: a surface can turn that particular red simply by sitting in space long enough, lunar or not. The red that had pointed at the Moon now pointed only at time.",
+      "Into this uncertainty a spacecraft has arrived. Tianwen-2, launched from southwestern China in May of last year, reached Kamo'oalewa this past week and slipped into orbit around it, the first machine ever to keep company with Earth's companion. In the weeks ahead it will map the surface; in July it is to descend and [[4]]take hold of the rock by two methods, one that anchors to the surface and one that only brushes it, and lift away at least a hundred grams of loose surface dust[[/4]]. That dust is due back on Earth in late 2027. A hundred grams is almost nothing, a small handful. It may settle the question the telescopes could not.",
+      "What it finds will not be the whole story. A hundred grams cannot speak for every rock that crosses our path, and a single sample can be read more than one way. But it will be the first piece of Kamo'oalewa held in a human hand rather than inferred from a smear of reflected light, and that is a different kind of knowing. For now the fragment keeps its distance and its name, oscillating across the sky, [[5]]a relative or a stranger[[/5]], with the question, after more than a century, finally being put to the rock itself."
+    ],
+    "devices": [
+      {"para": 1, "device": "Juxtaposition", "purpose": "Sets the asteroid's real motion against its apparent motion: it circles the Sun, yet from Earth it looks like it circles us. The side-by-side contrast plants the puzzle of appearance versus reality that the whole piece turns on."},
+      {"para": 3, "device": "Metaphor", "purpose": "Calling the asteroid 'a relative' treats the lunar-origin idea as kinship, compressing a technical hypothesis into one human word. It also sets up the closing line, where the same family image is left unresolved."},
+      {"para": 4, "device": "Telegraphic sentence", "purpose": "The three-word sentence lands the experiment's result with a snap, and its bluntness against the long sentence before it marks the exact moment the lunar explanation starts to give way. The short-against-long contrast is the register's signature rhythm."},
+      {"para": 5, "device": "Imagery", "purpose": "The concrete physical action, anchoring, brushing, lifting a small handful of dust, turns an abstract act of measurement into something the reader can see and almost feel, grounding the mission in the body rather than the idea."},
+      {"para": 6, "device": "Antithesis", "purpose": "'A relative or a stranger' holds the two live possibilities in balanced opposition and refuses to choose, matching the unsettled science and handing the reader the same open question the researchers face."}
+    ],
+    "mcq": [
+      {
+        "stem": "The relationship between the third paragraph and the fourth paragraph is best described as one in which the writer first",
+        "options": [
+          "builds the case that the asteroid came from the Moon, then shows that its central evidence can be read another way",
+          "proves that the asteroid came from the Moon, then explains how the returned sample will confirm it",
+          "dismisses the lunar origin as a myth, then offers a far-side crater as a better source",
+          "recounts the asteroid's discovery, then narrates the launch of the mission sent to reach it"
+        ],
+        "answer": "A",
+        "rationale": "Paragraph three assembles the lunar-origin case from the reddened light and even proposes Giordano Bruno as a source; paragraph four then shows the same reddening can arise with no lunar history, so the evidence no longer points only to the Moon. Saying the writer proves the lunar origin and the sample will confirm it overstates a case the piece deliberately unsettles (over-broad). Saying the writer dismisses the lunar origin as a myth inverts paragraph three, which presents that origin as the leading explanation (inverted relationship). The discovery-and-launch option names material from other paragraphs rather than the two the stem cites (right effect, wrong location)."
+      },
+      {
+        "stem": "In the fourth paragraph, the writer's use of the three-word sentence 'The color changed' serves chiefly to",
+        "options": [
+          "mark the turn at which the experiment unsettles the lunar explanation, its bluntness lending the reversal weight",
+          "provide a neutral transition between two technical descriptions of the laboratory method",
+          "convey the writer's astonishment at how quickly the material reddened",
+          "summarize how the asteroid looks through the spacecraft's cameras"
+        ],
+        "answer": "A",
+        "rationale": "Set against the long sentence describing the laser weathering, the clipped line lands the moment the reddening, once treated as a lunar fingerprint, is shown to prove nothing of the kind. Calling it a neutral transition understates a sentence placed at the argument's hinge (right device, wrong effect). The astonishment option imports an emotion the cool register withholds and the words never state (out-of-passage import). The cameras option ties the line to the mission described later rather than the experiment it actually punctuates (right effect, wrong location)."
+      }
+    ],
+    "discussion": [
+      "The writer waits until the fifth paragraph to bring in the spacecraft, after spending the first four paragraphs on what we do and do not know about the asteroid. How does that order change the way the mission reads when it finally appears?",
+      "The asteroid is called a 'companion,' then 'a relative,' and at the end 'a relative or a stranger.' What does the piece gain by leaving that family question open instead of resolving it?"
+    ],
+    "sample_responses": [
+      "A strong answer notes that by building the mystery first, the writer makes the mission feel like an answer to a real question rather than a feat for its own sake. The reader has been handed a century-old puzzle and a hypothesis that just weakened, so a craft that can bring back actual material reads as the natural next step, not a change of subject.",
+      "A strong answer sees that the open ending matches the subject: the science itself is unsettled, so a tidy verdict would misrepresent it. 'A relative or a stranger' holds both live possibilities at once and gives the reader the same uncertainty the researchers have, while the returning sample promises the question is at last answerable."
+    ],
+    "writing": {
+      "type": "in-class or homework, Q2 rhetorical analysis",
+      "text": "Write an essay analyzing the rhetorical choices the writer uses to convey both wonder and uncertainty about the asteroid and the mission, without ever calling either one amazing. Consider elements such as the contrast between long and short sentences, word choice, the metaphor of kinship, and the careful handling of what is known and what is not."
+    },
+    "misconceptions": [
+      "Students may read the piece as arguing the asteroid is definitely not from the Moon. It argues something narrower: that the strongest evidence for a lunar origin, the reddened light, is no longer decisive. The question is reopened, not closed.",
+      "Students often call 'a relative' a simile. There is no 'like' or 'as'; the asteroid is spoken of as a relative outright, which makes it a metaphor.",
+      "Students may dismiss 'The color changed' as filler because it is plain. Point them to its placement: it lands the experiment's result and gains force precisely by sitting against the long sentence before it."
+    ],
+    "ap_alignment": "Q2 rhetorical-analysis value: a cool, observational passage that produces wonder through accurate detail rather than asserted emotion, useful for teaching how syntax (the short sentence set against the long accumulation) and restrained diction create effect. It also models a clean argumentative turn, the lunar-origin case raised and then complicated, that students can trace without the passage taking a side."
+  },
+  {
+    "_meta": {"id": 2, "register": "Tribute", "basis": "real-news"},
+    "base": "Caught Up AI Opener - 2026-06-08 - The Other Half of the Song (Tribute)",
+    "edition": "Daily edition",
+    "date": "Monday, June 8, 2026",
+    "headline": "The Other Half of the Song",
+    "body": [
+      "Peabo Bryson, who died this week at seventy-five, had one of the great voices of his time, and he spent it, more often than not, making room for another. [[1]]He was a soloist by gift and a partner by instinct.[[/1]] The songs the world kept were the ones he sang with someone beside him.",
+      "You know the songs even if you have let the name slip. The ballroom melody from 'Beauty and the Beast', the one he sang with Celine Dion. The carpet ride from Aladdin, 'A Whole New World', the one he sang with Regina Belle, which climbed to the top of the pop chart, the first song from an animated film ever to do it. Before those, the slow turn of 'Tonight, I Celebrate My Love', beside Roberta Flack. Three of the songs that made his name were three songs he gave away half of.",
+      "This is not to slight the solo work. There was plenty of it, going back to a teenager singing in Greenville and a first hit before he was thirty. His voice alone could fill a room, [[2]]warm and unhurried and sure of the note before he reached it[[/2]]. But a voice like that can crowd a duet, can win it, can leave the other singer sounding small. His never did. He sang with people, not over them. That is harder than singing alone, and rarer, and he made it sound like the easiest thing in the world.",
+      "There is a kind of talent that needs to be the only light in the room. His was the other kind. To sing a duet well is to listen as much as to sound, to bend your own gift toward someone else's and let the blend be the point. He did that for the better part of his life, and the proof is in the recordings: [[3]]two voices, and no seam where they meet[[/3]].",
+      "He won two Grammys, both for duets, which feels exactly right. He could have chased the solo spotlight and the bigger name that comes with it. He reached instead for [[4]]the harmonized line, the shared credit, the song that needed two people to be itself[[/4]]. It was the humbler choice and the better one, and it is why the songs have outlived the charts.",
+      "The voice is on the records now, where it will go on doing the thing it did best, which was to make whoever stood beside him sound like the only other person in the world. A soloist is mourned by his listeners. A duet partner is mourned by the voice that has lost its other half. Peabo Bryson leaves a great many of both. [[5]]Rest him gently.[[/5]]"
+    ],
+    "devices": [
+      {"para": 1, "device": "Antithesis", "purpose": "'A soloist by gift and a partner by instinct' sets his natural talent against his natural choice in one balanced line, stating the contrast the whole tribute runs on before a single song is named."},
+      {"para": 3, "device": "Polysyndeton", "purpose": "The piled-up 'and's in 'warm and unhurried and sure of the note' slow the line to the unhurried pace of the voice it describes, giving each quality its own beat instead of rushing them into a list."},
+      {"para": 4, "device": "Metaphor", "purpose": "'No seam where they meet' borrows the language of sewing to describe two blended voices, turning an abstract praise of harmony into something the ear can picture as a single, jointless cloth."},
+      {"para": 5, "device": "Asyndeton", "purpose": "Dropping every conjunction from 'the harmonized line, the shared credit, the song that needed two people' does the opposite of the earlier piled 'and's: the three chosen things rush together in one breath, the unbroken list enacting the gathering it names."},
+      {"para": 6, "device": "Telegraphic sentence", "purpose": "The closing three-word benediction, 'Rest him gently,' lands after the longest sentences in the piece, and its plainness is the restraint the register prizes: grandeur made by stripping away, not by piling on."}
+    ],
+    "mcq": [
+      {
+        "stem": "Which of the following best characterizes the central claim the writer makes about Bryson's career?",
+        "options": [
+          "that what most deserves honor is his choice to share songs, not the solo talent that would have let him dominate them",
+          "that his duets worked only because his partners were more famous than he was",
+          "that his solo recordings were the true measure of his gift and the duets a distraction",
+          "that he went underrated because he so rarely recorded on his own"
+        ],
+        "answer": "A",
+        "rationale": "The piece grants his solo gift in full, a voice that could 'fill a room,' then honors the harder choice to sing with people, not over them, and closes on the duet partner's loss. Crediting the partners' greater fame imports a claim the piece never makes and undercuts its praise of his own voice (out-of-passage import). Calling the solo work the true measure inverts the writer's stated emphasis on the shared songs (inverted relationship). Saying he went underrated for rarely recording alone misstates the text, which says there was 'plenty' of solo work (true-sounding but unsupported)."
+      },
+      {
+        "stem": "The writer's attitude toward Bryson across the piece is best described as",
+        "options": [
+          "admiring, with the admiration aimed less at his talent than at his restraint",
+          "grieving to the point of treating his death as a national catastrophe",
+          "fond but quietly critical of the choices that cost him greater fame",
+          "detached and evenhanded, weighing his strengths against his flaws"
+        ],
+        "answer": "A",
+        "rationale": "The praise settles again and again on what he chose to do with his voice, blend it, share it, leave the room warmer, rather than on the voice alone. The 'national catastrophe' option overstates a tone the piece keeps quiet and intimate (over-broad). The 'quietly critical' option misreads the writer, who calls the duet path 'the humbler choice and the better one,' not a loss (inverted relationship). The 'detached and evenhanded' option mistakes the restrained style for neutrality when the piece is plainly reverent (right device, wrong effect)."
+      }
+    ],
+    "discussion": [
+      "The writer claims that singing a good duet 'is harder than singing alone, and rarer.' How convincing is that claim as the piece makes it? What supports it, and what would you want added?",
+      "The piece dwells on the songs Bryson shared more than on his solo career. What does that choice tell you about what the writer wants the reader to value, and is anything lost by it?"
+    ],
+    "sample_responses": [
+      "A strong answer points to the reasoning that a powerful voice can 'crowd a duet' and 'leave the other singer sounding small,' so blending rather than dominating is a genuine skill, not mere modesty. A student might add that the claim leans more on assertion than evidence, and that one specific moment from a recording would make it land harder.",
+      "A strong answer recognizes the writer is honoring generosity over showmanship and using the duets to define the man. What is lost is a fuller sense of his solo artistry, which the piece grants exists but sets aside; a reader who wants the whole musician would need more than the tribute's chosen frame."
+    ],
+    "writing": {
+      "type": "in-class or homework, Q2 rhetorical analysis",
+      "text": "Write an essay analyzing the rhetorical choices the writer uses to honor Peabo Bryson. Consider how antithesis (the soloist set against the partner), understatement and restraint, the handling of concrete detail (the named songs and partners), and the closing benediction work together to shape the tribute."
+    },
+    "misconceptions": [
+      "Students may take the piece as a straightforward sad obituary. Its argument is more specific: it honors a particular choice, to share the song, and most of its devices serve that claim rather than simple grief.",
+      "The piece uses both asyndeton and polysyndeton, and students mix them up. Count the conjunctions: 'warm and unhurried and sure' repeats 'and' (polysyndeton, which slows the line); 'the harmonized line, the shared credit, the song' drops them (asyndeton, which speeds it). Same list shape, opposite effect.",
+      "Students often label 'He was a soloist by gift and a partner by instinct' parallelism. It is antithesis: two contrasting roles set in balanced form. Reserve 'parallelism' for matched structure without that built-in opposition."
+    ],
+    "ap_alignment": "Q2 rhetorical-analysis value: a compact model of the consecratory mode, where grandeur comes from restraint rather than superlatives. Strong for teaching antithesis as a structural engine (soloist against partner), the asyndeton-versus-polysyndeton contrast in two nearby series, and how a writer builds praise through concrete particulars (named songs and partners) and a quiet benediction rather than asserted emotion."
+  },
+  {
+    "_meta": {"id": 3, "register": "Ledger", "basis": "real-news"},
+    "base": "Caught Up AI Opener - 2026-06-08 - The Survey Behind the Number (Ledger)",
+    "edition": "Daily edition",
+    "date": "Monday, June 8, 2026",
+    "headline": "The Survey Behind the Number",
+    "body": [
+      "Every month the country reacts to a single set of numbers: how many jobs the economy added, and what share of workers cannot find one. On June 2 the Government Accountability Office, the agency that audits the federal government for Congress, published a report on where those numbers come from. Its finding was measured. The people who rely on the monthly jobs report told the GAO it generally meets their needs, but the data behind it faces a slow problem that has been building for about a decade.",
+      "The jobs report rests on two surveys, both run by the Bureau of Labor Statistics. [[1]]One asks households whether their members are working or looking for work, and it is where the unemployment rate comes from; the other asks employers how many people are on their payrolls, and it is where the count of jobs added comes from.[[/1]] Neither is a headcount of the whole country. Each is a sample, scaled up to stand for everyone, and a sample only works if enough of the people contacted answer.",
+      "[[2]]Fewer of them do.[[/2]] The share of contacted households and businesses that respond, the response rate, has fallen over roughly the last ten years, according to the GAO. That on its own does not make a number wrong. [[3]]A smaller sample can still be accurate, so long as the people who drop out are a fair cross-section of the people who stay.[[/3]] The risk is the other case, the one statisticians call nonresponse bias: if the households and firms that quit answering differ in some consistent way from those that keep answering, the survey can lean off true without anyone seeing it lean.",
+      "The GAO did not say the jobs report is unreliable now. It said the agencies should be more open about the risk and more rigorous in checking for it. Its three recommendations are modest and technical: gather regular outside input on the report, document more clearly how the employer survey tests itself for that bias, and publish a plain assessment of how large the bias might be. The Bureau of Labor Statistics and the Census Bureau, for their part, plan to add an online way to answer the household survey in 2027, which they expect to lift response and lower costs. Recent funding limits, the report notes, may delay it.",
+      "The report's flat title undersells what rides on the numbers. The jobs figures move markets, inform the Federal Reserve's interest-rate decisions, and feed government budget plans, often within a single morning. A set of numbers that the Federal Reserve, Congress, and investors all treat as solid ground is built, in the end, on whether ordinary people and busy employers pick up and answer. The machinery has worked well for a long time. The report is a warning that one of its inputs, the public's willingness to respond, is quietly thinning.",
+      "For now the jobs report still does what it is built to do, and the agencies that produce it agree it can be made sturdier. [[4]]The figure you read each month remains the best single measure of a vast and shifting labor market, and the survey beneath it leans on a courtesy, answering a knock or a call, that Americans extend a little less each year.[[/4]] The GAO has put both on the record. The remedy it proposes is incremental, and the timeline, by the agencies' own account, is uncertain."
+    ],
+    "devices": [
+      {"para": 2, "device": "Parallelism", "purpose": "Two matched clauses, 'one asks households... the other asks employers,' lay the report's two surveys side by side in the same grammatical frame, so the reader holds the structure of the jobs report in a single ordered glance."},
+      {"para": 3, "device": "Telegraphic sentence", "purpose": "'Fewer of them do' answers the previous sentence's setup in four blunt words. The clipped reset delivers the core problem before any explanation, the plain, undramatic move the register uses in place of a flourish."},
+      {"para": 3, "device": "Logos", "purpose": "Rather than sound an alarm, the writer reasons through when missing answers do and do not corrupt a result, distinguishing an even loss from a biased one. The authority rests in the logic, which is the register's whole ethos."},
+      {"para": 6, "device": "Juxtaposition", "purpose": "The close sets the number's reliability beside the eroding habit it depends on, two true things held in one sentence, and declines to resolve them, leaving the tension exactly where the report leaves it."}
+    ],
+    "mcq": [
+      {
+        "stem": "Which of the following best characterizes the writer's position on the reliability of the monthly jobs report?",
+        "options": [
+          "that it is dependable now but rests on an eroding base the responsible agencies should shore up",
+          "that it has already grown too inaccurate to guide interest-rate and budget decisions",
+          "that its troubles are overblown and the falling response rates pose no real risk",
+          "that it should be scrapped in favor of a full count of every household and employer"
+        ],
+        "answer": "A",
+        "rationale": "The piece states outright that the GAO 'did not say the jobs report is unreliable now,' while reporting a decade-long slide in response rates the agencies are urged to address. Calling it already too inaccurate overstates a conclusion the writer specifically denies (over-broad). Calling the trouble overblown ignores the documented decline and the GAO's three recommendations (true-sounding but unsupported). The full-count option contradicts the piece, which explains the report depends on samples rather than a headcount (out-of-passage import)."
+      },
+      {
+        "stem": "In the third paragraph, the writer distinguishes a sample that loses responses evenly from one that loses them unevenly primarily to",
+        "options": [
+          "explain why a falling response rate threatens accuracy only when those who drop out differ from those who stay",
+          "argue that smaller samples are always more accurate than larger ones",
+          "establish that the current jobs numbers are already distorted by missing responses",
+          "introduce the agencies' plan to let people answer the survey online"
+        ],
+        "answer": "A",
+        "rationale": "The distinction names nonresponse bias as the specific danger: missing answers matter when the missing differ systematically, not merely because there are fewer of them. The claim that smaller samples are always more accurate overstates and reverses the point (over-broad). The claim that the numbers are already distorted asserts a present harm the paragraph treats only as a risk (right effect, wrong degree). The online-response option names a later paragraph's content rather than the work this distinction does (right effect, wrong location)."
+      }
+    ],
+    "discussion": [
+      "The writer concedes that 'a smaller sample can still be accurate' before explaining when it is not. How does granting that point first change the way you weigh the concern the piece raises?",
+      "The piece calls the survey's foundation 'a courtesy' that Americans 'extend a little less each year.' Whose job, if anyone's, is it to keep public data accurate, and what would you be willing to do as a respondent?"
+    ],
+    "sample_responses": [
+      "A strong answer notes the concession keeps the piece from sounding alarmist: by admitting fewer responses need not mean a wrong number, the writer earns the narrower claim that bias arises only when the dropouts differ from the responders. The reader trusts the worry more because the writer refused to overstate it.",
+      "A strong answer engages the shared-responsibility framing: official numbers depend on ordinary participation, so accuracy is partly a public good that individuals help sustain by answering. A thoughtful student might weigh that against the real burden surveys place on busy people, which is why the agencies' online-response plan matters."
+    ],
+    "writing": {
+      "type": "homework or extended in-class, Q3 argument",
+      "text": "The piece suggests that the trustworthiness of a public statistic can depend on something as ordinary as whether people still agree to answer a survey. Defend, challenge, or qualify the claim that citizens have a responsibility to take part in official data collection so that public numbers stay accurate. Use your own knowledge, observation, or reading."
+    },
+    "misconceptions": [
+      "Students may conclude the piece is saying the jobs numbers are fake or manipulated. It says the opposite about intent: the numbers generally work, and the concern is a slow, technical erosion in survey response, not deception.",
+      "Students often read 'Fewer of them do' as an incomplete thought. It is a deliberate telegraphic sentence answering the previous sentence's setup; its shortness is the point, delivering the problem before the explanation.",
+      "Students may treat 'nonresponse bias' as a vague worry. Hold them to the piece's own definition: the specific case in which the people who stop answering differ in a consistent way from those who keep answering."
+    ],
+    "ap_alignment": "Q3 argument value: the passage lays out a documented finding and its trade-off without taking a side, then opens onto a genuinely debatable civic question, whether individuals owe their participation to the accuracy of public data. Strong for teaching the evidence-forward register: attribution to a named body (the GAO), reasoning rather than adjective as the source of authority, and a concession (a smaller sample can still be accurate) that sharpens rather than softens the point."
+  }
+]
