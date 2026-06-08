@@ -6,7 +6,7 @@ Last updated: 2026-06-08
 ## Overview
 
 - **Instrument**: Bull call spread (debit spread)
-- **Universe**: Mag 7 -- AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA
+- **Universe**: Dynamic top 10 by market cap, rebalanced monthly. BRK.A and BRK.B permanently excluded (options behave unusually). In 2015 this included energy/financial names; by 2025 it converges toward today's Mag 7.
 - **Expiration target**: 14-21 DTE at entry
 - **Total allocated capital**: $2,000
 - **Max risk per trade**: $650 (not a default -- a ceiling)
