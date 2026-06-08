@@ -12,10 +12,31 @@ Usage:  python render_batch.py openers.json
 Determinism note: randomize_answers uses the module `random`. We seed once so a
 re-run reproduces the same key letters; remove the seed for true per-run shuffle.
 """
-import os, sys, json, random
+import os, sys, json, random, re
 import render_opener_v2 as r
 
 ILLEGAL = '\\/:*?"<>|'
+
+def normalize_closers(piece):
+    """Self-heal the Issue-1 duplicate-closer bug: a span closed with a second
+    [[n]] instead of [[/n]] never matches render_opener_v2.MARK, so it prints raw.
+    Per paragraph, for any n that appears exactly twice as [[n]] (and has no
+    [[/n]] yet), rewrite the 2nd [[n]] as [[/n]]. Returns the count repaired so
+    the driver can warn. Does NOT touch pieces whose tags are already balanced,
+    and cannot fix mis-numbered tags (e.g. the old #17), which must be repaired
+    at the source. Keeps the renderer itself strict."""
+    fixed = 0
+    for i, para in enumerate(piece.get("body", [])):
+        for n in sorted({int(x) for x in re.findall(r"\[\[(\d+)\]\]", para)}):
+            tok = "[[%d]]" % n
+            if ("[[/%d]]" % n) in para:
+                continue                              # already has a real closer
+            parts = para.split(tok)
+            if len(parts) == 3:                       # exactly two bare opens
+                para = parts[0] + tok + parts[1] + ("[[/%d]]" % n) + parts[2]
+                fixed += 1
+        piece["body"][i] = para
+    return fixed
 
 def safe_base(base):
     """Make piece['base'] safe as a Windows filename stem. Display fields
@@ -40,6 +61,10 @@ def main():
     rows = []
     for piece in openers:
         meta = piece.pop('_meta', {})           # id/register/basis carried alongside
+        healed = normalize_closers(piece)       # belt-and-suspenders for Issue 1
+        if healed:
+            print("  [normalize] id %s: repaired %d duplicate-closer tag(s) at render"
+                  % (meta.get('id', '?'), healed))
         piece['base'] = safe_base(piece['base'])
         r.randomize_answers(piece)              # ONCE, before both roles
         answers = [it['answer'] for it in piece['mcq']]

@@ -59,11 +59,7 @@ story.append(Paragraph("AP Lang Teacher Interview Guide&nbsp;&nbsp;|&nbsp;&nbsp;
 story.append(Spacer(1, 0.06*inch))
 story.append(HRFlowable(width="100%", thickness=1.2, color=ACCENT, spaceAfter=8))
 
-story.append(Paragraph(
-    "<b>What I want out of this meeting:</b> (1) an expert read on whether the Openers hold up, "
-    "(2) whether AI authorship matters to a teacher, (3) the real prep pain and what she pays, "
-    "(4) recruit her as a pilot teacher and panel judge.", P_BODY))
-story.append(Spacer(1, 0.10*inch))
+story.append(Spacer(1, 0.04*inch))
 
 # ---- Opener box ----
 opener = ("“I’m Samuel Levy, headed to Northwestern this fall, building this on my own. "
@@ -88,38 +84,11 @@ box.setStyle(TableStyle([
     ("BOTTOMPADDING", (0,0), (-1,-1), 8),
 ]))
 story.append(box)
-story.append(Spacer(1, 0.12*inch))
-
-# ---- Run of show ----
-story.append(Paragraph("Run of show", H_BLOCK))
-rows = [["#", "Block", "Time"],
-        ["0", "Opener (say it)", "2 min"],
-        ["1", "Discovery: workflow, pain, spend", "8-10 min"],
-        ["2", "The Opener + expert review  (most important)", "15-20 min"],
-        ["3", "AI, authenticity, accuracy", "8-10 min"],
-        ["4", "Product fit: topics + support", "5 min"],
-        ["5", "Pricing", "5 min"],
-        ["6", "The ask: pilot, panel, referrals", "5 min"]]
-t = Table(rows, colWidths=[0.4*inch, 4.6*inch, 1.5*inch])
-t.setStyle(TableStyle([
-    ("FONT", (0,0), (-1,0), "Helvetica-Bold", 9.5),
-    ("FONT", (0,1), (-1,-1), "Helvetica", 10),
-    ("TEXTCOLOR", (0,0), (-1,0), colors.white),
-    ("BACKGROUND", (0,0), (-1,0), ACCENT),
-    ("ROWBACKGROUNDS", (0,1), (-1,-1), [colors.white, colors.HexColor("#f4f7f8")]),
-    ("LINEBELOW", (0,0), (-1,-1), 0.4, LIGHT),
-    ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
-    ("TOPPADDING", (0,0), (-1,-1), 4),
-    ("BOTTOMPADDING", (0,0), (-1,-1), 4),
-    ("LEFTPADDING", (0,0), (-1,-1), 6),
-]))
-story.append(t)
-story.append(Spacer(1, 0.06*inch))
-story.append(Paragraph("<b>If it compresses to 25 min:</b> Opener &rarr; Block 2 &rarr; Q8 (the pedagogy question) &rarr; the ask. Block 2 is non-negotiable.", H_SUB))
+story.append(Spacer(1, 0.10*inch))
 story.append(Paragraph("<b>Say before the questions:</b> “These are about what you have actually done, not what you’d hypothetically do. Pull a real example if you can.”", H_SUB))
 
 # ---- Blocks ----
-story.append(Spacer(1, 0.10*inch))
+story.append(Spacer(1, 0.06*inch))
 story.append(HRFlowable(width="100%", thickness=1.0, color=ACCENT))
 story.append(Paragraph("Block 1 &mdash; Discovery: workflow, pain, spend", H_BLOCK))
 for it in q(1, "Walk me through how you build a lesson opener or bell-ringer now. Where does the time actually go?",
@@ -159,7 +128,7 @@ for it in q(6, "Knowing these are AI-written, would you have known? Does it read
             "(she is primed, so this is a ceiling; the clean test is the blind panel. Optional: show 2 pieces, ask which feels more human.)"): story.append(it)
 for it in q(7, "Does it bother you that the piece is AI-written? Would it bother your students, your department, or your admin?"): story.append(it)
 for it in q(8, "<b>The sharp one.</b> AP rhetorical analysis asks students to analyze the choices a real writer made for a real audience and purpose. An AI piece has no real author and no real occasion. Does analyzing an AI’s “choices” still teach the skill, or undercut it? Would you use these more for argument and reading practice than for pure rhetorical analysis?",
-            "(deepest risk to the concept. Do not argue it. Let her draw the line.)", lines=2): story.append(it)
+            "(Deepest risk to the concept. Do not argue it; let her draw the line. If she says it undercuts analysis, that is signal: lean the product toward argument/reading practice over authorial-intent analysis.)", lines=2): story.append(it)
 for it in q(9, "How much would a single factual error cost you in trust? One error and you are out, or is a correction fine?",
             "(prices the per-piece fact-verification we already do)"): story.append(it)
 
@@ -188,34 +157,6 @@ for it in q(15, "Would you be a fall pilot: use real Openers in class for about 
 for it in q(16, "Would you sit on a small panel of AP Lang teachers doing a blind read, to settle whether the AI pieces pass?",
             "(the decisive validation instrument)"): story.append(it)
 for it in q(17, "Who else should I talk to: AP Lang teachers or AP coordinators whose read on teaching tools you trust?"): story.append(it)
-
-# ---- Footer cards ----
-story.append(Spacer(1, 0.12*inch))
-story.append(HRFlowable(width="100%", thickness=1.0, color=ACCENT))
-
-risk = Table([[Paragraph("<b>The one risk to keep in mind</b>", H_BLOCK)],
-              [Paragraph("Q8 (AI author vs real author) can sink the concept, and she will have a real opinion. Do not defend it. "
-                         "If she says AI authorship undercuts rhetorical analysis, that is signal: it may push the product toward "
-                         "argument (Q3) and reading practice over authorial-intent analysis (Q2), and toward honest “practice text” framing.", P_BODY)]],
-             colWidths=[6.5*inch])
-risk.setStyle(TableStyle([
-    ("BACKGROUND", (0,0), (-1,-1), colors.HexColor("#fbf3e7")),
-    ("BOX", (0,0), (-1,-1), 0.5, colors.HexColor("#c79a4b")),
-    ("LEFTPADDING", (0,0), (-1,-1), 12), ("RIGHTPADDING", (0,0), (-1,-1), 12),
-    ("TOPPADDING", (0,0), (-1,-1), 4), ("BOTTOMPADDING", (0,0), (-1,-1), 8),
-]))
-story.append(risk)
-story.append(Spacer(1, 0.12*inch))
-
-story.append(Paragraph("Bring / do before the meeting", H_BLOCK))
-for c in [
-  "Print 2-3 <b>teacher-copy</b> Openers across registers (lead Ledger; one hotter register for range) + their student copies.",
-  "Read them end to end. Own every device label, MCQ, and answer-key line as if you wrote it.",
-  "Have the pilot ask and the panel ask ready to say in one sentence each.",
-  "Decide your real price floor before Block 5 so her number does not anchor you.",
-  "Bring this guide on paper and write on it.",
-]:
-    story.append(Paragraph("[ &nbsp; ]&nbsp;&nbsp;" + c, P_CHK))
 
 doc = SimpleDocTemplate(OUT, pagesize=letter,
                         topMargin=0.6*inch, bottomMargin=0.6*inch,
