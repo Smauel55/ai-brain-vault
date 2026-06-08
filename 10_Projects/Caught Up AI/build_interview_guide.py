@@ -49,20 +49,20 @@ story.append(HRFlowable(width="100%", thickness=1.2, color=ACCENT))
 # Block 1
 story.append(Paragraph("Discovery: workflow, pain, spend", H_BLOCK))
 for b in [
-    "How she builds an opener / bell-ringer now; where the time goes",
-    "With a current-events piece, what she still builds herself (questions, device markup, key, alignment); what eats most time",
-    "Tools she pays for out of pocket; anything cancelled this year and why (factual error, pedagogical miss, unreliability)",
+    "How he builds an opener / bell-ringer now; where the time goes",
+    "With a current-events piece, what he still builds himself (questions, device markup, key, alignment); what eats most time",
+    "Tools he pays for out of pocket; anything cancelled this year and why (factual error, pedagogical miss, unreliability)",
 ]:
     for it in bullet(b, note=True): story.append(it)
 
 # Block 2
-story.append(Paragraph("The Opener + expert review  (hand her the teacher copy first)", H_BLOCK))
+story.append(Paragraph("The Opener + expert review  (hand him the teacher copy first)", H_BLOCK))
 for b in [
-    "First reaction; would she teach it tomorrow; what is wrong with it",
+    "First reaction; would he teach it tomorrow; what is wrong with it",
     "Length and reading level right for AP Lang; register variety across days useful or noise",
 ]:
     for it in bullet(b, note=True): story.append(it)
-chk = [Paragraph("Walk the teacher copy with her &mdash; yes/no + a fix on each:" , P_HINT)]
+chk = [Paragraph("Walk the teacher copy with him &mdash; yes/no + a fix on each:" , P_HINT)]
 for s in [
     "Device labels correct and actually present; any mislabels (anaphora vs parallelism); anything obvious unmarked",
     "MCQs: one defensibly-best answer; each distractor fails for a real reason; AP-valid in form",
@@ -77,28 +77,28 @@ story.append(Spacer(1, 0.14*inch))
 
 # Block 3
 story.append(Paragraph("AI, authenticity, accuracy", H_BLOCK))
-for it in bullet("Would she have known it is AI; does it read machine-written anywhere, and where", note=True): story.append(it)
-for it in bullet("Does AI authorship bother her / students / department / admin", note=True): story.append(it)
+for it in bullet("Would he have known it is AI; does it read machine-written anywhere, and where", note=True): story.append(it)
+for it in bullet("Does AI authorship bother him / students / department / admin", note=True): story.append(it)
 for it in bullet("Pedagogy: analyzing an AI's choices with no real author or occasion &mdash; still teaches the skill or undercuts it; better for argument/reading practice than rhetorical analysis"
-                 + cue("don't argue it; let her draw the line"), note=True): story.append(it)
+                 + cue("don't argue it; let him draw the line"), note=True): story.append(it)
 for it in bullet("Tolerance for a single factual error (one and out, or is a correction fine)", note=True): story.append(it)
 
 # Block 4
 story.append(Paragraph("Product fit", H_BLOCK))
-for it in bullet("Charged topics: how she handles them now; would a one-time neutral-vs-civic setting earn trust, or need per-piece control", note=True): story.append(it)
+for it in bullet("Charged topics: how he handles them now; would a one-time neutral-vs-civic setting earn trust, or need per-piece control", note=True): story.append(it)
 for it in bullet("Optional support layer (glossary, FRQ sentence starters, vocab pre-list) &mdash; useful or unnecessary for AP", note=True): story.append(it)
 
 # Block 5
 story.append(Paragraph("Pricing", H_BLOCK))
-for it in bullet("What it is worth per month; out of pocket or through the school" + cue("let her name a number first"), note=True): story.append(it)
-for it in bullet("Reaction to $19.99/mo solo, $190/yr" + cue("only after her own number"), note=True): story.append(it)
-for it in bullet("What would make her cancel after a month", note=True): story.append(it)
+for it in bullet("What it is worth per month; out of pocket or through the school" + cue("let him name a number first"), note=True): story.append(it)
+for it in bullet("Reaction to $19.99/mo solo, $190/yr" + cue("only after his own number"), note=True): story.append(it)
+for it in bullet("What would make him cancel after a month", note=True): story.append(it)
 
 # Block 6
 story.append(Paragraph("The ask", H_BLOCK))
 for it in bullet("Fall pilot: real Openers in class ~4 weeks + honest feedback", note=True): story.append(it)
 for it in bullet("Blind-read panel of AP Lang teachers to settle whether the AI pieces pass", note=True): story.append(it)
-for it in bullet("Referrals: AP Lang teachers or coordinators whose read on tools she trusts", note=True): story.append(it)
+for it in bullet("Referrals: AP Lang teachers or coordinators whose read on tools he trusts", note=True): story.append(it)
 
 doc = SimpleDocTemplate(OUT, pagesize=letter,
                         topMargin=0.6*inch, bottomMargin=0.6*inch,
