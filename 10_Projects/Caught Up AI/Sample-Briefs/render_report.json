@@ -1,0 +1,366 @@
+[
+  {
+    "id": 1,
+    "register": "Ledger",
+    "basis": "R",
+    "headline": "What the 4.3% Headline Leaves Out",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "C",
+      "C"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 2,
+    "register": "Reckoning",
+    "basis": "R",
+    "headline": "The First State to Name the Man",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "A",
+      "C"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 3,
+    "register": "Long Think",
+    "basis": "R",
+    "headline": "The Undo Button: Speed and the Cost of Going Back",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "A",
+      "D"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 3
+  },
+  {
+    "id": 4,
+    "register": "Open Letter",
+    "basis": "R",
+    "headline": "The Purse You Promised to Guard",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "D",
+      "B"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 5,
+    "register": "Witness Stand",
+    "basis": "R",
+    "headline": "The Corridor Outside Ward Three",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "D",
+      "D"
+    ],
+    "teacher_pages": 5,
+    "student_pages": 2
+  },
+  {
+    "id": 6,
+    "register": "Tribute",
+    "basis": "R",
+    "headline": "The Coach Who Won Everything but the Last Game",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "B",
+      "A"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 7,
+    "register": "Long Look",
+    "basis": "R",
+    "headline": "The Gap It Closed",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "D",
+      "B"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 8,
+    "register": "Ledger",
+    "basis": "R",
+    "headline": "The Backlog the Department Could Not Count",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "C",
+      "B"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 9,
+    "register": "Reckoning",
+    "basis": "R",
+    "headline": "The Papers on the Table",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "C",
+      "A"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 10,
+    "register": "Long Think",
+    "basis": "R",
+    "headline": "The Skill We Keep Teaching",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "A",
+      "B"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 11,
+    "register": "Open Letter",
+    "basis": "R",
+    "headline": "The Forty-Year Rule You Wrote",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "D",
+      "A"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 12,
+    "register": "Witness Stand",
+    "basis": "E",
+    "headline": "The Friend I Did Not Lose",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "B",
+      "B"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 13,
+    "register": "Tribute",
+    "basis": "R",
+    "headline": "The Girl Who Drew the Revolution",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "C",
+      "B"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 14,
+    "register": "Long Look",
+    "basis": "E",
+    "headline": "The Marsh That Holds Its Breath",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "C",
+      "D"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 3
+  },
+  {
+    "id": 15,
+    "register": "Ledger",
+    "basis": "R",
+    "headline": "Why April's 3.8% Inflation Reads Truer Than November's 2.7%",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "D",
+      "D"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 16,
+    "register": "Reckoning",
+    "basis": "R",
+    "headline": "The $186 Billion Nobody Stopped",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "B",
+      "A"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 17,
+    "register": "Long Think",
+    "basis": "R",
+    "headline": "What We Mean by Protecting Them",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "B",
+      "B"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 18,
+    "register": "Open Letter",
+    "basis": "R",
+    "headline": "Decide What Your Oath Was For",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "A",
+      "B"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 19,
+    "register": "Witness Stand",
+    "basis": "E",
+    "headline": "The Two Names I Answer To",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "B",
+      "B"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 20,
+    "register": "Tribute",
+    "basis": "E",
+    "headline": "The Letter That Cannot Be Unsent",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "C",
+      "D"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 21,
+    "register": "Long Look",
+    "basis": "E",
+    "headline": "The Slow Architecture of Coral",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "C",
+      "B"
+    ],
+    "teacher_pages": 5,
+    "student_pages": 2
+  },
+  {
+    "id": 22,
+    "register": "Ledger",
+    "basis": "R",
+    "headline": "The $35 Cap and the People It Misses",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "B",
+      "D"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 23,
+    "register": "Reckoning",
+    "basis": "R",
+    "headline": "The Record Behind the Bolt",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "C",
+      "C"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 24,
+    "register": "Long Think",
+    "basis": "E",
+    "headline": "The Clock, Not the Calendar",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "D",
+      "A"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 25,
+    "register": "Open Letter",
+    "basis": "E",
+    "headline": "The Principles You Already Signed",
+    "frq": "Homework or extended in-class, Q3 argument",
+    "answers": [
+      "A",
+      "C"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 26,
+    "register": "Witness Stand",
+    "basis": "E",
+    "headline": "The Hands Don't Listen",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "B",
+      "A"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 27,
+    "register": "Tribute",
+    "basis": "E",
+    "headline": "The Square We Keep",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "B",
+      "A"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 2
+  },
+  {
+    "id": 28,
+    "register": "Long Look",
+    "basis": "E",
+    "headline": "The Chemistry a Culture Performs",
+    "frq": "Homework or extended in-class, Q2 rhetorical analysis",
+    "answers": [
+      "B",
+      "D"
+    ],
+    "teacher_pages": 4,
+    "student_pages": 3
+  }
+]
