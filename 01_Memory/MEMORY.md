@@ -25,3 +25,4 @@
 - [One issue at a time; fix at the source](feedback_one_issue_at_a_time.md) — On QA/fix work go one defect at a time (incl. ones only Claude caught); a "permanent fix" means the generation source, not a render-time symptom patch
 - [Openers must be politically neutral](feedback_opener_neutrality.md) — no taking sides, no attacking a person or group, even on the civic tier; Open Letter/Reckoning may never target a politician — route to Ledger or drop. Gate 0 in Editorial-Standards.md
 - [Openers: no jargon above HS common knowledge](feedback_opener_reading_level.md) — every unexplained term must be common knowledge to a high schooler (Medicare Part D/B was the trigger); gloss specialist terms in one clause or cut. Gate 0 in Editorial-Standards.md
+- [Options Trading System — project state](project_options_trading.md) — Bull call spread system on Mag 7, $2000 allocated, full spec at 10_Projects/Options Trading System/Strategy-Spec.md; backtesting next before build
