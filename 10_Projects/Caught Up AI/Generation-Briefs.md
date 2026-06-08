@@ -1,6 +1,6 @@
 ---
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-08
 tags: [project, caught-up-ai, writing, generation, prompts, anti-ai-tell]
 project: "[[Caught Up AI]]"
 ---
@@ -376,7 +376,13 @@ Rule: no two pieces share an opener type, architecture, or close type. At least 
 
 ## Per-piece pre-flight checklist
 
-Run this on every piece before it joins the batch. Four gates, in order. A piece that fails an early gate goes back before the later gates are worth running. The first three gates are per-piece; the batch-sameness gate runs once over the whole week. Each gate points to its authority file.
+Run this on every piece before it joins the batch. Five gates, in order. A piece that fails an early gate goes back before the later gates are worth running. The first four gates are per-piece; the batch-sameness gate runs once over the whole week. Each gate points to its authority file.
+
+### Gate 0: Editorial fit (per [[Editorial-Standards]])
+
+Run this first, before any other gate, because a piece that fails it should never have been drafted in this register at all. Two checks:
+- Neutrality firewall: the piece takes no political side, attacks no specific person, and attacks no group. No living political figure is the addressee, the villain, or the hero (an unnamed "Mr. President" still counts). Civic and political topics are fine; partisan stance is not, on any tier. If the only honest target or addressee is a politician or a party, the piece routes to The Ledger or is dropped. A reader should be able to tell what happened and what each side says, never which side the writer is on.
+- Plain-knowledge accessibility: every term used without explanation is common knowledge to a typical high schooler. Any load-bearing specialist term (program sub-parts like "Part D", procedural rules, financial metrics, acronyms) is defined in a plain-language clause on first use, or cut. Do not over-explain genuine common knowledge.
 
 ### Gate 1: Accuracy and expression (per [[Accuracy-Guardrail]])
 
@@ -436,6 +442,7 @@ Run once over the whole week before any of it ships. The per-piece gates cannot 
 - [[Cross-Piece-Sameness-Rubric]] - the batch audit and the Variety Matrix gate 4 runs.
 - [[Anti-Tell-List]] - the per-piece banned-construction list gate 3 runs.
 - [[Accuracy-Guardrail]] - the fact-fidelity and expression-firewall protocol gate 1 runs.
+- [[Editorial-Standards]] - the neutrality firewall and plain-knowledge accessibility rules gate 0 runs.
 - [[Annotated-Exemplars]] - worked examples of the registers in action.
 - [[Writing-Manual]] - the master craft rules every register inherits.
 - [[Content-Sourcing]] - where the verified facts each piece is built from come from.

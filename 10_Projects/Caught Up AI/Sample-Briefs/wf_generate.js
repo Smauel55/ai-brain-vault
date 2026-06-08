@@ -117,7 +117,7 @@ ${JSON.stringify(src)}
 
 WRITE:
 1) headline: short, specific, no clickbait.
-2) body: an array of paragraphs, 350-450 words total, in THE ${row.register} register, built on the ${row.template} template with a "${row.open_type}" opening and a "${row.close_type}" close, rhythm target: ${row.rhythm_target}. Vary sentence length hard (at least one under ~8 words, at least one over ~30; no three same-length sentences in a row). Apply the friction layer: lopsided structure, at least one inert/off-thesis true detail, not every paragraph ending on a button, no mirror-the-opening close, no reader-directing signposting. Inside the body, mark 4 to 6 GENUINELY PRESENT devices with highlight spans. EXACT TAG SHAPE (a strict renderer parses these character-for-character, so get it perfect): open a span with [[n]] and CLOSE it with [[/n]] -- a forward slash before the number, in the closing tag only. Worked example for device 1: [[1]]the whole tagged phrase[[/1]]. The closing tag is [[/1]]; it is NEVER a second [[1]]. Number the spans 1,2,3... in order of appearance, each span covering the whole device move. SELF-CHECK before you return: every [[n]] open has exactly one matching slashed [[/n]] close; the count of opens equals the count of closes equals the length of your devices array; and no bare [[n]] is ever used as a closer. Every load-bearing fact must trace to the fact spine; do not invent stats/history/science.
+2) body: an array of paragraphs, 350-450 words total, in THE ${row.register} register, built on the ${row.template} template with a "${row.open_type}" opening and a "${row.close_type}" close, rhythm target: ${row.rhythm_target}. Vary sentence length hard (at least one under ~8 words, at least one over ~30; no three same-length sentences in a row). Apply the friction layer: lopsided structure, at least one inert/off-thesis true detail, not every paragraph ending on a button, no mirror-the-opening close, no reader-directing signposting. Inside the body, mark 4 to 6 GENUINELY PRESENT devices with highlight spans. EXACT TAG SHAPE (a strict renderer parses these character-for-character, so get it perfect): open a span with [[n]] and CLOSE it with [[/n]] -- a forward slash before the number, in the closing tag only. Worked example for device 1: [[1]]the whole tagged phrase[[/1]]. The closing tag is [[/1]]; it is NEVER a second [[1]]. Number the spans 1,2,3... in order of appearance, each span covering the whole device move. SELF-CHECK before you return: every [[n]] open has exactly one matching slashed [[/n]] close; the count of opens equals the count of closes equals the length of your devices array; and no bare [[n]] is ever used as a closer. Every load-bearing fact must trace to the fact spine; do not invent stats/history/science. NO in-text citations of ANY kind: no parenthetical "(Author, year)", no "et al.", no journal/NBER/working-paper tags, and no inline source-naming of a researcher or study ("Carstensen's work", "Portfolio studies do find"). State facts plainly; attribute inline only to a named PUBLIC body where natural ("the GAO reported"). AP Lang source articles never carry citations. This bites hardest on evergreen/research pieces: the fact spine's references are for your verification only, never for quotation.
 3) devices: one entry per [[n]] span IN THE SAME ORDER (devices[n-1] matches span n). Each entry: para (the paragraph number the span sits in, 1-based), device (exact controlled-list name), purpose (1-2 lines: why the author chose it and what it accomplishes).
 4) mcq: exactly 2 questions, each 4 options, targeting TWO DIFFERENT AP reading skills (e.g. one Reasoning/Claims, one Style/tone). Each distractor must fail by a named trap from the MCQ spec; exactly one defensibly-best answer. Author by marking the correct option; set "answer" to the LETTER of the correct option AS YOU ORDERED THEM (the renderer reshuffles, so do not pattern letters). Rationales reference distractors BY CONTENT, never by letter.
 5) writing: pick the FRQ that genuinely fits. Q2 rhetorical analysis fits any passage; Q3 argument ONLY for argument-bearing passages (Reckoning, Long Think, Ledger, Open Letter); observational/consecratory passages (Long Look, Tribute, usually Witness Stand) take Q2. Never Q1. "type" = e.g. "Homework or extended in-class, Q2 rhetorical analysis". "text" = the full prompt.
@@ -133,7 +133,7 @@ function verifyPrompt(dim, dict, row, src){
     accuracy:`ACCURACY checker. Be adversarial: try to find a false or untraceable claim. Read ${F.acc}. ${row.basis==='R' ? 'Use WebSearch/WebFetch to spot-check every name, number, date, quote, and causal claim against independent sources; flag anything single-sourced, stale, or not on the fact spine (orphan fact).' : 'Verify every embedded HARD fact (stat/history/science/real institution) is true and traceable; invented persona/family detail is allowed and is NOT an accuracy failure.'} Check the fact spine: ${JSON.stringify(src).slice(0,8000)}`,
     devices:`DEVICES checker. Be adversarial. Read ${F.dev}. For each tagged device: is the label from the controlled list, correct, and genuinely present? Are look-alikes right (anaphora needs repetition at the START of successive clauses; simile needs like/as; antithesis needs balanced opposition)? Does each [[n]] span cover the whole move (not just a trigger word)? Is each span CLOSED with a slashed [[/n]] (never a second bare [[n]])? Does devices[n-1] match span n and is "para" correct? Are there 4-6 devices, with opens = slashed closes = devices length? Flag any mislabel, any forced/absent device, any unclosed/mis-closed span, any tag-count or ordering mismatch.`,
     mcq:`MCQ checker. Be adversarial. Read ${F.mcq}. For EACH question: is there exactly ONE defensibly-best answer (try to defend a second option; if you can, it fails)? Does every distractor fail by a named trap (no free-elimination throwaway)? Are all four options parallel in grammar and comparable in length? Do the two questions test DIFFERENT reading skills? Do rationales reference distractors by CONTENT not letter? Is each answerable from the opener alone? Also check the FRQ type genuinely fits the passage (no Q3 on a non-argument piece; no Q1).`,
-    mechanical:`MECHANICAL / ANTI-TELL checker. Be adversarial. Read ${F.tell} and the bands in ${F.reg} for THE ${row.register}. Checks: (1) ZERO em-dashes and ZERO emojis anywhere (hard fail on any hit). (2) Anti-tell sweep: significance-inflation, copula-avoidance, Family A-F words, sentence-head transition reflex (>1), elegant variation. (3) Friction layer present: not all paragraphs balanced, not every paragraph ends on a button, at least one inert/off-thesis detail, ending does not mirror opening, no reader-directing signposting, "not X but Y" capped. (4) Burstiness: at least one sentence <8 words and one >30; no three same-length in a row. (5) Register bands roughly in range; close type matches the assigned "${row.close_type}". (6) Word count 350-450. (7) Body device tags are renderer-valid: every span opens with [[n]] and closes with a SLASHED [[/n]] (a second bare [[n]] used as a closer is a HARD FAIL); the number of [[n]] opens equals the number of [[/n]] closes equals the length of the devices array; numbering is sequential 1,2,3... in order of appearance; no span is left unclosed.`
+    mechanical:`MECHANICAL / ANTI-TELL checker. Be adversarial. Read ${F.tell} and the bands in ${F.reg} for THE ${row.register}. Checks: (1) ZERO em-dashes and ZERO emojis anywhere (hard fail on any hit). (2) Anti-tell sweep: significance-inflation, copula-avoidance, Family A-F words, sentence-head transition reflex (>1), elegant variation. (3) Friction layer present: not all paragraphs balanced, not every paragraph ends on a button, at least one inert/off-thesis detail, ending does not mirror opening, no reader-directing signposting, "not X but Y" capped. (4) Burstiness: at least one sentence <8 words and one >30; no three same-length in a row. (5) Register bands roughly in range; close type matches the assigned "${row.close_type}". (6) Word count 350-450. (7) Body device tags are renderer-valid: every span opens with [[n]] and closes with a SLASHED [[/n]] (a second bare [[n]] used as a closer is a HARD FAIL); the number of [[n]] opens equals the number of [[/n]] closes equals the length of the devices array; numbering is sequential 1,2,3... in order of appearance; no span is left unclosed. (8) NO in-text citations anywhere (HARD FAIL on any hit): no parenthetical "(Author, year)", no "et al.", no journal/working-paper/NBER tags, and no inline source-naming of a researcher or study ("Carstensen's work", "Portfolio studies do find", "one of the most replicated results in the study of decision-making"). Inline attribution is allowed ONLY to a named public body ("the GAO reported"). A scholarly citation must be stripped and the fact stated plainly.`
   }
   return `${heads[dim]}
 
@@ -186,6 +186,20 @@ function tagLint(dict){
   return {ok, opens, closes, ndev,
     detail: ok ? '' : `opens=${opens} closes=${closes} devices=${ndev} (must be equal)`}
 }
+// Issue 2 permanent gate: catch the highest-value, regex-reliable citation forms.
+// The inline "Researcher's work" / "studies find" forms are NOT regex-safe (false
+// positives), so those lean on the mechanical model verifier's check (8); this
+// deterministic pass guarantees the parenthetical/et-al/journal forms never ship.
+function citationLint(dict){
+  const b = (dict.body||[]).join('\n')
+  const hits = []
+  const add = (re) => { const m = b.match(re); if (m) hits.push(...m) }
+  add(/\([A-Z][^)]*\b(?:18|19|20)\d\d[a-z]?[^)]*\)/g)   // (Author, 1979)
+  add(/\bet al\.?/gi)                                    // et al.
+  add(/\bNBER\b/g)                                       // working-paper tag
+  add(/\b(?:Journal|Review|Quarterly|Proceedings) of [A-Z]/g) // journal names
+  return {ok: hits.length === 0, hits: [...new Set(hits)]}
+}
 
 // ---------------- pipeline ----------------
 phase('Source')
@@ -216,6 +230,13 @@ const results = await pipeline(
     }
     if (healed) log(`[tag-gate] id ${row.id}: auto-repaired ${healed} duplicate-closer tag(s)`)
 
+    const cite = citationLint(dict)
+    const citeVerdict = {
+      dimension:'citations', pass: cite.ok,
+      issues: cite.ok ? [] : [`In-text citation(s) found in the prose: ${cite.hits.join(' | ')}. Openers carry NO citations.`],
+      fixes: cite.ok ? [] : ['Strip the citation(s) and state each fact plainly; attribute inline only to a named public body if natural.']
+    }
+
     const dims = ['accuracy','devices','mcq','mechanical']
     const verdicts = await parallel(dims.map(d => () =>
       agent(verifyPrompt(d, dict, row, src), {
@@ -223,7 +244,7 @@ const results = await pipeline(
         agentType: d==='accuracy' ? 'Explore' : undefined
       })
     ))
-    const v = [tagVerdict, ...verdicts.filter(Boolean)]
+    const v = [tagVerdict, citeVerdict, ...verdicts.filter(Boolean)]
     const failed = v.filter(x => !x.pass)
     let finalDict = dict, redrafted = false, residual = []
     if (failed.length){
@@ -232,10 +253,12 @@ const results = await pipeline(
       finalDict = await agent(redraftPrompt(dict, row, src, problems), {
         label:`redraft#${row.id}:${row.register}`, phase:'Verify', schema: DRAFT_SCHEMA
       })
-      // re-run the deterministic tag gate on the redraft so it cannot reintroduce the bug
+      // re-run the deterministic gates on the redraft so it cannot reintroduce a bug
       normalizeClosers(finalDict)
       const lint2 = tagLint(finalDict)
       if (!lint2.ok) residual.push(`tags still unbalanced after redraft: ${lint2.detail}`)
+      const cite2 = citationLint(finalDict)
+      if (!cite2.ok) residual.push(`in-text citation(s) still present after redraft: ${cite2.hits.join(' | ')}`)
       // single consolidated confirmation pass over the redraft
       const conf = await agent(
         `CONFIRMATION pass over a redrafted Caught Up AI opener #${row.id} (${row.register}). The prior issues were:\n${JSON.stringify(problems)}\nCheck the redraft below ONLY for: em-dashes/emojis (hard fail), the specific prior issues resolved, device tag/array integrity, exactly-one-best-answer per MCQ, two different skills, facts traceable. Read ${F.tell} and ${F.dev} if needed.\nREDRAFT:\n${JSON.stringify({headline:finalDict.headline, body:finalDict.body, devices:finalDict.devices, mcq:finalDict.mcq, writing:finalDict.writing}).slice(0,24000)}\nReturn dimension="confirmation", pass, issues, fixes.`,

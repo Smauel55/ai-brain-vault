@@ -12,10 +12,23 @@ Usage:  python render_batch.py openers.json
 Determinism note: randomize_answers uses the module `random`. We seed once so a
 re-run reproduces the same key letters; remove the seed for true per-run shuffle.
 """
-import os, sys, json, random, re
+import os, sys, json, random, re, time
 import render_opener_v2 as r
 
 ILLEGAL = '\\/:*?"<>|'
+
+def build_with_retry(piece, role, attempts=6):
+    """OneDrive intermittently locks a file mid-write (OSError errno 22) because
+    this folder is sync-backed. Retry with a short backoff; the lock clears in a
+    moment. Without this, a single transient lock leaves the 56-PDF batch half
+    rendered (some fresh, some stale)."""
+    for k in range(attempts):
+        try:
+            return r.build(piece, role)
+        except OSError:
+            if k == attempts - 1:
+                raise
+            time.sleep(0.7)
 
 def normalize_closers(piece):
     """Self-heal the Issue-1 duplicate-closer bug: a span closed with a second
@@ -70,7 +83,7 @@ def main():
         answers = [it['answer'] for it in piece['mcq']]
         pages = {}
         for role in ('Teacher', 'Student'):
-            fn, npages = r.build(piece, role)
+            fn, npages = build_with_retry(piece, role)
             pages[role] = npages
         frq = piece.get('writing', {}).get('type', '')
         rows.append({

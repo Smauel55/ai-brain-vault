@@ -1,6 +1,6 @@
 ---
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-08
 tags: [project, caught-up-ai, generation, prompts, sample-output]
 project: "[[Caught Up AI]]"
 ---
@@ -48,15 +48,26 @@ BEFORE WRITING ANYTHING, load the engine. Read these files in
 - Anti-Tell-List.md  (the per-piece banned-construction gate)
 - Cross-Piece-Sameness-Rubric.md  (the batch audit + Variety Matrix)
 - Accuracy-Guardrail.md  (fact-sourcing + the expression firewall)
+- Editorial-Standards.md  (the neutrality firewall + plain-knowledge accessibility, Gate 0)
 - MCQ-Construction-Spec.md  (AP-grounded rules for the two multiple-choice questions: skill spread, stem patterns, distractor traps, the one-best-answer gate, the self-check)
 - Rhetorical-Device-Vocabulary.md  (the controlled device list for labeling, plus the single-color highlight and per-device purpose convention)
 
-TWO HARD RULES override everything below: no em-dashes anywhere, no emojis anywhere.
+HARD RULES override everything below: no em-dashes anywhere, no emojis anywhere. And
+two editorial gates from Editorial-Standards.md bind every piece (Gate 0): (a) NEUTRALITY
+FIREWALL: take no political side, attack no specific person, attack no group; no living
+political figure as addressee, villain, or hero (an unnamed "Mr. President" still counts);
+civic and political topics are fine but partisan stance is not. (b) PLAIN-KNOWLEDGE: every
+unexplained term must be common knowledge to a typical high schooler; define any specialist
+term (program sub-parts like "Part D", procedural rules, financial metrics, acronyms) in a
+plain clause on first use or cut it.
 
 TOPIC MODE: real current events. For each piece:
 1. Find a genuinely recent, real news story (within the last 5 days of today's date).
    Spread the {{N}} stories across different subject areas (politics, science, business,
-   culture, sport, world) so the set does not cluster on one beat.
+   culture, sport, world) so the set does not cluster on one beat. For political stories,
+   pick the angle so the piece reports the issue and the competing positions fairly without
+   taking a side; if the only honest treatment requires taking a partisan side or targeting
+   an identifiable political figure, route it to The Ledger or drop it.
 2. Build a numbered, verified fact list per Accuracy-Guardrail BEFORE drafting.
    Web-search and confirm every name, number, date, quote, and causal claim against a
    real source. If you cannot confirm a fact, drop it. Never invent or guess a fact.
@@ -71,10 +82,11 @@ Cross-Piece-Sameness-Rubric.md):
   across the 7-voice palette. Force at least one long-periodic and one clipped rhythm
   into the set. Cap the terse one-line button close at one piece.
 
-GATES (run all four from the Generation-Briefs.md pre-flight before any piece is final):
-Gate 1 accuracy + expression firewall, Gate 2 register-band check, Gate 3 anti-tell scan,
-Gate 4 batch-sameness across the whole set. A piece that fails a gate goes back before it
-ships. Do not show me the gate work; just do not ship a piece that fails.
+GATES (run all five from the Generation-Briefs.md pre-flight before any piece is final):
+Gate 0 editorial fit (neutrality firewall + plain-knowledge accessibility), Gate 1 accuracy
++ expression firewall, Gate 2 register-band check, Gate 3 anti-tell scan, Gate 4
+batch-sameness across the whole set. A piece that fails a gate goes back before it ships.
+Do not show me the gate work; just do not ship a piece that fails.
 
 OUTPUT: present each piece as the full inbox lesson-opener package, in this order:
 

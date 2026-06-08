@@ -1,6 +1,6 @@
 ---
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-08
 tags: [project, caught-up-ai, writing, register-specs, anti-tell]
 project: "[[Caught Up AI]]"
 ---
@@ -117,6 +117,7 @@ Confidence: MEASURED, NOT RE-VERIFIED at the high-deference pole. The blended ba
 ## Drift cues (whole-piece)
 
 - Drifted if you attack the addressee directly instead of holding them to their own stated principles. The move is "you said you believe X; this contradicts X", never "you are wrong".
+- NEUTRALITY (per [[Editorial-Standards]], Gate 0): drifted if the addressee is a sitting or identifiable political officeholder, a candidate, or a partisan body, even unnamed (an "open letter to Mr. President" is banned). Redirect the engine onto a non-partisan powerful addressee: a company or CEO over a documented practice, an industry, a profession, a standards body, an institution in a non-partisan capacity, or a role or idea. If the only honest addressee is a political figure, this is not an Open Letter; route to The Ledger or drop it.
 - Drifted if the tone turns sarcastic, snarky, or ironic. This register runs on earnest deference.
 - Drifted if every sentence is the same length, or if there is no single long periodic sentence withholding its point to the end.
 - Drifted if you never quote or paraphrase the addressee's own values back at them; that borrowed-authority move is the whole engine.
@@ -166,6 +167,7 @@ Confidence: VERIFIED. Recomputed from public-domain full texts (Florence Kelley 
 ## Drift cues (whole-piece)
 
 - Drifted if there is no live, datable trigger and no nameable responsible party. With only a vague trend, you are writing an explainer, not a reckoning.
+- NEUTRALITY (per [[Editorial-Standards]], Gate 0): drifted if the nameable responsible party is a partisan political target, a politician, or a party. The culprit can be a corporation, an institution, a documented system or practice, an industry, never a political side. If the only culprit the facts support is a politician or party, route to The Ledger or drop it; forcing the blame onto a political figure to make the register work is the exact failure to avoid.
 - Drifted if every sentence is the same length, or if there is no parallel series of three or more.
 - Drifted if emotion is carried by feeling-words ("tragic", "heartbreaking", "outrageous") instead of a concrete scene or number.
 - Drifted if the piece ends by softening, qualifying, or seeing both sides. The close must be a charge to act or a verdict, tighter than what came before.

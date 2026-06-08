@@ -1,6 +1,6 @@
 ---
 created: 2026-06-05
-updated: 2026-06-07
+updated: 2026-06-08
 tags: [project, caught-up-ai, writing, style, palette]
 project: "[[Caught Up AI]]"
 ---
@@ -18,6 +18,7 @@ Companion documents: [[Register-Specs]] (the measurable bands and drift cues for
 - Match register to the news, not the news to the register. If the story has no nameable opposing party, it is not a Reckoning. If it is an occasion to honor rather than argue, it is a Tribute. If it has no genuine awe in it, it is not a Long Look. Forcing the wrong register is itself a tell.
 - Emulate craft only. We borrow rhetorical architecture, sentence craft, and register from the exemplar passages. We never borrow their topic, their period diction, or the pretense of being a historical author, and we never reproduce, summarize, or paraphrase any source prose. Facts only from sources; the prose is original.
 - Two hard personal rules sit above everything: no em-dashes anywhere (commas, semicolons, colons, periods, and parentheses carry every suspension and turn) and no emojis. These are not stylistic preferences; they are gates.
+- Two editorial gates also sit above register choice (see [[Editorial-Standards]], Gate 0). NEUTRALITY: no piece takes a political side, attacks a specific person, or attacks a group; civic topics are fine, partisan stance is not, on any tier. This constrains routing: The Open Letter's addressee and The Reckoning's culprit may never be a politician, a party, or an identifiable political figure (route those stories to The Ledger or drop them). PLAIN KNOWLEDGE: every unexplained term must be common knowledge to a high schooler; specialist terms get a plain-language gloss on first use or are cut.
 
 ## Evergreen vs event-pegged registers (a routing lens, not a rule)
 

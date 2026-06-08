@@ -1,6 +1,6 @@
 ---
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-08
 tags: [project, caught-up-ai, writing-manual, anti-ai-tell, blocklist]
 project: "[[Caught Up AI]]"
 ---
@@ -112,7 +112,8 @@ The positive target (the textures that marked the genuine human passages as huma
 
 ## 4. Discourse (banned stances and rhetorical postures)
 
-- Vague authority. "studies show", "experts agree", "research suggests", "observers have noted", "critics argue", "industry reports indicate", with nothing attached. For this product this doubles as an ACCURACY hazard: an unattributed claim is both an AI tell and an unverifiable fact. HARD RULE: every factual claim names a real, checkable source or it is cut. This single rule serves the anti-tell goal and the accuracy gate at once.
+- Vague authority. "studies show", "experts agree", "research suggests", "observers have noted", "critics argue", "industry reports indicate", with nothing attached. For this product this doubles as an ACCURACY hazard: an unattributed claim is both an AI tell and an unverifiable fact. HARD RULE: every factual claim must be TRACEABLE to a real, checkable source in the fact list, or it is cut. Traceable is not the same as cited: the trace lives in the fact list, not the prose. State the fact plainly, with at most an inline named-body attribution, and NEVER a scholarly citation (see the next item).
+- Academic in-text citations and reference lists. NEVER place a scholarly citation in the prose: no parenthetical "(Author, year)" or "(Smith et al., 2019)", no journal or working-paper tags ("NBER 2004", "in the Journal of..."), and no inline source-naming of a researcher or study ("Carstensen's work", "Portfolio studies do find", "one of the most replicated results in the study of decision-making"). An AP Lang source article never carries citations; the apparatus is an academic/AI tell and off-brand. The fact must still be real and traceable in the source stage, and you MAY attribute inline to a named PUBLIC body where natural ("the GAO reported", "the FAA said"), but a scholar, paper, or journal name stays out of the text entirely. This bites hardest on evergreen/research pieces, whose source stage supplies scholarly references for verification ONLY, never for quotation. See [[feedback_openers_no_citations]].
 - Implied many sources from one or two. "multiple outlets", "widespread coverage", "commentators across the spectrum". Name the actual outlets or drop the claim.
 - Over-hedging. Stacked qualifiers ("it could be argued that", "in many cases", "to some extent", "arguably", "generally speaking") that drain the piece of a position. The corpus takes ONE clear stance. Hedge only where the fact is genuinely uncertain, and then attribute the uncertainty.
 - False balance. "on one hand... on the other hand" that gives symmetric weight to asymmetric positions and commits to nothing. Distinct from genuine concession, which grants ground then turns. The machine both-sides and stops; the craft move concedes and advances. See the Concession row in the craft table.
@@ -146,7 +147,7 @@ Fast, cheap, do it every time, before any judgment call about quality:
 4. Find every sentence that asserts something is important, significant, vital, a testament, a turning point, or a reminder. Replace each with the concrete fact, or cut the beat. This is the highest-yield step.
 5. Find every "serves as / stands as / represents / marks / features / boasts" and test whether "is" or "has" is the honest verb. If yes, use it.
 6. Check burstiness: at least one sentence under 8 words and at least one over 30; no three same-length sentences in a row.
-7. Check every factual claim names a real checkable source. Unattributed claim: cut it. This is both the AI-tell gate and the accuracy gate.
+7. Check every factual claim is real and traceable to a source in the fact list. Traceability lives in the fact list, NOT in the prose: there are NO academic in-text citations or reference lists ("(Author, year)", "et al.", "NBER", "Journal of...", "Researcher's work", "studies find"). Inline attribution, if any, is to a named public body ("the GAO reported"). An untraceable claim is cut; an in-text scholarly citation is stripped and the fact stated plainly. This is both the AI-tell gate and the accuracy gate.
 8. Check the close: it lands on a turn, button, or concrete stake, not a recap or a forward-looking homily.
 9. Symmetry check (friction layer): count "not X but Y" (cap one), count three-item lists (most lists should not be threes), and confirm the paragraphs are not all balanced and not all the same length.
 10. Button check (friction layer): confirm not every paragraph ends on a kicker, that at least one paragraph ends flat or mid-thought, and that the negation-correction closer appears at most once.

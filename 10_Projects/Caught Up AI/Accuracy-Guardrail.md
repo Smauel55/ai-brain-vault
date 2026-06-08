@@ -1,6 +1,6 @@
 ---
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-08
 tags: [project, caught-up-ai, content-engine, accuracy, guardrail]
 project: "[[Caught Up AI]]"
 ---
@@ -31,6 +31,7 @@ We report facts in our own sentences. We never track a source's expression. The 
 - Never reuse distinctive phrasing. Ordinary factual wording is fine and often unavoidable (a name, a date, a title, a plain description). What is off limits is a source's memorable, chosen, or coined phrasing: a vivid metaphor, a clever turn, a distinctive label they invented, a quotable line. If a phrase has personality, it is theirs, not a fact.
 - No paraphrase-too-close. Swapping synonyms into a source's sentence is not original writing; it is a derivative of their expression. The test: could you have written this sentence knowing only the facts, without the source in front of you? If not, rewrite it.
 - Direct quotes are quoted and attributed, never absorbed. If you want a person's exact words, put them in quotation marks, attribute them, and confirm the quote is verbatim and in context against a primary or transcript source. A quote stripped of its marks and folded into your prose is both an accuracy risk and an expression risk.
+- No academic citations in the prose. Traceability lives in the fact list, not the text. The published sentences carry no "(Author, year)", no "et al.", no journal or working-paper names, and no inline "Researcher's work" or "studies find" source-naming. Attribute inline only to a named public body where natural ("the GAO reported", "the FAA said"). A scholarly citation in an Opener is an academic/AI tell and off-brand. Sourcing a fact (required) and citing it in the text (banned) are different jobs: do the first in the fact list, never the second in the prose. See [[feedback_openers_no_citations]] and the citation ban in [[Anti-Tell-List]].
 - You have drifted if: a sentence reads close to one you saw in a source, or follows its run of ideas in the same order, or carries a phrase you would not have invented from the facts alone. Rewrite from the fact list.
 
 ## The numbered pre-draft fact list (do this before drafting)
