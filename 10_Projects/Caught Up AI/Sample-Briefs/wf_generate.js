@@ -109,7 +109,7 @@ READ THESE SPECS LIVE before drafting (do not work from memory):
 - ${F.reg}  -> find the section for THE ${row.register.toUpperCase()}; hit its bands and honor its drift cues.
 - ${F.tpl}  -> use the template "${row.template}"; open_type "${row.open_type}"; close_type "${row.close_type}". Engine = exactly one.
 - ${F.tell}  -> apply the FRICTION / ANTI-SYMMETRY layer (read first) AND obey the mechanical blocklist. ZERO em-dashes, ZERO emojis.
-- ${F.dev}  -> device labels may ONLY come from this controlled list; tag the WHOLE move, not its trigger word; be exact about look-alikes (anaphora vs parallelism, simile vs metaphor). Understatement/litotes is removed; allusions must be widely recognizable.
+- ${F.dev}  -> device labels may ONLY come from this controlled list: no invented names ("Redefinition", "Statistical evidence") and no register close-types as devices ("charge"); use the combined label "Cumulative and periodic sentences", not bare "Periodic sentence". Name the SPECIFIC device; "Syntax/Diction/Tone" are last-resort only (a clipped short sentence is "Telegraphic sentence"). Tag the WHOLE move, not its trigger word. Be exact about look-alikes: anaphora vs parallelism, simile vs metaphor, asyndeton (no conjunctions) vs polysyndeton (repeated conjunctions), allusion (a recognizable reference) vs a verbatim quotation. Understatement/litotes is removed; allusions must be widely recognizable.
 - ${F.mcq}  -> the two MCQs and the FRQ selection follow this spec.
 
 FACT SPINE (draft ONLY from this; never track a source's sentences):
@@ -131,7 +131,7 @@ Return ONLY the structured object.`
 function verifyPrompt(dim, dict, row, src){
   const heads = {
     accuracy:`ACCURACY checker. Be adversarial: try to find a false or untraceable claim. Read ${F.acc}. ${row.basis==='R' ? 'Use WebSearch/WebFetch to spot-check every name, number, date, quote, and causal claim against independent sources; flag anything single-sourced, stale, or not on the fact spine (orphan fact).' : 'Verify every embedded HARD fact (stat/history/science/real institution) is true and traceable; invented persona/family detail is allowed and is NOT an accuracy failure.'} Check the fact spine: ${JSON.stringify(src).slice(0,8000)}`,
-    devices:`DEVICES checker. Be adversarial. Read ${F.dev}. For each tagged device: is the label from the controlled list, correct, and genuinely present? Are look-alikes right (anaphora needs repetition at the START of successive clauses; simile needs like/as; antithesis needs balanced opposition)? Does each [[n]] span cover the whole move (not just a trigger word)? Is each span CLOSED with a slashed [[/n]] (never a second bare [[n]])? Does devices[n-1] match span n and is "para" correct? Are there 4-6 devices, with opens = slashed closes = devices length? Flag any mislabel, any forced/absent device, any unclosed/mis-closed span, any tag-count or ordering mismatch.`,
+    devices:`DEVICES checker. Be adversarial. Read ${F.dev} (the controlled vocabulary). For each tagged device: is the label EXACTLY one of the controlled-list terms, correct, and genuinely present? HARD RULES: (a) No off-list or invented labels (e.g. "Statistical evidence", "Redefinition", "Periodic sentence") and no register close-types as devices (e.g. "Charge / obligation"); use the canonical combined label "Cumulative and periodic sentences", never bare "Periodic sentence". (b) Name the SPECIFIC device; "Syntax", "Diction", "Tone" are last-resort umbrellas, flag any of them unless NO more precise list device applies (a clipped short sentence is "Telegraphic sentence", not "Syntax"). (c) Look-alikes must be exact: anaphora repeats at the START of successive clauses (mid-clause repetition is parallelism); simile needs like/as (else metaphor); antithesis needs balanced opposition (vs juxtaposition); ASYNDETON omits conjunctions while POLYSYNDETON repeats them (count the conjunctions in the span); allusion is a passing reference to a recognizable text/person/event, NOT a verbatim quotation. Does each [[n]] span cover the whole move (not just a trigger word)? Is each span CLOSED with a slashed [[/n]] (never a second bare [[n]])? Does devices[n-1] match span n and is "para" correct? Are there 4-6 devices, with opens = slashed closes = devices length? Flag any off-list label, umbrella-where-specific-exists, look-alike mislabel, forced/absent device, unclosed/mis-closed span, or tag-count/ordering mismatch.`,
     mcq:`MCQ checker. Be adversarial. Read ${F.mcq}. For EACH question: is there exactly ONE defensibly-best answer (try to defend a second option; if you can, it fails)? Does every distractor fail by a named trap (no free-elimination throwaway)? Are all four options parallel in grammar and comparable in length? Do the two questions test DIFFERENT reading skills? Do rationales reference distractors by CONTENT not letter? Is each answerable from the opener alone? Also check the FRQ type genuinely fits the passage (no Q3 on a non-argument piece; no Q1).`,
     mechanical:`MECHANICAL / ANTI-TELL checker. Be adversarial. Read ${F.tell} and the bands in ${F.reg} for THE ${row.register}. Checks: (1) ZERO em-dashes and ZERO emojis anywhere (hard fail on any hit). (2) Anti-tell sweep: significance-inflation, copula-avoidance, Family A-F words, sentence-head transition reflex (>1), elegant variation. (3) Friction layer present: not all paragraphs balanced, not every paragraph ends on a button, at least one inert/off-thesis detail, ending does not mirror opening, no reader-directing signposting, "not X but Y" capped. (4) Burstiness: at least one sentence <8 words and one >30; no three same-length in a row. (5) Register bands roughly in range; close type matches the assigned "${row.close_type}". (6) Word count 350-450. (7) Body device tags are renderer-valid: every span opens with [[n]] and closes with a SLASHED [[/n]] (a second bare [[n]] used as a closer is a HARD FAIL); the number of [[n]] opens equals the number of [[/n]] closes equals the length of the devices array; numbering is sequential 1,2,3... in order of appearance; no span is left unclosed. (8) NO in-text citations anywhere (HARD FAIL on any hit): no parenthetical "(Author, year)", no "et al.", no journal/working-paper/NBER tags, and no inline source-naming of a researcher or study ("Carstensen's work", "Portfolio studies do find", "one of the most replicated results in the study of decision-making"). Inline attribution is allowed ONLY to a named public body ("the GAO reported"). A scholarly citation must be stripped and the fact stated plainly.`
   }
@@ -200,6 +200,26 @@ function citationLint(dict){
   add(/\b(?:Journal|Review|Quarterly|Proceedings) of [A-Z]/g) // journal names
   return {ok: hits.length === 0, hits: [...new Set(hits)]}
 }
+// Device labels must come from the fixed controlled vocabulary
+// (Rhetorical-Device-Vocabulary.md). Off-list/invented labels ("Statistical
+// evidence", "Charge / obligation", "Redefinition", "Periodic sentence") are the
+// recurring failure and are caught deterministically here. The umbrella terms
+// (Syntax/Diction/Tone) ARE on the list but are last-resort; whether a more
+// specific device applies is a judgment left to the devices model verifier, which
+// is told to scrutinize them. KEEP THIS SET IN SYNC with the vocabulary file.
+const DEVICE_CANON = new Set(['Ethos','Pathos','Logos','Diction','Syntax','Tone',
+  'Parallelism','Anaphora','Juxtaposition','Antithesis','Rhetorical question','Metaphor',
+  'Simile','Imagery','Allusion','Hyperbole','Irony','Repetition','Concession',
+  'Concession and refutation','Anecdote','Epistrophe','Asyndeton','Polysyndeton','Chiasmus',
+  'Analogy','Personification','Cumulative and periodic sentences','Telegraphic sentence',
+  'Anecdotal vs statistical evidence','Shift / volta'])
+const DEVICE_UMBRELLA = new Set(['Syntax','Diction','Tone'])
+function deviceLint(dict){
+  const labels = (dict.devices||[]).map(d => d.device)
+  const offlist = labels.filter(l => !DEVICE_CANON.has(l))
+  const umbrella = labels.filter(l => DEVICE_UMBRELLA.has(l))
+  return {ok: offlist.length === 0, offlist: [...new Set(offlist)], umbrella: [...new Set(umbrella)]}
+}
 
 // ---------------- pipeline ----------------
 phase('Source')
@@ -237,6 +257,14 @@ const results = await pipeline(
       fixes: cite.ok ? [] : ['Strip the citation(s) and state each fact plainly; attribute inline only to a named public body if natural.']
     }
 
+    const dl = deviceLint(dict)
+    const deviceVerdict = {
+      dimension:'device-labels', pass: dl.ok,
+      issues: dl.ok ? [] : [`Off-list device label(s): ${dl.offlist.join(', ')}. Labels must come ONLY from the controlled vocabulary (no invented names, no register close-types like "charge").`],
+      fixes: dl.ok ? [] : ['Relabel each to the correct controlled-list device, or drop it if no list device genuinely fits.']
+    }
+    if (dl.umbrella.length) log(`[device-gate] id ${row.id}: umbrella label(s) ${dl.umbrella.join(', ')} -- verifier will check a more specific device does not apply`)
+
     const dims = ['accuracy','devices','mcq','mechanical']
     const verdicts = await parallel(dims.map(d => () =>
       agent(verifyPrompt(d, dict, row, src), {
@@ -244,7 +272,7 @@ const results = await pipeline(
         agentType: d==='accuracy' ? 'Explore' : undefined
       })
     ))
-    const v = [tagVerdict, citeVerdict, ...verdicts.filter(Boolean)]
+    const v = [tagVerdict, citeVerdict, deviceVerdict, ...verdicts.filter(Boolean)]
     const failed = v.filter(x => !x.pass)
     let finalDict = dict, redrafted = false, residual = []
     if (failed.length){
@@ -259,6 +287,8 @@ const results = await pipeline(
       if (!lint2.ok) residual.push(`tags still unbalanced after redraft: ${lint2.detail}`)
       const cite2 = citationLint(finalDict)
       if (!cite2.ok) residual.push(`in-text citation(s) still present after redraft: ${cite2.hits.join(' | ')}`)
+      const dl2 = deviceLint(finalDict)
+      if (!dl2.ok) residual.push(`off-list device label(s) still present after redraft: ${dl2.offlist.join(', ')}`)
       // single consolidated confirmation pass over the redraft
       const conf = await agent(
         `CONFIRMATION pass over a redrafted Caught Up AI opener #${row.id} (${row.register}). The prior issues were:\n${JSON.stringify(problems)}\nCheck the redraft below ONLY for: em-dashes/emojis (hard fail), the specific prior issues resolved, device tag/array integrity, exactly-one-best-answer per MCQ, two different skills, facts traceable. Read ${F.tell} and ${F.dev} if needed.\nREDRAFT:\n${JSON.stringify({headline:finalDict.headline, body:finalDict.body, devices:finalDict.devices, mcq:finalDict.mcq, writing:finalDict.writing}).slice(0,24000)}\nReturn dimension="confirmation", pass, issues, fixes.`,

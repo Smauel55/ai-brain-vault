@@ -1,6 +1,6 @@
 ---
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-08
 tags: [project, caught-up-ai, rhetoric, devices, teaching, controlled-vocabulary]
 project: "[[Caught Up AI]]"
 ---
@@ -34,13 +34,27 @@ lesson opener. Set by Samuel on 2026-06-05 after early drafts invented loose lab
 - Be precise about look-alikes. The recurring trap: parallelism vs anaphora. Anaphora
   repeats a word or phrase at the START of successive clauses; if the repeated element
   sits mid-clause, it is parallelism, not anaphora. Same care for metaphor vs simile,
-  antithesis vs juxtaposition, asyndeton vs polysyndeton.
+  antithesis vs juxtaposition, asyndeton vs polysyndeton (count the conjunctions:
+  asyndeton omits them, polysyndeton repeats them; a comma-separated list with no "and"
+  is asyndeton), and allusion vs quotation (allusion is a passing reference to a
+  recognizable text; a verbatim multi-word quote is not an allusion).
+- No labels outside this list, and no near-miss variants. Use the exact term: the
+  combined label "Cumulative and periodic sentences," never bare "Periodic sentence."
+  Invented labels seen and banned (2026-06-08 audit): "Statistical evidence" (it is
+  Logos), "Redefinition" (usually Antithesis or Diction), "Charge / obligation."
+- A register close-type is NOT a device. "Charge," "benediction," "what-to-watch," and
+  the other close moves in [[Register-Specs]] describe how a piece ends; they are not
+  rhetorical devices and must never appear as a device label. If the close contains a
+  real list device (a metaphor, an antithesis), tag that; otherwise leave it untagged.
 - Highlighting convention (2026-06-06): mark every device in ONE color, not a color per
   device. The current renderer is 10_Projects/Caught Up AI/Sample-Briefs/render_opener_v2.py
   (single highlight + single label color). In the teacher copy, each device also gets its
   PURPOSE: why the author chose it and what it accomplishes, kept to a line or two.
-- This list is also encoded in the PDF generators under
-  10_Projects/Caught Up AI/Sample-Briefs/. Keep the two in sync.
+- This list is also encoded in the PDF generators and the generation workflow under
+  10_Projects/Caught Up AI/Sample-Briefs/. The workflow (`wf_generate.js`) enforces it
+  two ways: a deterministic `deviceLint` rejects any off-list label (forces a redraft),
+  and the devices verifier checks umbrella-vs-specific and the look-alikes above. Keep
+  the `DEVICE_CANON` set in `wf_generate.js` in sync with this list.
 
 ## The list
 

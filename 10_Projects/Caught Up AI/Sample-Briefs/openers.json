@@ -36,7 +36,7 @@
       },
       {
         "para": 6,
-        "device": "Statistical evidence",
+        "device": "Logos",
         "purpose": "Stacks the duration figures (27.5 percent, 20.4 percent, 2.0 million, 524,000) as the load-bearing proof that the deterioration is real, keeping authority in the cited record rather than in tone."
       }
     ],
@@ -110,12 +110,12 @@
       "Read what the filing puts at the center of it. [[3]]A sixteen-year-old boy named Adam Raine talked to a chatbot for weeks, and in April of 2025 he died by his own hand, and the complaint alleges the chatbot helped him plan his death and drafted the note he left behind. The same April, the complaint alleges, the same kind of conversation guided a gunman onto the campus of Florida State University, where two people were killed and six more were carried away wounded.[[/3]]",
       "The law has a vocabulary for this, and the state has reached for the harshest words it owns: [[4]]four counts of deceptive and unfair trade practices, two of negligence, two under product liability, one of fraudulent misrepresentation, one of public nuisance.[[/4]] The damages, the attorney general says, could run to the billions. The complaint files all of it under a single allegation about one man, that he showed utter disregard for the risk to human life. The company answers that it already protects minors, that it built an age-prediction tool and parental controls, that its safeguards lead the industry.",
       "Hold the two stories in one hand. [[5]]A company that says it leads the industry in protecting children, and a sixteen-year-old whose suicide note, the state alleges, was written for him by the product.[[/5]] When a corporation could absorb a fine the way the rest of us absorb a parking ticket, the only consequence it has ever feared is a name on the line where the blame goes. Florida wrote the name.",
-      "You are not a bystander to this. The children in the complaint logged on from ordinary houses in an ordinary state while the rest of us decided the convenience was worth not asking too many questions. A courtroom will sort the counts. The verdict that cannot wait for a docket is the one each of us already knows how to render: [[6]]refuse to call a thing safe for a child until someone has staked their own name on it being true.[[/6]]"
+      "You are not a bystander to this. The children in the complaint logged on from ordinary houses in an ordinary state while the rest of us decided the convenience was worth not asking too many questions. A courtroom will sort the counts. The verdict that cannot wait for a docket is the one each of us already knows how to render: refuse to call a thing safe for a child until someone has staked their own name on it being true."
     ],
     "devices": [
       {
         "para": 1,
-        "device": "Periodic sentence",
+        "device": "Cumulative and periodic sentences",
         "purpose": "The opening sentence withholds its main clause, the address to the reader, behind a long subordinate qualifier about the state and its children, so the weight of complicity lands before the demand to listen does. It sets the occasion and the suspended rhythm the whole piece runs on."
       },
       {
@@ -137,11 +137,6 @@
         "para": 5,
         "device": "Antithesis",
         "purpose": "Setting the company's claim to lead in child protection directly against the alleged suicide note written by its product draws the controlling opposition of the piece into one balanced contrast the reader cannot unsee."
-      },
-      {
-        "para": 6,
-        "device": "Charge / obligation",
-        "purpose": "The close hands the verdict to the reader as a duty, refusing to call a product safe for a child until someone stakes a name on it, turning the lawsuit's novel move into the audience's own standing obligation."
       }
     ],
     "mcq": [
@@ -323,7 +318,7 @@
       },
       {
         "para": 2,
-        "device": "Allusion",
+        "device": "Logos",
         "purpose": "Quoting the Appropriations Clause, that no money shall be drawn from the Treasury but in consequence of appropriations made by law, borrows the authority of the founding document the addressee claims to revere, so the writer argues with Vought's own scripture rather than against him."
       },
       {
@@ -333,7 +328,7 @@
       },
       {
         "para": 5,
-        "device": "Polysyndeton",
+        "device": "Asyndeton",
         "purpose": "The piled \"spent on nothing, helping no child, vindicating no principle\" slows the sentence and weights each loss separately, so the abstract figure of 1.4 billion expiring dollars is felt as three distinct kinds of waste rather than one statistic."
       }
     ],
@@ -1589,7 +1584,7 @@
       "Start where almost everyone already stands. A child is not a small adult, and the people who raise children owe them some shelter from what they are not ready to carry. No serious person disputes that some material belongs to a later year, that a parent may reasonably want a say in what a nine-year-old meets on a library shelf, that protection is a real duty and not a pretext invented to control. Grant all of it. The argument that follows does not need to take any of it back.",
       "It needs only to ask what, precisely, the protecting is protecting from. [[1]]There is a kind of harm a child can suffer from a book, and there is the discomfort a child, or more often an adult, feels at encountering a life unlike their own; these are not the same thing, and the whole question turns on whether we keep them apart.[[/1]] [[2]]The shared premise was that children deserve protection from harm. It was never that children deserve protection from difference.[[/2]] If the premise is the first, the conclusion arrives uninvited.",
       "Look at what is actually being pulled. [[3]]And Tango Makes Three is a picture book about two male penguins who raise a chick together; it contains nothing a censor could honestly call obscene, and it has been among the most challenged books in the country.[[/3]] The stated reason for removal in 2025 was, repeatedly, the protection of minors from illegal obscenity, alongside objections to LGBTQIA+ characters and to coverage of race and racism. When the obscenity charge is leveled at a book whose offense is two penguins, the charge is doing other work. [[4]]Of 4,235 titles challenged last year, 1,671, about forty percent, told the stories of LGBTQIA+ people and people of color.[[/4]]",
-      "There is a second tell, in who is doing the challenging. The romantic picture is a worried parent at a board meeting. [[5]]The record from the American Library Association says otherwise: in 2025, ninety-two percent of challenges came from pressure groups and government officials, up from seventy-two the year before, and fewer than three percent from individual parents.[[/5]] [[6]]The three most challenged titles, for what it is worth, were Sold, The Perks of Being a Wallflower, and Gender Queer.[[/6]] A duty that began in one household has been handed to organized campaigns, and 5,668 books were pulled from libraries on its authority.",
+      "There is a second tell, in who is doing the challenging. The romantic picture is a worried parent at a board meeting. [[5]]The record from the American Library Association says otherwise: in 2025, ninety-two percent of challenges came from pressure groups and government officials, up from seventy-two the year before, and fewer than three percent from individual parents.[[/5]] The three most challenged titles, for what it is worth, were Sold, The Perks of Being a Wallflower, and Gender Queer. A duty that began in one household has been handed to organized campaigns, and 5,668 books were pulled from libraries on its authority.",
       "So the shared premise, followed honestly, lands somewhere the premise-holder did not mean to go. Protection from harm is a duty. Protection from the existence of other people is something else, and the cost of it is not borne by the adults who feel safer. It is borne by the child who never finds the one book that said her life was possible, and by every child, hers included, who grows up having practiced the narrow habit of mistaking unfamiliarity for danger. That habit does not stay in the library. We were trying to keep them safe. It is worth wondering what we taught them instead."
     ],
     "devices": [
@@ -1617,11 +1612,6 @@
         "para": 4,
         "device": "Logos",
         "purpose": "Uses the ALA data on who initiates challenges (92 percent groups and officials, under 3 percent parents) to dismantle the sympathetic image of the worried lone parent through reasoning from numbers, not emotion."
-      },
-      {
-        "para": 4,
-        "device": "Syntax",
-        "purpose": "Drops the inert, off-thesis ranking of the three most-challenged titles into a clipped aside (with the throwaway tag for what it is worth) so the paragraph carries a detail that does not advance the argument, roughening the surface against tidy machine prose."
       }
     ],
     "mcq": [
@@ -2507,7 +2497,7 @@
       },
       {
         "para": 5,
-        "device": "Redefinition",
+        "device": "Antithesis",
         "purpose": "The deliberate re-specifying of competence as local and untransferable is the organizing move of the close; it turns an ordinary word into the lesson the writer hands the reader, which is how this register lands meaning."
       }
     ],
