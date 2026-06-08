@@ -67,6 +67,12 @@ Both paths resolve to the same files. Writes through either are visible through 
    - One-time install for the Windows scheduled task `ClaudeFolderWeeklyBackup`. Already registered.
    - Schedule: every Sunday at 12:00 PM, catches up if the laptop was asleep.
 
+## Git auto-gc disabled (2026-06-08)
+
+The vault is a git repo living INSIDE OneDrive. Git's automatic maintenance periodically packs loose objects and DELETES the redundant ones; OneDrive sees the mass deletion and pops a recurring "Delete these items?" confirmation (831 hash-named items on 2026-06-08). Harmless (the objects are packed and on GitHub; `git fsck` was clean), but it alarmed Samuel.
+
+Fix applied (Samuel chose the simplest option): disabled automatic packing on the vault repo via LOCAL config: `git config gc.auto 0` and `git config maintenance.auto false`. This stops the mass-delete prompts. Trade-off: loose objects accumulate slowly (additions sync silently, no scary delete prompt). To compact when it eventually grows: PAUSE OneDrive first, run `git -C "<vault>" gc`, then resume OneDrive (so the one-time deletion syncs without churn). Do NOT re-enable gc.auto. The proper long-term fix (not done) is to move `.git` out of OneDrive via a gitdir pointer; offer it if the loose-object count becomes a real problem.
+
 ## Vault structure
 
 The vault is a separate concept from memory. Memory is loaded automatically into every Claude Code session. The vault is markdown notes Samuel reads in Obsidian.
