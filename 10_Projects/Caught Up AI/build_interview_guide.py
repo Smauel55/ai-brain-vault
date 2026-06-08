@@ -1,162 +1,104 @@
-# Builds the AP Lang teacher interview guide PDF.
+# Builds the AP Lang teacher interview guide PDF (bullet coverage sheet).
 # Run: python build_interview_guide.py
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib import colors
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table,
-                                TableStyle, HRFlowable, KeepTogether)
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer,
+                                HRFlowable, KeepTogether)
 
 OUT = "Caught Up AI - Teacher Interview Guide (2026-06-08).pdf"
 
 INK = colors.HexColor("#1a1a1a")
-GREY = colors.HexColor("#666666")
-LIGHT = colors.HexColor("#cfcfcf")
+GREY = colors.HexColor("#777777")
+LIGHT = colors.HexColor("#d2d2d2")
 ACCENT = colors.HexColor("#1f4e5f")
-BOXBG = colors.HexColor("#eef3f4")
-
-ss = getSampleStyleSheet()
 
 def style(name, **kw):
-    base = dict(fontName="Helvetica", fontSize=10.5, leading=14, textColor=INK)
-    base.update(kw)
-    return ParagraphStyle(name, **base)
+    base = dict(fontName="Helvetica", fontSize=11, leading=14.5, textColor=INK)
+    base.update(kw); return ParagraphStyle(name, **base)
 
-H_TITLE = style("title", fontName="Helvetica-Bold", fontSize=19, leading=22, textColor=ACCENT)
-H_SUB = style("sub", fontSize=10, textColor=GREY, leading=13)
-H_BLOCK = style("block", fontName="Helvetica-Bold", fontSize=12.5, leading=15,
-                textColor=ACCENT, spaceBefore=10, spaceAfter=3)
-H_NOTE = style("note", fontSize=9.5, textColor=GREY, leading=12, leftIndent=18, italic=True)
-P_Q = style("q", fontSize=10.5, leading=14, leftIndent=18, firstLineIndent=-18, spaceBefore=6)
-P_SAY = style("say", fontSize=10.5, leading=14.5, textColor=INK)
-P_SAYQ = style("sayq", fontSize=11, leading=15.5, textColor=ACCENT, fontName="Helvetica-Oblique")
-P_BODY = style("body", fontSize=10.5, leading=14)
-P_CHK = style("chk", fontSize=10, leading=13.5, leftIndent=20, firstLineIndent=-13)
+H_TITLE = style("title", fontName="Helvetica-Bold", fontSize=18, leading=21, textColor=ACCENT)
+H_SUB = style("sub", fontSize=9.5, textColor=GREY, leading=12)
+H_BLOCK = style("block", fontName="Helvetica-Bold", fontSize=12, leading=15,
+                textColor=ACCENT, spaceBefore=11, spaceAfter=4)
+P_BULL = style("bull", fontSize=11, leading=14.5, leftIndent=20, firstLineIndent=-14)
+P_SUB = style("subb", fontSize=9.8, leading=13, leftIndent=40, firstLineIndent=-12, textColor=INK)
+P_HINT = style("hint", fontSize=9.5, leading=12, leftIndent=20, textColor=GREY,
+               fontName="Helvetica-Oblique")
 
-# patch oblique where needed
-H_NOTE.fontName = "Helvetica-Oblique"
+def cue(text):
+    return f' <font size=8 color="#888888"><i>{text}</i></font>'
 
-def notelines(n=1, gap=0.30):
-    out = []
-    for _ in range(n):
-        out.append(Spacer(1, gap * inch))
-        out.append(HRFlowable(width="100%", thickness=0.5, color=LIGHT,
-                              spaceBefore=0, spaceAfter=0))
-    return out
-
-def q(num, text, cue=None, lines=1):
-    items = [Paragraph(f"<b>{num}.</b>&nbsp;&nbsp;{text}", P_Q)]
-    if cue:
-        items.append(Paragraph(cue, H_NOTE))
-    items += notelines(lines)
+def bullet(text, note=False, gap=0.26):
+    items = [Paragraph("[ &nbsp; ]&nbsp;&nbsp;" + text, P_BULL)]
+    if note:
+        items.append(Spacer(1, gap*inch))
+        items.append(HRFlowable(width="100%", thickness=0.5, color=LIGHT))
     return items
 
+def sub(text):
+    return Paragraph("&ndash;&nbsp;&nbsp;" + text, P_SUB)
+
 story = []
+story.append(Paragraph("Caught Up AI &mdash; AP Lang Teacher Interview Guide", H_TITLE))
+story.append(Paragraph("June 8, 2026&nbsp;&nbsp;|&nbsp;&nbsp;Points to cover", H_SUB))
+story.append(Spacer(1, 0.05*inch))
+story.append(HRFlowable(width="100%", thickness=1.2, color=ACCENT))
 
-# ---- Header ----
-story.append(Paragraph("Caught Up AI", H_TITLE))
-story.append(Paragraph("AP Lang Teacher Interview Guide&nbsp;&nbsp;|&nbsp;&nbsp;June 8, 2026&nbsp;&nbsp;|&nbsp;&nbsp;Private guide, Samuel Levy", H_SUB))
-story.append(Spacer(1, 0.06*inch))
-story.append(HRFlowable(width="100%", thickness=1.2, color=ACCENT, spaceAfter=8))
+# Block 1
+story.append(Paragraph("Discovery: workflow, pain, spend", H_BLOCK))
+for b in [
+    "How she builds an opener / bell-ringer now; where the time goes",
+    "With a current-events piece, what she still builds herself (questions, device markup, key, alignment); what eats most time",
+    "Tools she pays for out of pocket; anything cancelled this year and why (factual error, pedagogical miss, unreliability)",
+]:
+    for it in bullet(b, note=True): story.append(it)
 
-story.append(Spacer(1, 0.04*inch))
-
-# ---- Opener box ----
-opener = ("“I’m Samuel Levy, headed to Northwestern this fall, building this on my own. "
-          "I’m not an AP Lang teacher and I’ve never run a classroom, which is exactly why I want your read.<br/><br/>"
-          "Caught Up AI is a daily ten-minute lesson opener for AP Lang: a short current-events nonfiction piece "
-          "plus the full teaching layer, a student copy and a teacher copy, in your inbox by 6 a.m. "
-          "One four-minute setup form, then nothing else to do.<br/><br/>"
-          "The thing I want to be straight about up front: the pieces are written by AI from verified facts, "
-          "not pulled from real publications. I went down the licensing road and it does not work for a product "
-          "that marks up the text. So the real question I need your help with is whether AI-written pieces are good enough, "
-          "and honest enough, to put in front of AP students. I would rather you tell me where it breaks than be polite.”")
-box = Table([[Paragraph("<b>OPEN WITH THIS &mdash; say it out loud</b>", H_BLOCK)],
-             [Paragraph(opener, P_SAY)],
-             [Paragraph("Then hand her a <b>teacher-copy Opener</b> and let her read before you say anything else.", P_BODY)]],
-            colWidths=[6.5*inch])
-box.setStyle(TableStyle([
-    ("BACKGROUND", (0,0), (-1,-1), BOXBG),
-    ("BOX", (0,0), (-1,-1), 0.5, ACCENT),
-    ("LEFTPADDING", (0,0), (-1,-1), 12),
-    ("RIGHTPADDING", (0,0), (-1,-1), 12),
-    ("TOPPADDING", (0,0), (-1,-1), 6),
-    ("BOTTOMPADDING", (0,0), (-1,-1), 8),
-]))
-story.append(box)
-story.append(Spacer(1, 0.10*inch))
-story.append(Paragraph("<b>Say before the questions:</b> “These are about what you have actually done, not what you’d hypothetically do. Pull a real example if you can.”", H_SUB))
-
-# ---- Blocks ----
-story.append(Spacer(1, 0.06*inch))
-story.append(HRFlowable(width="100%", thickness=1.0, color=ACCENT))
-story.append(Paragraph("Block 1 &mdash; Discovery: workflow, pain, spend", H_BLOCK))
-for it in q(1, "Walk me through how you build a lesson opener or bell-ringer now. Where does the time actually go?",
-            "(her real workflow, not the ideal one)"): story.append(it)
-for it in q(2, "When you use a current-events nonfiction piece, what do you still have to build yourself: the questions, the device markup, the answer key, the alignment? Which eats the most time?",
-            "(isolates the layer the product sells)"): story.append(it)
-for it in q(3, "What teaching tools do you pay for out of pocket? Have you cancelled one this past year, and what made you cancel: a factual error, a pedagogical miss, unreliability?",
-            "(real spend + the error category that sets the QA bar)"): story.append(it)
-
-story.append(Spacer(1, 0.06*inch))
-story.append(HRFlowable(width="100%", thickness=1.0, color=ACCENT))
-story.append(Paragraph("Block 2 &mdash; The Opener + expert review  (most important)", H_BLOCK))
-story.append(Paragraph("Hand her a <b>teacher-copy</b> Opener (lead with the Ledger). Let her read first.", H_NOTE))
-for it in q(4, "First reaction. Would you put this in front of students tomorrow? What is wrong with it?",
-            "(unprompted, before you steer)"): story.append(it)
-for it in q(5, "Is the length and reading level right for AP Lang? Is the register variety across days useful, or noise?"): story.append(it)
-
-# expert checklist
-chk = [Paragraph("<b>Expert-validation checklist</b> &mdash; walk the teacher copy with her; get a yes/no + a fix on each. This is the read I can’t do myself.", H_BLOCK)]
-checks = [
- "<b>Device labels:</b> every marked device named correctly and actually present? Any mislabels (anaphora vs parallelism)? Anything obvious left unmarked?",
- "<b>MCQs:</b> one defensibly-best answer each? Does every distractor fail for a real reason, or can a student eliminate by feel? AP-exam-valid in form?",
- "<b>Answer key reasoning:</b> does it hold up, or would it lose an argument with a sharp student?",
- "<b>Sample strong responses:</b> would these actually earn the points?",
- "<b>Common misconceptions:</b> the real ones students hit, or invented?",
- "<b>AP exam alignment:</b> is the Q1/Q2/Q3 framing accurate? Better for analysis, argument, or synthesis?",
-]
-for c in checks:
-    chk.append(Paragraph("[ &nbsp; ]&nbsp;&nbsp;" + c, P_CHK))
-chk.append(Paragraph("2+ objections on any one layer = that layer needs rework before pilot. Capture exact fixes in her words.", H_NOTE))
+# Block 2
+story.append(Paragraph("The Opener + expert review  (hand her the teacher copy first)", H_BLOCK))
+for b in [
+    "First reaction; would she teach it tomorrow; what is wrong with it",
+    "Length and reading level right for AP Lang; register variety across days useful or noise",
+]:
+    for it in bullet(b, note=True): story.append(it)
+chk = [Paragraph("Walk the teacher copy with her &mdash; yes/no + a fix on each:" , P_HINT)]
+for s in [
+    "Device labels correct and actually present; any mislabels (anaphora vs parallelism); anything obvious unmarked",
+    "MCQs: one defensibly-best answer; each distractor fails for a real reason; AP-valid in form",
+    "Answer-key reasoning holds up against a sharp student",
+    "Sample strong responses would actually earn the points",
+    "Common misconceptions are the real ones, not invented",
+    "AP alignment accurate (Q1/Q2/Q3; better for analysis, argument, or synthesis)",
+]:
+    chk.append(sub(s))
 story.append(KeepTogether(chk))
-story.append(Spacer(1, 0.18*inch))
+story.append(Spacer(1, 0.14*inch))
 
-story.append(HRFlowable(width="100%", thickness=1.0, color=ACCENT))
-story.append(Paragraph("Block 3 &mdash; AI, authenticity, accuracy", H_BLOCK))
-for it in q(6, "Knowing these are AI-written, would you have known? Does it read as machine-written anywhere, and where?",
-            "(she is primed, so this is a ceiling; the clean test is the blind panel. Optional: show 2 pieces, ask which feels more human.)"): story.append(it)
-for it in q(7, "Does it bother you that the piece is AI-written? Would it bother your students, your department, or your admin?"): story.append(it)
-for it in q(8, "<b>The sharp one.</b> AP rhetorical analysis asks students to analyze the choices a real writer made for a real audience and purpose. An AI piece has no real author and no real occasion. Does analyzing an AI’s “choices” still teach the skill, or undercut it? Would you use these more for argument and reading practice than for pure rhetorical analysis?",
-            "(Deepest risk to the concept. Do not argue it; let her draw the line. If she says it undercuts analysis, that is signal: lean the product toward argument/reading practice over authorial-intent analysis.)", lines=2): story.append(it)
-for it in q(9, "How much would a single factual error cost you in trust? One error and you are out, or is a correction fine?",
-            "(prices the per-piece fact-verification we already do)"): story.append(it)
+# Block 3
+story.append(Paragraph("AI, authenticity, accuracy", H_BLOCK))
+for it in bullet("Would she have known it is AI; does it read machine-written anywhere, and where", note=True): story.append(it)
+for it in bullet("Does AI authorship bother her / students / department / admin", note=True): story.append(it)
+for it in bullet("Pedagogy: analyzing an AI's choices with no real author or occasion &mdash; still teaches the skill or undercuts it; better for argument/reading practice than rhetorical analysis"
+                 + cue("don't argue it; let her draw the line"), note=True): story.append(it)
+for it in bullet("Tolerance for a single factual error (one and out, or is a correction fine)", note=True): story.append(it)
 
-story.append(Spacer(1, 0.06*inch))
-story.append(HRFlowable(width="100%", thickness=1.0, color=ACCENT))
-story.append(Paragraph("Block 4 &mdash; Product fit: topics + support", H_BLOCK))
-for it in q(10, "How do you handle politically charged topics now? Would a one-time signup setting &mdash; neutral vs includes civic/current-events &mdash; earn your trust, or do you need per-piece control?",
-            "(validates the political-intensity dial direction)"): story.append(it)
-for it in q(11, "Would an optional support layer &mdash; glossary of hard terms, FRQ sentence starters, vocab pre-list &mdash; be useful, or unnecessary for AP students?",
-            "(tests scaffolding-layer demand)"): story.append(it)
+# Block 4
+story.append(Paragraph("Product fit", H_BLOCK))
+for it in bullet("Charged topics: how she handles them now; would a one-time neutral-vs-civic setting earn trust, or need per-piece control", note=True): story.append(it)
+for it in bullet("Optional support layer (glossary, FRQ sentence starters, vocab pre-list) &mdash; useful or unnecessary for AP", note=True): story.append(it)
 
-story.append(Spacer(1, 0.06*inch))
-story.append(HRFlowable(width="100%", thickness=1.0, color=ACCENT))
-story.append(Paragraph("Block 5 &mdash; Pricing", H_BLOCK))
-for it in q(12, "If this landed ready-to-teach in your inbox every morning, what is it worth per month? Would you pay out of pocket, or does it have to go through the school?",
-            "(let her name a number first)"): story.append(it)
-for it in q(13, "Reaction to $19.99/month solo, $190/year? Too high, too low, about right?",
-            "(only after she names her own number)"): story.append(it)
-for it in q(14, "After a month of using it, what would make you cancel?"): story.append(it)
+# Block 5
+story.append(Paragraph("Pricing", H_BLOCK))
+for it in bullet("What it is worth per month; out of pocket or through the school" + cue("let her name a number first"), note=True): story.append(it)
+for it in bullet("Reaction to $19.99/mo solo, $190/yr" + cue("only after her own number"), note=True): story.append(it)
+for it in bullet("What would make her cancel after a month", note=True): story.append(it)
 
-story.append(Spacer(1, 0.06*inch))
-story.append(HRFlowable(width="100%", thickness=1.0, color=ACCENT))
-story.append(Paragraph("Block 6 &mdash; The ask", H_BLOCK))
-for it in q(15, "Would you be a fall pilot: use real Openers in class for about four weeks and give me honest feedback?",
-            "(the primary ask)"): story.append(it)
-for it in q(16, "Would you sit on a small panel of AP Lang teachers doing a blind read, to settle whether the AI pieces pass?",
-            "(the decisive validation instrument)"): story.append(it)
-for it in q(17, "Who else should I talk to: AP Lang teachers or AP coordinators whose read on teaching tools you trust?"): story.append(it)
+# Block 6
+story.append(Paragraph("The ask", H_BLOCK))
+for it in bullet("Fall pilot: real Openers in class ~4 weeks + honest feedback", note=True): story.append(it)
+for it in bullet("Blind-read panel of AP Lang teachers to settle whether the AI pieces pass", note=True): story.append(it)
+for it in bullet("Referrals: AP Lang teachers or coordinators whose read on tools she trusts", note=True): story.append(it)
 
 doc = SimpleDocTemplate(OUT, pagesize=letter,
                         topMargin=0.6*inch, bottomMargin=0.6*inch,
