@@ -28,11 +28,17 @@ Continued the 28-opener dry run from a handoff note ([[Opener-Batch-Test-Results
 
 ## Action items
 
-- [ ] Make the mechanical lint gate (tag balance + citation scan) a required stage in `wf_generate.js`; harden draft prompt to show the slashed `[[1]]…[[/1]]` shape + self-check; add explicit in-text-citation ban to the anti-tell verifier brief. (Only bites on regenerate.)
+- [x] **DONE (same session, after Samuel's correction).** Permanent fixes baked into `wf_generate.js`: hardened the draft prompt to the slashed `[[1]]…[[/1]]` shape + self-check; tightened the mechanical verifier's tag check (item 7) to test slash-closers and counts; added a deterministic tag-lint+auto-normalize GATE (auto-repairs the duplicate-closer class, forces a redraft on #17-style mis-numbering a regex can't fix, re-checks after redraft). Helpers unit-tested against the three real bug shapes (duplicate-closer heals to ok; correct piece untouched; mis-numbered stays not-ok). Anti-tell verifier brief given an explicit ban on ALL in-text "scholarly" citations (see correction below). NOTE: `wf_generate.js` is modified but not committed.
 - [ ] Issue 3 (deferred): re-tag #2 and #4 (zero `[[n]]` spans though devices exist).
 - [ ] Ask Samuel to specify the unstated "article type" concern.
 - [ ] Run the cross-piece sameness critic over the 28 first sentences/spines.
 - [ ] Accuracy spot-check #23 (Boeing) source; classroom-neutrality glance at #4/#11/#18.
+
+## Follow-up corrections (Samuel, second turn)
+
+- **Issue 2 was scoped too narrowly by me.** Stripping parentheticals was not enough. Samuel: he has never seen an AP Lang article with in-text citations; they are too rare to normalize. Rule: **Openers must contain NO in-text citations of any kind** — not just `(Author, year)` parentheticals but the whole scholarly apparatus, including inline forms like "Carstensen's work" / "Portfolio studies do find." Facts are stated plainly (name a body like "the GAO reported" is fine; an academic-paper citation is not). Encoded in the anti-tell verifier. See [[feedback_openers_no_citations]].
+- **"Permanent fix" means fix at the source, not a render-time patch.** The render-time `normalize_closers()` guard was only half the job; the real fix is the gate in the generation workflow. 
+- **Process going forward: one issue at a time**, including issues only Claude caught (not Samuel). See [[feedback_one_issue_at_a_time]].
 
 ## Open threads
 

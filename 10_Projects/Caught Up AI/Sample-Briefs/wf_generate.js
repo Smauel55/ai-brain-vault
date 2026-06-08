@@ -117,7 +117,7 @@ ${JSON.stringify(src)}
 
 WRITE:
 1) headline: short, specific, no clickbait.
-2) body: an array of paragraphs, 350-450 words total, in THE ${row.register} register, built on the ${row.template} template with a "${row.open_type}" opening and a "${row.close_type}" close, rhythm target: ${row.rhythm_target}. Vary sentence length hard (at least one under ~8 words, at least one over ~30; no three same-length sentences in a row). Apply the friction layer: lopsided structure, at least one inert/off-thesis true detail, not every paragraph ending on a button, no mirror-the-opening close, no reader-directing signposting. Inside the body, mark 4 to 6 GENUINELY PRESENT devices with [[n]]...[[/n]] spans, n = 1,2,3... in order of appearance, each span covering the whole device. Every load-bearing fact must trace to the fact spine; do not invent stats/history/science.
+2) body: an array of paragraphs, 350-450 words total, in THE ${row.register} register, built on the ${row.template} template with a "${row.open_type}" opening and a "${row.close_type}" close, rhythm target: ${row.rhythm_target}. Vary sentence length hard (at least one under ~8 words, at least one over ~30; no three same-length sentences in a row). Apply the friction layer: lopsided structure, at least one inert/off-thesis true detail, not every paragraph ending on a button, no mirror-the-opening close, no reader-directing signposting. Inside the body, mark 4 to 6 GENUINELY PRESENT devices with highlight spans. EXACT TAG SHAPE (a strict renderer parses these character-for-character, so get it perfect): open a span with [[n]] and CLOSE it with [[/n]] -- a forward slash before the number, in the closing tag only. Worked example for device 1: [[1]]the whole tagged phrase[[/1]]. The closing tag is [[/1]]; it is NEVER a second [[1]]. Number the spans 1,2,3... in order of appearance, each span covering the whole device move. SELF-CHECK before you return: every [[n]] open has exactly one matching slashed [[/n]] close; the count of opens equals the count of closes equals the length of your devices array; and no bare [[n]] is ever used as a closer. Every load-bearing fact must trace to the fact spine; do not invent stats/history/science.
 3) devices: one entry per [[n]] span IN THE SAME ORDER (devices[n-1] matches span n). Each entry: para (the paragraph number the span sits in, 1-based), device (exact controlled-list name), purpose (1-2 lines: why the author chose it and what it accomplishes).
 4) mcq: exactly 2 questions, each 4 options, targeting TWO DIFFERENT AP reading skills (e.g. one Reasoning/Claims, one Style/tone). Each distractor must fail by a named trap from the MCQ spec; exactly one defensibly-best answer. Author by marking the correct option; set "answer" to the LETTER of the correct option AS YOU ORDERED THEM (the renderer reshuffles, so do not pattern letters). Rationales reference distractors BY CONTENT, never by letter.
 5) writing: pick the FRQ that genuinely fits. Q2 rhetorical analysis fits any passage; Q3 argument ONLY for argument-bearing passages (Reckoning, Long Think, Ledger, Open Letter); observational/consecratory passages (Long Look, Tribute, usually Witness Stand) take Q2. Never Q1. "type" = e.g. "Homework or extended in-class, Q2 rhetorical analysis". "text" = the full prompt.
@@ -131,9 +131,9 @@ Return ONLY the structured object.`
 function verifyPrompt(dim, dict, row, src){
   const heads = {
     accuracy:`ACCURACY checker. Be adversarial: try to find a false or untraceable claim. Read ${F.acc}. ${row.basis==='R' ? 'Use WebSearch/WebFetch to spot-check every name, number, date, quote, and causal claim against independent sources; flag anything single-sourced, stale, or not on the fact spine (orphan fact).' : 'Verify every embedded HARD fact (stat/history/science/real institution) is true and traceable; invented persona/family detail is allowed and is NOT an accuracy failure.'} Check the fact spine: ${JSON.stringify(src).slice(0,8000)}`,
-    devices:`DEVICES checker. Be adversarial. Read ${F.dev}. For each tagged device: is the label from the controlled list, correct, and genuinely present? Are look-alikes right (anaphora needs repetition at the START of successive clauses; simile needs like/as; antithesis needs balanced opposition)? Does each [[n]] span cover the whole move (not just a trigger word)? Does devices[n-1] match span n and is "para" correct? Are there 4-6 devices? Flag any mislabel, any forced/absent device, any tag-count or ordering mismatch.`,
+    devices:`DEVICES checker. Be adversarial. Read ${F.dev}. For each tagged device: is the label from the controlled list, correct, and genuinely present? Are look-alikes right (anaphora needs repetition at the START of successive clauses; simile needs like/as; antithesis needs balanced opposition)? Does each [[n]] span cover the whole move (not just a trigger word)? Is each span CLOSED with a slashed [[/n]] (never a second bare [[n]])? Does devices[n-1] match span n and is "para" correct? Are there 4-6 devices, with opens = slashed closes = devices length? Flag any mislabel, any forced/absent device, any unclosed/mis-closed span, any tag-count or ordering mismatch.`,
     mcq:`MCQ checker. Be adversarial. Read ${F.mcq}. For EACH question: is there exactly ONE defensibly-best answer (try to defend a second option; if you can, it fails)? Does every distractor fail by a named trap (no free-elimination throwaway)? Are all four options parallel in grammar and comparable in length? Do the two questions test DIFFERENT reading skills? Do rationales reference distractors by CONTENT not letter? Is each answerable from the opener alone? Also check the FRQ type genuinely fits the passage (no Q3 on a non-argument piece; no Q1).`,
-    mechanical:`MECHANICAL / ANTI-TELL checker. Be adversarial. Read ${F.tell} and the bands in ${F.reg} for THE ${row.register}. Checks: (1) ZERO em-dashes and ZERO emojis anywhere (hard fail on any hit). (2) Anti-tell sweep: significance-inflation, copula-avoidance, Family A-F words, sentence-head transition reflex (>1), elegant variation. (3) Friction layer present: not all paragraphs balanced, not every paragraph ends on a button, at least one inert/off-thesis detail, ending does not mirror opening, no reader-directing signposting, "not X but Y" capped. (4) Burstiness: at least one sentence <8 words and one >30; no three same-length in a row. (5) Register bands roughly in range; close type matches the assigned "${row.close_type}". (6) Word count 350-450. (7) Body device tags [[n]] are well-formed and sequential.`
+    mechanical:`MECHANICAL / ANTI-TELL checker. Be adversarial. Read ${F.tell} and the bands in ${F.reg} for THE ${row.register}. Checks: (1) ZERO em-dashes and ZERO emojis anywhere (hard fail on any hit). (2) Anti-tell sweep: significance-inflation, copula-avoidance, Family A-F words, sentence-head transition reflex (>1), elegant variation. (3) Friction layer present: not all paragraphs balanced, not every paragraph ends on a button, at least one inert/off-thesis detail, ending does not mirror opening, no reader-directing signposting, "not X but Y" capped. (4) Burstiness: at least one sentence <8 words and one >30; no three same-length in a row. (5) Register bands roughly in range; close type matches the assigned "${row.close_type}". (6) Word count 350-450. (7) Body device tags are renderer-valid: every span opens with [[n]] and closes with a SLASHED [[/n]] (a second bare [[n]] used as a closer is a HARD FAIL); the number of [[n]] opens equals the number of [[/n]] closes equals the length of the devices array; numbering is sequential 1,2,3... in order of appearance; no span is left unclosed.`
   }
   return `${heads[dim]}
 
@@ -158,6 +158,35 @@ ${JSON.stringify(src).slice(0, 8000)}
 Return the COMPLETE corrected opener as the same structured object (all fields incl. _scan), ids/format unchanged.`
 }
 
+// ---------------- deterministic tag gate (Issue 1 permanent fix) ----------------
+// A model verifier reads [[1]]..[[1]] as "span 1" and is blind to the defect; only a
+// strict count catches it. This runs on the JS side so it cannot be rubber-stamped.
+function normalizeClosers(dict){
+  let fixed = 0
+  dict.body = (dict.body||[]).map(para => {
+    const nums = [...new Set([...para.matchAll(/\[\[(\d+)\]\]/g)].map(m=>+m[1]))].sort((a,b)=>a-b)
+    for (const n of nums){
+      const tok = `[[${n}]]`
+      if (para.includes(`[[/${n}]]`)) continue          // already has a real closer
+      const parts = para.split(tok)
+      if (parts.length === 3){                           // exactly two bare opens
+        para = parts[0]+tok+parts[1]+`[[/${n}]]`+parts[2]; fixed++
+      }
+    }
+    return para
+  })
+  return fixed
+}
+function tagLint(dict){
+  const b = (dict.body||[]).join('\n')
+  const opens = (b.match(/\[\[\d+\]\]/g)||[]).length
+  const closes = (b.match(/\[\[\/\d+\]\]/g)||[]).length
+  const ndev = (dict.devices||[]).length
+  const ok = opens === closes && opens === ndev
+  return {ok, opens, closes, ndev,
+    detail: ok ? '' : `opens=${opens} closes=${closes} devices=${ndev} (must be equal)`}
+}
+
 // ---------------- pipeline ----------------
 phase('Source')
 const results = await pipeline(
@@ -175,6 +204,18 @@ const results = await pipeline(
 
   // stage 3: VERIFY (4 adversarial) -> redraft once on any fail
   async ({row, src, dict}) => {
+    // Deterministic tag gate FIRST: auto-repair duplicate-closers, then lint.
+    // A residual imbalance (e.g. mis-numbered spans like the old #17) cannot be
+    // regex-fixed, so it becomes a hard verdict that forces a redraft.
+    const healed = normalizeClosers(dict)
+    const lint = tagLint(dict)
+    const tagVerdict = {
+      dimension:'tags', pass: lint.ok,
+      issues: lint.ok ? [] : [`Device highlight tags do not balance: ${lint.detail}. Likely a span opened with [[n]] but not closed with a slashed [[/n]], or a span count that does not match the devices array.`],
+      fixes: lint.ok ? [] : ['Re-tag the body so every device move is wrapped [[n]]...[[/n]] with a slashed close, numbered in order, one span per devices entry.']
+    }
+    if (healed) log(`[tag-gate] id ${row.id}: auto-repaired ${healed} duplicate-closer tag(s)`)
+
     const dims = ['accuracy','devices','mcq','mechanical']
     const verdicts = await parallel(dims.map(d => () =>
       agent(verifyPrompt(d, dict, row, src), {
@@ -182,7 +223,7 @@ const results = await pipeline(
         agentType: d==='accuracy' ? 'Explore' : undefined
       })
     ))
-    const v = verdicts.filter(Boolean)
+    const v = [tagVerdict, ...verdicts.filter(Boolean)]
     const failed = v.filter(x => !x.pass)
     let finalDict = dict, redrafted = false, residual = []
     if (failed.length){
@@ -191,6 +232,10 @@ const results = await pipeline(
       finalDict = await agent(redraftPrompt(dict, row, src, problems), {
         label:`redraft#${row.id}:${row.register}`, phase:'Verify', schema: DRAFT_SCHEMA
       })
+      // re-run the deterministic tag gate on the redraft so it cannot reintroduce the bug
+      normalizeClosers(finalDict)
+      const lint2 = tagLint(finalDict)
+      if (!lint2.ok) residual.push(`tags still unbalanced after redraft: ${lint2.detail}`)
       // single consolidated confirmation pass over the redraft
       const conf = await agent(
         `CONFIRMATION pass over a redrafted Caught Up AI opener #${row.id} (${row.register}). The prior issues were:\n${JSON.stringify(problems)}\nCheck the redraft below ONLY for: em-dashes/emojis (hard fail), the specific prior issues resolved, device tag/array integrity, exactly-one-best-answer per MCQ, two different skills, facts traceable. Read ${F.tell} and ${F.dev} if needed.\nREDRAFT:\n${JSON.stringify({headline:finalDict.headline, body:finalDict.body, devices:finalDict.devices, mcq:finalDict.mcq, writing:finalDict.writing}).slice(0,24000)}\nReturn dimension="confirmation", pass, issues, fixes.`,
