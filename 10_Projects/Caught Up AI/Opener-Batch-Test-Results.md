@@ -24,9 +24,11 @@ Generation history: the generate+verify workflow (run `wf_8b080f31-5ee`) was int
 
 ## The three issues Samuel flagged (fix 1 and 2 now; 3 is deferred)
 
+> **STATUS 2026-06-08: Issues 1 and 2 are FIXED and re-rendered.** See [[2026-06-08 - Opener batch fixes (Issue 1 and 2)]]. `openers.json` corrected in place (backup: `openers.backup-pre-fix-2026-06-08.json`); all 56 PDFs rebuilt; verified opens=closers=device count on every piece, no raw `[[ ]]` leaks, no citations in 12/24. Tooling: `fix_openers.py` (one-shot) + `normalize_closers()` added to `render_batch.py` (render-time self-heal). #17 was re-tagged by hand (it was NOT a missing-closer; 6 devices, tags laid as 3 pairs, numbers not mapping to devices). Issue 3 and the unspecified "article type" issue still open.
+
 Diagnostic already run (per-opener tag/citation audit). Precise affected lists:
 
-### Issue 1: literal `[[ ]]` brackets instead of highlights (FORMATTING)
+### Issue 1: literal `[[ ]]` brackets instead of highlights (FORMATTING) — FIXED 2026-06-08
 - Affected ids: **1, 3, 6, 9, 16, 17, 20, 25, 27, 28** (10 pieces).
 - Root cause: the renderer (`render_opener_v2.py`, regex `MARK = \[\[(\d+)\]\](.*?)\[\[/\1\]\]`) requires a SLASHED closing tag `[[/n]]`. These drafts closed the span with a second `[[n]]` (no slash), so nothing matched and the raw tags printed with no highlight and no device-name label. #17 dropped the closer entirely (6 opens, 0 closers of any kind).
 - The 14 correct pieces (5,7,8,10,11,13,14,15,18,19,21,22,23,26) used `[[/n]]` properly. NOTE id 17 was mis-labelled "ok" by a status-logic bug in the quick audit; it IS broken (closers=0). Trust the closers-vs-opens count, not the status string.
@@ -35,7 +37,7 @@ Diagnostic already run (per-opener tag/citation audit). Precise affected lists:
   - For #17 (closers missing entirely): the span END is unknown, so a pure regex cannot place `[[/n]]`. Options: (a) cheap targeted re-tag of just #17's body (one small model call that returns the body with correct `[[n]]...[[/n]]` spans, devices array unchanged), or (b) hand-place closers using the device `purpose` text as a guide. Prefer (a), one agent.
   - PERMANENT FIX to prevent recurrence: either harden the renderer to also accept a second `[[n]]` as the closer, OR add a normalization pass in render_batch.py that repairs closers before building. Recommend the normalization pass (keeps the renderer strict). Also tighten the draft prompt: show the exact `[[1]]span[[/1]]` shape with the slash and add a self-check "every open tag has a matching slashed close."
 
-### Issue 2: in-text academic citations in the prose (CONTENT)
+### Issue 2: in-text academic citations in the prose (CONTENT) — FIXED 2026-06-08
 - Affected ids: **12, 24** (both evergreen; e.g. "(Kahneman and Tversky, 1979)", "(Ameriks and Zeldes, NBER 2004)").
 - Root cause: the SOURCE stage gave these evergreen pieces scholarly references and the DRAFT folded them in as parenthetical citations. The product must NEVER show in-text citations or reference lists; facts are stated plainly (the citation is the AI/academic tell and is off-brand).
 - FIX: strip parenthetical citation patterns `\([A-Z][^)]*\b(18|19|20)\d\d[a-z]?\)` from those two bodies, then re-read each sentence so it still flows (the strip can leave a dangling space or stranded clause). This is light but needs a human/quick model read, not blind regex. PERMANENT FIX: add to the draft prompt and the mechanical/anti-tell verifier an explicit ban on in-text citations and reference lists in the prose. (The accuracy guardrail already says attribute facts, but that means name a body inline like "the GAO reported," NOT academic parentheticals; clarify this distinction in [[Accuracy-Guardrail]] and [[Anti-Tell-List]].)
