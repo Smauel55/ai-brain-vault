@@ -13,9 +13,9 @@ set the number, and the full engine runs end to end: real-news sourcing, registe
 routing, the Variety Matrix, the 4 pre-flight gates, and the batch-sameness pass.
 
 What each sample contains (the inbox lesson-opener package): subject line, headline,
-register tag, the 350 to 600 word opener, rhetorical devices highlighted and explained,
-2 AP-Lang-style multiple choice questions, 2 discussion questions, and 1 rhetorical
-analysis prompt.
+register tag, a one or two sentence headnote naming the rhetorical situation, the 350 to
+600 word opener, rhetorical devices highlighted and explained, 2 AP-Lang-style multiple
+choice questions, 2 discussion questions, and 1 rhetorical analysis prompt.
 
 How to use:
 - Set the number at the bottom and paste the whole block.
@@ -51,6 +51,7 @@ BEFORE WRITING ANYTHING, load the engine. Read these files in
 - Editorial-Standards.md  (the neutrality firewall + plain-knowledge accessibility, Gate 0)
 - MCQ-Construction-Spec.md  (AP-grounded rules for the two multiple-choice questions: skill spread, stem patterns, distractor traps, the one-best-answer gate, the self-check)
 - Rhetorical-Device-Vocabulary.md  (the controlled device list for labeling, plus the single-color highlight and per-device purpose convention)
+- Headnote-Spec.md  (the one-or-two-sentence AP-exam-style rhetorical-situation line that opens every piece on both copies; written FIRST, before the prose, as a forcing function)
 
 HARD RULES override everything below: no em-dashes anywhere, no emojis anywhere. And
 two editorial gates from Editorial-Standards.md bind every piece (Gate 0): (a) NEUTRALITY
@@ -93,6 +94,12 @@ OUTPUT: present each piece as the full inbox lesson-opener package, in this orde
   SUBJECT LINE: the email subject, the way it lands in the inbox
   HEADLINE: the piece's title
   Register and focus: e.g. "The Reckoning | anaphora and antithesis"
+
+  HEADNOTE: one or two sentences in the neutral voice of an AP exam passage headnote,
+  naming the rhetorical situation (speaker or speaking role, audience, occasion or
+  purpose) per Headnote-Spec.md. Write it BEFORE the piece, then draft the piece to earn
+  exactly that situation. Frame an invented persona by role, never a fabricated name;
+  name a real subject truthfully; take no side; name no devices. Goes on both copies.
 
   THE PIECE
   the 350 to 600 word original opener, clean reading copy, no inline marks

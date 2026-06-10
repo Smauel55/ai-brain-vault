@@ -52,6 +52,12 @@ title = ParagraphStyle("title", parent=ss["Title"], fontName="Times-Bold",
                        fontSize=18, leading=21, textColor=black, alignment=TA_LEFT, spaceAfter=3)
 roletag = ParagraphStyle("roletag", parent=ss["Normal"], fontName="Helvetica-Bold",
                          fontSize=9, textColor=GREY, spaceAfter=10)
+# Rhetorical-situation headnote, set in italic above the piece on BOTH copies, in the
+# neutral descriptive voice of an AP exam passage headnote (see Headnote-Spec.md). One
+# or two sentences naming speaker/role, audience, and occasion/purpose.
+hnote = ParagraphStyle("hnote", parent=ss["Normal"], fontName="Times-Italic",
+                       fontSize=10.5, leading=14, textColor=HexColor("#333333"),
+                       alignment=TA_LEFT, spaceBefore=0, spaceAfter=11)
 sect  = ParagraphStyle("sect", parent=ss["Normal"], fontName="Helvetica-Bold",
                        fontSize=12, textColor=black, spaceBefore=12, spaceAfter=3, leading=14,
                        keepWithNext=1)
@@ -174,6 +180,13 @@ def build(piece, role):
     s.append(Paragraph("Teacher copy (everything in the student copy, plus answers and teaching notes)"
                        if teacher else "Student copy (project or hand out)", roletag))
 
+    # Rhetorical-situation headnote (both copies), AP-exam style. Optional, so pieces
+    # generated before this field existed still render. Sits above the article and, on
+    # the teacher copy, above the "marked article" section header.
+    hn = piece.get("headnote")
+    if hn:
+        s.append(Paragraph(esc(hn), hnote))
+
     # Article: each paragraph kept intact across page breaks.
     art_paras = [Paragraph(make_para(para, i, piece["devices"], teacher), art)
                  for i, para in enumerate(piece["body"], 1)]
@@ -237,6 +250,7 @@ longthink = {
  "base":"Caught Up AI Opener - 2026-06-06 - What the Waiting Did (Long Think)",
  "edition":"Sample edition (new format)", "date":DATE,
  "headline":"What the Waiting Did",
+ "headnote":"The following is a reflective essay on the disappearance of waiting from everyday life, addressed to a general reader. The writer first grants the gains of a world without delay, then turns to ask what was quietly lost along with it.",
  "body":[
   "Waiting used to be the ordinary weather of a life. [[1]]You wrote a letter and waited weeks for the reply. You wanted a song and waited for the radio to play it. You missed a fact and waited, sometimes for years, to learn it.[[/1]] None of this was a virtue. It was the plain cost of being alive, back before that cost was quietly abolished.",
   "The abolition is a gift, and it would be foolish to pretend otherwise. A parent now reaches a child in a held breath. A test result arrives before the dread has time to settle. The busy signal, the layaway counter, the long line at the bank: speed has retired a hundred small daily humiliations, and almost nobody who lived through them misses the waiting itself. [[2]]We bought back the time we used to lose, and we were right to want it.[[/2]]",

@@ -27,9 +27,10 @@ A reminder carried from [[Accuracy-Guardrail]]: you draft from a numbered fact l
 
 1. Route the story to a register using [[Style-Palette]], or take today's register from the rotation grid in the orchestration note below.
 2. Build the numbered pre-draft fact list per [[Accuracy-Guardrail]]. Close the sources.
-3. Paste the matching brief below. Fill the two slots at its head: the chosen template (from the Suits line) and the chosen open and close moves.
-4. Draft from the fact list, inside the brief's bands.
-5. Run the per-piece pre-flight checklist at the bottom of this file before the piece joins the batch.
+3. Paste the matching brief below. Fill the slots at its head: the chosen template (from the Suits line), the chosen open and close moves, and the headnote.
+4. Write the headnote FIRST, before the prose (see [[Headnote-Spec]]): one or two sentences in the neutral voice of an AP exam passage headnote, naming the rhetorical situation (speaker or speaking role, audience, occasion or purpose) drawn from this register's Stance, Audience, and Occasion. Frame an invented persona by role, never a fabricated name; name a real subject truthfully; take no side; name no devices. Then draft a piece that earns exactly that situation. The headnote is a forcing function, not a post-hoc caption.
+5. Draft from the fact list, inside the brief's bands.
+6. Run the per-piece pre-flight checklist at the bottom of this file before the piece joins the batch.
 
 Each brief has the same shape: a one-line identity, a slot header to fill, the voice instruction (what the prose must do), the bands (the measurable targets, stated as plain cues), the templates this register sits on, the open and close repertoire, and the hard bans. The bands are ranges, not bullseyes. Land inside the range and you are in register.
 
@@ -42,6 +43,7 @@ Paste-ready prompt. Identity: an impersonal, evidence-forward voice where author
 Fill before drafting:
 - Template (from the Suits line): __________
 - Open move: __________   Close move: __________
+- Headnote (write first, per [[Headnote-Spec]]; one or two sentences, AP-exam voice, names speaker or role, audience, and occasion or purpose): __________
 - Today's fact list is built and the sources are closed: yes / no
 
 Voice instruction:
@@ -81,6 +83,7 @@ Fill before drafting:
 - Template (from the Suits line): __________
 - Open move: __________   Close move: __________
 - Named addressee (a real, specific power held throughout): __________
+- Headnote (write first, per [[Headnote-Spec]]; one or two sentences, AP-exam voice, names speaker or role, audience, and occasion or purpose): __________
 - Today's fact list is built and the sources are closed: yes / no
 
 Voice instruction:
@@ -119,6 +122,7 @@ Fill before drafting:
 - Template (from the Suits line): __________
 - Open move: __________   Close move: __________
 - The nameable opposing handful, and the live datable trigger that licenses the charge: __________
+- Headnote (write first, per [[Headnote-Spec]]; one or two sentences, AP-exam voice, names speaker or role, audience, and occasion or purpose): __________
 - Today's fact list is built and the sources are closed: yes / no
 
 Voice instruction:
@@ -157,6 +161,7 @@ Fill before drafting:
 - Template (from the Suits line): __________
 - Open move: __________   Close move: __________
 - The occasion (death, anniversary, milestone, award, farewell) and the subject honored: __________
+- Headnote (write first, per [[Headnote-Spec]]; one or two sentences, AP-exam voice, names speaker or role, audience, and occasion or purpose): __________
 - Today's fact list is built and the sources are closed: yes / no
 
 Voice instruction:
@@ -195,6 +200,7 @@ Fill before drafting:
 - Template (from the Suits line): __________
 - Open move: __________   Close move: __________
 - The durable human theme behind the news this piece turns over (attention, money, place, work, language): __________
+- Headnote (write first, per [[Headnote-Spec]]; one or two sentences, AP-exam voice, names speaker or role, audience, and occasion or purpose): __________
 - Today's fact list is built and the sources are closed: yes / no
 
 Voice instruction:
@@ -233,6 +239,7 @@ Fill before drafting:
 - Template (from the Suits line): __________
 - Open move: __________   Close move: __________
 - The shared human experience the story runs through, and the moment that licenses the intimacy: __________
+- Headnote (write first, per [[Headnote-Spec]]; one or two sentences, AP-exam voice, names speaker or role, audience, and occasion or purpose): __________
 - Today's fact list is built and the sources are closed: yes / no
 
 Voice instruction:
@@ -272,6 +279,7 @@ Fill before drafting:
 - Template (from the Suits line): __________
 - Open move: __________   Close move: __________
 - The genuinely awe-worthy system, place, or process (not a conflict or accountability story): __________
+- Headnote (write first, per [[Headnote-Spec]]; one or two sentences, AP-exam voice, names speaker or role, audience, and occasion or purpose): __________
 - Today's fact list is built and the sources are closed: yes / no
 
 Voice instruction:
@@ -404,6 +412,7 @@ Confirm the piece is actually in the register it was assigned, not the default s
 - Opener variety matches the register; the piece does not open nearly every sentence on its grammatical subject.
 - The register's signature device is present and load-bearing (parallelism for The Reckoning, antithesis and restraint for The Tribute, the short-against-long snap for The Long Look, the confiding refrain for The Witness Stand, the withheld turn for The Long Think, the periodic suspension for The Open Letter, attribution density for The Ledger).
 - The ethos posture is right: the self is absent where it should be (Ledger, Long Look), present-as-reasoner (Long Think), present-as-witness (Witness Stand), receded behind the subject (Tribute).
+- Headnote present and earned (per [[Headnote-Spec]]): one or two sentences in the neutral AP-exam voice, naming speaker or role, audience, and occasion or purpose; it frames any invented persona by role (no fabricated name), names a real subject truthfully, takes no side, and names no devices. The decisive check: the finished prose actually delivers the speaker, audience, and purpose the headnote promises. If the piece does not match its own headnote, it has drifted toward the generic explainer voice and goes back.
 - Drifted-if cue: read the opening cold. Could it be attributed to this register's voice specifically, or does it read like the generic calm explainer? If the latter, it has flattened.
 
 ### Gate 3: Anti-tell scan (per [[Anti-Tell-List]])
