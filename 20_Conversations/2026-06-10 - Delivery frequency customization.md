@@ -90,9 +90,19 @@ Drive the browser (Chrome MCP) to the live site, then run the anonymous probe fr
 - If the probe STILL returns records after publish: do NOT trust the builder's "platform limitation" theory; escalate by removing the Teacher entity from the public API entirely (or changing the data approach). Not done until the endpoint refuses the data.
 - Cleanup once verified: delete the 3 fake test Teacher records (Sarah, Marcus, Priya).
 
+## 2026-06-11 (cont.): live probe after publish — SPLIT RESULT
+
+Samuel published the corrected per-op-deny rule. Claude drove Chrome to caughtupai.com and ran the recipe.
+
+- READ-LEAK PROBE = PASS. Anonymous GET to `entities/Teacher` returns `200 []` (zero records) on BOTH `app.base44.com/api/...` and the real proxy host `caughtupai.com/api/...`. Previously leaked all 3. Public API no longer serves the data; per-op deny is enforced.
+- FUNCTIONAL RE-CHECK = FAIL, but AMBIGUOUS. Marcus's valid token shows "invalid or expired." The page calls backend fn `getTeacherByToken` (HTTP 200) which returns `{"found":false}`; a direct call with the same token also returns `{"found":false}`. So the legitimate service-role path can't find the record either.
+- Two unresolved causes: (1) Samuel deleted the 3 fake test records (cleanup item) -> found:false is correct, leak genuinely closed, just nothing to test against; OR (2) the `{read:false}` lock also blocks the backend function's own read -> over-locked, would break every real teacher's link = shipping blocker. Empty `[]` alone does NOT prove a working fix — it can hide a broken function.
+- BLOCKED ON SAMUEL: did he delete the test Teacher records? yes -> recreate one record (or wait for real signup) to confirm fn path end-to-end. no -> lock is over-blocking; drive Base44 editor to confirm record still exists, hand builder a precise bug report (backend fn needs service-role carve-out around the public lock).
+- Hard gate stands: nothing real ships until the functional path is confirmed WORKING (prefill + save + unsubscribe/restore), not just until the read endpoint goes quiet.
+
 ## Open / next
 
-- HARD GATE (in progress): correct per-op-deny rule in DRAFT; SAMUEL TO PUBLISH, then re-probe live (must return nothing + functional pass). NOTHING real ships until the live probe confirms the leak is closed.
+- HARD GATE (in progress): read-leak CLOSED on live; FUNCTIONAL path unconfirmed (getTeacherByToken returns found:false for a valid token). Resolve the delete-vs-overlock ambiguity first (see split-result section above). NOTHING real ships until the functional path is confirmed working.
 - Wire the token into the real flow when it exists: signup form creates the Teacher record; every email footer carries caughtupai.com/manage?t=TOKEN.
 - Resend send-time segmentation by delivery_days + time_zone (the receive-filter half of the broadcast model).
 - Spec files not yet updated with the delivery-frequency model; this note + memory carry it.
