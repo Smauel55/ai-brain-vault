@@ -38,8 +38,21 @@ Second topic of the session (after [[2026-06-10 - Teacher feedback, headnotes|he
 - **Summer (June to July) auto-throttles to ONE opener a week for everyone.** Reason: cuts generation cost roughly 80% over those weeks (broadcast, so it is one edition produced instead of five) while keeping the habit alive in the inbox. Billing is untouched, so this is consistent with the prior no-billing-pause / summer-as-a-feature decision; it REPLACES a pause toggle (no separate pause offered). Normal cadence resumes in August for back-to-school (also the launch window).
 - Open / deferred: treat the summer window as an operator-controlled setting, not a hard date, for late-return districts; a summer-school override for a teacher who wants more; both deferred.
 
+## Built (same session, 2026-06-10): the /manage page on Base44
+
+Claude drove Samuel's browser (Chrome extension) into the Base44 editor and built the page in the production app (the one holding the verified caughtupai.com domain; "Caught Up AI (Copy)" is a backup). All changes are in PREVIEW, NOT PUBLISHED.
+
+- Access decision first: the page is gated subscriber-vs-stranger, not paid-vs-unpaid. Unlisted route /manage + signed token in the email footer (?t=manage_token). Trial users CAN customize (it drives conversion); strangers see only an invalid-link message. No nav/footer/sitemap link anywhere.
+- Created Teacher entity: full_name, email, school, delivery_days (Mon-Fri list, default all), political_content (neutral/civic, default neutral), time_zone (IANA, default America/New_York), manage_token (auto-generated unique), status (trial/active/canceled, default trial). Built to be the same record the future signup form writes.
+- Page behavior (all verified by hand in preview): token lookup; invalid/no token shows only the error line; valid token shows prefilled form (delivery-day toggles, political radio, US timezone dropdown, Save) plus a separated, muted unsubscribe block and the 6am/summer footer note.
+- 3 sample Teacher records created for testing (Sarah Chen all-days/Eastern/neutral/trial; Marcus Webb MWF/Central/civic/active; Priya Nair TuTh/Pacific/neutral/trial), each with a /manage?t=... test URL (in the Base44 chat log).
+- BUG FOUND AND FIXED during testing: unsubscribe originally fired off one stray click (native confirm + layout shift + buttons missing type="button" submitting the form). Fix: in-page two-step confirm (Are you sure? / Yes, unsubscribe me / Keep my Openers), a "Changed your mind? Restore my subscription" link on the unsubscribed state, more spacing between Save and Unsubscribe. Second bug: the panel buttons were unwired (handler after an early return + state updates blocked behind a throwing async write); fixed by Base44 after a specific defect report.
+- Final verified pass: no-token case; prefill per record; save persists across reload (Tue added to Marcus stuck); last-day guard blocks with "At least one delivery day must remain selected"; Keep dismisses; unsubscribe shows message + restore; restore returns and persists.
+
 ## Open / next
 
-- Confirm the minor defaults above.
-- Build phase (not started): day-set field on signup + the magic-link page on Base44; segment the daily send by each teacher's day-set in the ESP (Resend). Easy in both Phase 0 (send to today's segment) and Phase 1 (semi-auto scheduled send).
-- Not yet written into the spec files; this note plus the memory update capture the decision.
+- PUBLISH is Samuel's call (pushes to caughtupai.com; /manage is unlisted so nothing visible changes for visitors; landing page untouched).
+- Before real teachers use it: verify on the PUBLISHED app that an anonymous (token-only, no-login) visitor can save/unsubscribe (the builder noted an "unauthenticated write" error in preview; entity permissions may need explicit anonymous read/update scoping, and over-open permissions would let anyone enumerate Teacher records, so it needs scoping BOTH ways).
+- Wire the token into the real flow when it exists: signup form creates the Teacher record; every email footer carries caughtupai.com/manage?t=TOKEN.
+- Resend send-time segmentation by delivery_days + time_zone (the receive-filter half of the broadcast model).
+- Spec files not yet updated with the delivery-frequency model; this note + memory carry it.
