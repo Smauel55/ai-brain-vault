@@ -57,8 +57,13 @@ HARD RULES override everything below: no em-dashes anywhere, no emojis anywhere.
 two editorial gates from Editorial-Standards.md bind every piece (Gate 0): (a) NEUTRALITY
 FIREWALL (two modes, REVISED 2026-06-11): NEUTRAL-EXPLAINER mode (every tier; the only
 mode on the non-civic tier) takes no side. POINTED-ADVOCACY mode (CIVIC tier only) MAY argue
-a position with full force IF it has a clear speaker named by role (not name), uses
-first-person emotion, and aims that force at the issue or institution, never a person.
+a position with full force IF it presents a clear rhetorical situation (per Headnote-Spec)
+and aims that force at the issue or institution, never a person. VARY THE FORM across the
+batch (do not make every pointed piece a named individual testifying to a group, that
+sameness is a tell): op-ed/signed column, unsigned editorial in the paper's voice,
+first-person essay, open letter to a body, witness account, guest commentary. Speaker framed
+by role/relationship, never an invented proper name or a real person; emotion welcome where
+the form supports it.
 Three hard bans in BOTH modes, EVERY tier: no attack on a specific person (no living
 political figure as addressee, villain, or hero; an unnamed "Mr. President" still counts; a
 real official may appear only as a neutral sourced actor); no attack on a group (party,
