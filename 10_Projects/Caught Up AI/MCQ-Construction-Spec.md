@@ -128,6 +128,30 @@ Rules:
 - Argument-driven registers (The Reckoning, The Long Think, The Ledger, The Open Letter) support both Q2 and Q3; rotate them across a batch. Observational or consecratory registers (The Long Look, The Tribute) usually support only Q2, because there is no contestable claim to argue.
 - Across a batch, vary the FRQ type wherever the passages allow, the way registers are varied, but never staple a Q3 argument onto a piece that argues nothing.
 
+## General-English framing (audience = general_english)
+
+The same two MCQs and the same writing prompt ship to non-AP English teachers unchanged;
+only the skill LABELS are renamed (see [[General-English-Mode-Spec]]). The four AP reading
+skills and the three FRQ types map one-to-one onto general reading/analysis (Common Core)
+labels:
+
+| AP reading skill | General-English label | Common Core (RI/L) |
+|---|---|---|
+| Rhetorical Situation (SC 1) | Author's purpose, audience, point of view | RI.6 |
+| Claims and Evidence (SC 3) | Central idea and supporting evidence | RI.1, RI.2, RI.8 |
+| Reasoning and Organization (SC 5) | Text structure and how ideas develop | RI.3, RI.5 |
+| Style (SC 7) | Word choice, tone, figurative language | RI.4, L.5 |
+
+| AP FRQ | General label | Common Core (W) |
+|---|---|---|
+| Q1 synthesis | synthesis essay | W.7, W.8, W.9 |
+| Q2 rhetorical analysis | rhetorical analysis | W.2, W.9 |
+| Q3 argument | argument essay | W.1 |
+
+Build the questions to the AP standard above; the general-English version is a relabel,
+not a different question. The renderer swaps the section headers automatically; the
+generator supplies the `gen_alignment` / `gen_type` text per [[General-English-Mode-Spec]].
+
 ## Sourcing and confidence
 
 - Grounded against the official CED (2024) reading samples Q1 to Q7 and the skill-alignment table (Skills 1.A, 3.A, 7.A, 5.A, 5.C, 7.B). Exam structure: Section I = 45 multiple choice in 60 minutes (45% of score), 23 to 25 reading plus 20 to 22 writing questions across 5 passage sets.

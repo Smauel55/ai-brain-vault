@@ -52,6 +52,7 @@ BEFORE WRITING ANYTHING, load the engine. Read these files in
 - MCQ-Construction-Spec.md  (AP-grounded rules for the two multiple-choice questions: skill spread, stem patterns, distractor traps, the one-best-answer gate, the self-check)
 - Rhetorical-Device-Vocabulary.md  (the controlled device list for labeling, plus the single-color highlight and per-device purpose convention)
 - Headnote-Spec.md  (the one-or-two-sentence AP-exam-style rhetorical-situation line that opens every piece on both copies; written FIRST, before the prose, as a forcing function)
+- General-English-Mode-Spec.md  (the audience dimension: the same Opener also ships to non-AP English teachers, who get general reading/analysis labels instead of AP-exam labels; you must dual-write the alignment + writing-type framing so both audiences render cleanly)
 
 HARD RULES override everything below: no em-dashes anywhere, no emojis anywhere. And
 two editorial gates from Editorial-Standards.md bind every piece (Gate 0): (a) NEUTRALITY
@@ -142,6 +143,19 @@ OUTPUT: present each piece as the full inbox lesson-opener package, in this orde
   RHETORICAL ANALYSIS PROMPT
   1 AP Lang Q2-style prompt asking students to analyze the rhetorical choices the writer
   makes in the piece
+
+  SKILL ALIGNMENT (dual-write, per General-English-Mode-Spec.md)
+  Two short versions of the same teaching value, so the one Opener renders for both
+  audiences:
+  - AP exam alignment (ap_alignment): the AP-exam framing, naming the FRQ type (Q2/Q3)
+    and the AP reading skills the piece teaches.
+  - Reading and analysis skills (gen_alignment): the SAME analytical value with NO AP
+    labels (no "Q2," no "rhetorical-analysis value"), phrased as general reading/analysis,
+    ending with a short Common Core tag, e.g. "(Common Core: RI.4, RI.5, W.2.)" Use the
+    AP-skill -> Common Core map in General-English-Mode-Spec.md.
+  Also give the writing-prompt type both ways: the AP label (e.g. "Q3 argument") and the
+  plain general label (gen_type, e.g. "argument essay"). The passage, devices, MCQs,
+  discussion, and prompt TEXT are identical across audiences; only these labels differ.
 
 After all {{N}} packages, give me a one-paragraph batch note: the register, template,
 opener, and close used for each piece, and confirmation the batch passed the sameness
