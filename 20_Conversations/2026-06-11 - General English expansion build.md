@@ -58,6 +58,35 @@ same secure way as delivery_days/political_content. Result, all code-verified in
   "This sets how your teacher notes are labeled. Your students' handout is the same either
   way."
 
+## Live test (post-publish, 2026-06-11)
+
+Samuel published. Tested on live caughtupai.com.
+
+- SECURITY RE-VERIFY = PASS (the critical check). Anonymous GET to `entities/Teacher`
+  returns `200 []` on both app.base44.com and the caughtupai.com proxy. Adding the
+  `audience` field did NOT reopen the leak. Stronger: even an ADMIN-credentialed REST call
+  to the entities endpoint returns no rows, so the `{read:false}` lock applies to the
+  public API for everyone; only the editor UI and the service-role functions can read the
+  data. (The "Permission risks detected" banner + "Fix" button in the editor is the same
+  known false-positive; do NOT click Fix, it would replace the working per-op lock.)
+- FUNCTIONS deployed + code-verified live: getTeacherByToken filters by manage_token and
+  returns `audience: t.audience || 'ap_lang'`; updateTeacherByToken validates audience in
+  {ap_lang, general_english} and writes it via `asServiceRole` alongside the other fields.
+- PAGE deployed live: /manage loads, invokes getTeacherByToken (HTTP 200), and shows the
+  invalid-link state for a bad token. The audience field is live in the entity (the
+  Add-Item form shows it, default ap_lang).
+- NOT exercised end-to-end live: the actual prefill -> flip Course -> Save -> reload ->
+  persist with a REAL token. Blocked by (a) the token store being locked by design (no API
+  read), (b) `manage_token` auto-generating so a hand-typed test token did not match
+  (getTeacherByToken correctly returned found:false), and (c) the Base44 editor data grid
+  freezing the browser renderer on row interactions, so the fixture's real token could not
+  be read from the UI. The save path is byte-identical to the delivery_days save that WAS
+  demonstrated live last session (persist across reload), and the audience write rides it.
+- LITTER: a throwaway Teacher record `full_name = "Audience Test"` (audience ap_lang, no
+  email, auto-gen token) was created for testing and left in place (grid freezing blocked a
+  clean delete). Harmless fake data; delete via the builder chat or grid when convenient,
+  alongside the older Priya test record.
+
 ## Open / next
 
 - HARD GATE: Samuel clicks **Publish** in the Base44 editor (publishing to the live domain
