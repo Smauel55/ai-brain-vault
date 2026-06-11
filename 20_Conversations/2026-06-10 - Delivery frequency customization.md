@@ -31,11 +31,12 @@ Second topic of the session (after [[2026-06-10 - Teacher feedback, headnotes|he
 - Teachers pick specific **days** (M-F), not just a count: AP Lang meets on fixed schedules (MWF, etc.).
 - Consistent with the political-dial precedent ([[2026-06-07 - Opener customization strategy]]): low-cardinality, set at signup, changeable later, no parallel pipelines.
 
-## Proposed defaults (pending Samuel's confirm)
+## Defaults (confirmed 2026-06-10)
 
-- Weekdays only; no weekend editions.
-- 1 to 5 days a week allowed; default = all 5.
-- Pause intentionally NOT added (prior decision: summer-as-feature, no pause option). Revisit only if churn data argues for it.
+- Weekdays only; no weekend editions. CONFIRMED.
+- 1 to 5 days a week allowed; default = all 5. CONFIRMED.
+- **Summer (June to July) auto-throttles to ONE opener a week for everyone.** Reason: cuts generation cost roughly 80% over those weeks (broadcast, so it is one edition produced instead of five) while keeping the habit alive in the inbox. Billing is untouched, so this is consistent with the prior no-billing-pause / summer-as-a-feature decision; it REPLACES a pause toggle (no separate pause offered). Normal cadence resumes in August for back-to-school (also the launch window).
+- Open / deferred: treat the summer window as an operator-controlled setting, not a hard date, for late-return districts; a summer-school override for a teacher who wants more; both deferred.
 
 ## Open / next
 
