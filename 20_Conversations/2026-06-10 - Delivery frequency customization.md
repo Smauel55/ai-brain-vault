@@ -75,9 +75,24 @@ KEY GOTCHA (publish-gate confound): the in-editor builder kept "verifying" again
 
 NEXT (Samuel): Publish again. Then Claude re-probes the live endpoint. PASS BAR: anonymous GET to the Teacher entities endpoint returns 0 records / 403 AND /manage still prefills + saves (functions bypass via service role). HONEST CAVEAT: the "platform limitation" theory is unconfirmed (its evidence was confounded); if the post-publish probe STILL leaks, the fix gets heavier (remove the entity from the public API entirely, or restructure) and Claude pursues it then. Not done until the live endpoint refuses the data to an anonymous caller.
 
+## Re-verify recipe (for the next session, after Samuel publishes)
+
+Drive the browser (Chrome MCP) to the live site, then run the anonymous probe from the page JS context (caughtupai.com origin = unauthenticated to the Base44 API):
+
+- App ID: 6a1f286b511ece79b6ef3942
+- Endpoint: https://app.base44.com/api/apps/6a1f286b511ece79b6ef3942/entities/Teacher
+- PASS = the GET returns 0 records or 403. FAIL = it returns the teacher list (the leak).
+- Probe (run in page console on a caughtupai.com tab):
+  `(async()=>{const r=await fetch('https://app.base44.com/api/apps/6a1f286b511ece79b6ef3942/entities/Teacher',{credentials:'include'});const b=await r.text();return {status:r.status,body:b.slice(0,200)};})()`
+- Functional re-check (must still work via the service-role functions): open
+  `https://caughtupai.com/manage?t=tok_marcus_z9y8x7w6v5u4t3s2r1q0ponmlkjihgfedcba9876543210xyz`
+  and confirm it prefills Marcus Webb, saves+persists, and the two-step unsubscribe+restore works.
+- If the probe STILL returns records after publish: do NOT trust the builder's "platform limitation" theory; escalate by removing the Teacher entity from the public API entirely (or changing the data approach). Not done until the endpoint refuses the data.
+- Cleanup once verified: delete the 3 fake test Teacher records (Sarah, Marcus, Priya).
+
 ## Open / next
 
-- HARD GATE (in progress): correct per-op-deny rule in DRAFT; SAMUEL TO PUBLISH, then Claude re-probes live (must return nothing + functional pass). NOTHING real ships until the live probe confirms the leak is closed.
+- HARD GATE (in progress): correct per-op-deny rule in DRAFT; SAMUEL TO PUBLISH, then re-probe live (must return nothing + functional pass). NOTHING real ships until the live probe confirms the leak is closed.
 - Wire the token into the real flow when it exists: signup form creates the Teacher record; every email footer carries caughtupai.com/manage?t=TOKEN.
 - Resend send-time segmentation by delivery_days + time_zone (the receive-filter half of the broadcast model).
 - Spec files not yet updated with the delivery-frequency model; this note + memory carry it.
