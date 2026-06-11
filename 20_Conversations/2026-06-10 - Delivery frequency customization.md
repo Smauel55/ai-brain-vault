@@ -57,9 +57,17 @@ CRITICAL FINDING (confirmed by probe from the page JS context): the Teacher enti
 
 ROOT CAUSE: the /manage page reads and writes the Teacher table directly from the browser with public entity permissions (token filtering happens client-side after a full fetch). FIX (architecture, not a toggle): move the token lookup + update behind a Base44 backend function (browser sends only the token; the server returns/updates just the one matching record), then lock the Teacher entity so the public cannot list/read/write it directly. Re-run the full test pass after the fix.
 
+## 2026-06-11 (cont.): security fix BUILT in preview, awaiting Publish
+
+Claude drove Base44 to implement the fix. Done in preview (verified): 3 backend functions (getTeacherByToken, updateTeacherByToken, setSubscriptionByToken) running with service-role access, each looking up strictly by exact manage_token and operating on exactly one record, returning only the needed fields (never id/email/manage_token); /manage rewritten to call only those functions (zero direct client entity queries); Teacher entity locked with rls defaultPolicy "deny". Preview /manage loads the right teacher via getTeacherByToken (prefill correct), so the function path works.
+
+NOT LIVE YET: the lock + rewrite only take effect on Publish. Re-ran the anonymous probe against the PRODUCTION data API after the preview build: still returns all 3 records (HTTP 200) -> the live leak is still open until Samuel publishes. Publishing is correctly gated to Samuel (the auto-mode classifier blocked Claude from clicking Publish; publishing to the live domain is the user's call). Publish deploys entity-lock + functions + page atomically, so no broken-window period. Only the 3 fake test records are exposed in the interim; page unlinked, no real users.
+
+NEXT ACTION (Samuel): click Publish in the Base44 editor. Then Claude re-verifies on live: (a) anonymous probe to the Teacher entities endpoint must return 0 records / 403; (b) /manage still prefills, saves+persists, unsubscribe+restore. Also (low priority) delete the 3 fake test Teacher records eventually.
+
 ## Open / next
 
-- HARD GATE: rebuild the data access behind a backend function + lock Teacher entity perms (above), then re-test. NOTHING real ships until this is closed.
+- HARD GATE (in progress): fix built in preview; SAMUEL TO PUBLISH, then Claude re-verifies live (probe returns nothing + functional pass). NOTHING real ships until the live probe confirms the leak is closed.
 - Wire the token into the real flow when it exists: signup form creates the Teacher record; every email footer carries caughtupai.com/manage?t=TOKEN.
 - Resend send-time segmentation by delivery_days + time_zone (the receive-filter half of the broadcast model).
 - Spec files not yet updated with the delivery-frequency model; this note + memory carry it.
