@@ -36,6 +36,43 @@ GREY = HexColor("#666666"); RULE = HexColor("#CCCCCC")
 HL_BG    = "#FFF3A0"   # single highlight color for every tagged device (yellow)
 HL_LABEL = "#1F4E79"   # single label color for every inline device name
 
+# Audience framing (see General-English-Mode-Spec.md). The daily edition's
+# pedagogical content (passage, devices, MCQs, discussion, writing prompt) is
+# IDENTICAL across audiences. Only the masthead tagline and the teacher-copy skill
+# framing (MCQ header, alignment section, writing-type label) change. Default is
+# AP Lang, so pieces authored before this field existed render unchanged.
+AUDIENCE = {
+    "ap_lang": {
+        "tagline":          "The daily AP English Language Opener",
+        "mcq_header":       "AP-style multiple choice:",
+        "alignment_header": "AP exam alignment:",
+    },
+    "general_english": {
+        "tagline":          "The daily English Language Opener",
+        "mcq_header":       "Close-reading multiple choice:",
+        "alignment_header": "Reading and analysis skills:",
+    },
+}
+
+# AP free-response labels -> general-English equivalents. Used to translate the
+# writing-prompt type line (and, as a degraded fallback, the alignment text) when
+# no audience-specific field is supplied. Longest keys first so "Q2 rhetorical
+# analysis" matches before a bare "Q2". Q-numbers are an AP-exam artifact.
+AP_TO_GEN = [
+    ("Q1 synthesis",          "synthesis essay"),
+    ("Q2 rhetorical-analysis","rhetorical analysis"),
+    ("Q2 rhetorical analysis","rhetorical analysis"),
+    ("Q3 argument",           "argument essay"),
+    ("Q1", "synthesis essay"), ("Q2", "rhetorical analysis"), ("Q3", "argument essay"),
+]
+
+def ap_to_gen(text):
+    """Strip AP free-response (Q1/Q2/Q3) labels from a string, replacing them with
+    plain general-English equivalents. A fallback for pieces lacking gen_* fields."""
+    for ap, gen in AP_TO_GEN:
+        text = text.replace(ap, gen)
+    return text
+
 _ir = ImageReader(LOGO); _iw, _ih = _ir.getSize()
 LOGO_H = 0.40*inch; LOGO_W = LOGO_H*_iw/_ih
 
@@ -97,10 +134,10 @@ def make_decorators(running_text):
         canvas.restoreState()
     return first, later
 
-def header(date_str, role):
+def header(date_str, role, tagline="The daily AP English Language Opener"):
     logo = Image(LOGO, width=LOGO_W, height=LOGO_H)
     left = Table([[logo, [Paragraph("Caught Up AI", wordm),
-                          Paragraph("The daily AP English Language Opener", wtag)]]],
+                          Paragraph(tagline, wtag)]]],
                  colWidths=[LOGO_W+8, 3.1*inch])
     left.setStyle(TableStyle([("VALIGN",(0,0),(-1,-1),"MIDDLE"),
                               ("LEFTPADDING",(0,0),(-1,-1),0),("RIGHTPADDING",(0,0),(0,0),8),
@@ -166,6 +203,11 @@ def sec(title, blocks):
 
 def build(piece, role):
     teacher = (role == "Teacher")
+    # Audience framing. Unknown values fall back to AP Lang so a typo never blanks
+    # the labels. Student pedagogical content is identical regardless of audience;
+    # only the masthead tagline and teacher-copy skill framing change.
+    lab = AUDIENCE.get(piece.get("audience", "ap_lang"), AUDIENCE["ap_lang"])
+    general = piece.get("audience") == "general_english"
     art = body if teacher else bodystu
     fname = os.path.join(OUT_DIR, "%s - %s copy.pdf" % (piece["base"], role))
     running = ("Caught Up AI Opener   .   %s   .   %s   .   %s copy"
@@ -175,7 +217,7 @@ def build(piece, role):
                             topMargin=0.7*inch, bottomMargin=0.75*inch,
                             title="%s (%s copy)" % (piece["headline"], role), author="Caught Up AI")
     s = []
-    s += header(piece["date"], piece["edition"] + " . " + role + " copy")
+    s += header(piece["date"], piece["edition"] + " . " + role + " copy", lab["tagline"])
     s.append(Paragraph(esc(piece["headline"]), title))
     s.append(Paragraph("Teacher copy (everything in the student copy, plus answers and teaching notes)"
                        if teacher else "Student copy (project or hand out)", roletag))
@@ -209,7 +251,7 @@ def build(piece, role):
             blk.append(Paragraph("%s)&nbsp;&nbsp;%s" % (let, esc(o)), opt))
         blk.append(Spacer(1, 4))
         mcq_blocks.append(KeepTogether(blk))
-    s += sec("AP-style multiple choice:", mcq_blocks)
+    s += sec(lab["mcq_header"], mcq_blocks)
 
     # Answer key (teacher only): each item atomic.
     if teacher:
@@ -229,8 +271,13 @@ def build(piece, role):
                      for i, r in enumerate(piece["sample_responses"], 1)]
         s += sec("Sample strong discussion responses:", sr_blocks)
 
-    # Writing prompt.
-    s += sec("Writing prompt (%s):" % esc(piece["writing"]["type"]),
+    # Writing prompt. In general-English mode the AP free-response label (Q1/Q2/Q3)
+    # is replaced by its plain equivalent: prefer an authored gen_type, else strip
+    # the Q-label from the AP type string.
+    wtype = piece["writing"]["type"]
+    if general:
+        wtype = piece["writing"].get("gen_type") or ap_to_gen(wtype)
+    s += sec("Writing prompt (%s):" % esc(wtype),
              [Paragraph(esc(piece["writing"]["text"]), appb)])
 
     # Misconceptions and AP alignment (teacher only).
@@ -238,7 +285,13 @@ def build(piece, role):
         mis_blocks = [KeepTogether([Paragraph("&bull;&nbsp;&nbsp;" + esc(m), bullet)])
                       for m in piece["misconceptions"]]
         s += sec("Common misconceptions to watch for:", mis_blocks)
-        s += sec("AP exam alignment:", [Paragraph(esc(piece["ap_alignment"]), appb)])
+        # Skill alignment. AP mode uses the authored AP-exam framing; general mode
+        # prefers an authored gen_alignment (general reading/analysis or Common Core
+        # framing), falling back to the AP text with its Q-labels translated out.
+        align = piece["ap_alignment"]
+        if general:
+            align = piece.get("gen_alignment") or ap_to_gen(align)
+        s += sec(lab["alignment_header"], [Paragraph(esc(align), appb)])
 
     doc.build(s, onFirstPage=first_fn, onLaterPages=later_fn)
     return fname, doc.page
@@ -303,12 +356,20 @@ longthink = {
   "Students may label “it was a room” a simile. There is no “like” or “as”; it is a metaphor, an implied identity.",
  ],
  "ap_alignment":"Q2 rhetorical-analysis value: a compact text for teaching a clean concession, the anaphora-versus-parallelism distinction, a clearly marked shift (volta), and a single load-bearing metaphor students can name and defend. The clipped telegraphic sentence set against the long cumulative one is a clean lesson in how sentence length alone creates emphasis.",
+ "gen_alignment":"Reading and analysis value: a compact text for teaching how a writer builds an argument by first granting the other side (concession), the difference between repetition that opens successive sentences and repeated structure inside a sentence, a clearly marked turn in the argument, and a single controlling metaphor students can name and defend. The short, clipped sentence set against the long one shows how sentence length alone creates emphasis. (Common Core: RI.4 word choice and tone, RI.5 text structure, RI.6 point of view and purpose, W.2/W.9 analytical writing.)",
 }
 
 if __name__ == "__main__":
+    import copy
     randomize_answers(longthink)
-    for role in ("Teacher", "Student"):
-        fn, pages = build(longthink, role)
-        print("wrote: %s  (%d page%s)  answers %s"
-              % (os.path.basename(fn), pages, "" if pages == 1 else "s",
-                 [it["answer"] for it in longthink["mcq"]]))
+    # Render the AP-Lang edition, then a general-English edition of the SAME piece
+    # (identical content, audience flag flipped) so both framings can be compared.
+    gen = copy.deepcopy(longthink)
+    gen["audience"] = "general_english"
+    gen["base"] = longthink["base"].replace("(Long Think)", "(Long Think, General English)")
+    for piece in (longthink, gen):
+        for role in ("Teacher", "Student"):
+            fn, pages = build(piece, role)
+            print("wrote: %s  (%d page%s)  answers %s"
+                  % (os.path.basename(fn), pages, "" if pages == 1 else "s",
+                     [it["answer"] for it in piece["mcq"]]))

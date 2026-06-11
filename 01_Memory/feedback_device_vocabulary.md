@@ -21,3 +21,5 @@ The controlled list with definitions lives at `10_Projects/Caught Up AI/Rhetoric
 3. In the TEACHER copy, do not just point out and describe each device, also give its PURPOSE: why the author chose it and what it accomplishes. Keep each to a line or two, readable at a glance (a "Devices, and why they are here" section). Student copy stays clean.
 
 First piece built in this format: the Long Think opener "What the Waiting Did" (2026-06-06), teacher + student PDFs in Sample-Briefs/.
+
+Reusable generation prompts (2026-06-11): `caughtupai-sampleprompt-V1.md` for batch sample runs (set N, Variety Matrix, batch audit) and `caughtupai-quickprompt-V1.md` for on-demand single Openers (optional topic/register inputs, recency check vs latest editions in Sample-Briefs, renders PDFs via render_opener_v2 by default). Both in 10_Projects/Caught Up AI/.
