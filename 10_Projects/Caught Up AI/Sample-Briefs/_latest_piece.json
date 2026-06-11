@@ -1,0 +1,83 @@
+{
+  "base": "Caught Up AI Opener - 2026-06-11 - Two Straight Years Past 2,000",
+  "edition": "Beta edition - Thursday, June 11, 2026",
+  "date": "Thursday, June 11, 2026",
+  "headline": "Two Straight Years Past 2,000",
+  "headnote": "The following lays out what the 2026 measles case totals show about where the disease is spreading, and why public health officials measure each community against a single vaccination threshold.",
+  "body": [
+    "[[1]]The United States has recorded 2,030 confirmed measles cases in 2026 as of June 4, according to the Centers for Disease Control and Prevention.[[/1]] The prior year, 2025, ended with 2,288. With the 2026 total already past 2,000, this is the second straight year the country has crossed that mark.",
+    "The cases are not scattered evenly. The CDC reports that 93 percent of them, 1,890 of the 2,030, are outbreak-associated, meaning they trace to a known cluster rather than to a lone traveler who infects no one else. That leaves about 140 cases not linked to any cluster. [[2]]Even so, the reach is broad: 40 jurisdictions have logged at least one case this year, plus Washington, D.C.[[/2]]",
+    "One outbreak accounts for much of the recent total. Centered in Spartanburg County, South Carolina, it ran from October 2, 2025, until the state declared it over on April 26, 2026, and reached 997 confirmed cases. State health officials describe it as the largest measles outbreak in the country in more than 35 years.",
+    "The South Carolina record points to one variable above the others. Of the cases counted there as of March 3, some 95 percent, 945 of 990, were in people who were unvaccinated or whose vaccination status was unknown. The measles, mumps, and rubella shot, given in two doses, is the standard protection; where it is absent, the virus moves through a population with little to stop it.",
+    "Epidemiologists watch a specific number for measles. Public health guidance holds that roughly 95 percent of a community must be immune to keep the virus from circulating freely, a level often called community immunity. Below that line, a single case can [[3]]seed a chain[[/3]]. The CDC reports that kindergarten vaccination coverage for the measles shot has slipped under that 95 percent mark, the threshold considered necessary for community protection.",
+    "[[4]]What the 2026 count shows, then, is less a sudden event than a math problem holding steady.[[/4]] The cases concentrate where coverage has thinned, and the national figure has stayed above 2,000 for a second year while that coverage sits below the level considered necessary to stop the virus from spreading. Whether 2027 looks different depends on numbers that are being recorded now, school district by school district."
+  ],
+  "devices": [
+    {
+      "para": 1,
+      "device": "Logos",
+      "purpose": "Opens on an attributed, quantified claim, letting a sourced number rather than the writer's assertion carry the credibility, the Ledger's core ethos move."
+    },
+    {
+      "para": 2,
+      "device": "Juxtaposition",
+      "purpose": "Sets the broad geographic reach against the just-stated concentration in clusters, so the reader holds both facts at once: the disease is contained in pockets yet present in many places."
+    },
+    {
+      "para": 5,
+      "device": "Metaphor",
+      "purpose": "A single quiet figurative term, seed a chain, compresses how one case can start sustained transmission once a community falls below the immunity threshold, without leaving the plain register."
+    },
+    {
+      "para": 6,
+      "device": "Antithesis",
+      "purpose": "Balances a sudden event against a math problem holding steady to reframe the totals as a predictable result of measurable conditions, the closing assessment the evidence supports."
+    }
+  ],
+  "mcq": [
+    {
+      "stem": "The relationship between the second paragraph and the fifth paragraph is best described as one in which the writer first",
+      "options": [
+        "maps where the cases occur, then identifies the immunity condition that explains that distribution",
+        "establishes the national case total, then disputes whether that total can be trusted",
+        "presents competing explanations for the cases, then selects the most likely one",
+        "describes one state's outbreak in detail, then generalizes it to the whole country"
+      ],
+      "answer": "A",
+      "rationale": "The second paragraph documents the distribution of cases, that they cluster in outbreaks yet appear in 40 jurisdictions, and the fifth paragraph supplies the community-immunity threshold that accounts for where outbreaks take hold; the keyed pairing tracks that move from pattern to explanation. The option about disputing the total fails because no paragraph questions the reliability of the count, a trap built on importing a skepticism the passage never raises. The option about competing explanations fails because the second paragraph offers a single distribution, not rival accounts, naming a move the text does not make. The option about one state generalized to the nation describes the third and fourth paragraphs, not the second and fifth, a true effect tied to the wrong span."
+    },
+    {
+      "stem": "In the final paragraph, the phrase \"a math problem holding steady\" primarily serves to",
+      "options": [
+        "predict that case numbers will rise sharply in the coming year",
+        "question whether the reported case counts can be trusted",
+        "frame the outbreaks as a predictable consequence of measurable conditions rather than a sudden crisis",
+        "assign blame to public health agencies for the rising totals"
+      ],
+      "answer": "C",
+      "rationale": "The phrase recasts the totals as the outcome of a known threshold and a measurable coverage figure, which is why the keyed option fits the writer's level, assessment-bearing tone. The prediction option overreaches: the passage explicitly says the next year depends on numbers still being recorded and declines to forecast a sharp rise. The option about questioning the counts imports a doubt the text never expresses, since every figure is attributed and accepted. The blame option misreads the neutral attribution as accusation, assigning a stance toward an actor that the disinterested register withholds."
+    }
+  ],
+  "discussion": [
+    "The writer orders the piece to arrive at the community-immunity threshold only in the fifth paragraph, after the case totals and the South Carolina outbreak. How does saving that figure for late in the piece shape the way a reader understands the numbers that came before it?",
+    "Every figure in the opener is attributed to a named body, and the writer avoids emotive language about the outbreaks. What does that restraint gain for a reader's trust, and what might it leave out for a reader trying to feel the stakes of the data?"
+  ],
+  "sample_responses": [
+    "By withholding the 95 percent threshold until the fifth paragraph, the writer lets the reader first absorb the totals as raw scale, 2,030 cases, a second straight year past 2,000, a 997-case outbreak, before naming the single variable that ties them together. The earlier paragraphs read like an accumulation of separate alarming facts; the threshold then reorganizes them into one explanation, so the reader experiences the same turn the argument makes, from a pile of numbers to a pattern with a cause. Placed first, the threshold would have flattened the totals into mere illustration. Placed last, it reframes everything already read, which is why the closing antithesis, less a sudden event than a math problem, lands as earned rather than asserted.",
+    "The relentless attribution, the CDC reports, state health officials describe, gives the piece its authority: a skeptical reader can in principle check each claim, and the writer never asks to be believed on personal conviction. The flat diction reinforces this, since refusing words like tragic or alarming signals that the numbers are meant to be weighed, not felt on command. What the restraint leaves out is the human texture of an outbreak, the individual cases behind 997, the experience of a community below the threshold. The writer trades immediacy for credibility, betting that a reader who trusts the figures will supply the gravity that the prose deliberately declines to perform."
+  ],
+  "writing": {
+    "type": "Q2 rhetorical analysis",
+    "text": "Read the passage carefully. Then write an essay that analyzes the rhetorical choices the writer makes to convey a stance toward the 2026 measles data. In your response, consider how the writer's ordering of evidence, consistent attribution to named bodies, and restraint in diction work together to position the case totals as the product of measurable conditions rather than a sudden crisis."
+  },
+  "misconceptions": [
+    "That a higher national case count means the virus is spreading randomly everywhere. In fact 93 percent of 2026 cases trace to known clusters, so concentration in pockets of low coverage, not even diffusion across the country, drives the total.",
+    "That the 95 percent figure is an arbitrary public-health goal. It is the share of a community that must be immune for the threshold considered necessary for community protection to hold; below it, sustained transmission can occur.",
+    "That the writer's neutral attribution signals agreement or disagreement with any party. A Ledger-style piece reports the documented record and assigns no praise or blame, so reading a stance into the sourced figures misreads the register."
+  ],
+  "ap_alignment": "This opener is built in the AP English Language source-passage mold and supports reading work across multiple Big Ideas. The Ledger register models Rhetorical Situation (Skill Category 1): a disinterested writer, a literate non-specialist audience, and an informational exigence (a knowledge gap about the case totals). The finding-first organization and the late placement of the immunity threshold give Reasoning and Organization (Skill Category 5) a clear line to trace, targeted by the first multiple-choice item. The closing antithesis and the level, attribution-heavy diction give Style (Skill Category 7) concrete material, targeted by the second item. The two questions test different reading skills as required. The free-response prompt is a Q2 rhetorical analysis, the fitting choice because the passage advances a clear rhetorical posture toward its data without arguing a contestable value position; a Q3 argument prompt is not stapled on, since the neutral explainer takes no debatable side to defend, challenge, or qualify.",
+  "register": "The Ledger",
+  "template": "Finding-First / Claim-First Build",
+  "opener_type": "Flat-fact / finding-first",
+  "close_type": "Status (left in current status)"
+}
