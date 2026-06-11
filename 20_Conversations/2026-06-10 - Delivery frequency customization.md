@@ -65,9 +65,19 @@ NOT LIVE YET: the lock + rewrite only take effect on Publish. Re-ran the anonymo
 
 NEXT ACTION (Samuel): click Publish in the Base44 editor. Then Claude re-verifies on live: (a) anonymous probe to the Teacher entities endpoint must return 0 records / 403; (b) /manage still prefills, saves+persists, unsubscribe+restore. Also (low priority) delete the 3 fake test Teacher records eventually.
 
+## 2026-06-11 (cont.): first lock attempt FAILED on live; correct rule now in draft
+
+Samuel published the first fix. Re-probe of the live Teacher endpoint STILL returned all 3 records (200): the builder's bare {"defaultPolicy":"deny"} is NOT enforced by Base44's REST API (Base44's own Permissions panel flagged it: "issues detected", "may expose data to unintended users").
+
+Claude investigated the entity Permissions UI directly, then handed the builder a precise bug report. The builder checked Base44 docs and found the enforced syntax is explicit per-operation booleans, not defaultPolicy. Correct rule now APPLIED IN DRAFT (confirmed in the Teacher > Permissions panel): { "create": false, "read": false, "update": false, "delete": false }.
+
+KEY GOTCHA (publish-gate confound): the in-editor builder kept "verifying" against the LIVE endpoint and seeing "still returning all 3 records," then wrongly theorized a "platform limitation." That signal is an artifact: entity permission changes only take effect on PUBLISH, and the live endpoint serves the old published version, so no rule can pass the builder's test pre-publish. Claude sent a corrective telling it to stop testing live, keep the per-op-false rule, and confirm the 3 functions use the server-side service role (which bypasses the lock). Do NOT trust the builder's in-chat "still failing / platform limitation" messages; they are confounded.
+
+NEXT (Samuel): Publish again. Then Claude re-probes the live endpoint. PASS BAR: anonymous GET to the Teacher entities endpoint returns 0 records / 403 AND /manage still prefills + saves (functions bypass via service role). HONEST CAVEAT: the "platform limitation" theory is unconfirmed (its evidence was confounded); if the post-publish probe STILL leaks, the fix gets heavier (remove the entity from the public API entirely, or restructure) and Claude pursues it then. Not done until the live endpoint refuses the data to an anonymous caller.
+
 ## Open / next
 
-- HARD GATE (in progress): fix built in preview; SAMUEL TO PUBLISH, then Claude re-verifies live (probe returns nothing + functional pass). NOTHING real ships until the live probe confirms the leak is closed.
+- HARD GATE (in progress): correct per-op-deny rule in DRAFT; SAMUEL TO PUBLISH, then Claude re-probes live (must return nothing + functional pass). NOTHING real ships until the live probe confirms the leak is closed.
 - Wire the token into the real flow when it exists: signup form creates the Teacher record; every email footer carries caughtupai.com/manage?t=TOKEN.
 - Resend send-time segmentation by delivery_days + time_zone (the receive-filter half of the broadcast model).
 - Spec files not yet updated with the delivery-frequency model; this note + memory carry it.
