@@ -49,10 +49,17 @@ Claude drove Samuel's browser (Chrome extension) into the Base44 editor and buil
 - BUG FOUND AND FIXED during testing: unsubscribe originally fired off one stray click (native confirm + layout shift + buttons missing type="button" submitting the form). Fix: in-page two-step confirm (Are you sure? / Yes, unsubscribe me / Keep my Openers), a "Changed your mind? Restore my subscription" link on the unsubscribed state, more spacing between Save and Unsubscribe. Second bug: the panel buttons were unwired (handler after an early return + state updates blocked behind a throwing async write); fixed by Base44 after a specific defect report.
 - Final verified pass: no-token case; prefill per record; save persists across reload (Tue added to Marcus stuck); last-day guard blocks with "At least one delivery day must remain selected"; Keep dismisses; unsubscribe shows message + restore; restore returns and persists.
 
+## 2026-06-11: PUBLISHED + live-tested; SECURITY HOLE FOUND (must fix before signup)
+
+Samuel published. Claude tested on the live domain (caughtupai.com). Functional behavior all PASSED live: no/bad token shows error only; valid token prefills the right teacher; Save persists across a hard reload (anonymous write works); two-step unsubscribe + restore both work and persist.
+
+CRITICAL FINDING (confirmed by probe from the page JS context): the Teacher entity is world-readable and world-writable with NO auth. A bare unauthenticated GET to `https://app.base44.com/api/apps/6a1f286b511ece79b6ef3942/entities/Teacher` returns ALL records in full, including every teacher's full_name, email, school, status, AND manage_token. Impact: (1) PII leak of all teacher emails/names/schools; (2) total defeat of the token access model, since every manage_token is handed out, so anyone can read/alter/unsubscribe any teacher; (3) writes are open on the same unauthenticated API the Save uses. Only fake test data exposed so far (3 records), page is unlinked with no real users, so no real breach yet, but this is a hard gate before signup.
+
+ROOT CAUSE: the /manage page reads and writes the Teacher table directly from the browser with public entity permissions (token filtering happens client-side after a full fetch). FIX (architecture, not a toggle): move the token lookup + update behind a Base44 backend function (browser sends only the token; the server returns/updates just the one matching record), then lock the Teacher entity so the public cannot list/read/write it directly. Re-run the full test pass after the fix.
+
 ## Open / next
 
-- PUBLISH is Samuel's call (pushes to caughtupai.com; /manage is unlisted so nothing visible changes for visitors; landing page untouched).
-- Before real teachers use it: verify on the PUBLISHED app that an anonymous (token-only, no-login) visitor can save/unsubscribe (the builder noted an "unauthenticated write" error in preview; entity permissions may need explicit anonymous read/update scoping, and over-open permissions would let anyone enumerate Teacher records, so it needs scoping BOTH ways).
+- HARD GATE: rebuild the data access behind a backend function + lock Teacher entity perms (above), then re-test. NOTHING real ships until this is closed.
 - Wire the token into the real flow when it exists: signup form creates the Teacher record; every email footer carries caughtupai.com/manage?t=TOKEN.
 - Resend send-time segmentation by delivery_days + time_zone (the receive-filter half of the broadcast model).
 - Spec files not yet updated with the delivery-frequency model; this note + memory carry it.
