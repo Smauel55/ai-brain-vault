@@ -19,13 +19,17 @@ Three phases, with model routing ENFORCED per phase (not advisory):
 
 | Phase | Model | Work |
 |---|---|---|
-| Verify | Haiku (cheap) | Fetch today's real date, pick a real story from the last 5 days (or take a given topic), web-confirm every fact against a source, return a sourced fact list. Rejects person-attacks and national third rails. |
+| Verify | Fable 5 (strongest) | Fetch today's real date, pick a real story from the last 5 days (or take a given topic), web-confirm every fact against a source, return a sourced fact list. Rejects person-attacks and national third rails. |
 | Compose | Fable 5 (strongest) | Read all binding spec files, write the headnote first, draft the 350-600 word piece, self-run the 4 gates with the friction/anti-symmetry layer, tag devices from the controlled list, build 2 MCQs + full apparatus. Emits a schema-valid piece dict. The load-bearing creative + editorial stage. |
 | Render | Haiku (cheap) | Write the piece dict to JSON + a driver that imports `build()` / `randomize_answers()` from `render_opener_v2.py` unmodified, produce the teacher + student PDFs, append to the editions log. |
 
-Routing rationale: AI-sameness and the neutrality calls are what the human AP-Lang
-panel judges, so the prose + editorial core stays on the strongest model; fact
-verification and deterministic rendering go to the cheap model. See [[caughtupai-quickprompt-V1]].
+Routing rule: strongest model for anything involving judgment (story choice, fact
+verification, prose + editorial), cheap model only for the genuinely mechanical render
+step. Verify was moved from Haiku to Fable 5 on 2026-06-11: accuracy is the #1 open
+risk, a wrong fact hits an expert (teacher) customer, and because the product is
+broadcast (one edition/day amortized across all subscribers) the model-cost saving
+from a cheap verify is a rounding error not worth the accuracy risk. This routing flips
+only if the product ever moves to per-teacher personalized editions. See [[caughtupai-quickprompt-V1]].
 
 ## Two things that make it reliable
 
