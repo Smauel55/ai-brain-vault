@@ -55,9 +55,18 @@ BEFORE WRITING ANYTHING, load the engine. Read these files in
 
 HARD RULES override everything below: no em-dashes anywhere, no emojis anywhere. And
 two editorial gates from Editorial-Standards.md bind every piece (Gate 0): (a) NEUTRALITY
-FIREWALL: take no political side, attack no specific person, attack no group; no living
-political figure as addressee, villain, or hero (an unnamed "Mr. President" still counts);
-civic and political topics are fine but partisan stance is not. (b) PLAIN-KNOWLEDGE: every
+FIREWALL (two modes, REVISED 2026-06-11): NEUTRAL-EXPLAINER mode (every tier; the only
+mode on the non-civic tier) takes no side. POINTED-ADVOCACY mode (CIVIC tier only) MAY argue
+a position with full force IF it has a clear speaker named by role (not name), uses
+first-person emotion, and aims that force at the issue or institution, never a person.
+Three hard bans in BOTH modes, EVERY tier: no attack on a specific person (no living
+political figure as addressee, villain, or hero; an unnamed "Mr. President" still counts; a
+real official may appear only as a neutral sourced actor); no attack on a group (party,
+religion, nationality, ideology, demographic); NO SIDE on the national third rails (abortion,
+guns, partisan elections/candidates, contested-value immigration like whether birthright
+citizenship should exist) which stay neutral-explainer even on the civic tier. Test for what
+advocacy unlocks: value-consensus (means/competence/local-impact disputes = advocate;
+contested-value disputes = stay neutral). (b) PLAIN-KNOWLEDGE: every
 unexplained term must be common knowledge to a typical high schooler; define any specialist
 term (program sub-parts like "Part D", procedural rules, financial metrics, acronyms) in a
 plain clause on first use or cut it.
@@ -66,9 +75,14 @@ TOPIC MODE: real current events. For each piece:
 1. Find a genuinely recent, real news story (within the last 5 days of today's date).
    Spread the {{N}} stories across different subject areas (politics, science, business,
    culture, sport, world) so the set does not cluster on one beat. For political stories,
-   pick the angle so the piece reports the issue and the competing positions fairly without
-   taking a side; if the only honest treatment requires taking a partisan side or targeting
-   an identifiable political figure, route it to The Ledger or drop it.
+   pick the angle by tier and mode: on the NON-civic tier, report the issue and competing
+   positions fairly without taking a side. On the CIVIC tier, a story on a broad civic/policy
+   matter (value-consensus: local services, a bill's tradeoffs, school funding, infrastructure,
+   governance, civic duty) MAY be drafted in pointed-advocacy mode with a clear role-speaker
+   and first-person emotion aimed at the issue or institution. A story that can only be told
+   by targeting an identifiable political figure, or by taking one side of a national third
+   rail (abortion, guns, partisan elections/candidates, whether birthright citizenship should
+   exist), stays neutral and routes to The Ledger or is dropped.
 2. Build a numbered, verified fact list per Accuracy-Guardrail BEFORE drafting.
    Web-search and confirm every name, number, date, quote, and causal claim against a
    real source. If you cannot confirm a fact, drop it. Never invent or guess a fact.
