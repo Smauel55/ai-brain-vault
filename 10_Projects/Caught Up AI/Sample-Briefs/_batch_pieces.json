@@ -1,0 +1,265 @@
+[
+  {
+    "base": "Caught Up AI Opener - 2026-06-11 - Inflation Climbs to a Three-Year High, Driven Mostly by Energy",
+    "edition": "Batch edition - Thursday, June 11, 2026",
+    "date": "Thursday, June 11, 2026",
+    "headline": "Inflation Climbs to a Three-Year High, Driven Mostly by Energy",
+    "headnote": "The following lays out what the May 2026 Consumer Price Index report shows about the pace of inflation, and where most of the month's increase came from.",
+    "body": [
+      "Consumer prices are climbing faster again. [[1]]The Bureau of Labor Statistics reported on June 10 that the Consumer Price Index, the government's main measure of what households pay for goods and services, rose 0.5 percent in May, putting prices 4.2 percent above where they stood a year earlier. That is the fastest twelve-month pace since April 2023, and a step up from April's annual rate of 3.8 percent.[[/1]] The bureau adjusts its monthly figures for ordinary seasonal swings, so the May increase is not a quirk of the calendar.",
+      "[[2]]Energy did most of the lifting.[[/2]] The energy index rose 3.9 percent in May alone and stands 23.5 percent higher than it did a year ago; energy supplied more than 60 percent of the month's overall increase. Gasoline is the extreme case inside that category, up 40.5 percent from a year earlier. A tank of gas that cost 50 dollars last May costs about 70 now.",
+      "The rest of the report tells a quieter story. The core measure, which sets aside food and energy because both swing widely from month to month, rose 0.2 percent in May and 2.9 percent over the past year. Economists watch that steadier number because it shows what prices are doing once the loudest movers are taken out. Food rose 0.2 percent for the month and 3.1 percent over the year. Shelter, the housing portion of the index, went up 0.3 percent, half its 0.6 percent gain in April. [[3]]Set food and energy aside and inflation runs just under 3 percent a year; count them back in and it runs above 4.[[/3]]",
+      "[[4]]There is a fair way to read May as a narrower problem than its headline number: the core rate is under 3 percent, and shelter slowed rather than sped up.[[/4]] The qualification is that nobody pays the core rate. A family's gasoline and grocery bills sit inside the all-items number and outside the core one, and the all-items number is the one that moved from 3.8 percent to 4.2 between one report and the next. Whether energy keeps pushing it upward is a question the May report raises and does not answer."
+    ],
+    "devices": [
+      {
+        "para": 1,
+        "device": "Logos",
+        "purpose": "Builds the opening claim on attributed government data, with the agency, the date, and checkable figures all present in the first sentences, so the authority rests on the documented record rather than the writer's assertion."
+      },
+      {
+        "para": 2,
+        "device": "Metaphor",
+        "purpose": "Compresses the report's finding that energy supplied most of the month's increase into one plain physical image of lifting, letting a single quiet figure of speech announce the paragraph's subject without any emotional coloring."
+      },
+      {
+        "para": 3,
+        "device": "Antithesis",
+        "purpose": "Holds the two ways of measuring the same month in balanced, parallel clauses, the under-3-percent core reading against the above-4-percent full reading, so the gap between them is felt as a contrast rather than merely reported."
+      },
+      {
+        "para": 4,
+        "device": "Concession",
+        "purpose": "Grants the calmer reading of the report its genuine force before qualifying it, which keeps the voice fair to the evidence and makes the qualification that follows land as a conclusion the facts compel rather than an opinion the writer brought."
+      }
+    ],
+    "mcq": [
+      {
+        "stem": "The relationship between the second and third paragraphs is best described as one in which the writer first ___ and then ___.",
+        "options": [
+          "isolates the largest source of the month's increase, and then turns to the categories where prices stayed calmer",
+          "concedes that prices barely moved in May, and then argues that the report overstates the problem",
+          "explains how the bureau adjusts its monthly figures, and then questions whether that adjustment can be trusted",
+          "proves that energy alone will set the course of future inflation, and then dismisses the remaining categories entirely"
+        ],
+        "answer": "A",
+        "rationale": "The second paragraph singles out energy as the supplier of most of the month's increase, and the third moves to the core measure, food, and shelter, the categories that rose more slowly. The option about conceding that prices barely moved inverts the piece's actual opening claim that prices are climbing faster. The option about the seasonal adjustment describes material from the first paragraph, not the second, and the report's adjustment is never doubted. The option about proving energy's future course uses absolute wording the passage never supports; the piece confines itself to what one month's record shows."
+      },
+      {
+        "stem": "In the third paragraph, the writer's use of balanced clauses in the sentence beginning \"Set food and energy aside\" serves primarily to ___",
+        "options": [
+          "sharpen the contrast between two readings of the same month's prices",
+          "soften the report's findings by presenting them as a matter of perspective",
+          "instruct readers to recalculate their own cost of living without food and energy",
+          "imply that the government designed two indexes to satisfy different audiences"
+        ],
+        "answer": "A",
+        "rationale": "The paired clauses hold the under-3-percent core reading directly against the above-4-percent full reading so the gap between them lands in a single breath. The softening option names a real move, balance, but assigns it a purpose the paragraph does not serve, since the sentence heightens rather than blurs the difference. The recalculating option takes the imperative phrasing literally, as if the sentence were advice instead of a framing device. The two-audiences option imports a motive about the government's design of its statistics that the passage never states."
+      }
+    ],
+    "discussion": [
+      "The writer spends a full paragraph on the calmer core, food, and shelter numbers before setting them aside with \"nobody pays the core rate.\" What does giving the quieter reading that much space do for the writer's credibility, and what would the piece lose if that paragraph were cut?",
+      "The piece closes on \"a question the May report raises and does not answer.\" Why might a writer in this evidence-forward voice refuse to end on a verdict, and how would the tone change if the piece ended on the gasoline figure instead?"
+    ],
+    "sample_responses": [
+      "Giving the quieter numbers a full paragraph is the writer's central credibility move. By presenting the core rate, food, and shelter fairly and at length before qualifying them, the writer shows the conclusion was weighed rather than assumed; the concession costs the argument something, which is exactly why the qualification that follows, that nobody pays the core rate, reads as a judgment the evidence forced. Without that paragraph the piece would still be accurate, but it would read as a one-sided alarm about energy, and the level, adjudicating authority the voice depends on would collapse.",
+      "Refusing a verdict is consistent with the whole posture of the piece: the writer claims only what the record supports, and one month of data cannot establish whether the climb will continue. Ending on the open question keeps the authority where the piece has placed it all along, in the documented figures, and leaves the reader holding exactly as much certainty as the report provides. Ending on the 40.5 percent gasoline number instead would make the final note loud and alarming, a closing flourish the rest of the prose deliberately avoids, and it would tip the even, evidence-forward tone toward advocacy."
+    ],
+    "writing": {
+      "type": "AP Q3-style argument",
+      "text": "In the final paragraph, the writer observes that \"nobody pays the core rate\": the measure economists watch most closely is one no household ever experiences directly. Write an essay that argues your position on whether simplified measures of a complicated reality, in economics or elsewhere, clarify more than they conceal. Use appropriate, specific evidence to illustrate and develop your position."
+    },
+    "misconceptions": [
+      "Reading 4.2 percent as May's one-month increase. The monthly rise was 0.5 percent; 4.2 percent is the change over the twelve months ending in May.",
+      "Treating the final paragraph's granted claim as the writer's position. The narrower reading of May is a concession the writer then qualifies, not the conclusion the piece reaches.",
+      "Labeling the balanced \"Set food and energy aside\" sentence anaphora. No word repeats at the start of successive clauses; contrasting ideas carried in parallel structure is antithesis.",
+      "Assuming the core measure excludes food and energy because they do not matter. The piece gives the actual reason: both categories swing widely from month to month, so removing them shows the steadier underlying trend."
+    ],
+    "ap_alignment": "MCQ 1 targets Reasoning and Organization (Skill Category 5: the relationship between paragraphs within the line of reasoning). MCQ 2 targets Style (Skill Category 7: how balanced syntax serves the writer's purpose). The writing prompt is an AP Q3-style argument that generalizes the passage's contestable premise about simplified measures. All marked devices (logos, metaphor, antithesis, concession) are drawn from the controlled AP device vocabulary, and the headnote follows the AP exam's italic occasion-line convention for an impersonal passage.",
+    "register": "The Ledger",
+    "template": "Finding-First / Claim-First Build (10)",
+    "opener_type": "Flat-fact / finding-first",
+    "close_type": "Status (matter left in its current status; open question, no button)"
+  },
+  {
+    "base": "Caught Up AI Opener - 2026-06-11 - Say Earth Orbit First",
+    "edition": "Batch edition - Thursday, June 11, 2026",
+    "date": "Thursday, June 11, 2026",
+    "headline": "Say Earth Orbit First: A Letter to NASA",
+    "headnote": "In the following open letter, written after NASA announced the crew of the Artemis III mission on June 9, 2026, a planetarium educator who hosts school field trips asks the agency to change how the flight is described to young audiences.",
+    "body": [
+      "To the National Aeronautics and Space Administration: I write from a low seat. I run the dome theater at a city planetarium, where my equipment amounts to a star projector, a microphone, and a carpet that has outlasted four directors; you, for your part, fly people off the planet. On June 9 you announced the four astronauts of Artemis III: commander Randy Bresnik, pilot Luca Parmitano, and mission specialists Frank Rubio and Andre Douglas. I have been saying their names out loud in the empty dome all week, practicing.",
+      "You will expect a letter like this one to want something, because letters like this one always want something: a poster, or a school visit, or a signed photograph for the lobby case. I am not asking for any of that. [[1]]I am writing because of a girl in the second row on Tuesday, a few hours after your announcement, maybe nine years old, who held her hand up through the entire show and then asked me whether the four people on the screen would walk on the Moon. I told her the truth, and the truth took three sentences longer than she wanted.[[/1]] Artemis III is not the landing.",
+      "Let me grant you something first, freely: [[2]]wonder is your trade, you have been good at it for longer than I have been alive, and the crew you chose needs no varnish from me or from anyone[[/2]]. [[3]]You named a commander who has flown twice and commanded the International Space Station during Expedition 53; you named a pilot, Luca Parmitano, the station's first Italian commander and the first European Space Agency astronaut assigned to an Artemis mission; you named Frank Rubio, a board-certified physician and flight surgeon who left on a Soyuz in September 2022 and did not come home for 371 days, the longest single spaceflight any American has flown; and you named Andre Douglas, a backup for Artemis II who has never been to space.[[/3]] Children gasp at the 371. Nobody has to tell them to.",
+      "And yet the flight plan, stated plainly, is this: Artemis III is targeted to launch in 2027 and will test rendezvous and docking, in Earth orbit, with test articles, practice versions, of the Blue Origin and SpaceX lunar landers; the first crewed landing at the Moon's South Pole is planned for Artemis IV, as early as 2028. [[4]]If you trusted the plain record when you picked these four, if a doctor who was gone for 371 days and a pilot on loan from another continent's space agency were inspiring enough without any dressing, then the itinerary deserves the same confidence: lead with Earth orbit.[[/4]] Put it in the first sentence, not the fine print. The girl in the second row can hold two true things at once. She proved it before her bus left.",
+      "My fall calendar starts filling in late September, school groups mostly, four buses on a good Friday. Before the first of them arrives, publish one description of this mission that a nine-year-old could read to the end of its second sentence and still know where the spacecraft is going, and where it is not yet going. You hold the larger instrument here; I only hold the microphone. Whatever you write, I will read it aloud under the dome, in the dark, to children with their hands already up. [[5]]That part is mine.[[/5]]"
+    ],
+    "devices": [
+      {
+        "para": 2,
+        "device": "Anecdote",
+        "purpose": "The girl with her hand up gives the request a human stake; the writer's standing to ask anything of NASA comes from the child he has to answer, not from any expertise of his own."
+      },
+      {
+        "para": 3,
+        "device": "Concession",
+        "purpose": "Granting NASA's skill and good faith before making the ask lets the pressure read as loyalty rather than attack, and removes the agency's easiest reason to dismiss the letter."
+      },
+      {
+        "para": 3,
+        "device": "Anaphora",
+        "purpose": "The repeated \"you named\" opening each clause stacks the crew's credentials one on top of the next, building the case that the plain record inspires on its own, without embellishment."
+      },
+      {
+        "para": 4,
+        "device": "Cumulative and periodic sentences",
+        "purpose": "The stacked \"if\" clauses withhold the main demand until the end, performing deference while making the request land as the conclusion the whole letter has earned."
+      },
+      {
+        "para": 5,
+        "device": "Telegraphic sentence",
+        "purpose": "After the letter's long deferential sentences, the clipped final line quietly claims the writer's small share of the work and hands the larger share back to NASA."
+      }
+    ],
+    "mcq": [
+      {
+        "stem": "In the third paragraph, the writer catalogues the crew's flights, records, and firsts primarily to",
+        "options": [
+          "establish that the mission's plain facts can move an audience without embellishment",
+          "question whether NASA has selected a crew experienced enough for a lunar landing",
+          "emphasize the physical dangers the astronauts will face during the 2027 flight",
+          "concede that the writer lacks the expertise to evaluate the crew's qualifications"
+        ],
+        "answer": "A",
+        "rationale": "The catalogue follows the writer's grant that the crew \"needs no varnish\" and feeds the paragraph's closing claim that children gasp at the bare number, so its function is to prove the plain record persuades on its own. The option doubting the crew's experience inverts the writer's open admiration; the option about physical danger imports a concern the passage never raises; and the option about the writer's lack of expertise describes the letter's opening self-lowering posture, a true observation that does not answer what this catalogue accomplishes."
+      },
+      {
+        "stem": "In the first and final paragraphs, the writer's references to his own equipment (\"a star projector, a microphone,\" \"I only hold the microphone\") serve primarily to",
+        "options": [
+          "lower the speaker's standing so the request rests on the addressee's power rather than the writer's authority",
+          "suggest that planetariums lack the resources to keep pace with modern spaceflight",
+          "contrast the writer's honesty with the agency's deceptive publicity practices",
+          "illustrate the technical difficulty of presenting astronomy to school-age children"
+        ],
+        "answer": "A",
+        "rationale": "The letter's deference depends on the writer claiming a small instrument against NASA's large one (\"You hold the larger instrument here\"), which frames the closing request as a matter for the agency's better nature rather than a demand from an equal. The resources reading imports a funding complaint the passage never states; the deception reading is more extreme than a letter that openly grants NASA's good faith; and the technical-difficulty reading takes the equipment literally instead of as a marker of the speaker's standing."
+      }
+    ],
+    "discussion": [
+      "The writer asks NASA to \"lead with Earth orbit\" even though the plainer description is less exciting than a Moon landing. When does simplifying a story for an audience cross into misleading it, and who should get to decide where that line sits?",
+      "The letter is addressed to NASA, but it is written to be read by everyone. How does knowing the public is overhearing change what the writer can say, and how does it change what the agency can afford to do in response?"
+    ],
+    "sample_responses": [
+      "Simplifying becomes misleading at the point where the short version creates a belief the full version would correct. The girl in the second row believed the four astronauts would walk on the Moon, and nothing in a crew announcement alone would have corrected her; that is why the writer wants Earth orbit in the first sentence, not the fine print. The audience itself is the best judge of the line, which is the force of the claim that a nine-year-old \"can hold two true things at once\": if the plain version still lands, the simplification was never necessary.",
+      "The public audience cuts both ways. It forces the writer into deference, because an open attack on NASA in front of everyone would read as grandstanding, so he grants the agency's good faith and asks rather than demands. But it also raises the cost of refusal for NASA: a private letter can be ignored quietly, while an overheard request turns silence into a visible choice. The form lets a person with only a microphone borrow the audience's weight without ever raising his voice."
+    ],
+    "writing": {
+      "type": "Q3 argument",
+      "text": "In an open letter to NASA, a planetarium educator claims that even a young audience \"can hold two true things at once,\" and asks the agency to lead its public descriptions with the plain facts of a mission rather than its most exciting framing. Write an essay that argues your position on the extent to which institutions, such as agencies, schools, and companies, should favor plain accuracy over excitement when communicating with the public. In your response you should: respond to the prompt with a thesis that presents a defensible position; provide evidence to support your line of reasoning; explain how the evidence supports your line of reasoning; and use appropriate grammar and punctuation in communicating your argument."
+    },
+    "misconceptions": [
+      "\"Artemis III is the Moon landing.\" It is not, and the passage turns on exactly this point: Artemis III, targeted for 2027, tests rendezvous and docking with lunar lander test articles in Earth orbit; the first crewed landing at the lunar South Pole is planned for Artemis IV, as early as 2028.",
+      "\"The letter is an attack on NASA.\" Students may read the request as criticism, but the writer concedes the agency's skill and good faith (\"wonder is your trade\") and applies pressure by holding NASA to its own demonstrated trust in plain facts; the deference is the engine, not a disguise.",
+      "\"The 'you named' series is just parallelism.\" Because the repeated phrase opens successive clauses, it is anaphora; if the repeated element sat mid-clause it would be parallelism. The distinction is the position of the repetition, not its presence.",
+      "\"The girl's question is a rhetorical question.\" It is a real question reported inside an anecdote; the writer poses no question for effect anywhere in the letter."
+    ],
+    "ap_alignment": "MCQ 1 targets Reasoning and Organization (Skill Category 5), asking how the crew catalogue functions in the letter's line of reasoning. MCQ 2 targets Style (Skill Category 7), asking how the writer's self-presenting diction serves his persuasive strategy. The writing prompt is an AP Q3-style argument, generalizing the letter's contestable claim about plain accuracy versus excitement into a debatable proposition with no sources required. All labeled devices come from the controlled AP vocabulary: anecdote, concession, anaphora, cumulative and periodic sentences, and telegraphic sentence.",
+    "register": "The Open Letter",
+    "template": "Withheld-Turn (8)",
+    "opener_type": "Vocative self-lowering address anchored to the precipitating event",
+    "close_type": "Concrete request and condition handed to the addressee"
+  },
+  {
+    "base": "Caught Up AI Opener - 2026-06-11 - Full Price for an Empty Camp",
+    "edition": "Batch edition - Thursday, June 11, 2026",
+    "date": "Thursday, June 11, 2026",
+    "headline": "Full Price for an Empty Camp",
+    "headnote": "On June 9, 2026, the Government Accountability Office, the nonpartisan agency that audits federal spending for Congress, released a report detailing waste and safety failures at Camp East Montana, the nation's largest immigration detention facility. The following is a guest commentary published in a national newspaper, in which the writer addresses fellow taxpayers about what the audit found.",
+    "register": "The Reckoning",
+    "template": "Antithesis-as-Engine (Template 2)",
+    "opener_type": "Address / occasion",
+    "close_type": "Charge / obligation",
+    "body": [
+      "On June 9 the Government Accountability Office, the agency Congress assigns to audit federal spending, published what its auditors found at Camp East Montana, the largest immigration detention facility the federal government has ever run. The camp opened in August 2025 on Fort Bliss, an Army post in El Paso, Texas, with room for 5,000 people and an operating contract worth $1.3 billion. [[1]]That money is ours.[[/1]] The auditors went to see what it bought.",
+      "For its first two weeks, from August 1 to August 15, 2025, the camp held no detained people at all. The Army, under terms the government itself had signed, paid the full cost anyway: [[2]]guards for no one, medical care for no one, transportation for no one, meals for no one[[/2]]. Those two empty weeks cost $11.5 million. Roughly $423,000 more went to wasted meals between mid-August and the end of September, because the contract required full meal and service payments for 5,000 people no matter how many were actually there. [[3]]The payments always arrived in full; the people never did.[[/3]] At the end of February 2026, the camp built for 5,000 held about 1,600.",
+      "The auditors also measured the camp against the government's own detention standards and found failures the report described as \"risking the safety and security of detained noncitizens and staff.\" [[4]]When a camp opened without perimeter security cameras, without outdoor recreation space, without anywhere for the people inside to meet a lawyer or a family member; when a loaded firearm went missing; when a man with tuberculosis was housed with the general population in November because screening procedures were not followed, and not one detainee with HIV or diabetes had a treatment plan on file, that camp was failing the one duty that justifies holding anyone at all, which is keeping the people in its custody safe.[[/4]] We paid full price again. [[5]]At least four people have died at Camp East Montana. The local coroner ruled one of those deaths a homicide, and the report notes that \"evidence associated with the incident was missing or destroyed.\"[[/5]]",
+      "Some of this has since moved. In April 2026, ICE, the federal agency that runs immigration detention, ended the operating contract early, a step the government may take without claiming anyone broke the rules, and chose a new contractor to run the camp. The auditors issued four recommendations, two to ICE, one to the Department of the Army, and one to the Department of Homeland Security, and estimated that tens of millions of dollars could still be saved through September 2026.",
+      "The report's warning reaches past El Paso. [[6]]Thirty-eight billion dollars is planned for the Department of Homeland Security to convert warehouses into new detention facilities, and the auditors warned that this camp's failures could become the blueprint for that spending. That is roughly thirty times the contract that just failed.[[/6]] We funded the first camp without looking; we owe the next ones the attention this one never got. Ask what a contract pays for when the beds are empty. Ask who checks the standards before the buses arrive. The auditors looked once. The next look belongs to us."
+    ],
+    "devices": [
+      {
+        "para": 1,
+        "device": "Telegraphic sentence",
+        "purpose": "A four-word claim of ownership lands flat after two long factual sentences, planting the moral stake, the public's money, before a single finding is reported."
+      },
+      {
+        "para": 2,
+        "device": "Epistrophe",
+        "purpose": "Repeating \"for no one\" at the end of each item makes every paid-for service collapse into the same absence, so the waste is felt service by service instead of as one abstract sum."
+      },
+      {
+        "para": 2,
+        "device": "Antithesis",
+        "purpose": "Balancing \"the payments always arrived in full\" against \"the people never did\" compresses the contract's central failure, full cost for a fraction of the population, into one opposed pair."
+      },
+      {
+        "para": 3,
+        "device": "Anaphora",
+        "purpose": "The repeated \"when\" clauses stack the documented failures into one accumulating runway, withholding the verdict so it lands with their combined weight."
+      },
+      {
+        "para": 3,
+        "device": "Pathos",
+        "purpose": "The deaths, the homicide ruling, and the destroyed evidence are stated without one emotional adjective; the bare facts carry the feeling, which reads as restraint rather than manipulation."
+      },
+      {
+        "para": 5,
+        "device": "Logos",
+        "purpose": "The arithmetic comparison, $38 billion against the $1.3 billion contract, grounds the closing charge in verifiable scale rather than alarm."
+      }
+    ],
+    "mcq": [
+      {
+        "stem": "In the third paragraph, the writer follows the long sentence beginning \"When a camp opened\" with the short sentence \"We paid full price again.\" primarily to",
+        "options": [
+          "turn the catalogue of safety failures into a shared financial complicity the reader cannot stand apart from",
+          "concede that the camp's conditions matter less to the report than the contract's cost",
+          "shift the essay from the auditors' findings to the writer's firsthand experience of the camp",
+          "emphasize the thoroughness of the auditors' accounting of the empty weeks"
+        ],
+        "answer": "A",
+        "rationale": "The short sentence converts the runway's safety catalogue into the essay's running ledger of collective payment, binding the \"we\" to the failure; that is its function after the long suspension. The option claiming conditions matter less than cost inverts the relationship the piece builds, since the paragraph treats the safety failures as the graver half of the same purchase. The option about firsthand experience imports a personal vantage the passage never contains; the writer speaks only from the report. The option about accounting thoroughness states a true feature of the essay but ties it to the wrong location, since the itemized accounting belongs to the second paragraph's empty-weeks figures, not to this sentence's effect."
+      },
+      {
+        "stem": "In the second paragraph, the repetition of \"for no one\" in \"guards for no one, medical care for no one, transportation for no one, meals for no one\" serves primarily to",
+        "options": [
+          "suggest that the services were poorly delivered even when detained people were present",
+          "mock the contractors who staffed the empty facility",
+          "itemize each paid-for service against the same absence so the waste is felt item by item rather than as one abstract sum",
+          "exaggerate the camp's emptiness beyond what the audit documents"
+        ],
+        "answer": "C",
+        "rationale": "The repetition breaks the $11.5 million into its component services and sets each against the identical emptiness, making the figure concrete before it is named. The option about poor delivery describes a real concern of the essay but attaches it to the wrong span; quality failures are the third paragraph's subject, while this list concerns payment with nobody present. The option about mockery names the device but assigns it an effect the tone does not support, since the passage indicts through fact and never ridicules. The option about exaggeration is over-broad: the emptiness during August 1 to 15 is the audit's documented finding, and the device counts costs rather than inflating them."
+      }
+    ],
+    "discussion": [
+      "The writer repeatedly says \"we\" paid and closes by handing \"the next look\" to the reader. What does the piece gain, and what does it risk, by implicating its audience instead of blaming only the agencies?",
+      "The piece argues forcefully about waste and safety while never taking a side on immigration policy itself. Where exactly does the writer hold that line, and does the restraint make the charge stronger or weaker?"
+    ],
+    "sample_responses": [
+      "By folding the audience into the verdict (\"That money is ours,\" \"We paid full price again\"), the writer converts spectators into parties to the failure, which makes the closing charge read as a duty rather than advice. The risk is resentment: a reader who never chose the contract may reject the shared blame. The writer manages that risk by keeping the accusation factual, payments, dates, and dollar figures, so that standing apart feels like denial rather than innocence.",
+      "The line is held at the level of target: every charge lands on the contract's structure, the unmet standards, and the agencies as institutions, never on detention policy or any named official. The narrow target arguably strengthens the piece, because readers on either side of immigration politics can agree that paying $11.5 million for an empty camp and losing a loaded firearm are failures; a broader target would let readers dismiss the charge as partisanship instead of answering it."
+    ],
+    "writing": {
+      "type": "AP FRQ Q3: Argument",
+      "text": "In \"Full Price for an Empty Camp,\" the writer claims that responsibility for how public money is spent does not end with official watchdogs: \"The auditors looked once. The next look belongs to us.\" Write an essay that argues your position on the extent to which ordinary citizens are responsible for overseeing how their government spends money. Use appropriate evidence from your reading, experience, or observations to develop your argument."
+    },
+    "misconceptions": [
+      "This is not an argument against immigration detention or for any immigration policy; the charge targets the contract structure and the unmet safety standards. Students who read it as a side on immigration are importing a stance the text never takes.",
+      "\"For no one\" is epistrophe, repetition at the END of successive phrases, not anaphora; the anaphora is the \"When... when... when...\" runway in paragraph 3. Students routinely conflate the two.",
+      "The $11.5 million and the roughly $423,000 are separate findings: the first covers the fully empty August 1 to 15 period, the second covers meals during below-capacity operations afterward. Students tend to merge them into one figure.",
+      "\"We paid full price again.\" is a complete five-word sentence used as a button after the runway, not a sentence fragment."
+    ],
+    "ap_alignment": "MCQ 1: Reasoning and Organization (Skill Category 5; CED 5.A/5.C), the function of a short sentence placed after a cumulative runway. MCQ 2: Style (Skill Category 7; CED 7.A/7.B), the effect of repetition (epistrophe). Writing: FRQ Q3 Argument, defend, challenge, or qualify a debatable claim about civic responsibility for public spending. The headnote primes Rhetorical Situation analysis (Skill Category 1): speaker role (a taxpayer writing a guest commentary), audience (fellow taxpayers), occasion (the June 9, 2026 GAO report)."
+  }
+]
