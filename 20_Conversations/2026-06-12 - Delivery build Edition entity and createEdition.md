@@ -53,10 +53,47 @@ Goal this session: host the PDFs and start the Base44 send path.
 - Remaining tasks: wire pipeline -> createEdition (task 3), sendTodaysEdition + recipient
   query (task 4), email template (task 5), then scheduling + Stripe.
 
+## Part 2 (same session): send path built + FIRST EMAIL DELIVERED
+- **Resend API key created** via the browser: name `caughtupai-base44`, permission
+  Sending access (least privilege), scoped to domain `send.caughtupai.com`. Samuel did the
+  final create + copy (Claude does not handle keys) and added it to Base44 Secrets as
+  `RESEND_API_KEY` (verified present, masked).
+- **Email template v1** finalized at `10_Projects/Caught Up AI/email-template-v1.html`.
+  Table-based, inline styles, links-not-attachments, one-click unsubscribe, no em-dashes.
+  Personalized sign-off "Have a great class, {{teacher_first_name}}". Subject
+  "Today's Opener: {{headline}}". From `opener@send.caughtupai.com`. Footer postal address
+  = Samuel's home address (Greenville SC 29615), set in the function only, NOT committed.
+  August reminder saved to swap in a virtual mailbox at launch ([[project_august_launch_reminders]]).
+- **`sendTodaysEdition` built + code-verified safe.** Three modes: dry_run (DEFAULT, sends
+  nothing, returns recipient count+list), test (one email to test_email), live (all due +
+  marks edition sent). mode validated (unknown rejected). Recipient filter = status
+  trial/active AND weekday(edition_date) in delivery_days. Audience routing, first-name,
+  Resend POST with List-Unsubscribe + one-click headers.
+- **RLS GOTCHA (reusable):** on this Base44 platform, an entity with `rls.read:false`
+  blocks even `asServiceRole` READS (writes via asServiceRole still bypass rls). Symptom:
+  `Edition.filter()` returns zero despite records existing. Fix: set the entity's
+  `rls.read` to `true`. Edition is now `{create:false, read:true, update:false,
+  delete:false}` (read open, WRITE still locked). Same pattern as the Teacher fix.
+  Base44's permission DIFF panel shows unchanged ops as "No restrictions" (current state,
+  not a change) -- read the actual entities/<Name>.json `rls` block to be sure; insist on
+  exact values rather than approving an ambiguous all-open diff.
+- **TEST SEND DELIVERED:** created a dummy Edition (2026-06-12, "Measles cases hit a
+  30-year high"), ran sendTodaysEdition mode=test to samuellevy2030@u.northwestern.edu ->
+  Resend status **Delivered** to a Google Workspace EDU inbox (best-case deliverability
+  proof: SPF/DKIM/DMARC + domain reputation all good).
+
+## Still open / next session
+- **Wire the generation pipeline to createEdition** (task 3) -- the only remaining piece;
+  it also finally proves Core.UploadFile gives a PUBLIC URL (test used placeholder links).
+- Delete the dummy 2026-06-12 test Edition before any real scheduling.
+- Then: scheduling (subscription routine) + Stripe.
+- Base44 editor freezes for ~30s under load (publish, function runs, big typed inputs);
+  verify results via the Resend tab (source of truth for sends) when the editor hangs.
+
 ## Process note
 - Base44's chat input SENDS on Enter and treats newlines as separate messages. Paste
   multi-field instructions as ONE single-line message (semicolons, no newlines) or it
   fragments into a queue. The browser `type` tool times out on ack for this textarea but
   the text still lands; verify by screenshot, then click send.
 
-Related: [[Delivery-Stack]], [[Generation-Pipeline]], [[Caught Up AI]].
+Related: [[Delivery-Stack]], [[Generation-Pipeline]], [[project_august_launch_reminders]], [[Caught Up AI]].

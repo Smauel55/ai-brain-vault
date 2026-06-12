@@ -96,34 +96,46 @@ Architecture confirmed against the live app, foundation entity built.
   Edition record with the resulting URLs + `status='draft'`, returns `{ok, edition}`.
   Reviewed the full source in the Base44 code editor; logic is complete and correct.
 
-## TWO RUNTIME RISKS to clear with one live `createEdition` call (not by reading)
+## MILESTONE 2026-06-12: send path verified, FIRST EMAIL DELIVERED
 
-1. **Public file URL** -- `Core.UploadFile`'s `file_url` must open with NO login. If it
-   needs auth, switch PDF hosting to R2/S3. This is the core "host the PDFs" bet.
-2. **Admin-auth via api_key** -- the pipeline's `api_key` call must pass the
-   `role==='admin'` guard, else 403. Both answered the moment the pipeline fires a real call.
+The whole email path works end to end. Built + DONE this session:
+- Resend API key (`caughtupai-base44`, Sending access, scoped to send.caughtupai.com) ->
+  Base44 Secrets `RESEND_API_KEY`. Email template v1. App published.
+- `sendTodaysEdition` (admin-only; modes dry_run[default]/test/live; recipient filter;
+  audience routing; Resend + List-Unsubscribe + one-click). Code-verified safe.
+- **RLS fix:** Edition `rls.read` set to true (asServiceRole reads were blocked by
+  read:false -- same platform quirk as Teacher). Write still locked
+  (`{create:false, read:true, update:false, delete:false}`).
+- **Test send DELIVERED** to samuellevy2030@u.northwestern.edu (Resend "Delivered" to a
+  Google Workspace EDU inbox = SPF/DKIM/DMARC + reputation all good). Used a dummy
+  2026-06-12 edition with placeholder PDF links.
 
 ## NEXT (next session starts here)
 
-1. **Wire the pipeline** (`.claude/workflows/caughtup-opener.mjs`): after render, POST
-   metadata + the rendered PDFs (base64) to `createEdition`. App `api_key` from a LOCAL env
-   var, never committed. Then one live call to clear the two risks above.
-2. **Build `sendTodaysEdition`** (service-role): take an edition, run "who is due today"
-   (weekday in `delivery_days` AND `status` in trial/active), send each via Resend with the
-   teacher-copy link matching their `audience`. Dry-run first.
-3. **Email template** (logo, one-line preview, two buttons, manage + one-click unsubscribe).
-   Samuel approves copy (his voice) before any send.
-4. **Samuel actions for the send path:** create a Resend API key + add to Base44 Secrets as
-   `RESEND_API_KEY` himself (Claude never enters keys); **Publish** the app so the new
-   entity + function go live at the REST endpoint.
-5. Later: scheduling (scheduled Claude Code routine on the subscription, NOT the Batches API
-   -- see [[Batch-API-Readiness]]); payments (Stripe; native Base44 connector available).
+1. **Wire the pipeline -> createEdition** (`.claude/workflows/caughtup-opener.mjs`): after
+   render, POST metadata + the rendered PDFs (base64) to `createEdition`. App `api_key`
+   from a LOCAL env var, never committed. This is the LAST core piece AND the only way to
+   prove the open runtime risk below.
+2. **Delete the dummy 2026-06-12 test Edition** before any real scheduling.
+3. Later: scheduling (scheduled Claude Code routine on the subscription, NOT the Batches
+   API -- see [[Batch-API-Readiness]]); payments (Stripe; native Base44 connector available).
 
-**Safety gate:** the send path is built + dry-run only; the FIRST real email goes to
-Samuel's inbox alone, on explicit go. Never the teacher list during testing.
+## STILL-OPEN runtime risk (only the pipeline test clears it)
 
-Base44 chat gotcha: input sends on Enter and treats newlines as separate messages. Send
-multi-field specs as ONE single-line message (semicolons), or it fragments into a queue.
+- **Public file URL** -- `Core.UploadFile`'s `file_url` must open with NO login (teachers
+  click from email). The delivered test used placeholder caughtupai.com links, so this is
+  UNPROVEN. If uploaded URLs need auth, switch PDF hosting to R2/S3.
+- (Admin-auth via api_key is partly de-risked: the in-editor Test Function passed the
+  admin guard. Confirm the pipeline's api_key call also passes when wiring task 1.)
+
+**Safety gate:** the FIRST real broadcast to the teacher list still requires explicit go.
+Test/live sends to Samuel's own inbox are fine.
+
+Base44 notes: chat input sends on Enter and treats newlines as separate messages -- send
+multi-field specs as ONE single-line message. The editor freezes ~30s under load (publish,
+function runs, long typed inputs); verify sends via the Resend tab when it hangs. To change
+entity permissions, edit `entities/<Name>.json` `rls` and insist on exact values (the diff
+panel's "No restrictions" can mean unchanged current state, not a new opening).
 
 ## Email + sender details (2026-06-12)
 
