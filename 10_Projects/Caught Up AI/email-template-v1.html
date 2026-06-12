@@ -1,0 +1,116 @@
+<!--
+  Caught Up AI - daily Opener delivery email (v1)
+  Table-based, inline styles for max email-client compatibility (Outlook / Google Workspace
+  for Education / M365). Placeholders are filled per-edition / per-teacher by sendTodaysEdition:
+    {{headline}}          - the opener's headline
+    {{preview}}           - one-line preview (also used as preheader)
+    {{date_human}}        - e.g. "Friday, June 12"
+    {{teacher_pdf_url}}   - audience-correct teacher copy (ap or general)
+    {{student_pdf_url}}   - student copy
+    {{manage_url}}        - magic link to /manage (no login)
+    {{unsubscribe_url}}   - one-click unsubscribe (also set List-Unsubscribe header)
+    {{logo_url}}          - hosted logo (public URL)
+    {{postal_address}}    - physical mailing address (CAN-SPAM requirement)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>Today's Opener</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f4f4f7; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#1a1a2e;">
+
+  <!-- preheader (hidden) -->
+  <div style="display:none; max-height:0; overflow:hidden; opacity:0;">{{preview}}</div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f7;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%; background-color:#ffffff; border-radius:12px; overflow:hidden;">
+
+          <!-- header -->
+          <tr>
+            <td style="padding:28px 32px 8px 32px;">
+              <img src="{{logo_url}}" alt="Caught Up AI" width="36" height="36" style="vertical-align:middle; border:0;">
+              <span style="font-size:18px; font-weight:700; color:#1a1a2e; vertical-align:middle; padding-left:8px;">Caught Up AI</span>
+            </td>
+          </tr>
+
+          <!-- date + headline -->
+          <tr>
+            <td style="padding:16px 32px 0 32px;">
+              <p style="margin:0 0 6px 0; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; color:#7a7a8c;">{{date_human}} &middot; Today's Opener</p>
+              <h1 style="margin:0; font-size:24px; line-height:1.3; font-weight:700; color:#1a1a2e;">{{headline}}</h1>
+            </td>
+          </tr>
+
+          <!-- preview -->
+          <tr>
+            <td style="padding:16px 32px 0 32px;">
+              <p style="margin:0; font-size:16px; line-height:1.6; color:#3a3a4a;">{{preview}}</p>
+            </td>
+          </tr>
+
+          <!-- buttons -->
+          <tr>
+            <td style="padding:28px 32px 8px 32px;">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding-right:12px;">
+                    <a href="{{teacher_pdf_url}}" style="display:inline-block; background-color:#5b21b6; color:#ffffff; font-size:15px; font-weight:600; text-decoration:none; padding:13px 22px; border-radius:8px;">Open teacher copy</a>
+                  </td>
+                  <td>
+                    <a href="{{student_pdf_url}}" style="display:inline-block; background-color:#ffffff; color:#5b21b6; font-size:15px; font-weight:600; text-decoration:none; padding:12px 21px; border-radius:8px; border:1px solid #d8d2ec;">Open student copy</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- helper line -->
+          <tr>
+            <td style="padding:8px 32px 32px 32px;">
+              <p style="margin:0; font-size:13px; line-height:1.6; color:#7a7a8c;">The teacher copy has the marked article, answer key, and sample responses. The student copy is clean.</p>
+            </td>
+          </tr>
+
+          <!-- divider -->
+          <tr>
+            <td style="padding:0 32px;">
+              <div style="border-top:1px solid #ececf2; height:1px; line-height:1px;">&nbsp;</div>
+            </td>
+          </tr>
+
+          <!-- sign-off -->
+          <tr>
+            <td style="padding:24px 32px 8px 32px;">
+              <p style="margin:0; font-size:15px; line-height:1.6; color:#3a3a4a;">Have a good class,<br>Caught Up AI</p>
+            </td>
+          </tr>
+
+          <!-- footer -->
+          <tr>
+            <td style="padding:24px 32px 32px 32px;">
+              <p style="margin:0 0 8px 0; font-size:12px; line-height:1.6; color:#9a9aac;">
+                You are getting this because you signed up for daily AP Lang openers.
+              </p>
+              <p style="margin:0 0 8px 0; font-size:12px; line-height:1.6; color:#9a9aac;">
+                <a href="{{manage_url}}" style="color:#5b21b6; text-decoration:underline;">Change your delivery days</a>
+                &nbsp;&middot;&nbsp;
+                <a href="{{unsubscribe_url}}" style="color:#9a9aac; text-decoration:underline;">Unsubscribe</a>
+              </p>
+              <p style="margin:0; font-size:12px; line-height:1.6; color:#bcbcc8;">{{postal_address}}</p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
