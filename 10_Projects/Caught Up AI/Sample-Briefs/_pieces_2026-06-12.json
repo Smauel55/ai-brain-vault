@@ -1,0 +1,197 @@
+[
+{
+  "base": "Caught Up AI Opener - 2026-06-12 - The Seam Between Day and Night (Long Look)",
+  "edition": "Beta edition - Friday, June 12, 2026",
+  "date": "Friday, June 12, 2026",
+  "headline": "The Seam Between Day and Night",
+  "headnote": "The following examines WASP-121 b, a planet so close to its star that one hemisphere faces permanent day and the other permanent night, and how astronomers have begun to read the differences along the boundary between them.",
+  "body": [
+    "Eight hundred and fifty-eight light-years from Earth, a planet called WASP-121 b circles its star about once every thirty hours. It orbits so close that the star fills its sky. The heat has locked it in place, [[1]]one face turned forever toward the fire, the other turned forever toward the dark[[/1]], so the planet has no sunrise and no sunset, only a permanent day on one side and a permanent night on the other.",
+    "Between those two hemispheres runs [[2]]a seam[[/2]], and a team of astronomers at the Max Planck Institute for Astronomy has now read it edge by edge. On the day side the air reaches about 2,500 degrees Celsius, hot enough to turn metal and rock to vapor; on the night side it falls to around 700, still glowing but darker, a difference of more than 1,700 degrees across a single world. The boundary, the line astronomers call the terminator, is not one line here but two: a morning edge, where the dark turns toward light, and an evening edge, where the light fails into dark.",
+    "Reading a seam on a world that far away takes patience and a trick of geometry. As the planet crosses the face of its star, from Earth a small, regular eclipse, it turns by about thirty degrees, so the starlight that filters through its air passes through one longitude after another in sequence. That light carries a record of what it passed through. Split into its colors, it shows which gases lie along each edge and how hot they are. The two edges do not match.",
+    "The evening edge swallows more starlight than the morning edge. [[3]]The reason is wind.[[/3]] Superheated gas pours off the day side on a steady eastward current and piles into the evening air; the air swells with the heat, widens, and blocks more light. The evening edge is also drier. There the temperature runs high enough to tear water molecules apart into the atoms that make them, hydrogen and oxygen, so less water survives to be seen. In its place the trace of carbon monoxide grows stronger toward the evening, a tougher molecule that holds together where water cannot.",
+    "What the measurements do not fully explain is how large the difference is. The models of these atmospheres predict a gentler imbalance than the telescope found, which means something in the evening air, some haze or cloud the equations do not yet carry, is still unaccounted for. The planet was found in 2015, the first beyond our own system shown to hold water and to wrap itself in a warm upper layer. A decade later it is read longitude by longitude: [[4]]its locked face, its eastward wind, its swelling evening edge, its vanishing water and its surviving carbon monoxide[[/4]], a single circling object that turns out to be made of differences, and not yet wholly known."
+  ],
+  "devices": [
+    {"para": 1, "device": "Antithesis",
+     "purpose": "Sets the planet's permanent dayside against its permanent nightside in a single balanced clause, fixing the one opposition the whole piece explores: a world split into two unmoving halves."},
+    {"para": 2, "device": "Metaphor",
+     "purpose": "Calling the day-night boundary a seam turns an abstract line of physics into something a reader can picture being opened and read, and quietly frames the planet as a thing stitched from two unlike sides."},
+    {"para": 4, "device": "Telegraphic sentence",
+     "purpose": "After a long sentence about which edge absorbs more light, three blunt words deliver the cause and let the explanation that follows expand against them. The brevity is the emphasis."},
+    {"para": 5, "device": "Parallelism",
+     "purpose": "The repeated 'its' phrases pile the planet's features into one accumulating list whose growing length enacts the complexity it names, closing on the object itself rather than on any moral drawn from it."}
+  ],
+  "mcq": [
+    {"stem": "The relationship between the third paragraph and the fourth paragraph is best described as one in which the writer first",
+     "options": [
+       "explains the method used to read the planet's atmosphere, then gives the physical cause of the difference that method revealed",
+       "describes the planet's discovery, then predicts what future telescopes will find",
+       "raises a doubt about the measurements, then resolves it with new evidence",
+       "compares the planet to Jupiter, then explains why the comparison breaks down"
+     ],
+     "answer": "A",
+     "rationale": "The third paragraph lays out how starlight read during the planet's transit reveals each edge of its atmosphere, and the fourth paragraph supplies the cause, an eastward wind that swells and dries the evening edge; the keyed pairing tracks that move from method to mechanism. The discovery-and-prediction option fails because the discovery is mentioned only in the fifth paragraph and no forecast about future telescopes appears, a true detail tied to the wrong span. The doubt-and-resolution option imports a skepticism the passage raises only at the end, and about the models rather than the measurements. The Jupiter option names a comparison the passage never makes."},
+    {"stem": "In the final paragraph, the phrase 'not yet wholly known' primarily serves to",
+     "options": [
+       "concede that the planet's atmosphere resists complete explanation even after close study",
+       "warn that the telescope's measurements are probably mistaken",
+       "imply that astronomers have lost interest in the planet",
+       "claim that the planet can never be studied any further"
+     ],
+     "answer": "A",
+     "rationale": "The phrase caps a paragraph that admits the models predict a smaller imbalance than was observed, so the keyed option matches the writer's candid, measured tone about the limits of present knowledge. The mistaken-measurements option inverts the point: the passage faults the models, not the data. The lost-interest option imports an attitude the text never states, since the planet is described as freshly and closely read. The never-again option overreaches into an absolute the passage contradicts by showing the work is ongoing."}
+  ],
+  "discussion": [
+    "The writer accumulates physical detail about the planet but never says why the discovery matters or draws a lesson from it. What does the piece gain, and what might it give up, by withholding any judgment of significance?",
+    "Several times the writer states plainly what is not known, ending on a planet that is 'not yet wholly known.' How does admitting the limits of the account affect your trust in the writer?"
+  ],
+  "sample_responses": [
+    "By refusing to tell the reader the discovery is important, the writer lets the facts carry their own weight: the temperature gap, the wind, the dissolving water are allowed to be striking on their own rather than because a sentence insists they are. The gain is trust, since nothing is being oversold and the reader feels shown rather than told. What it gives up is direction. A reader who wants to know why an alien atmosphere should matter to them is left to supply that, because the piece stops at accurate description and declines the moral.",
+    "The repeated admissions, that the models predict less than was seen, that some cloud is unaccounted for, that the planet is not yet wholly known, make the writer more believable, not less. A voice that claimed to understand everything would invite suspicion; one that marks the edge of its own knowledge sounds like it is reporting honestly. The candor also mirrors how science actually works, as a record still open, so the unanswered questions read as part of the subject rather than as a failure of the account."
+  ],
+  "writing": {"type": "Q2 rhetorical analysis",
+    "text": "Read the passage carefully. Then write an essay that analyzes the rhetorical choices the writer makes to convey both the strangeness of WASP-121 b and the limits of what is currently known about it. Consider how the writer's accumulation of physical detail, contrast between short and long sentences, and admissions of uncertainty work together."},
+  "misconceptions": [
+    "That a tidally locked planet does not rotate. It rotates exactly once each orbit, which is why one face stays toward the star, and that slow turn is precisely what lets astronomers read different longitudes of its air during a single transit.",
+    "That 'a seam' means the planet has a literal stitched line. It is a metaphor for the terminator, the broad boundary region between the permanent dayside and nightside, not a visible crack.",
+    "That the writer's closing admission of uncertainty means the measurements are unreliable. The passage says the models predict a smaller difference than was observed, which points to incomplete theory, not faulty data."
+  ],
+  "ap_alignment": "This opener is built in the AP English Language source-passage mold. The Long Look register models Rhetorical Situation (Skill Category 1): an absorbed, impersonal observer; a curious general reader; and an exigence of illumination rather than dispute. The accumulation structure, building edge by edge to a final piled list, gives Reasoning and Organization (Skill Category 5) a clear line to trace, targeted by the first multiple-choice item. The short-against-long rhythm, the single controlling metaphor, and the candid admissions of uncertainty give Style (Skill Category 7) concrete material, targeted by the second item. The two questions test different reading skills. The free-response prompt is a Q2 rhetorical analysis, the fitting choice because the passage renders a phenomenon rather than arguing a contestable position; no Q3 argument is stapled on, since the piece advances no debatable claim to defend, challenge, or qualify.",
+  "register": "The Long Look",
+  "template": "Accumulation under a Repeated Frame",
+  "opener_type": "Flat-fact / finding-first",
+  "close_type": "Culminating accumulation (close on the complexity itself)"
+},
+{
+  "base": "Caught Up AI Opener - 2026-06-12 - Stored, Not Kept (Long Think)",
+  "edition": "Beta edition - Friday, June 12, 2026",
+  "date": "Friday, June 12, 2026",
+  "headline": "Stored, Not Kept",
+  "headnote": "The following is a reflective essay occasioned by Apple's decision to begin removing apps that are not updated, improved, or used. The writer grants the appeal of a world where what we make can simply stay, then asks whether staying is the same as being kept.",
+  "body": [
+    "For most of its life the App Store worked on a quiet promise: build something once, and it could stay. A developer who made a small flashlight app over a weekend in 2009 could publish it and walk away, and the thing would sit there, downloadable, for as long as the store existed. There is a real generosity in that. It lets the work outlast the worker's attention, the way a book, once printed, outlasts the afternoon it was written in. Apple opened the store in 2008 with five hundred apps; it now holds close to two million, and a great many of them are exactly these quiet survivors, made once and left alone.",
+    "[[1]]That permanence was a kind of equality.[[/1]] It meant a person of no particular standing could put a working thing into the world and have it stay in the world, on the same shelf as the work of large companies, judged by whether it was useful rather than by whether anyone kept tending it. The store took in millions of submissions a year and asked each app to clear the bar once. After that, the app was a tenant with a permanent lease.",
+    "This month, at its developer conference, Apple said it would change the bar. The rulebook every app must pass now warns that an app already published can be taken down, not for breaking a rule, but for sitting still: 'We may remove these apps from the App Store going forward if they are not updated, improved, or do not attract customers.' Wallpaper apps, plain timers, flashlight apps, the weekend survivors: these are the named examples. It is easy to read this as [[2]]a landlord finally clearing out the quiet tenants[[/2]]. But the change exposes something the old promise had let us forget. [[3]]A thing that is only stored is not the same as a thing that is kept.[[/3]]",
+    "To keep a thing, as opposed to storing it, is to keep working on it; the keeping is the work, not a state the work arrives at; [[4]]a garden is kept and a shed is stored; a language is kept and a fact is stored[[/4]]; the difference is never the object but whether anyone is still bent over it.",
+    "What the old store offered was the shed, and we mistook the shed for permanence, even for a kind of ownership, because the app stayed where we left it. But staying is not living. Most of the two million were never really being kept by anyone; they were being remembered by a database. The store is not a library, where finished things are supposed to rest. It was always closer to a garden, and a garden does not let you walk away.",
+    "None of this is really about software. The unease the announcement stirs is older than any store, and it has less to do with apps than with how much of what we call having made something is just having left it somewhere. We build, and then we hope the building counts as keeping, because keeping is harder and does not end. Maybe a place that pulls what no one tends is only admitting what was always true of made things, that they ask to be tended or they quietly stop being ours. Or maybe it is simply colder than the store that let everything stay. The comfortable years were the ones that never made us choose."
+  ],
+  "devices": [
+    {"para": 2, "device": "Concession",
+     "purpose": "The writer grants the opposing case its strongest form, that the old permanence genuinely served the powerless by letting a small maker's work persist beside a big company's. Conceding this much in good faith is what earns the later turn; the line states the granted value itself, not a claim that the grant is sincere."},
+    {"para": 3, "device": "Metaphor",
+     "purpose": "Casting the policy as a landlord clearing out quiet tenants gives the abstract change a concrete, slightly sympathetic picture, the easy reading the writer is about to complicate."},
+    {"para": 3, "device": "Shift / volta",
+     "purpose": "The turn of the whole essay sits in this claim, not in the 'But' that precedes it. Here the piece pivots from praising permanence to distinguishing it from something better: the difference between an app merely stored and a thing actually kept."},
+    {"para": 4, "device": "Antithesis",
+     "purpose": "Two balanced pairs set keeping against storing across different objects, making an abstract distinction concrete and testable; a garden and a language are tended, a shed and a fact are merely held."}
+  ],
+  "mcq": [
+    {"stem": "In the fifth paragraph, which best characterizes the writer's position on the App Store's longtime permanence?",
+     "options": [
+       "It offered the appearance of keeping a made thing while in fact only storing it",
+       "It was a plain mistake that the new policy rightly corrects",
+       "It proved that made things can survive without anyone tending them",
+       "It mattered only to large companies and not to independent makers"
+     ],
+     "answer": "A",
+     "rationale": "The fifth paragraph says the old store offered 'the shed,' that staying is not living, and that most apps were remembered by a database rather than kept, so the keyed option captures the writer's distinction between the look of keeping and the fact of storage. The plain-mistake option overstates the writer, who concedes the permanence had real value and never calls the policy simply right. The survival-without-tending option inverts the argument, which holds that staying is not the same as living. The large-companies option contradicts the second paragraph, which credits the old model for helping the maker of no particular standing."},
+    {"stem": "The writer devotes the first two paragraphs to praising the old 'build once and it stays' model primarily in order to",
+     "options": [
+       "make the later turn against mere storage read as fair rather than as reflexive complaint",
+       "argue that the company should reverse its new policy",
+       "show that the store had always treated developers unfairly",
+       "give readers step-by-step instructions for keeping an app available"
+     ],
+     "answer": "A",
+     "rationale": "Granting the old model's genuine generosity and equality up front means that when the writer later separates storing from keeping, the criticism cannot be dismissed as knee-jerk nostalgia, which is why the keyed option fits. The reverse-the-policy option imports a demand the essay never makes; it takes no side on whether the removal is correct. The always-unfair option inverts the first two paragraphs, which praise the model's fairness. The instructions option mistakes a reflective essay for a how-to and answers a purpose the text does not serve."}
+  ],
+  "discussion": [
+    "The writer spends two full paragraphs granting that the old model was genuinely good before turning against it. How does conceding the other side so completely change the way the later argument lands?",
+    "The essay turns on the difference between a thing that is 'stored' and a thing that is 'kept,' carried by the images of a shed and a garden. How does that distinction change what it means to say someone 'made something'?"
+  ],
+  "sample_responses": [
+    "The concession is doing strategic work. By agreeing in full that the old permanence was a real good, even a kind of equality that let small makers' work survive beside big companies', the writer removes the easy objection that the essay is merely nostalgic or anti-technology. Having been visibly fair to the other side, the later claim, that storing is not keeping, arrives as an earned distinction rather than a complaint. A piece that had opened with the criticism would have sounded reflexive; this one sounds like a mind that reached the turn honestly.",
+    "The distinction reframes making as an ongoing act rather than a finished one. To 'store' is to set a completed object down and walk away; to 'keep' is to stay bent over the thing, tending it, so the work never fully ends. Read that way, publishing an app, or finishing any made thing, is not the same as keeping it alive, and the permanence people prized was really just storage wearing the look of care. The shed and the garden make the idea concrete: one holds what is dead, the other demands a gardener."
+  ],
+  "writing": {"type": "Q3 argument",
+    "text": "The writer claims that 'a thing that is only stored is not the same as a thing that is kept.' Defend, challenge, or qualify the idea that to truly keep something a person has made requires continuing to tend it, rather than simply leaving it in place. Use your own knowledge, observation, or reading."},
+  "misconceptions": [
+    "That the essay is mainly an argument about Apple or app-store policy. The policy is the occasion, not the subject; the piece uses it to think about the difference between making something and maintaining it, and it takes no position on whether the removal is good.",
+    "That the long concession in the first two paragraphs is the writer's final view. It is ground granted on purpose, in good faith, so that the later turn reads as fair rather than as reflexive complaint.",
+    "That the shift in the argument is signaled by the word 'But.' The connective only flags that a turn is coming; the volta is the claim it introduces, that a thing only stored is not the same as a thing kept. Mark the claim, not the cue word."
+  ],
+  "ap_alignment": "This opener is built in the AP English Language source-passage mold. The Long Think register models Rhetorical Situation (Skill Category 1): a writer reasoning aloud to a thoughtful peer, with an exigence that is a durable human theme, the difference between making and maintaining, behind a current news item. The concession-then-rebuttal structure and the withheld distinction give Reasoning and Organization (Skill Category 5) a clear line to trace, targeted by the second multiple-choice item, while the writer's stated position is targeted by the first (Claims and Evidence, Skill Category 3). The two questions test different reading skills. The free-response prompt is a Q3 argument, the fitting choice because the passage advances a contestable claim, that storing and keeping differ, which a student can defend, challenge, or qualify; the same passage would also support a Q2 on the concession structure, and Q3 is chosen here to vary the task across the batch.",
+  "register": "The Long Think",
+  "template": "Concession-then-Rebuttal",
+  "opener_type": "Concede-first",
+  "close_type": "Inward turn"
+},
+{
+  "base": "Caught Up AI Opener - 2026-06-12 - The Voice That Carried (Tribute)",
+  "edition": "Beta edition - Friday, June 12, 2026",
+  "date": "Friday, June 12, 2026",
+  "headline": "The Voice That Carried",
+  "headnote": "The following is a tribute to the singer Peabo Bryson, who died on June 2, 2026, at the age of seventy-five, written to mark a career that carried a voice from a South Carolina farm to the title songs of two animated films.",
+  "body": [
+    "He learned to sing on a farm outside Greenville, on his grandfather's land in Mauldin, South Carolina, before anyone had a reason to listen. By fourteen he was on the road with a local revue, a boy carrying grown men's songs from one town to the next. Peabo Bryson, who died on June 2 at seventy-five, spent the next sixty years doing only that, carrying a song to people who needed it carried. And the voice that did the carrying never seemed to strain.",
+    "The songs people knew best were not all his own to begin with. He sang the title song to one animated film, and then to another, and for a generation of children the sound of a fairy tale became, without their ever learning his name, the sound of Peabo Bryson. [[1]]He sang 'Beauty and the Beast' with Celine Dion. He sang 'A Whole New World' with Regina Belle[[/1]], and it rose to the top of the pop chart in the winter of 1993. Each recording won a Grammy. Grown listeners had found him long before, through 'If Ever You're in My Arms Again' and a row of records before it. But it was the cartoons that [[2]]slipped his voice into childhoods that did not know they were keeping it[[/2]].",
+    "What set him apart was not range alone but restraint. He could have oversung any of it, and the era rewarded singers who did. Instead he trusted the melody and stayed out of its way, and the feeling arrived because he had not forced it. Twenty-one albums came and went across five decades. And he kept the same unhurried tone through all of them, the sound of a man who had decided long ago that a song does not need to shout to be believed.",
+    "Two years ago his hometown painted him onto a wall. In the fall of 2024, [[3]]Greenville unveiled a mural of him at a park near where he had started, and he came home to stand in front of it[[/3]]. It was [[4]]a small ceremony for a man who had filled large rooms[[/4]]. But it was the right size, somehow, for what the work had always been: a voice from one ordinary place, carried out to everywhere, and then welcomed back.",
+    "His family said his voice had been the soundtrack to some of life's most cherished moments. That is the kind of thing families say, and in this case it happens to be true; the songs are already loved by people who will never trace them back to a farm in Mauldin. He leaves a wife, two children, and grandchildren who will grow up inside the recordings. [[5]]The voice is not going anywhere.[[/5]] It is in the films, and it will keep singing those fairy tales to children who are not yet born, which is a strange and ordinary kind of staying, the only kind a song was ever going to manage."
+  ],
+  "devices": [
+    {"para": 2, "device": "Anaphora",
+     "purpose": "Beginning two successive sentences with 'He sang' lines up the two Disney duets as matched halves of one achievement and gives the passage a measured, almost ceremonial beat. The repetition sits at the head of each sentence, which is what makes it anaphora rather than parallelism."},
+    {"para": 2, "device": "Metaphor",
+     "purpose": "Saying his voice was slipped into childhoods that did not know they were keeping it turns an abstract idea, lasting influence, into a quiet physical image, and carries the tribute's claim that his reach was largest where it was least noticed."},
+    {"para": 4, "device": "Anecdote",
+     "purpose": "The small, true story of the hometown mural grounds the praise in one concrete scene rather than in adjectives, letting a single homecoming stand for a whole career's relationship to the place that made him."},
+    {"para": 4, "device": "Antithesis",
+     "purpose": "Setting a small ceremony against the large rooms he had filled is the tribute's governing contrast, the small against the large, and it honors his reach precisely by understating the occasion."},
+    {"para": 5, "device": "Telegraphic sentence",
+     "purpose": "Five flat words assert the permanence the whole piece has been building toward, and their bluntness, set against the long final sentence that follows, makes the claim land as fact rather than as sentiment."}
+  ],
+  "mcq": [
+    {"stem": "The writer's description of the mural unveiling as 'a small ceremony for a man who had filled large rooms' primarily serves to",
+     "options": [
+       "honor the singer's reach by contrasting the modest occasion with the scale of his audience",
+       "fault his hometown for failing to hold a grander event",
+       "suggest that his fame had faded by the end of his life",
+       "question whether the ceremony was worth his attention"
+     ],
+     "answer": "A",
+     "rationale": "The balanced contrast between the small ceremony and the large rooms praises Bryson's reach by understatement, which is why the keyed option fits; the next sentence confirms the modest scale was 'the right size.' The fault-the-hometown option misreads admiration as complaint, contradicting that confirmation. The faded-fame option inverts the passage, which presents the homecoming as fitting tribute, not decline. The not-worth-attention option imports a dismissiveness the warm, reverent passage never shows."},
+    {"stem": "The relationship between the first paragraph and the second paragraph is best described as one in which the writer first",
+     "options": [
+       "places the singer in his obscure beginnings, then traces how his voice reached a vast audience",
+       "states the cause of his death, then lists every award he received",
+       "praises his character, then concedes his weaknesses",
+       "describes his final concert, then explains why he stopped performing"
+     ],
+     "answer": "A",
+     "rationale": "The first paragraph sets Bryson on a Greenville farm and an unknown teenage revue, and the second carries his voice into the Disney songs a generation of children knew, so the keyed option tracks the movement from humble origin to mass reach. The cause-and-awards option misstates the text, which gives neither a cause of death nor a full award list. The concedes-weaknesses option describes a move this consecratory passage never makes; a tribute honors rather than rebuts. The final-concert option invents a retirement scene the passage does not contain."}
+  ],
+  "discussion": [
+    "Again and again the writer sets something small against something large: a farm boy and a generation's childhoods, a small ceremony and large rooms. How does that recurring contrast shape the way the piece honors Bryson?",
+    "The writer claims Bryson's gift was restraint, that 'a song does not need to shout to be believed.' Where does the writing itself practice that same restraint, and what does it gain by doing so?"
+  ],
+  "sample_responses": [
+    "The contrast lets the piece praise without inflating. Rather than calling Bryson great, the writer keeps pairing his ordinary origins with the enormous reach his voice finally had, so the reader measures the distance between the two and feels the size of the achievement directly. Honoring by contrast also fits the man the piece describes, someone who worked by understatement, so the form of the tribute matches its subject. The small-against-large pattern carries the central claim, that a voice from one modest place ended up everywhere, without ever having to announce it.",
+    "The writing withholds the big adjectives the occasion might invite. It does not call the voice legendary or the loss devastating; it states plain facts, a farm, a revue, two duets, a mural, and lets them accumulate. Even the family's grand line about a soundtrack to cherished moments is immediately cooled by the dry aside that this is 'the kind of thing families say.' By refusing to shout, the prose enacts the restraint it credits to Bryson, and the feeling lands harder because it was not forced, which is exactly the case the piece is making about his singing."
+  ],
+  "writing": {"type": "Q2 rhetorical analysis",
+    "text": "Read the passage carefully. Then write an essay that analyzes the rhetorical choices the writer makes to honor Peabo Bryson and to convey what made his voice and his manner distinctive. Consider how the writer's use of contrast, understatement, and concrete scenes from his life shapes the tribute."},
+  "misconceptions": [
+    "That Bryson wrote or starred in the Disney films. He sang the popular duet versions of their title songs, 'Beauty and the Beast' with Celine Dion and 'A Whole New World' with Regina Belle; the piece honors his voice, not authorship of the films or the songs.",
+    "That the repeated 'He sang' opening two sentences is parallelism. Because the repetition falls at the start of successive sentences, it is anaphora; reserve parallelism for repeated structure that does not begin the clause.",
+    "That a tribute must pile up superlatives to do its work. This one honors almost entirely by understatement and by setting small against large, so a reader scanning for big praise-words will miss where the actual honoring happens."
+  ],
+  "ap_alignment": "This opener is built in the AP English Language source-passage mold. The Tribute register models Rhetorical Situation (Skill Category 1): a consecratory voice that recedes behind its subject, a community of listeners marking a death, and an epideictic purpose, to honor rather than to argue. The understatement, the small-against-large antithesis, and the short button set against the long final cadence give Style (Skill Category 7) concrete material, targeted by the first multiple-choice item, while the narrative-into-claim development from origin to reach gives Reasoning and Organization (Skill Category 5) a line to trace, targeted by the second. The two questions test different reading skills. The free-response prompt is a Q2 rhetorical analysis, the fitting choice because the passage consecrates a life rather than advancing a contestable claim; a Q3 argument is not stapled on, since the tribute offers no debatable position to defend, challenge, or qualify.",
+  "register": "The Tribute",
+  "template": "Narrative-into-Claim",
+  "opener_type": "In-scene",
+  "close_type": "Placement-into-permanence / benediction"
+}
+]
