@@ -120,13 +120,35 @@ The whole email path works end to end. Built + DONE this session:
 3. Later: scheduling (scheduled Claude Code routine on the subscription, NOT the Batches
    API -- see [[Batch-API-Readiness]]); payments (Stripe; native Base44 connector available).
 
-## STILL-OPEN runtime risk (only the pipeline test clears it)
+## RESOLVED 2026-06-12 (eve): pipeline check passed + magic-link bug fixed
 
-- **Public file URL** -- `Core.UploadFile`'s `file_url` must open with NO login (teachers
-  click from email). The delivered test used placeholder caughtupai.com links, so this is
-  UNPROVEN. If uploaded URLs need auth, switch PDF hosting to R2/S3.
-- (Admin-auth via api_key is partly de-risked: the in-editor Test Function passed the
-  admin guard. Confirm the pipeline's api_key call also passes when wiring task 1.)
+Ran the pipeline check end to end and delivered the first REAL-content email to Samuel with
+working links. See [[2026-06-12 - Pipeline check, magic-link bug fixed, first real email]].
+
+- **Public file URL -- PROVEN.** Uploaded the real Tribute PDFs via `Core.UploadFile`; both URLs
+  return 200 / `application/pdf` from `media.base44.com/files/public/...` with no auth. No R2/S3
+  needed.
+- **api_key path (skips createEdition).** The app `api_key` authenticates as the app OWNER and can
+  call `Core.UploadFile` + `entities.Edition.create/list/filter` directly (owner bypasses the
+  locked `create:false`). So the local pipeline can upload PDFs + create the Edition over REST and
+  skip the admin-gated `createEdition`. CAVEAT: `Edition.delete`/`.update` via api_key return 404
+  (rls delete/update:false is NOT bypassed by the owner REST client; only asServiceRole inside a
+  function bypasses writes).
+- **Admin gate is real.** `createEdition` AND `sendTodaysEdition` 500 over REST
+  ("Authentication required to view users") because the api_key is not a user identity. Sends run
+  via the editor Test Function (admin), or need a pipeline-secret guard added to the function.
+- **BUG FOUND + FIXED (preview).** `sendTodaysEdition` built manage/unsubscribe links with
+  `?token=`, but the live `/manage` page only reads `?t=` -> every teacher's manage + unsubscribe
+  link was dead. Fixed in PREVIEW (not published): `?t=`, test-mode personalization by test_email,
+  optional `edition_id` + latest-wins on date collision. Test send Delivered; all 4 links verified.
+- Created: Edition `6a2c843b` (real public URLs) + Samuel's Teacher record `6a2c864b`.
+
+### Remaining before production
+1. **Publish** the `?t=` fix (also pushes the staged audience/Course `/manage` changes). Test sends
+   to Samuel already work off draft.
+2. **Delete the dummy "Measles" Edition** `6a2c6feb` (couldn't via the frozen Data grid or REST;
+   neutralized by latest-wins selection).
+3. **Delete the fake test Teachers** before any real broadcast (2 are "due" on Fridays).
 
 **Safety gate:** the FIRST real broadcast to the teacher list still requires explicit go.
 Test/live sends to Samuel's own inbox are fine.
