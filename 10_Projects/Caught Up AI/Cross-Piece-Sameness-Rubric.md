@@ -119,6 +119,21 @@ Each flag below gives you: what the sameness looks like, the eyeball-or-tally si
 - Threshold: treat as a soft flag; rework if 4 or more pieces attribute facts in the same cadence.
 - Remediation: vary fact placement and attribution (lead with the fact in one, bury it in another, attribute inline in one and at sentence-end in another).
 
+### Bonus check: subject-first opener density (v2.1, the #1 Run-2 band miss)
+
+- What it is: across [[Proxy-Pilot-Run-2]], nearly every piece opened most of its sentences on the grammatical subject ("The agency said", "It found", "I felt"), far above each register's band. This is invisible in a single-piece read but glaring across a batch: the whole set "breathes" subject-verb-object. It is the deepest sentence-level tell the proxy named, distinct from the paragraph-opener tic in flag 6.
+- Signal (Subject-First Scan): in each piece, read just the first two or three words of every sentence. Estimate at a glance the share that start on the grammatical subject. You are not counting precisely, you are checking whether the piece is dominated by subject-first openers.
+- Threshold: each piece must sit inside ITS register's subject-first ceiling (the ceilings differ; see [[Register-Specs]] opener bands). As a rough guide: The Witness Stand wants under about 50%; The Open Letter, Long Think, Reckoning, and Tribute under about 60 to 65%; The Ledger and Long Look up to about 60 to 70%. Rework any piece that visibly runs above its ceiling, and rework the BATCH if four or more pieces are subject-first dominated even where each is borderline.
+- You have drifted if: reading only sentence-openings, the batch sounds like one writer who always starts on the subject.
+- Remediation: apply the per-register opener fixes from [[Register-Specs]] (dates and rule-clauses for the Ledger; the present-tense pivot for the Reckoning; the And/Yet/But/So coordinator for the Tribute; If/When/Yet subordinators for the Long Think; conversational So/And/But for the Witness Stand; the But/And/Not-only snap for the Long Look). Convert four to six subject-first openers per offending piece to non-subject openers, then re-scan.
+
+### Bonus check: friction uniformity (v2.1)
+
+- What it is: the friction layer ([[Anti-Tell-List]]) puts deliberate roughness back into each piece (an inert detail, an awkward turn, a flat or trailing close). If every piece in the batch carries the SAME roughness in the SAME place, the friction has become its own template, which is a fresh batch-level tell.
+- Signal: note, per piece, what the one rough edge is and where it falls. If all the pieces leave their thread hanging at the close, or all carry their off-thesis detail in paragraph two, the friction has converged.
+- Threshold: rework if four or more pieces show the same kind of friction in the same position.
+- Remediation: redistribute. Let one piece lean its argument, one trail its close, one leave a mid-body thread, one carry an inert specific. Vary the kind and the position.
+
 ---
 
 ## Two read tests (do these after the tallies)
@@ -212,6 +227,14 @@ Each flag below gives you: what the sameness looks like, the eyeball-or-tally si
 - 4+ of 7 feel like the same writer? Y / N   ->   if Y, flag 10 tripped (regenerate with register specs).
 
 **Pass 11, Batch Read-Aloud.** Read all pieces aloud in one sitting. Deja vu by piece 3? Y / N   ->   if Y, hunt flags 4 and 10.
+
+**Pass 12, Subject-First Scan** (v2.1). Read only the first two or three words of every sentence in each piece. Mark each piece inside its register's subject-first ceiling? Y / N.
+
+| P1 | P2 | P3 | P4 | P5 | P6 | P7 |
+|----|----|----|----|----|----|----|
+|    |    |    |    |    |    |    |
+
+- Any piece over its ceiling, or 4+ pieces subject-first dominated? Y / N   ->   if Y, opener-density check tripped (apply per-register opener fixes, re-scan).
 
 **Tripped categories total:** ____
 - 1 tripped: rework the named pieces, re-check.

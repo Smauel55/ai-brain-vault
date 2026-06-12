@@ -55,21 +55,26 @@ Voice instruction:
 - Keep device density low. Plainness is the ethos. Pathos lives in a concrete number or a specific human-scale detail that you state and decline to comment on. If you reach for an emotive modifier, you have left the register.
 - Repeat the precise noun (the agency, the figure, the program) rather than cycling synonyms.
 
+READABILITY REVISION (2026-06-12). Samuel flagged the Ledger as wordy and hard to read, and it is the daily default, so the bands below are LOWERED for plainness: shorter sentences, less subordination, a plainer lexicon, no long periodic closer. This overrides the Run-2 proxy, which wanted a longer anchor sentence; Samuel's human read outranks the saturated proxy (P5). Full rationale in the Ledger sheet of [[Register-Specs]].
+
 Bands (plain cues):
-- Sentences average 19 to 21 words. Drifted if the prose reads as dense as a government report (routinely past 25) or as thin as a news brief (routinely under 14).
-- At least one short declarative reset under 10 words. No sentence past about 44.
-- Medium burstiness, calmer than the hotter registers. Most sentences cluster 16 to 28 words with occasional dips to a short verdict line. Drifted if the rhythm swings long-then-two-words for drama.
-- Lean loose, not periodic: the workhorse sentence states its point early and trails qualifiers and attributions after it.
-- Subject-first about half the time; the rest open on a preposition ("In 2008", "According to officials") or a light adverbial ("Similarly", "Although", "Because"). Drifted if nearly every sentence opens on its grammatical subject.
+- Sentences average 16 to 18 words (lowered from 19 to 21). Drifted if the prose reads as dense as a government report (routinely past 24) or as thin as a news brief (routinely under 12).
+- At least one short declarative reset under 10 words. No sentence past about 34, and NO long periodic anchor sentence (the old 34 to 44 ceiling was the wordiness; the Ledger gives up its long showpiece).
+- Keep subordination shallow: most sentences carry no subordinate clause or one, never two stacked. The wordiness Samuel flagged is mostly stacked clauses.
+- Medium burstiness, calmer than the hotter registers. Most sentences cluster 12 to 22 words with dips to a short verdict line. Drifted if the rhythm swings long-then-two-words for drama.
+- Lean loose, not periodic: the workhorse sentence states its point early and trails one short qualifier or attribution after it.
+- Opener variety was the #1 Run-2 miss (the pieces ran 77% and 90% subject-first). Open about one sentence in three on something other than the subject: a date ("In March"), a clause of the rule ("Under the statute"), the affected party ("For owners"), or the source ("According to the filing"). Drifted if more than about two-thirds of sentences open on their grammatical subject.
+- Do not signpost the structure ("Read these together", "The first issue is..., the second is..."). Set the facts side by side and let the reader join them.
 - Parallelism is structural and occasional (a catalogue of attributed facts), not an anaphoric refrain.
-- Latinate-leaning and mid-formal, but the formality is in the precision, never in ornament. Prefer the plain Anglo-Saxon verb where one exists.
-- Readable in one pass: roughly college level, not government-report dense.
+- Plainer than before: prefer the plain Anglo-Saxon verb and noun wherever one carries the meaning (use over utilize, pay over remit, start over commence). Formality lives in precision, never ornament.
+- Carry one sourced particular that does not advance the argument, a fact that is just true; the Ledger absorbs an inert detail more easily than any other register.
+- Readable fast and in one pass: roughly grade 10 to 12, not government-report dense.
 
 Templates this register sits on: Finding-First / Claim-First Build (10, the home template), Concession-then-Rebuttal (1), Dialectic (7), Accumulation under a Repeated Frame (3), Statistic-to-Scene Pivot (11). See [[Structural-Templates]].
 
 Open repertoire: name the situation or finding flatly with a key actor and often a figure or date already in sentence one; or open with the contested question stated neutrally; or lead with a quantified fact that sets scale; or establish the stakes institutionally.
 
-Close repertoire: state the implication the evidence supports, level and unembellished; or leave the matter in its current status; or land a quiet qualified verdict phrased as conclusion, not exhortation. No call to action, no uplift, no image. If the last line feels like a mic-drop, rewrite it as a status report.
+Close repertoire: state the implication the evidence supports, level and unembellished; or leave the matter in its current status; or land a quiet qualified verdict phrased as conclusion, not exhortation. No call to action, no uplift, no image. If the last line feels like a mic-drop, rewrite it as a status report. Keep the closer SHORT and plain (2026-06-12): end on one plain status sentence, not a long sentence that re-marshals the case.
 
 Hard bans for this register: no em-dashes, no emojis, no rhetorical questions, no flourish close, no emotive modifiers standing in for a fact, no significance-inflation ("underscores the importance of", "marks a turning point"), no copula-avoidance ("serves as" where "is" is honest). The full per-piece list is [[Anti-Tell-List]].
 
@@ -427,6 +432,7 @@ The fast mechanical pass. Run it every time, before any judgment call about qual
 7. Check every factual claim names a real checkable source. Unattributed claim: cut it. This is both the AI-tell gate and the accuracy gate.
 8. Check the close: it lands on a turn, button, or concrete stake, not a recap or a forward-looking homily.
 9. Check the banned constructions: no "not just X but Y", no "it's not about X, it's about Y", no autopilot tricolon, no strained aphoristic wrap-up.
+10. Friction gate (v2.1, per the Friction Layer at the top of [[Anti-Tell-List]] and the per-register friction cues in [[Register-Specs]]). Confirm: subject-first openers sit inside this register's ceiling (the #1 Run-2 miss); the piece does not narrate its own structure or use labeled enumeration ("Read these together", "first... second..."); not every paragraph ends on a tidy button and there is no negation-correction kicker except where the register earns one; at least one inert, off-thesis, or un-tidy detail is present; invented specifics are messy (no round numbers, no placeholder-sounding proper names); and the close does not ring the opening shut. A piece that is perfectly smooth and symmetric but passes everything else still reads as machine; treat a fully frictionless sweep as a warning, not a pass.
 A piece that fails steps 1, 4, or 7 does not get a quality read. It goes back first.
 
 ### Gate 4: Batch-sameness check (per [[Cross-Piece-Sameness-Rubric]])
