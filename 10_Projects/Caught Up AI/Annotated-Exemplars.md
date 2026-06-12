@@ -36,15 +36,15 @@ project: "[[Caught Up AI]]"
 
 In four states this spring, a little over five thousand drivers began paying for the roads by the mile instead of the gallon. They report their mileage with a plug-in device or a once-a-year odometer photo. In exchange they skip the federal gas tax at the pump. The fee runs about a penny and a half per mile. For most of them it comes out close to a wash, give or take a few dollars a month.
 
-The reason is not hard to find. The federal gas tax has sat at 18.4 cents a gallon since 1993, while the cost of building a road has roughly doubled. The fund it feeds, the one that pays for interstates and big bridges, has needed repeated bailouts from general taxes to stay solvent. Electric cars use the roads and buy no gas, and they were about one new car in nine sold last year. A tax on gallons brings in less as the cars sip less.
+The reason is not hard to find. Since 1993, the federal gas tax has held at 18.4 cents a gallon, while the cost of building a road has roughly doubled. The fund it feeds, the one that pays for interstates and big bridges, has needed repeated bailouts from general taxes to stay solvent. Electric cars use the roads and buy no gas, and they were about one new car in nine sold last year. A tax on gallons brings in less as the cars sip less.
 
 So a few states are testing a charge on distance instead. The open question is whether it can be collected cheaply, and without tracking where people drive. On cost, the early figures are not flattering. The pilots spend close to a dime to bring in a dollar, against well under a penny for the gas tax. Officials say most of that gap is the price of running something small and new.
 
-Privacy is the harder problem, and it deserves its strongest form. A device that counts miles can, if it also notes location, record everywhere a car goes. Drivers in the pilots can pick a version that logs no location at all, and state law tells the contractor to delete location data after a few weeks. Whether those rules would survive the jump from a few thousand volunteers to every driver in the country is the one thing a pilot cannot tell you.
+Privacy is the harder problem, and it deserves its strongest form. A device that counts miles can, if it also notes location, record everywhere a car goes. Under the pilots, drivers can pick a version that logs no location at all, and state law tells the contractor to delete location data after a few weeks. Whether those rules would survive the jump from a few thousand volunteers to every driver in the country is the one thing a pilot cannot tell you.
 
 Rural drivers were supposed to be the losers here, since they cover more miles. For many of them the interim report found the reverse. They drove more, but in older trucks that guzzle, so under the gas tax they were already paying more than a per-mile fee would charge. The plug-in device, for what it is worth, is about the size of a garage remote.
 
-For now it stays a pilot. Congress has funded the studies through 2027 and has not voted to make the fee real or national. The gas tax keeps falling short. The trust fund keeps drawing on general money. Whether a per-mile charge is the fix it was built to be is still an open question on the evidence.
+For now it stays a pilot. Through 2027, Congress has funded the studies but has not voted to make the fee real or national. The gas tax keeps falling short. The trust fund keeps drawing on general money. Whether a per-mile charge is the fix it was built to be is still an open question on the evidence.
 
 *(about 415 words.)*
 
