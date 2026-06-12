@@ -64,5 +64,13 @@ Opener on <topic>", or add "...in the <register> register". Optional args: `topi
 - Beta discipline: eyeball the facts before any Opener reaches a real teacher, until
   it holds across a batch.
 
+## Cost and scaling
+
+At API rates the measured cost is ~$5.40 per Opener (Fable Verify + Compose +
+Fact-check, Haiku render), ~$160/month for a daily Opener. Cheaper paths (Batches API
+at 50% off, scheduled routine on subscription) are scoped in [[Batch-API-Readiness]];
+decided 2026-06-12 not to build the batch port yet (premature against a moving spec).
+
 Related: [[caughtupai-quickprompt-V1]], [[caughtupai-sampleprompt-V1]],
-[[Generation-Briefs]], [[Editorial-Standards]], [[Headnote-Spec]], [[Caught Up AI]].
+[[Generation-Briefs]], [[Editorial-Standards]], [[Headnote-Spec]],
+[[Batch-API-Readiness]], [[Caught Up AI]].
