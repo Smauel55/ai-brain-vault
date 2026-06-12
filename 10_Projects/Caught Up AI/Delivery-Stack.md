@@ -67,15 +67,38 @@ un-debuggable code surface small ([[feedback_no_code_path]]).
   rather than trusting the panel list. Nameservers are Porkbun's defaults
   (fortaleza/salvador/maceio/curitiba.ns.porkbun.com), so Porkbun is authoritative.
 
+## PROGRESS: Base44 build (2026-06-12, session 2)
+
+Architecture confirmed against the live app, foundation entity built.
+
+- **App ID** = `6a1f286b511ece79b6ef3942` (Caught Up AI in Samuel's Base44 workspace).
+- **Backend = Deno + `@base44/sdk`.** Service-role data access via
+  `base44.asServiceRole.entities.X.filter/create/update`; outbound `fetch` to Resend is
+  native to Deno (confirms the send function can call Resend directly).
+- **Pipeline -> Base44 seam = REST API.** App exposes `POST /entities/{Entity}` and
+  `POST /functions/{fn}`, authenticated by an app `api_key`. So the local generation
+  pipeline can push an edition in by calling a backend function (no manual upload).
+- **File hosting = Base44 `Core.UploadFile`** -> PUBLIC URLs that open without login
+  (teachers click straight from email). Resolves NEXT-item 1; no R2/S3 needed.
+- **`Edition` entity built + verified (11 fields).** `edition_date*` (req), `headline`,
+  `register`, `preview`, `subject`, `student_pdf_url`, `teacher_pdf_url_ap`,
+  `teacher_pdf_url_general` (string); `status` (draft|sent); `sent_at` (date-time);
+  `recipient_count` (number). Permissions locked to **service-role + admin only**.
+- **`createEdition` function = IN PROGRESS** (admin-only; build prompt sent to Base44 at
+  session end, not yet verified). Spec: POST JSON `edition_date` (req, YYYY-MM-DD),
+  `headline`, `register`, `preview`, `subject`, `student_pdf_base64` (req),
+  `teacher_pdf_ap_base64` (req), `teacher_pdf_general_base64` (optional). Decodes each
+  base64 -> PDF, uploads via `Core.UploadFile`, names them
+  `edition-<date>-student.pdf` / `-teacher-ap.pdf` / `-teacher-general.pdf`, then creates
+  one Edition record with the resulting URLs and `status=draft`.
+
 ## NEXT (next session starts here)
 
-1. **Host the PDFs.** Confirm whether Base44 can store files with public URLs; if not, use
-   Cloudflare R2 / S3. Verify Base44 can also (a) run a scheduled function and (b) make
-   outbound calls to Resend (the latter near-certain, since service-role functions already
-   call the entity API).
+1. **Verify `createEdition`** landed correctly in Base44, then test it end to end (push a
+   real generated edition from the local pipeline via the REST API + app `api_key`).
 2. **Build the send function** in Base44 (`sendTodaysEdition`, service-role): take the
    edition, run the "who is due today" query, loop due teachers, call Resend per teacher.
-3. **Edition record + recipient query** (weekday + throttle + active + not-unsubscribed).
+3. **Recipient query** (weekday + throttle + active + not-unsubscribed).
 4. **Email template** (logo, one-line preview, two buttons, manage + one-click unsubscribe).
 5. Later segments: scheduling (the launch path is a scheduled Claude Code routine on the
    subscription, NOT the Batches API -- see [[Batch-API-Readiness]]), and payments (Stripe).
