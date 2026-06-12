@@ -16,6 +16,7 @@
 
 ## Caught Up AI
 - [Caught Up AI — project state](project_caught_up_ai.md) — READ FIRST for any Caught Up AI session: current state, durable decisions, detail map (updated 2026-06-12)
+- [August 2026 launch reminders](project_august_launch_reminders.md) — when launch work starts: swap home address for a virtual mailbox; revisit payments/entity/pricing
 - [Opener renderer + prompts](reference_opener_renderer.md) — render_opener_v2.py is the PDF source of truth; batch + quick generation prompts; logo path
 - [Product naming](reference_product_naming.md) — the daily PDF is an "Opener" (never a "brief"); teacher copy / student copy; each day = an edition
 - [MCQ construction spec](reference_mcq_spec.md) — 2 AP-grounded reading MCQs per Opener, named distractor traps, keys randomized at render

@@ -125,6 +125,28 @@ Samuel's inbox alone, on explicit go. Never the teacher list during testing.
 Base44 chat gotcha: input sends on Enter and treats newlines as separate messages. Send
 multi-field specs as ONE single-line message (semicolons), or it fragments into a queue.
 
+## Email + sender details (2026-06-12)
+
+- **Template v1 built** at `10_Projects/Caught Up AI/email-template-v1.html` (table-based,
+  inline styles, links not attachments, one-click unsubscribe, no em-dashes). Personalized
+  sign-off: "Have a great class, {{teacher_first_name}}" (derive first name from full_name).
+  Subject line: "Today's Opener: {{headline}}". Buttons: Open teacher copy / Open student
+  copy. Helper line explains teacher vs student copy.
+- **From address** (to wire in send fn): something like `Caught Up AI
+  <opener@send.caughtupai.com>` on the verified sending subdomain.
+- **Footer postal address (CAN-SPAM):** interim = Samuel's HOME address (provided
+  2026-06-12, Greenville SC 29615). Set the literal value directly in the Base44 send
+  function, NOT in committed vault files. Samuel accepted that the home address is visible
+  to all recipients in the meantime.
+
+### >>> AUGUST LAUNCH REMINDER <<<
+
+When real-business launch work begins (targeted **August 2026**), set up a **virtual
+mailbox** (real street address, mail managed online, ~$10-20/mo) and swap it into the email
+footer in place of Samuel's home address. Samuel explicitly asked to be reminded of this at
+launch. Also revisit: business entity, the Stripe/payments segment, and any "real business
+address" needs (invoicing schools).
+
 ### Open wrinkle to carry forward
 
 The `audience` flag (AP Lang vs General English) changes the TEACHER copy's labels, so a
