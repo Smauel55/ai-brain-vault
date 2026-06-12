@@ -78,30 +78,52 @@ Architecture confirmed against the live app, foundation entity built.
 - **Pipeline -> Base44 seam = REST API.** App exposes `POST /entities/{Entity}` and
   `POST /functions/{fn}`, authenticated by an app `api_key`. So the local generation
   pipeline can push an edition in by calling a backend function (no manual upload).
-- **File hosting = Base44 `Core.UploadFile`** -> PUBLIC URLs that open without login
-  (teachers click straight from email). Resolves NEXT-item 1; no R2/S3 needed.
+- **File hosting = Base44 `Core.UploadFile`** -> returns a `file_url`. INTENDED to be a
+  public URL that opens without login (teachers click straight from email), and Base44
+  reports it uploads to "public storage" -- but this is NOT yet proven at runtime. Treat
+  as a RISK until a real uploaded URL is confirmed to open with no auth; R2/S3 is the
+  fallback if it requires login.
 - **`Edition` entity built + verified (11 fields).** `edition_date*` (req), `headline`,
   `register`, `preview`, `subject`, `student_pdf_url`, `teacher_pdf_url_ap`,
   `teacher_pdf_url_general` (string); `status` (draft|sent); `sent_at` (date-time);
   `recipient_count` (number). Permissions locked to **service-role + admin only**.
-- **`createEdition` function = IN PROGRESS** (admin-only; build prompt sent to Base44 at
-  session end, not yet verified). Spec: POST JSON `edition_date` (req, YYYY-MM-DD),
+- **`createEdition` function = BUILT + code-reviewed (correct); runtime test PENDING.**
+  Admin-only (auth.me, `role==='admin'`). POST JSON: `edition_date` (req, YYYY-MM-DD),
   `headline`, `register`, `preview`, `subject`, `student_pdf_base64` (req),
   `teacher_pdf_ap_base64` (req), `teacher_pdf_general_base64` (optional). Decodes each
-  base64 -> PDF, uploads via `Core.UploadFile`, names them
-  `edition-<date>-student.pdf` / `-teacher-ap.pdf` / `-teacher-general.pdf`, then creates
-  one Edition record with the resulting URLs and `status=draft`.
+  base64 -> PDF file, uploads via `Core.UploadFile`, names them
+  `edition-<date>-student.pdf` / `-teacher-ap.pdf` / `-teacher-general.pdf`, creates one
+  Edition record with the resulting URLs + `status='draft'`, returns `{ok, edition}`.
+  Reviewed the full source in the Base44 code editor; logic is complete and correct.
+
+## TWO RUNTIME RISKS to clear with one live `createEdition` call (not by reading)
+
+1. **Public file URL** -- `Core.UploadFile`'s `file_url` must open with NO login. If it
+   needs auth, switch PDF hosting to R2/S3. This is the core "host the PDFs" bet.
+2. **Admin-auth via api_key** -- the pipeline's `api_key` call must pass the
+   `role==='admin'` guard, else 403. Both answered the moment the pipeline fires a real call.
 
 ## NEXT (next session starts here)
 
-1. **Verify `createEdition`** landed correctly in Base44, then test it end to end (push a
-   real generated edition from the local pipeline via the REST API + app `api_key`).
-2. **Build the send function** in Base44 (`sendTodaysEdition`, service-role): take the
-   edition, run the "who is due today" query, loop due teachers, call Resend per teacher.
-3. **Recipient query** (weekday + throttle + active + not-unsubscribed).
-4. **Email template** (logo, one-line preview, two buttons, manage + one-click unsubscribe).
-5. Later segments: scheduling (the launch path is a scheduled Claude Code routine on the
-   subscription, NOT the Batches API -- see [[Batch-API-Readiness]]), and payments (Stripe).
+1. **Wire the pipeline** (`.claude/workflows/caughtup-opener.mjs`): after render, POST
+   metadata + the rendered PDFs (base64) to `createEdition`. App `api_key` from a LOCAL env
+   var, never committed. Then one live call to clear the two risks above.
+2. **Build `sendTodaysEdition`** (service-role): take an edition, run "who is due today"
+   (weekday in `delivery_days` AND `status` in trial/active), send each via Resend with the
+   teacher-copy link matching their `audience`. Dry-run first.
+3. **Email template** (logo, one-line preview, two buttons, manage + one-click unsubscribe).
+   Samuel approves copy (his voice) before any send.
+4. **Samuel actions for the send path:** create a Resend API key + add to Base44 Secrets as
+   `RESEND_API_KEY` himself (Claude never enters keys); **Publish** the app so the new
+   entity + function go live at the REST endpoint.
+5. Later: scheduling (scheduled Claude Code routine on the subscription, NOT the Batches API
+   -- see [[Batch-API-Readiness]]); payments (Stripe; native Base44 connector available).
+
+**Safety gate:** the send path is built + dry-run only; the FIRST real email goes to
+Samuel's inbox alone, on explicit go. Never the teacher list during testing.
+
+Base44 chat gotcha: input sends on Enter and treats newlines as separate messages. Send
+multi-field specs as ONE single-line message (semicolons), or it fragments into a queue.
 
 ### Open wrinkle to carry forward
 
