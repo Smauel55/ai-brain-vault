@@ -41,11 +41,12 @@ Composition teacher would receive in their inbox at 6am.
 BEFORE WRITING ANYTHING, load the engine. Read these files in
 "10_Projects/Caught Up AI/" and treat them as binding:
 - Generation-Briefs.md  (the per-register drafting briefs, the rotation/orchestration
-  logic, and the 4-gate pre-flight checklist)
+  logic, and the five-gate pre-flight checklist, Gate 0 through Gate 4)
 - Style-Palette.md  (register routing: which voice fits which story)
 - Register-Specs.md  (the measurable per-register bands)
 - Structural-Templates.md  (the 12 skeletons + rotation grid)
-- Anti-Tell-List.md  (the per-piece banned-construction gate)
+- Anti-Tell-List.md  (the per-piece banned-construction gate; read its Friction Layer
+  v2.1 section FIRST, it is the highest-order rule and binds every piece)
 - Cross-Piece-Sameness-Rubric.md  (the batch audit + Variety Matrix)
 - Accuracy-Guardrail.md  (fact-sourcing + the expression firewall)
 - Editorial-Standards.md  (the neutrality firewall + plain-knowledge accessibility, Gate 0)
@@ -105,8 +106,11 @@ Cross-Piece-Sameness-Rubric.md):
 
 GATES (run all five from the Generation-Briefs.md pre-flight before any piece is final):
 Gate 0 editorial fit (neutrality firewall + plain-knowledge accessibility), Gate 1 accuracy
-+ expression firewall, Gate 2 register-band check, Gate 3 anti-tell scan, Gate 4
-batch-sameness across the whole set. A piece that fails a gate goes back before it ships.
++ expression firewall, Gate 2 register-band check, Gate 3 anti-tell scan including the v2.1
+friction gate (opener variety inside the register's subject-first ceiling, no signposting,
+no tidy buttoning everywhere, un-tidy specifics, one rough edge left in), Gate 4
+batch-sameness across the whole set, including the subject-first scan and the
+friction-uniformity check (vary where the friction lands piece to piece). A piece that fails a gate goes back before it ships.
 Do not show me the gate work; just do not ship a piece that fails.
 
 OUTPUT: present each piece as the full inbox lesson-opener package, in this order:
