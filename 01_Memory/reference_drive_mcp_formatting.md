@@ -7,7 +7,7 @@ metadata:
   originSessionId: aeced60e-3f8b-4c7d-9854-cbf61fe8df5a
 ---
 
-How to deliver a FORMATTED document to Samuel's Google Drive via the Google Drive MCP (`create_file`), learned 2026-06-06 building Caught Up AI opener test docs.
+How to deliver a FORMATTED document to Samuel's Google Drive via the Google Drive MCP (`create_file`), learned 2026-06-06 building Caught Up AI opener test docs. (The Drive MCP itself has been connected and working since 2026-05-08: list/search/read/create/copy/download/metadata/permissions — no delete.)
 
 - `create_file` only auto-converts `text/plain` -> native Google Doc (and `text/csv` -> Sheet). A native Doc made this way is PLAIN: no background-color highlight, no rich formatting.
 - HTML does NOT auto-convert: uploading `contentMimeType: text/html` (even with the deprecated `mimeType` target set) stays an `.html` file. But an `.html` file in Drive opens in Google Docs ("Open with Google Docs" / File > Save as Google Docs) with formatting preserved, including `<span style="background-color:#FFF3A0">` -> yellow highlight. This is the way to get highlight into Google Docs through this connector.
