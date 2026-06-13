@@ -192,14 +192,31 @@ def randomize_answers(piece, rng=random):
         rng.shuffle(item["options"])
         item["answer"] = chr(65 + item["options"].index(correct))
 
-def sec(title, blocks):
-    """A section header with a thin rule. The header style sets keepWithNext and the
-    rule is flagged the same way, so the header is never left at the bottom of a page
-    without content under it, while a long first block is NOT forced whole (no big gaps)."""
+def sec(title, blocks, keep_whole=True):
+    """A section header with a thin rule, kept together with its body. By default the
+    whole section (header + rule + every block) is wrapped in one KeepTogether, so if it
+    will not fit in the space left on the current page it starts on the next page instead
+    of being cut off by the break. A section taller than a full page is allowed to split
+    (KeepTogether falls back), so this never blanks a page chasing the impossible.
+    Pass keep_whole=False for the article, which is meant to flow paragraph by paragraph
+    across pages and is normally too tall to keep whole.
+
+    The blocks come in pre-wrapped as KeepTogether (one per MCQ item, device, etc.) so
+    each stays atomic. A KeepTogether reports a sentinel height (0xffffff) from wrap(),
+    so nesting them inside the section-wide KeepTogether would make the section measure
+    as astronomically tall and force EVERY section onto its own page. So when keeping the
+    section whole we unwrap those inner blocks first: the outer KeepTogether then measures
+    a real height (each item is still kept whole by the outer wrap), sections pack onto a
+    page normally, and one only jumps to the next page when it genuinely will not fit."""
     head = Paragraph(title, sect)
     rule = HRFlowable(width="100%", thickness=0.5, color=RULE, spaceBefore=1, spaceAfter=5)
     rule.keepWithNext = 1
-    return [head, rule] + list(blocks)
+    if not keep_whole:
+        return [head, rule] + list(blocks)
+    flat = []
+    for b in blocks:
+        flat.extend(b._content if isinstance(b, KeepTogether) else [b])
+    return [KeepTogether([head, rule] + flat)]
 
 def build(piece, role):
     teacher = (role == "Teacher")
@@ -233,7 +250,8 @@ def build(piece, role):
     art_paras = [Paragraph(make_para(para, i, piece["devices"], teacher), art)
                  for i, para in enumerate(piece["body"], 1)]
     if teacher:
-        s += sec("The article, marked for rhetorical devices (one color throughout):", art_paras)
+        s += sec("The article, marked for rhetorical devices (one color throughout):",
+                 art_paras, keep_whole=False)
     else:
         s += art_paras
 
