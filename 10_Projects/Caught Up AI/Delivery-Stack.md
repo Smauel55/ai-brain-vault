@@ -119,6 +119,8 @@ The whole email path works end to end. Built + DONE this session:
 2. **Delete the dummy 2026-06-12 test Edition** before any real scheduling.
 3. Later: scheduling (scheduled Claude Code routine on the subscription, NOT the Batches
    API -- see [[Batch-API-Readiness]]); payments (Stripe; native Base44 connector available).
+   Billing now has its own design + plan-of-record: [[Billing-Stripe]] (two-phase, test-mode
+   first, isolated from Base44; started 2026-06-13).
 
 ## RESOLVED 2026-06-12 (eve): pipeline check passed + magic-link bug fixed
 
