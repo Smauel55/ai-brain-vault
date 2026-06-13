@@ -15,6 +15,6 @@ Caught Up AI outreach CRM lives in Airtable (one base in the account).
   - Source choices: Northwestern, LinkedIn, Referral, Cold outbound, Other
 - Table: "Outreaches" — `tblkzWLfJC29LKNNF`. Fields: Touch, Client (link), Type, Date, Outcome, Next step, Next step date. Logs each outreach touch per client.
 
-As of 2026-06-13 the Clients table held 14 AP Lang teacher leads, all Chicagoland. New prospects import as Status=Lead. CSV import maps by header name; single-select values must match a choice name exactly.
+As of 2026-06-13 the Clients table holds 18 AP Lang teacher leads/contacts, all Chicagoland (the 4 IATE network hubs were synced in from the vault on 2026-06-13). Existing pre-2026-06-13 rows have Status/Source blank; the 4 hubs are Status=Lead, Source=Referral. New prospects import as Status=Lead. CSV import maps by header name; single-select values must match a choice name exactly.
 
-SYNC GAP (2026-06-13): the vault knows more known contacts than Airtable. The vault `Outreach-Tracker-2026-05` adds 4 IATE network hubs (Kim Kotty, Andrew Rodbro, Jennifer Gouin, Michelle Ryan), and `AP-Lang-Teachers-Master-List-2026-05` holds ~46 more guessed/English-only rows. Reconcile before treating Airtable as the full known set. See [[project_caught_up_ai]], [[reference_vault_infrastructure]].
+RESERVE (not in CRM by design): `AP-Lang-Teachers-Master-List-2026-05` in the vault holds ~46 guessed/English-only rows deliberately kept OUT of Airtable (low confidence, would dilute the pipeline and risk bounces). Promote individually only if/when an email gets verified. See [[project_caught_up_ai]], [[reference_vault_infrastructure]].

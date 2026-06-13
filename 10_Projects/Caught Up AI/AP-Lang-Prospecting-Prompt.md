@@ -15,9 +15,9 @@ Reusable prompt for a prospecting pass: find new AP English Language teachers no
 3. Paste into Cowork. It returns `new-ap-lang-teachers.csv`.
 4. Import into the Clients table (headers already match), or hand the CSV to Claude Code to re-dedup against the live table and push via the Airtable MCP.
 
-## Caveat — vault vs Airtable sync gap (2026-06-13)
+## Sync status (updated 2026-06-13)
 
-The exclusion list below = the 14 rows currently in Airtable. The vault knows more people who are NOT in Airtable: 4 IATE network hubs (Kim Kotty, Andrew Rodbro, Jennifer Gouin, Michelle Ryan) in [[Outreach-Tracker-2026-05]], plus ~46 guessed / English-only rows in [[AP-Lang-Teachers-Master-List-2026-05]]. To avoid re-surfacing known names, either sync those into Airtable first or add them to the exclusion list before running.
+The 4 IATE network hubs (Kim Kotty, Andrew Rodbro, Jennifer Gouin, Michelle Ryan) were added to Airtable on 2026-06-13, so the Clients table now holds all 18 verified contactable rows, and the exclusion list below reflects that. The ~46 guessed / English-only rows in [[AP-Lang-Teachers-Master-List-2026-05]] are deliberately left out of the CRM as a reserve; they are NOT in the exclusion list on purpose, so that if the Cowork pass independently finds and verifies one, it counts as a real new lead.
 
 ## The prompt
 
@@ -90,4 +90,8 @@ ALREADY IN DATABASE — DO NOT INCLUDE (dedup by email):
 - gchandle@hinsdale86.org  (Gina Chandler, Hinsdale Central HS)
 - jmehta@d125.org  (Jay Mehta, Adlai E. Stevenson HS)
 - weilerk@nths.net  (Kurt Weiler, New Trier HS)
+- kkotty@fenwickfriars.com  (Kim Kotty, Fenwick HS — IATE hub)
+- arodbro@wths.net  (Andrew Rodbro, Warren Township HS — IATE hub)
+- jgouin@lchsrailers.org  (Jennifer Gouin, Lincoln Community HS — IATE hub)
+- mryan@lchsrailers.org  (Michelle Ryan, Lincoln Community HS — IATE hub)
 ```
