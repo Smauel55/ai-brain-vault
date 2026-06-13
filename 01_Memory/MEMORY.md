@@ -19,6 +19,7 @@
 - [August 2026 launch reminders](project_august_launch_reminders.md) — when launch work starts: swap home address for a virtual mailbox; revisit payments/entity/pricing
 - [Opener renderer + prompts](reference_opener_renderer.md) — render_opener_v2.py is the PDF source of truth; batch + quick generation prompts; logo path
 - [Product naming](reference_product_naming.md) — the daily PDF is an "Opener" (never a "brief"); teacher copy / student copy; each day = an edition
+- [Airtable outreach CRM](reference_airtable_crm.md) — base/table/field IDs + dropdown choices for the teacher pipeline; 14 leads as of 2026-06-13; vault-vs-Airtable sync gap noted
 - [MCQ construction spec](reference_mcq_spec.md) — 2 AP-grounded reading MCQs per Opener, named distractor traps, keys randomized at render
 - [Rhetorical device vocabulary](feedback_device_vocabulary.md) — fixed controlled AP list only, single-color highlight, name the specific device + its purpose
 - [Neutrality firewall](feedback_opener_neutrality.md) — civic tier allows issue-pointed advocacy; never person/group attacks or national third rails (rev. 2026-06-11)
