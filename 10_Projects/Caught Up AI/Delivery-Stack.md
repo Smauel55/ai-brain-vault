@@ -159,6 +159,47 @@ function runs, long typed inputs); verify sends via the Resend tab when it hangs
 entity permissions, edit `entities/<Name>.json` `rls` and insist on exact values (the diff
 panel's "No restrictions" can mean unchanged current state, not a new opening).
 
+## RESOLVED 2026-06-13: magic-link Save fixed end to end + email link colors
+
+The /manage Save button hung forever because of a **day-format mismatch**. Diagnosed live
+in Chrome (Save POSTed `updateTeacherByToken` -> `400 {"error":"Invalid days: ..."}`, page
+had no error handler so it span). The canonical format across storage, `getTeacherByToken`,
+and the page payload is **full capitalized weekday names** (`Monday`..`Friday`); three places
+disagreed and were all aligned to full names:
+
+1. **`updateTeacherByToken`** validated against `['Mon','Tue','Wed','Thu','Fri']`. Fixed:
+   accepts the seven full names, case-insensitive, normalizes to capitalized full names
+   before saving.
+2. **`pages/Manage` day chips** carried short-code VALUES (prefill never highlighted;
+   toggling sent a short code the backend rejected). Fixed: chips are now
+   `{label:'Mon', value:'Monday'}`; selected-state, toggle, and Save payload use the
+   full-name value (plus a legacy short-code normalizer).
+3. **`sendTodaysEdition` recipient filter** computed the weekday as a short code
+   (`WEEKDAY_NAMES = ['Sun','Mon',...]`) and matched it against full-name `delivery_days`,
+   so a real `live` broadcast would have reached **ZERO** teachers (hidden because every test
+   used `test` mode, which skips the filter). Fixed: `WEEKDAY_NAMES` now full names.
+
+**Email footer links recolored** in `sendTodaysEdition`: "Change your delivery days" ->
+`color:#5b21b6;text-decoration:underline`; "Unsubscribe" -> `color:#6b7280;text-decoration:underline`
+(both were `#9ca3af` gray and hard to see).
+
+Published and **verified live by behavior**: prefill highlights selected days; toggled Friday
+off -> Save `200 {"success":true}` with `["Monday".."Thursday"]`; reload confirmed
+persistence; restored to all five. Samuel's founder-test record left intact at all 5 days.
+
+### >>> CRITICAL SECURITY REGRESSION (found 2026-06-13) <<<
+
+The Teacher entity is **leaking again**. An anonymous (no-auth) `GET
+/api/apps/6a1f286b511ece79b6ef3942/entities/Teacher` returns `200` with every record's
+`email` and `manage_token` (the magic-link secret = full account control). It regressed
+because Teacher `read` was set back to `true` during 2026-06-12 debugging (Base44 quirk:
+`read:false` blocks even `asServiceRole` reads, which broke `getTeacherByToken`). Only
+fake/test data is exposed now. **This is a hard launch blocker.** Naive re-lock (`read:false`)
+re-breaks the working Save. Real fix options: lock the entity and serve ALL Teacher reads
+only through service-role functions returning safe fields; or remove Teacher from the public
+REST surface; or a proper RLS `user_condition`. Do NOT click the Permissions "Fix" banner
+(known false positive). Needs its own focused session.
+
 ## Email + sender details (2026-06-12)
 
 - **Template v1 built** at `10_Projects/Caught Up AI/email-template-v1.html` (table-based,
