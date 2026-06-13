@@ -1,83 +1,93 @@
 {
-  "base": "Caught Up AI Opener - 2026-06-11 - Two Straight Years Past 2,000",
-  "edition": "Beta edition - Thursday, June 11, 2026",
-  "date": "Thursday, June 11, 2026",
-  "headline": "Two Straight Years Past 2,000",
-  "headnote": "The following lays out what the 2026 measles case totals show about where the disease is spreading, and why public health officials measure each community against a single vaccination threshold.",
+  "base": "Caught Up AI Opener - 2026-06-13 - The Stone That Ice Would Not Carry",
+  "edition": "Beta edition - Saturday, June 13, 2026",
+  "date": "Saturday, June 13, 2026",
+  "headline": "The Stone That Ice Would Not Carry",
+  "headnote": "The following examines how researchers traced the origin of Stonehenge's central Altar Stone and weighed whether ice or human hands carried it the length of Britain.",
   "body": [
-    "[[1]]The United States has recorded 2,030 confirmed measles cases in 2026 as of June 4, according to the Centers for Disease Control and Prevention.[[/1]] The prior year, 2025, ended with 2,288. With the 2026 total already past 2,000, this is the second straight year the country has crossed that mark.",
-    "The cases are not scattered evenly. The CDC reports that 93 percent of them, 1,890 of the 2,030, are outbreak-associated, meaning they trace to a known cluster rather than to a lone traveler who infects no one else. That leaves about 140 cases not linked to any cluster. [[2]]Even so, the reach is broad: 40 jurisdictions have logged at least one case this year, plus Washington, D.C.[[/2]]",
-    "One outbreak accounts for much of the recent total. Centered in Spartanburg County, South Carolina, it ran from October 2, 2025, until the state declared it over on April 26, 2026, and reached 997 confirmed cases. State health officials describe it as the largest measles outbreak in the country in more than 35 years.",
-    "The South Carolina record points to one variable above the others. Of the cases counted there as of March 3, some 95 percent, 945 of 990, were in people who were unvaccinated or whose vaccination status was unknown. The measles, mumps, and rubella shot, given in two doses, is the standard protection; where it is absent, the virus moves through a population with little to stop it.",
-    "Epidemiologists watch a specific number for measles. Public health guidance holds that roughly 95 percent of a community must be immune to keep the virus from circulating freely, a level often called community immunity. Below that line, a single case can [[3]]seed a chain[[/3]]. The CDC reports that kindergarten vaccination coverage for the measles shot has slipped under that 95 percent mark, the threshold considered necessary for community protection.",
-    "[[4]]What the 2026 count shows, then, is less a sudden event than a math problem holding steady.[[/4]] The cases concentrate where coverage has thinned, and the national figure has stayed above 2,000 for a second year while that coverage sits below the level considered necessary to stop the virus from spreading. Whether 2027 looks different depends on numbers that are being recorded now, school district by school district."
+    "Ice is patient. People are deliberate. The flat slab at the heart of Stonehenge, the one called the Altar Stone, asks which of those two moved it, and a 2026 study says the answer is the second.",
+    "[[1]]Begin with the rock itself[[/1]]. It is sandstone, about sixteen feet long, more than thirteen thousand pounds, six tonnes of single stone laid flat where the great uprights meet. For years its birthplace was put somewhere in Wales, near the smaller bluestones around it. The new work moves it much farther. The grains in it match the Orcadian Basin, the old sandstone country of northeast Scotland, more than four hundred and fifty miles from Salisbury Plain. The team behind the finding worked across several institutions, with Curtin University in Australia and Sheffield Hallam, Sheffield, Bristol, and Wessex Archaeology in Britain.",
+    "[[2]]How they fixed the source is its own kind of patience: they read the ages locked inside individual mineral grains, the tiny clocks a rock keeps from the day it formed, and matched that signature against the rock of the far north[[/2]]. The match held. A slab quarried near the top of the island had ended up at the bottom of it, set among stones added to the monument somewhere between roughly 2620 and 2480 B.C.E.",
+    "Then the harder question. A stone can travel without anyone choosing to move it. Glaciers drag boulders for hundreds of miles and drop them where the ice dies, far from where they began, and for a six-tonne block that is no small possibility. So the researchers built a model of where the old ice sheets flowed. The ice, they found, could plausibly have carried rock as far as Dogger Bank, the drowned land now under the North Sea between Britain and the continent. It does not reach southern England. The glaciers stop short of Stonehenge.",
+    "[[3]]Which leaves the gap to be closed by hands[[/3]]. [[4]]If the ice could not deliver the stone, then people did: hundreds of kilometres of it, over land and water, by what the work describes as coordinated effort across communities[[/4]]. Remy Veness, the glaciologist who ran the ice-flow modelling, is the one who drew that line where the ice gives out. Anthony Clarke, a co-lead author, put the conclusion plainly. [[5]]\"Rather than being carried naturally by ice, the evidence points to a deliberate, carefully planned movement across a challenging and varied landscape.\"[[/5]]",
+    "What that movement actually looked like, the study does not claim to know. The route is unrecovered. The method, whether sledge or raft or some long relay of both, is not in the rock. [[6]]The grains can name the quarry and the ice can be ruled out, and still the four hundred and fifty miles in between stay a blank the science has narrowed but not filled[[/6]]. A people who left no writing moved a stone the length of their island and told no one how, and the henge keeps that part to itself."
   ],
   "devices": [
     {
-      "para": 1,
-      "device": "Logos",
-      "purpose": "Opens on an attributed, quantified claim, letting a sourced number rather than the writer's assertion carry the credibility, the Ledger's core ethos move."
+      "para": 2,
+      "device": "Imagery",
+      "purpose": "Opens the second paragraph on the physical stone in concrete, measurable terms (length, weight, sandstone laid flat) so the scale registers through sense and fact rather than through any claim that it is impressive."
     },
     {
-      "para": 2,
-      "device": "Juxtaposition",
-      "purpose": "Sets the broad geographic reach against the just-stated concentration in clusters, so the reader holds both facts at once: the disease is contained in pockets yet present in many places."
+      "para": 3,
+      "device": "Metaphor",
+      "purpose": "Calls the mineral grains tiny clocks the rock keeps, making an unfamiliar dating method graspable by mapping it onto a familiar timekeeping image without overstating it."
     },
     {
       "para": 5,
-      "device": "Metaphor",
-      "purpose": "A single quiet figurative term, seed a chain, compresses how one case can start sustained transmission once a community falls below the immunity threshold, without leaving the plain register."
+      "device": "Antithesis",
+      "purpose": "Sets ice against hands in balanced opposition, naming the single tension the whole piece runs on: natural transport versus deliberate human movement."
+    },
+    {
+      "para": 5,
+      "device": "Cumulative and periodic sentences",
+      "purpose": "Front-loads a conditional, then lets the consequence accumulate across the distance and the means, so the sentence enacts the long human haul it describes."
+    },
+    {
+      "para": 5,
+      "device": "Logos",
+      "purpose": "Lands the lead researcher's verbatim conclusion as the reasoned inference the evidence forces, letting the quoted reasoning carry authority rather than the writer asserting it."
     },
     {
       "para": 6,
-      "device": "Antithesis",
-      "purpose": "Balances a sudden event against a math problem holding steady to reframe the totals as a predictable result of measurable conditions, the closing assessment the evidence supports."
+      "device": "Asyndeton",
+      "purpose": "Strings the certainties together with commas and no closing conjunction so the known facts pile up fast against the one thing still unknown, leaving the gap exposed."
     }
   ],
   "mcq": [
     {
-      "stem": "The relationship between the second paragraph and the fifth paragraph is best described as one in which the writer first",
+      "stem": "In the fourth paragraph, the writer introduces the possibility that glaciers moved the stone primarily in order to",
       "options": [
-        "maps where the cases occur, then identifies the immunity condition that explains that distribution",
-        "establishes the national case total, then disputes whether that total can be trusted",
-        "presents competing explanations for the cases, then selects the most likely one",
-        "describes one state's outbreak in detail, then generalizes it to the whole country"
+        "raise and then rule out a natural explanation before crediting human effort",
+        "argue that the earlier Welsh-origin theory was the more likely account",
+        "show that the ice-sheet model was the least reliable part of the research",
+        "suggest that the stone's weight made any human transport impossible"
       ],
       "answer": "A",
-      "rationale": "The second paragraph documents the distribution of cases, that they cluster in outbreaks yet appear in 40 jurisdictions, and the fifth paragraph supplies the community-immunity threshold that accounts for where outbreaks take hold; the keyed pairing tracks that move from pattern to explanation. The option about disputing the total fails because no paragraph questions the reliability of the count, a trap built on importing a skepticism the passage never raises. The option about competing explanations fails because the second paragraph offers a single distribution, not rival accounts, naming a move the text does not make. The option about one state generalized to the nation describes the third and fourth paragraphs, not the second and fifth, a true effect tied to the wrong span."
+      "rationale": "The paragraph builds the glacier scenario in good faith (a six-tonne block is no small possibility, the ice could reach Dogger Bank) and then states the ice stops short of Stonehenge, so the move sets up a natural explanation only to eliminate it and hand the work to people. The Welsh-origin option misreads the third paragraph, where Wales is the discarded source of the rock, not a transport theory the writer endorses. The least-reliable-model option inverts the text, which treats the ice model as the decisive tool that closes the natural route. The impossibility option overstates the passage, which concludes people did move it, not that they could not."
     },
     {
-      "stem": "In the final paragraph, the phrase \"a math problem holding steady\" primarily serves to",
+      "stem": "In context, the final sentence of the last paragraph (\"A people who left no writing... keeps that part to itself\") most contributes to the passage's tone of",
       "options": [
-        "predict that case numbers will rise sharply in the coming year",
-        "question whether the reported case counts can be trusted",
-        "frame the outbreaks as a predictable consequence of measurable conditions rather than a sudden crisis",
-        "assign blame to public health agencies for the rising totals"
+        "measured wonder held in check by candor about what is unknown",
+        "mounting alarm at a discovery that unsettles settled history",
+        "gentle irony at the expense of the researchers' overreach",
+        "brisk confidence that the central mystery has been solved"
       ],
-      "answer": "C",
-      "rationale": "The phrase recasts the totals as the outcome of a known threshold and a measurable coverage figure, which is why the keyed option fits the writer's level, assessment-bearing tone. The prediction option overreaches: the passage explicitly says the next year depends on numbers still being recorded and declines to forecast a sharp rise. The option about questioning the counts imports a doubt the text never expresses, since every figure is attributed and accepted. The blame option misreads the neutral attribution as accusation, assigning a stance toward an actor that the disinterested register withholds."
+      "answer": "A",
+      "rationale": "The sentence pairs a genuinely striking image (a stone hauled the length of an island by people who left no record) with an admission that the how stays hidden, which sustains the piece's restrained admiration alongside its honesty about the blank that remains. The alarm option misreads the calm, unhurried handling for distress the text never shows. The irony option fails because the writer credits the researchers' method rather than mocking it; the limit named is in the evidence, not in their reach. The confidence option contradicts the paragraph, which explicitly says the route and method are not known."
     }
   ],
   "discussion": [
-    "The writer orders the piece to arrive at the community-immunity threshold only in the fifth paragraph, after the case totals and the South Carolina outbreak. How does saving that figure for late in the piece shape the way a reader understands the numbers that came before it?",
-    "Every figure in the opener is attributed to a named body, and the writer avoids emotive language about the outbreaks. What does that restraint gain for a reader's trust, and what might it leave out for a reader trying to feel the stakes of the data?"
+    "The piece spends a full paragraph building the case that glaciers could have moved the stone before setting that case aside. How does granting the natural explanation real weight change the force of the conclusion that people moved it?",
+    "The writer ends not on the discovery but on what remains unknown: the route and the method. What does closing on an admitted limit, rather than on the achievement, do to how you read the researchers' authority?"
   ],
   "sample_responses": [
-    "By withholding the 95 percent threshold until the fifth paragraph, the writer lets the reader first absorb the totals as raw scale, 2,030 cases, a second straight year past 2,000, a 997-case outbreak, before naming the single variable that ties them together. The earlier paragraphs read like an accumulation of separate alarming facts; the threshold then reorganizes them into one explanation, so the reader experiences the same turn the argument makes, from a pile of numbers to a pattern with a cause. Placed first, the threshold would have flattened the totals into mere illustration. Placed last, it reframes everything already read, which is why the closing antithesis, less a sudden event than a math problem, lands as earned rather than asserted.",
-    "The relentless attribution, the CDC reports, state health officials describe, gives the piece its authority: a skeptical reader can in principle check each claim, and the writer never asks to be believed on personal conviction. The flat diction reinforces this, since refusing words like tragic or alarming signals that the numbers are meant to be weighed, not felt on command. What the restraint leaves out is the human texture of an outbreak, the individual cases behind 997, the experience of a community below the threshold. The writer trades immediacy for credibility, betting that a reader who trusts the figures will supply the gravity that the prose deliberately declines to perform."
+    "The glacier paragraph works as a genuine concession rather than a straw target. By granting that ice drags boulders for hundreds of miles and could plausibly reach Dogger Bank, the writer makes the natural explanation strong enough to take seriously, so that ruling it out with the ice-flow model carries weight. The human conclusion then arrives as something the evidence forces ('If the ice could not deliver the stone, then people did'), not as a romantic assumption. Had the writer dismissed glaciers in a line, the deliberate-movement claim would read as a guess dressed up as a finding.",
+    "Closing on the unknown deepens the researchers' authority rather than undercutting it. The piece is careful to separate what the grains can establish (the Scottish quarry) and what the ice model can establish (that glaciers stop short) from what neither can recover (the actual route and means). By naming that blank plainly, the writer signals that the science claims only what it can support. The final image, a stone moved the length of an island by a people who left no record of how, lets the wonder stand on accurate limits instead of overreach, which is what makes the restraint persuasive."
   ],
   "writing": {
     "type": "Q2 rhetorical analysis",
-    "text": "Read the passage carefully. Then write an essay that analyzes the rhetorical choices the writer makes to convey a stance toward the 2026 measles data. In your response, consider how the writer's ordering of evidence, consistent attribution to named bodies, and restraint in diction work together to position the case totals as the product of measurable conditions rather than a sudden crisis."
+    "text": "The following passage examines how researchers traced the origin of Stonehenge's Altar Stone and weighed whether ice or human effort carried it across Britain. Read the passage carefully. Then, in a well-written essay, analyze the rhetorical choices the writer makes to convey an attitude toward both what the research has established and what remains unknown."
   },
   "misconceptions": [
-    "That a higher national case count means the virus is spreading randomly everywhere. In fact 93 percent of 2026 cases trace to known clusters, so concentration in pockets of low coverage, not even diffusion across the country, drives the total.",
-    "That the 95 percent figure is an arbitrary public-health goal. It is the share of a community that must be immune for the threshold considered necessary for community protection to hold; below it, sustained transmission can occur.",
-    "That the writer's neutral attribution signals agreement or disagreement with any party. A Ledger-style piece reports the documented record and assigns no praise or blame, so reading a stance into the sourced figures misreads the register."
+    "That the study recovered the route or method by which the stone was moved. The passage states the opposite: the Scottish source is fixed and glacier transport is ruled out, but the actual path and means (sledge, raft, relay) remain unknown.",
+    "That ruling out glaciers proves a single grand organized expedition. The text supports only that people moved the stone hundreds of kilometres through coordinated effort across communities; it does not describe one journey, one crew, or one technique.",
+    "That the Altar Stone was always known to come from Scotland. The piece notes its origin had for years been placed in Wales near the bluestones, and the new grain-matching work is what relocated the source to the far north."
   ],
-  "ap_alignment": "This opener is built in the AP English Language source-passage mold and supports reading work across multiple Big Ideas. The Ledger register models Rhetorical Situation (Skill Category 1): a disinterested writer, a literate non-specialist audience, and an informational exigence (a knowledge gap about the case totals). The finding-first organization and the late placement of the immunity threshold give Reasoning and Organization (Skill Category 5) a clear line to trace, targeted by the first multiple-choice item. The closing antithesis and the level, attribution-heavy diction give Style (Skill Category 7) concrete material, targeted by the second item. The two questions test different reading skills as required. The free-response prompt is a Q2 rhetorical analysis, the fitting choice because the passage advances a clear rhetorical posture toward its data without arguing a contestable value position; a Q3 argument prompt is not stapled on, since the neutral explainer takes no debatable side to defend, challenge, or qualify.",
-  "register": "The Ledger",
-  "template": "Finding-First / Claim-First Build",
-  "opener_type": "Flat-fact / finding-first",
-  "close_type": "Status (left in current status)"
+  "ap_alignment": "Targets the four AP English Language reading skills across two items: the first MCQ tests Reasoning and Organization (Skill Category 5) by asking what the concede-then-eliminate move in the fourth paragraph accomplishes in the line of reasoning; the second tests Style (Skill Category 7) by asking how the closing sentence shapes tone. The two discussion questions extend Claims and Evidence (the function of a real concession) and Rhetorical Situation (how an admitted limit positions the writer's authority). The writing task is a Q2 rhetorical analysis, the fitting FRQ for an observational Long Look passage that renders and weighs evidence without arguing a contestable thesis, so a Q3 argument prompt is deliberately not used.",
+  "register": "The Long Look",
+  "template": "Antithesis-as-Engine (2)",
+  "opener_type": "Flat-fact / controlling antithesis in clipped sentences",
+  "close_type": "Candid limit (close on what remains unknown, no moral drawn)"
 }
